@@ -105,6 +105,11 @@ public class MyRestApiTest{
 ```
 * You can organize and arrange the tests to suit your requirements, by folder/feature/release wise
 
-* You can add as many tests as you want by just annotating the test method. See here some examples
+* You can add as many tests as you want by just annotating the test method. See [here](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/java/org/jsmart/zerocode/testhelp/tests/ZeroCodeSampleUnitRunner.java) some examples
 
-![https://dzone.com/storage/temp/7566618-screen-shot-2017-12-17-at-101840-pm.png](IDE setup)
+You can assert the entire JSON in the assertion block however complex and hierercical structure it might be, just by  copy paste  of the entire JSON. Hassle free, no serialize/deserialze is needed !
+
+You can also use only the perticular section or even an element of a JSON using JSON path e.g.  $.get_emp_details.response.body.id  which will resove to  1001  in the above case.
+
+You can test the consumer contract APIs by creating specific runners specific to clients.
+
