@@ -109,7 +109,39 @@ public class MyRestApiTest{
 
 You can assert the entire JSON in the assertion block however complex and hierercical structure it might be, just by  copy paste  of the entire JSON. Hassle free, no serialize/deserialze is needed !
 
-You can also use only the perticular section or even an element of a JSON using JSON path e.g.  $.get_emp_details.response.body.id  which will resove to  1001  in the above case.
+You can also use only the perticular section or even an element of a JSON using JSON path e.g.  `$.get_emp_details.response.body.id`  which will resove to  1001  in the above case.
 
 You can test the consumer contract APIs by creating specific runners specific to clients.
+
+## Examples
+
+* Working examples of various use cases are here. 
+
+* You can use place holders for various outcomes if you need.
+
+* Examples of some features are here
+
+    * * Re-using Request/Response via JSON Path
+
+    * * Asserting NULL or NOT_NULL
+
+    * * Using GREATER THAN, LESS THAN
+
+    * * Executing External Java method
+
+    * * Chaining steps using previous response 
+
+    * * Using Random Numer and Random String as ID
+
+    * * Generating custom IDs example here.
+
+    * * Using  loop  for  performance testing . See loop example 
+
+    * * Asserting empty array 
+
+    * * Asserting  part of a string . See $CONTAINS.STRING
+
+    * * Asserting size or length of an array. Use  $<path.to.array>.SIZE e.g. in the assertion JSON use
+
+    * * More place holders and their usages are here and the link to the README file is here.
 
