@@ -141,13 +141,14 @@ You can test the consumer contract APIs by creating specific runners specific to
 
     * * Asserting  part of a string . See [$CONTAINS.STRING](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/09_asserting_string_messages.json)
 
+    * *  More place holders and their usages are [here](https://github.com/authorjapps/zerocode#99) and the link to the [README](https://github.com/authorjapps/zerocode/blob/master/README.md) file is here.
+
     * * Asserting size or length of an array. Use  $<path.to.array>.SIZE e.g. in the assertion JSON use
 ```
 "persons.SIZE": 4  
 or 
 "addresses.SIZE": 2 etc
 ```
-    * * More place holders and their usages are [here](https://github.com/authorjapps/zerocode#99) and the link to the [README](https://github.com/authorjapps/zerocode/blob/master/README.md) file is here.
 
 ## Test Report
 
