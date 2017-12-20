@@ -43,6 +43,22 @@ and your happy scenario test case code exactly looks like below e.g.
 }
 ```
 
+, your negative scenario test case code exactly looks like below e.g.
+```
+{
+      "name": "get_not_existing_emp_details",
+      "url": "http://host:port/api/v1/persons/9999",
+      "operation": "GET",
+      "request": {},
+      "assertions": {
+          "status": 404,
+          "body": {
+             "message": "No such employee exists"
+          }
+      }
+}
+```
+
 and if you need them together as a scenario, then the code looks exacly like below
 ```
 {
@@ -78,9 +94,9 @@ and if you need them together as a scenario, then the code looks exacly like bel
 }
 ```
 
-, then you just stick these into a JSON file named e.g.  "get_happy_and_sad.json"  anywhere in the  test/resources  folder,
+, then you just stick these into a JSON file named e.g.  `"get_happy_and_sad.json"`  anywhere in the  `test/resources` folder,
 
-and run the code like below  pointing to that  JSON file  and then you are done with testing.
+and run the code like below  pointing to that JSON file  and then you are done with testing.
 ```
 @RunWith(ZeroCodeUnitRunner.class)
 @HostProperties(host="http://localhost", port=8088, context = "")
