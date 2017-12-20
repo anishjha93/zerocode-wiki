@@ -121,27 +121,144 @@ You can test the consumer contract APIs by creating specific runners specific to
 
 * Examples of some features are here
 
-    * * Re-using Request/Response via JSON Path
+    * * Re-using [Request/Response](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/13_random_and_static_string_number_place_holders.json) via [JSON Path](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/15_place_holders_of_request_response.json)
 
-    * * Asserting NULL or NOT_NULL
+    * * Asserting [NULL or NOT NULL](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/06_asserting_null_or_notnull_json_content.json)
 
-    * * Using GREATER THAN, LESS THAN
+    * * Using [GREATER THAN or LESS THAN](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/07_asserting_greaterthan_lesserthan_number.json)
 
-    * * Executing External Java method
+    * * Executing [External Java Method](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/11_execute_local_java_program.json)
 
-    * * Chaining steps using previous response 
+    * * Chaining steps [using previous request or response](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/12_chaining_multiple_steps_with_prev_response.json) 
 
-    * * Using Random Numer and Random String as ID
+    * * Using [Random Number or Random String](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/13_random_and_static_string_number_place_holders.json) as ID
 
-    * * Generating custom IDs example here.
+    * * Generating [Custom ID example](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/01_vanila_placeholders/01_generatinng_ids_and_sharing_among_steps.json) .
 
-    * * Using  loop  for  performance testing . See loop example 
+    * * Using  loop  for  performance testing . See [loop example](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/02_using_step_loop.json) 
 
-    * * Asserting empty array 
+    * * Asserting [empty array](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/05_asserting_empty_array.json) 
 
-    * * Asserting  part of a string . See $CONTAINS.STRING
+    * * Asserting  part of a string . See [$CONTAINS.STRING](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/09_asserting_string_messages.json)
 
     * * Asserting size or length of an array. Use  $<path.to.array>.SIZE e.g. in the assertion JSON use
+```
+"persons.SIZE": 4  
+or 
+"addresses.SIZE": 2 etc
+```
+    * * More place holders and their usages are [here](https://github.com/authorjapps/zerocode#99) and the link to the [README](https://github.com/authorjapps/zerocode/blob/master/README.md) file is here.
 
-    * * More place holders and their usages are here and the link to the README file is here.
+## Test Report
+
+Test reports are generated into  /target  folder everytime the tests are run. Sample reports are here in [.html spike chart](http://htmlpreview.github.io/?https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/zz_reports/zerocode_results_chart_2016-07-30T09-55-53.056.html) and [.csv tabular](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/zz_reports/zerocode_full_report_2016-07-30T11-44-14.512.csv) format. 
+
+## Test Logs
+
+Test logs are generated in the console as well as into the log file in a readable JSON format  `target/logs/zerocode_rest_bdd_logs.log` . In case of a test failure it exactly lists which field or fields didn't match with their  JSON Path in a tree view.
+
+e.g.
+If test passed: 
+```
+--------- CORRELATION-ID: e6170365-94e7-49dc-a1a3-5e102468acc2 ---------
+requestTimeStamp:2017-12-20T10:00:48.840
+step:get_same_employee
+url:http://localhost:9999/api/testing/v1/persons/UK1001
+method:GET
+request:
+{ } 
+--------- CORRELATION-ID: e6170365-94e7-49dc-a1a3-5e102468acc2 ---------
+Response:
+{
+  "status" : 200,
+  "headers" : {
+    "Date" : [ [ "Wed, 20 Dec 2017 03:00:48 GMT" ] ],
+    "Last-Modified" : [ [ "Wed, 20 Dec 2017 03:00:48 GMT" ] ],
+    "Transfer-Encoding" : [ [ "chunked" ] ],
+    "Content-Type" : [ [ "application/json" ] ],
+    "Connection" : [ [ "keep-alive" ] ]
+  },
+  "body" : {
+    "id" : "UK1001",
+    "name" : "Bobby Lion",
+    "addresses" : [ {
+      "line1" : "HOME, AECS Layout, ZIP-56094"
+    }, {
+      "line1" : "OFFICE, Newark, ZIP-730290"
+    } ]
+  }
+}
+*responseTimeStamp:2017-12-20T10:00:48.847 
+*Response delay:7.0 milli-secs 
+---------> Assertion: <----------
+{
+  "status" : "$EQ.200",
+  "body" : {
+    "id" : "UK1001"
+  }
+} 
+-done-
+```
+
+If test failed: 
+```
+--------- CORRELATION-ID: 8ad5c1fe-31cb-4e46-a8ba-7500a00c2199 ---------
+requestTimeStamp:2017-12-20T10:02:01.163
+step:get_an_employee_detail
+url:http://localhost:9999/api/testing/v1/persons/UK1001
+method:GET
+request:
+{ } 
+--------- CORRELATION-ID: 8ad5c1fe-31cb-4e46-a8ba-7500a00c2199 ---------
+Response:
+{
+  "status" : 200,
+  "headers" : {
+    "Date" : [ [ "Wed, 20 Dec 2017 03:02:01 GMT" ] ],
+    "Last-Modified" : [ [ "Wed, 20 Dec 2017 03:02:01 GMT" ] ],
+    "Transfer-Encoding" : [ [ "chunked" ] ],
+    "Content-Type" : [ [ "application/json" ] ],
+    "Connection" : [ [ "keep-alive" ] ]
+  },
+  "body" : {
+    "id" : "UK1001",
+    "name" : "Bobby Lion",
+    "addresses" : [ {
+      "line1" : "HOME, AECS Layout, ZIP-56094"
+    }, {
+      "line1" : "OFFICE, Newark, ZIP-730290"
+    } ]
+  }
+}
+*responseTimeStamp:2017-12-20T10:02:01.315 
+*Response delay:152.0 milli-secs 
+---------> Assertion: <----------
+{
+  "status" : 400,
+  "body" : {
+    "id" : "UK1001"
+  }
+} 
+-done-
+ 
+
+java.lang.RuntimeException: Assertion failed for :- 
+
+[test_get_request_response_rainy_scene.json] 
+	|
+	|
+	+---Step --> [get_an_employee_detail] 
+
+Failures:
+--------- 
+Assertion path '$.status' with actual value '200' did not match the expected value '400'
+
+```
+
+## Source Code in GitHub
+Visit the source here in  GitHub [zerocode](https://github.com/authorjapps/zerocode).
+
+## Contribute
+Raise [issues and contribute](https://github.com/authorjapps/zerocode/issues) to imrpove zerocode library and add more essential features you need by writing to the author.
+
 
