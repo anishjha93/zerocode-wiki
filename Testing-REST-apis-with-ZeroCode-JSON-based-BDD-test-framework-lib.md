@@ -3,6 +3,8 @@
 
 Get rid of lot of boilerplate codes! Learn how the ZeroCode testing library will make your life easier.
 
+See the [HelloWorldTest](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/java/org/jsmart/zerocode/testhelp/tests/HelloWorldTest.java)
+
 ## Why?
 
 * It's simple and easy to use, no clutters or boiler-plate code for testers and developers or any stakeholders to understand what's being tested. Great time saver!
