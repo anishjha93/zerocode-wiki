@@ -1,4 +1,3 @@
-Welcome to the zerocode wiki!
 
 **Testing REST apis with Zero Code JSON based BDD test framework lib**
 
@@ -135,7 +134,7 @@ You can test the consumer contract APIs by creating specific runners specific to
 
 * Working examples of various use cases are here. 
 
-* You can use place holders for various outcomes if you need.
+* You can use place holders for various outcomes when you need.
 
 * Examples of some features are here
 
@@ -158,6 +157,10 @@ You can test the consumer contract APIs by creating specific runners specific to
     * * Asserting [empty array](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/05_asserting_empty_array.json) 
 
     * * Asserting  part of a string . See [$CONTAINS.STRING](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/09_asserting_string_messages.json)
+    
+    * * Using custom Http Client upon project demand. See [Using Custom Http Clinet](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/java/org/jsmart/zerocode/testhelp/zcmore/ZeroCodeUnitRunnerWithCustomHttpClient.java)
+    
+    * * Passing value in headers. See [headers example](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/16_passing_headers_to_rest_apis.json)
 
     * *  More place holders and their usages are [here](https://github.com/authorjapps/zerocode#99) and the link to the [README](https://github.com/authorjapps/zerocode/blob/master/README.md) file is here.
 
