@@ -1,5 +1,5 @@
 
-**Testing REST apis with Zero Code JSON based BDD test framework lib**
+**Testing REST apis with Zero Code JSON based BDD test framework lib. Great tool for test automation!**
 
 Get rid of lot of boilerplate codes! Learn how the ZeroCode testing library will make your life easier.
 
