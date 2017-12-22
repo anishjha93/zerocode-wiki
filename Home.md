@@ -216,7 +216,7 @@ Response:
 *Response delay:7.0 milli-secs 
 ---------> Assertion: <----------
 {
-  "status" : "$EQ.200",
+  "status" : 200,
   "body" : {
     "id" : "UK1001"
   }
@@ -264,7 +264,6 @@ Response:
   }
 } 
 -done-
- 
 
 java.lang.RuntimeException: Assertion failed for :- 
 
