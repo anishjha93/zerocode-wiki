@@ -113,13 +113,13 @@ public class MyRestApiTest{
 ## How?
 * Zerocode Examples and samples are here to [download or clone](https://github.com/authorjapps/helpme/tree/master/zerocode-rest-help)  
 
-* The  latest  maven dependency can be found here at [latest-maven-central-zerocode](http://search.maven.org/#search%7Cga%7C1%7Czerocode-rest-bdd)
+* The  **latest**  maven dependency can be found here at [latest-maven-central-zerocode](http://search.maven.org/#search%7Cga%7C1%7Czerocode-rest-bdd)
 
 ```
 <dependency>
     <groupId>org.jsmart</groupId>
     <artifactId>zerocode-rest-bdd</artifactId>
-    <version>1.1.18</version>
+    <version>1.1.22</version>
 </dependency>
 ```
 * You can organize and arrange the tests to suit your requirements, by folder/feature/release wise
