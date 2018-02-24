@@ -1,4 +1,4 @@
-## Helps and Docs- https://authorjapps.github.io/zerocode
+## Helps and Docs- [https://github.com/authorjapps/zerocode#table-of-contents--)
 
 **Testing REST apis with Zero Code JSON based BDD test framework lib. Great tool for api test automation!**
 
