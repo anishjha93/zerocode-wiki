@@ -1,6 +1,6 @@
 Motivation
 ===
-One of the motivations behind the Zerocode was the Govt's Digital Transformation Project where `a lot number of micro services` were used to achieve specific workflows. Along with this, there were number of `data pipe lines` to ingest various legacy system's data into Hadoop with help of `Kafka/Samza streaming` with support of smartly written in-house NoSql BigData framework to interact with HBase/HDFS. 
+One of the motivations behind the Zerocode was the Govt's Digital Transformation Project where `a lot number of micro services` were used to achieve various workflows. Along with this, there were number of `data pipe lines` to ingest various legacy system's data into Hadoop with help of `Kafka/Samza streaming` with support of smartly written in-house NoSql BigData framework to interact with HBase/HDFS. 
 
 In a spike to demonstrate best testing approach, the automation testers and developers did come to a common understanding to write tests in such a way that will allow anyone to `change and maintain` tests easily; certainly avoiding boiler plate grammar code and unnecessary wrappers which particularly fail to fit into different IDEs and readability of the tests are lost while `changing context` between test steps. 
 
