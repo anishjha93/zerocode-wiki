@@ -21,7 +21,7 @@ In fact many folks were already practicing this kind of approach in the similar 
 
 After implementation of agreed approach we found that we were successfully able to achieve the following :- 
 
-Repetitive tasks became part of the framework
+* Repetitive tasks became `part of the` framework
 * Tests were simple, `human readable JSON` files
 * Tests were completely `independent` and `decoupled` from code.
 * `Jenkins Pipeline` integration was seamless
