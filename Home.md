@@ -1,14 +1,16 @@
 ## Helps and Docs- [Zerocode Table of Contents](https://github.com/authorjapps/zerocode#table-of-contents--)
 
-**Testing REST apis with Zero Code JSON based BDD test framework lib. Great tool for api test automation!**
+Testing REST apis with Zero Code JSON assertion based REST test framework lib. Great tool for `REST api`, `SOAP api` and `DB integration` test automation and [much more](https://github.com/authorjapps/zerocode#table-of-contents--)!
 
-Get rid of lot of boilerplate codes! Learn how the ZeroCode testing library will make your life easier.
+Learn how the ZeroCode testing library can make your life easier and writing tests faster by simply putting your **thoughts** into **executable test** scenarios and **not enforcing** you to write boiler plate glue code and sticky wrappers around your tests. Tests become neat and clean as well as easily maintainable.
+
+You have still options to write the `glue code` if you have a need to do, also it allows to **override** the framework behavior by your own **java code** which becomes not only **reusable** but becomes **part of the framework**.
 
 See the [HelloWorldTest](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/java/org/jsmart/zerocode/testhelp/tests/HelloWorldTest.java)
 
 ## Why?
 
-* It's simple and easy to use, no clutters or boiler-plate code for testers and developers or any stakeholders to understand what's being tested. Great time saver!
+* It's simple and easy to use, no boiler-plate code needed for testers and developers or any stakeholders to understand what's being tested.
 
 * Automate and write your end-to-end tests and integration-tests at the speed of writing unit tests 
 
@@ -120,7 +122,7 @@ public class MyRestApiTest{
 <dependency>
     <groupId>org.jsmart</groupId>
     <artifactId>zerocode-rest-bdd</artifactId>
-    <version>1.1.22</version>
+    <version>1.1.27</version>
 </dependency>
 ```
 * You can organize and arrange the tests to suit your requirements, by folder/feature/release wise
@@ -283,4 +285,4 @@ Assertion path '$.status' with actual value '200' did not match the expected val
 Visit the source here in  GitHub [zerocode](https://github.com/authorjapps/zerocode).
 
 ## Contribute
-Raise [issues and contribute](https://github.com/authorjapps/zerocode/issues) to imrpove zerocode library and add more essential features you need by writing to the author.
+Raise [issues and contribute](https://github.com/authorjapps/zerocode/issues) to imrpove zerocode library and add more essential features you need by writing to the author or contributing yourself.
