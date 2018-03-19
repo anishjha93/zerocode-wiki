@@ -11,7 +11,7 @@ Over several brain storming sessions, automation testers and developers came to 
 * That will allow anyone to change and maintain the tests easily
 * Avoid writing boiler plate sticky code.
 * Large numbers of tests can be well organized.
-* Configurable for multiple environments (SIT, UAT, PRE-PROD, PROD etc)
+* Configurable for multiple environments (DEV/DIT/CI, SIT, UAT, PRE-PROD, PROD etc)
 
 Outcome of the sessions was to consider a `steps based` scenario build-up approach where the underlying test and test data is picked from a referenced `JSON file`. 
 
@@ -30,7 +30,9 @@ After implementation of agreed approach we found that we were successfully able 
 * Failure assertions were `to the point` precisely describing the scenario step.
 * Enabled `overriding framework behavior` for performing `project/test specific` tasks
 
-It helped the program in a big way, and in the recent years it has added many more features into it.
+The above approach(es) helped the program in a big way. 
+
+Then in the recent years `Zerocode` has standardized the approaches and added many more testing features to make it easy n efficient.
 
 We sincerely hope it helps you too.
 
