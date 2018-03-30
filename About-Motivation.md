@@ -11,7 +11,7 @@ Over several brain storming sessions, automation testers and developers came to 
 * That will allow anyone to change and maintain the tests easily
 * Avoid writing boiler plate sticky code.
 * Large numbers of tests can be well organized.
-* Configurable for multiple environments (DEV/DIT/CI, SIT, UAT, PRE-PROD, PROD etc)
+* Configurable for multiple environments (LAPTOP, DEV/DIT/CI, SIT, UAT, PRE-PROD etc)
 
 Outcome of the sessions was to consider a `steps based` scenario build-up approach where the underlying test and test data is picked from a referenced `JSON file`. 
 
