@@ -147,19 +147,11 @@ You can test the consumer contract APIs by creating specific runners specific to
 
     * * Asserting [NULL or NOT NULL](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/06_asserting_null_or_notnull_json_content.json)
 
-    * * Using [GREATER THAN or LESS THAN](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/07_asserting_greaterthan_lesserthan_number.json)
-
     * * Executing [External Java Method](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/11_execute_local_java_program.json)
 
     * * Chaining steps [using previous request or response](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/12_chaining_multiple_steps_with_prev_response.json) 
 
-    * * Using [Random Number or Random String](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/13_random_and_static_string_number_place_holders.json) as ID
-
     * * Generating [Custom ID example](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/01_vanila_placeholders/01_generatinng_ids_and_sharing_among_steps.json) .
-
-    * * Using  loop  for  performance testing . See [loop example](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/02_using_step_loop.json) 
-
-    * * Asserting [empty array](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/05_asserting_empty_array.json) 
 
     * * Asserting  part of a string . See [$CONTAINS.STRING](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/09_asserting_string_messages.json)
     
@@ -169,20 +161,15 @@ You can test the consumer contract APIs by creating specific runners specific to
 
     * *  More place holders and their usages are [here](https://github.com/authorjapps/zerocode#99) and the link to the [README](https://github.com/authorjapps/zerocode/blob/master/README.md) file is here.
 
-    * * Asserting size or length of an array. Use  $<path.to.array>.SIZE e.g. in the assertion JSON use
-```
-"persons.SIZE": 4  
-or 
-"addresses.SIZE": 2 etc
-```
-
 ## Test Report
 
-Test reports are generated into  /target  folder everytime the tests are run. Sample reports are here in [.html spike chart](http://htmlpreview.github.io/?https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/zz_reports/zerocode_results_chart_2016-07-30T09-55-53.056.html) and [.csv tabular](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/zz_reports/zerocode_full_report_2016-07-30T11-44-14.512.csv) format. 
+Test reports are generated into  `/target`  folder everytime the tests are run. Sample [reports are here](https://github.com/authorjapps/zerocode#generated-reports-and-charts) format. 
 
 ## Test Logs
 
 Test logs are generated in the console as well as into the log file in a readable JSON format  `target/logs/zerocode_rest_bdd_logs.log` . In case of a test failure it exactly lists which field or fields didn't match with their  JSON Path in a tree view.
+Note-
+Every **step** is assigned with an **auto** generated **STEP-ID** to relate request with response of that **step**.
 
 e.g.
 If test passed: 
@@ -281,8 +268,5 @@ Assertion path '$.status' with actual value '200' did not match the expected val
 
 ```
 
-## Source Code in GitHub
-Visit the source here in  GitHub [zerocode](https://github.com/authorjapps/zerocode).
-
 ## Contribute
-Raise [issues and contribute](https://github.com/authorjapps/zerocode/issues) to imrpove zerocode library and add more essential features you need by writing to the author or contributing yourself.
+Raise [issues](https://github.com/authorjapps/zerocode/issues) and [contribute](https://github.com/authorjapps/zerocode/blob/master/CONTRIBUTING.md) to improve zerocode library and add more essential features which you might need by yourself.
