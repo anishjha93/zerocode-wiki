@@ -46,7 +46,7 @@ Expected Response status: 200
 
 and your happy scenario test case code exactly looks like below e.g.
 
-```
+```javaScript
 {
       "name": "get_emp_details",
       "url": "http://host:port/api/v1/persons/1001,",
