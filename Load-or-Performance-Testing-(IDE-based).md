@@ -1,7 +1,7 @@
 
 ## Why using an IDE ?
 Performance testing could be simple, easy and flexible to match your project need if it is based from your IDE!
-- Go to the [Download or Browse Demo Test Maven project](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing%28using-your-IDE%29/_edit#download-or-browse-demo-project) section towards the trail of this page
+- [Download or Browse Demo Test Maven project](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing%28using-your-IDE%29/_edit#download-or-browse-demo-project) section towards the trail of this page
 
 There are many standalone tools available in the market which you need to install and configure in order to generate load. But you need to spent much time in installing and learning the product on Windows/Mac/Linux, to be able to fire tests in parallel.
 
