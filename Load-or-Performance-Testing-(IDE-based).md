@@ -22,25 +22,25 @@ public class LoadTest {
 ```
 
 ## In essence the performance testing is all about : 
-+ [How to run a test in parallel in the context of a scenarios or usecase ?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing%28using-your-IDE%29/_edit#how-to-run-tests-in-parallel-in-context-of-one-or-more-scenarios-)
++ [How to run a test in parallel in the context of a scenarios or usecase ?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-run-tests-in-parallel-in-context-of-one-or-more-scenarios-)
 
-+ [How to run the tests in a gap of configurable amount of time ?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing%28using-your-IDE%29/_edit#how-to-run-tests-in-a-gap-of-configurable-amount-of-time-)
++ [How to run the tests in a gap of configurable amount of time ?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-run-tests-in-a-gap-of-configurable-amount-of-time-)
 
-+ [How to dynamically change the payload for every request during the load ?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing%28using-your-IDE%29/_edit#how-to-dynamically-change-the-payload-for-every-request-during-the-load-)
++ [How to dynamically change the payload for every request during the load ?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-dynamically-change-the-payload-for-every-request-during-the-load-)
 
-+ [How to assert the result once the response is received ?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing%28using-your-IDE%29/_edit#how-to-assert-the-result-once-the-response-is-received-)
++ [How to assert the result once the response is received ?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-assert-the-result-once-the-response-is-received-)
 
-+ [How to configure number of users to be launched in parallel ?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing%28using-your-IDE%29/_edit#how-to-configure-number-of-users-to-be-launched-in-parallel-)
++ [How to configure number of users to be launched in parallel ?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-configure-number-of-users-to-be-launched-in-parallel-)
 
-+ [How to configure how long the tests to be run?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing%28using-your-IDE%29/_edit#how-to-configure-how-long-the-tests-to-be-run)
++ [How to configure how long the tests to be run?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-configure-how-long-the-tests-to-be-run)
 
-+ [How to generate useful report(s) or statistics to explain the behaviour of the system under test?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing%28using-your-IDE%29/_edit#how-to-generate-useful-reports-or-statistics-to-explain-the-behaviour-of-the-system-under-test)
++ [How to generate useful report(s) or statistics to explain the behaviour of the system under test?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-generate-useful-reports-or-statistics-to-explain-the-behaviour-of-the-system-under-test)
 
-+ [How to reuse your existing test to feed it to generate load?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing%28using-your-IDE%29/_edit#how-to-reuse-your-existing-test-to-feed-it-to-generate-load)
++ [How to reuse your existing test to feed it to generate load?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-reuse-your-existing-test-to-feed-it-to-generate-load)
 
-+ [And how to achieve/run the above by using your IDE e.g. Eclipse or IntelliJ etc?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing%28using-your-IDE%29/_edit#and-finally-how-do-you-run-the-load-test-using-your-ide-eg-eclipse-or-intellij-etc)
++ [And how to achieve/run the above by using your IDE e.g. Eclipse or IntelliJ etc?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#and-finally-how-do-you-run-the-load-test-using-your-ide-eg-eclipse-or-intellij-etc)
 
-+ [Download or browse the demo project](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing%28using-your-IDE%29/_edit#download-or-browse-demo-project)
++ [Download or browse the demo project](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#download-or-browse-demo-project)
 
 Lets address one by one of the above aspects in details in the following section.
 
