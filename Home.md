@@ -1,4 +1,4 @@
-## Zerocoe Wiki
+## Zerocode Wiki
 
 (For helps and usage- Visit [Table of Contents](https://github.com/authorjapps/zerocode#table-of-contents--))
 
