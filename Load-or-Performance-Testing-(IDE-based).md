@@ -191,7 +191,7 @@ and the entire test case looks like following-
             "operation": "POST",
             "request": {
                 "body": {
-                    "id": "EMP-${RANDOM.NUMBER}",
+                    "id": "EMP-300000001",
                     "name": "Sindrella Holmes",
                     "address": "Piscataway, NJ Turn Pike, ZIP-300009"
                 }
@@ -199,11 +199,12 @@ and the entire test case looks like following-
             "assertions": {
                 "status": 201,
                 "body": {
-                    "id": "EMP-300000001"
+                    "id": "${create_emp.request.body.id}"
                 }
             }
         }
 ```
+where `${create_emp.request.body.id}` resolves to `EMP-300000001`. But you can simply put `EMP-300000001` too
 
 ### How to configure number of users to be launched in parallel ?
 > The `number.of.threads=2` above creates number of users.
