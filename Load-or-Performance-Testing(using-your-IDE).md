@@ -1,1 +1,0 @@
-Performance testing could be simple, easy and flexible to match your project need if it is based from your IDE!
