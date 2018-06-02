@@ -1,9 +1,11 @@
 
 ## Why using an IDE ?
 Performance testing could be simple, easy and flexible to match your project need if it is based from your IDE!
+It's **easy to fit into your CI Build pipe line** due to simplicity of **maven** based project.
+
 - [Download or Browse Demo Test Maven project](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing%28using-your-IDE%29/_edit#download-or-browse-demo-project) section towards the trail of this page
 
-There are many standalone tools available in the market which you need to install and configure in order to generate load. But you need to spent much time in installing and learning the product on Windows/Mac/Linux, to be able to fire tests in parallel.
+There are many standalone tools available in the market which you need to install and configure in order to generate load. But you need to spent much time in installing and learning the product on Windows/Mac/Linux, to be able to fire tests in parallel, and **not so easy** to fit into your CI Build pipe line .
 
 JUnit framework already provides various mechanisms to run the tests in parallel e.g. [ParallelComputer](https://junit.org/junit4/javadoc/4.12/org/junit/experimental/ParallelComputer.html) class or fork-options-and-parallel execution in the [Sure-Fire](http://maven.apache.org/surefire/maven-surefire-plugin/examples/fork-options-and-parallel-execution.html). These mechanisms also helps you to fire all tests in the suite in parallel and at the same time, as you can set it up simply inside a maven plugin; you don't need the pain of installing standalone or fancy products to this job.
 
