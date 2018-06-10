@@ -1,7 +1,7 @@
 
 ## Why using an IDE ?
 Performance testing could be simple, easy and flexible to match your project need if it is based from your IDE!
-It's **easy to fit into your CI Build pipe line** due to simplicity of **maven** based project.
+It's **easy to fit into your CI Build pipe line** due to simplicity of **maven** and **JUnit** based project.
 
 - [Download or Browse Demo Test Maven project](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#download-or-browse-demo-project) section towards the trail of this page
 
