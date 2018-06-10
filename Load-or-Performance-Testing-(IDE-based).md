@@ -38,6 +38,8 @@ public class LoadTest {
 
 + [How to run multiple test scenarios in parallel simulating production like parallel users ?](https://github.com/authorjapps/performance-tests#multi-scenario-parallel-load)
 
++ [How to increase or decrease load gradually?](https://github.com/authorjapps/performance-tests#load-with-gradually-increasing-or-decreasing)
+
 + [How to generate useful report(s) or statistics to explain the behaviour of the system under test?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-generate-useful-reports-or-statistics-to-explain-the-behaviour-of-the-system-under-test)
 
 + [How to reuse your existing test to feed it to generate load?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-reuse-your-existing-test-to-feed-it-to-generate-load)
