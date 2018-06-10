@@ -36,6 +36,8 @@ public class LoadTest {
 
 + [How to configure how long the tests to be run?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-configure-how-long-the-tests-to-be-run)
 
++ [How to run multiple test scenarios in parallel simulating production like parallel users ?](https://github.com/authorjapps/performance-tests#multi-scenario-parallel-load)
+
 + [How to generate useful report(s) or statistics to explain the behaviour of the system under test?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-generate-useful-reports-or-statistics-to-explain-the-behaviour-of-the-system-under-test)
 
 + [How to reuse your existing test to feed it to generate load?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-reuse-your-existing-test-to-feed-it-to-generate-load)
@@ -279,16 +281,16 @@ Hope this wiki page helps you in doing your performance testing easy, accurate a
 For any queries please write to `author.japps@gmail.com`
 
 ### Download or browse demo project
-1. Browse 
-- [the load generating test class](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/java/org/jsmart/zerocode/testhelp/tests/loadtesting/LoadGetEndPointTest.java), 
-- [the test-case containing the payload with assertions](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/resources/loadtesting/github_get_api_test_case.json) and 
-- [the JUnit test method pointing the JSON testcase](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/java/org/jsmart/zerocode/testhelp/tests/loadtesting/restendpoint/TestGitGubEndPoint.java)
++ Browse 
+  + [The load generating test class](https://github.com/authorjapps/performance-tests/blob/master/src/test/java/org/jsmart/zerocode/samples/load/parallelget/LoadGetTest.java), 
+  + [The test-case containing the payload with assertions](https://github.com/authorjapps/performance-tests/blob/master/src/test/resources/load_tests/get/get_screening_details_by_custid.json) and 
+  + [The JUnit test method pointing the JSON testcase](https://github.com/authorjapps/performance-tests/blob/master/src/test/java/org/jsmart/zerocode/samples/tests/get/GetScreeningServiceTest.java)
 
 or
 
-1. [Download the demo maven project](https://github.com/authorjapps/zerocode-hello-world/archive/master.zip) and run the `org.jsmart.zerocode.testhelp.tests.loadtesting.LoadGetEndPointTest` as simple JUnit, from your IDE or using `maven` command e.g.
-> mvn test -Dtest=org.jsmart.zerocode.testhelp.tests.loadtesting.LoadGetEndPointTest
++ Browse [the demo maven test project](https://github.com/authorjapps/performance-tests)
 
 or
 
-1. Browse [the demo test project source](https://github.com/authorjapps/zerocode-hello-world)
++ [Download the demo maven performance-test project](https://github.com/authorjapps/performance-tests/archive/master.zip) and run a sample load test e.g. `org.jsmart.zerocode.samples.load.parallelget.LoadGetTest` as simple JUnit from your IDE or using `maven` command e.g.
+> mvn test -Dtest=org.jsmart.zerocode.samples.load.parallelget.LoadGetTest
