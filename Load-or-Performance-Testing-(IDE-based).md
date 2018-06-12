@@ -24,6 +24,7 @@ public class LoadTest {
 ```
 
 ## In essence the performance testing is all about : 
++ [Load vs Stress, Horizontal Load vs Vertical Load](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-%28IDE-based%29/_edit#load-vs-stress-horizontal-load-vs-vertical-load)
 + [How to run a test in parallel in the context of a scenarios or usecase ?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-run-tests-in-parallel-in-context-of-one-or-more-scenarios-)
 
 + [How to run the tests in a gap of configurable amount of time ?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-run-tests-in-a-gap-of-configurable-amount-of-time-)
@@ -49,6 +50,18 @@ public class LoadTest {
 + [Download or browse the demo project](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#download-or-browse-demo-project)
 
 Lets address one by one of the above aspects in details in the following section.
+
+### Load vs Stress, Horizontal Load vs Vertical Load
+In a nutshell :
++ Load: Generate more parallel requests on the application server
+   + Monitor the system behaviour making large number of concurrent users fire the requests.
++ Stress: In a single request, pass a heavy payload 
+   + Monitor the system is behaviour with making your payload largest
+
++ Horizontal: Generate more parallel requests on the application server
+   + Monitor the system behaviour making large number of concurrent users fire the requests.
++ Vertical: In a single request, pass a heavy payload 
+   + Monitor the system is behaviour with making your payload largest
 
 ### How to run tests in parallel in context of one or more scenarios ?
 Annotate your load test class with :
