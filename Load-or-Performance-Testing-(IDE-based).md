@@ -24,7 +24,7 @@ public class LoadTest {
 ```
 
 ## In essence the performance testing is all about : 
-+ [Load vs Stress, Horizontal Load vs Vertical Load](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-%28IDE-based%29/_edit#load-vs-stress-horizontal-load-vs-vertical-load)
++ [Load vs Stress, Horizontal Load vs Vertical Load](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#load-vs-stress-horizontal-load-vs-vertical-load)
 + [How to run a test in parallel in the context of a scenarios or usecase ?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-run-tests-in-parallel-in-context-of-one-or-more-scenarios-)
 
 + [How to run the tests in a gap of configurable amount of time ?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-run-tests-in-a-gap-of-configurable-amount-of-time-)
