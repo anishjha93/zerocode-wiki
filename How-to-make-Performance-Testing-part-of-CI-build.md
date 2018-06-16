@@ -1,4 +1,4 @@
-Demo Maven Project for CI Build Link
+Demo Maven Project for CI Build set up
 ===
 https://github.com/authorjapps/performance-tests#performance-testing-testing-load-and-stress
 
