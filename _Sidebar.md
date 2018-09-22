@@ -1,1 +1,0 @@
-https://github.com/authorjapps/zerocode/wiki/About-Motivation
