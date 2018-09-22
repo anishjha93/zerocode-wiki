@@ -1,4 +1,4 @@
-+ [QnA](https://github.com/authorjapps/zerocode/wiki)
++ Questions and answers
   + [SSL http https connections supported?](https://github.com/authorjapps/zerocode/wiki/QnA:-Does-it-support-https-connections%3F)
   + [How to assert array size Greater-Than Lesser-Than etc?](https://github.com/authorjapps/zerocode/wiki/QnA:-How-to-assert-an-array-in-the-response-with-SIZE-Greater-Than-or-Lesser-Than-etc%3F)
   + [How to invoke POST api?](https://github.com/authorjapps/zerocode/wiki/QnA:-How-to-invoke-POST-apis-%3F)
