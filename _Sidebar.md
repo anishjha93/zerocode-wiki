@@ -4,4 +4,4 @@
   + [How to invoke POST api?](https://github.com/authorjapps/zerocode/wiki/QnA:-How-to-invoke-POST-apis-%3F)
 
 + Best Practices
-  + [An User journey to a test case - Quick n easy]()
+  + [An User journey(CRUD operation) to a test case - Quick n easy](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
