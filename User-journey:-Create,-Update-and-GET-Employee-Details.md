@@ -3,13 +3,15 @@ USER JOURNEY1
 ```
 GIVEN- The Create-API details
 WHEN I invoke the POST operation with a employee payload
-THEN I will create a new employee and assert the 201(created) status and newly created employee ID.
+THEN I will create a new employee 
+AND assert the 201(created) status and newly created employee ID.
 ```
 + AC2
 ```
 GIVEN- The Update-API 
 WHEN I invoke the PUT operation to update the employee by the ID 
-THEN I will update the existing employee and assert the 200(OK) status and updated fields.
+THEN I will update the existing employee 
+AND assert the 200(OK) status and updated fields.
 ```
 + AC3
 ```
