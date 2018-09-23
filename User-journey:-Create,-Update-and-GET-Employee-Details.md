@@ -42,9 +42,18 @@ Next you get your API end points from the spec or api-doc(e.g. swagger) and fit 
 Next you **Copy-Paste your payload and assertions** section which you might get from the `spec` or api-doc(swagger). See below the **full-blown** steps(That's it - _you are ready to run._) How simple was that !
 <img width="555"  height="726" alt="Full Blown steps" src="https://user-images.githubusercontent.com/12598420/45925567-ef007780-bf0f-11e8-8daf-12e7c8a12b82.png">
 
-Done.
+
+To complete the `D` part the CRUD operation(if your application has implemented this operation), you can simply add one more step or 2 more steps as below to verify it works perfectly ok.
+
+<img width="504"  height="272" alt="Delete steps" src="https://user-images.githubusercontent.com/12598420/45928093-f2a6f500-bf35-11e8-8d4c-202849917c06.png">
+
+
+
+> 
+Done. Happy days !
 
 ***
+
 
 _If you have little more time to read below, see what you escaped and how much time you saved !_
 
