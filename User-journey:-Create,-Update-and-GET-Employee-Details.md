@@ -41,3 +41,103 @@ Next you get your API end points from the spec or api-doc(e.g. swagger) and fit 
 
 Next you **Copy-Paste your payload and assertions** section which you might get from the `spec` or api-doc(swagger). See below the **full-blown** steps(That's it - _you are ready to run._) How simple was that !
 <img width="555"  height="726" alt="Full Blown steps" src="https://user-images.githubusercontent.com/12598420/45925567-ef007780-bf0f-11e8-8daf-12e7c8a12b82.png">
+
+Done.
+
+***
+
+_If you have little more time to read below, see what you escaped and how much time you saved !_
+
++ No need to write pojos and builder for the domain objects(e.g. Employee here)
++ No need of any serialization/deserialization
++ No need of http client calls and read the response
++ No need to `aseretThat(expected, is(actual))` etc multiple times
++ No need of any feature files and syntax searchings
++ No need of English statements and grammars
+
+See below what you did not have to do(luckily?) :
+===
+JOURNEY1 :
+
++ Step 1
+
+~~Employee emp =~~
+    ~~EmployeeBuilder.aNewInstance();~~
+    ~~.name("Larry P")~~
+    ~~.job("Full Time")~~
+    ~~.build()~~
+
+> Make the POST call
+
+~~ObjectMapper objectMapper = ObjectMapperProvider.getInjectedObjectMapper();~~
+
+~~HttpResponse<Object> postResponse =~~
+
+~~aHttpClient.post("http://host:port/api/v1/persons")~~
+
+  ~~.header("accept", "application/json")~~
+
+  ~~.body(objectMapper.writeValueAsString(emp))~~
+
+  ~~.execute();~~
+
+> Assert the response
+
+~~assertThat(postResponse.getStatusCode(), is(201))~~
+
+~~assertThat(postResponse.getEntity().getId(), is(1001))~~
+
+
++ Step 2
+
+> Create an employee with updated payload
+
+~~Employee empForUpdate = EmployeeBuilder.aNewInstance()~~
+    ~~.name("Larry Page")~~
+    ~~.job("Co-Founder")~~
+    ~~.build();~~
+
+> Make a PUT call
+
+~~HttpResponse<Employee> putResponse =~~
+
+~~aHttpClient.put("http://host:port/api/v1/persons/" + postResponse.getEntity().getId())~~
+
+  ~~.header("accept", "application/json")~~
+
+  ~~.body(objectMapper.writeValueAsString(empForUpdate))~~
+
+  ~~.execute();~~
+
+~~Employee empUpdated = response.getUser();~~
+
+> Assert the response
+
+~~assertThat(putResponse.getStatusCode(), is(200))~~
+
+~~assertThat(empUpdated.getName(), is(empForUpdate.getName()))~~
+
+~~assertThat(empUpdated.getJob(), is(empForUpdate.getJob()))~~
+
+
++ Step 3
+
+> Make the GET call
+
+~~HttpResponse<Employee> response =~~
+
+~~aHttpClient.get("http://host:port/api/v1/persons/" + postResponse.getEntity().getId())~~
+
+  ~~.header("accept", "application/json")~~
+
+  ~~.execute();~~
+
+~~Employee empFetched = response.getEmployee();~~
+
+> Assert the response
+
+~~assertThat(response.getStatusCode(), is(200))~~
+
+~~assertThat(empFetched.getName(), is(empForUpdate.getName()))~~
+
+~~assertThat(empFetched.getJob(), is(empForUpdate.getJob()))~~
