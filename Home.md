@@ -6,7 +6,7 @@ Zerocode helps you to design better Test Cases for your business features, maint
 
 Your tests will not be cumbersome and complex anymore. Zerocode makes your tests independent, complete and structured and easily maintainable by the team or the new comers. It enables you to write your `API End Point Tests`, `Consumer Contract Tests` and `End to End Tests` etc, at the **speed** of writing **JUnit** tests.
 
-Zerocode at its core uses simple and powerful libs like `Google Jackson` for JSON assertions, `Apache HttpClient` for invoking REST and SOAP APIs, and Spring style place holders `${JSON Path}` for result assertions. It does not limit you to use Apache HttpClient, it enables you to easily override the framework behaviour with `@UseHttpClient` to use e.g. UniRest HttpClient, RestEasy HttpClient or any of your custom HttpClient that suits your project needs. 
+Zerocode at its core uses simple and powerful libs like `Jackson` for JSON assertions, `Apache HttpClient` for invoking REST and SOAP APIs, `Google Guice` for `DI` and Spring style place holders `${JSON Path}` for result assertions. It does not limit you to use Apache HttpClient, it enables you to easily override the framework behaviour with `@UseHttpClient` to use e.g. UniRest HttpClient, RestEasy HttpClient or any of your custom HttpClient that suits your project needs. 
 
 Zerocode gives you out of the box **SSL** enabled Http Client and **SOAP** Client along with the optional MIME type converters e.g. XML to JSON if needed to increase test readability. It provides you with the options to configure **Corporate Proxy** at runtime to authenticate API invocations.
 
