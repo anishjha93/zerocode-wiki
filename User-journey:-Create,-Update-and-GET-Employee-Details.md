@@ -23,6 +23,8 @@ AND assert the status 200(OK) along with updated as well as non-updated fields
 
 To write a test-case for the above CRUD operation scenario is quite easy, just your IDE's **JSON editor is enough**. And at the same time you **don't have to search** for or think hard of any **syntaxes** to do the job. That means, you are ready with a BDD scenario test in couple of minutes with simple JSON steps(see below).
 
+> _Note- The `Zerocode` lib takes care of the JSON comparison, you can choose to skip or ignore the fields you need_
+
 <img width="566" alt="expanded-simple" src="https://user-images.githubusercontent.com/12598420/45925725-fe34f480-bf12-11e8-941c-cb3ec8da6c3e.png"> <br />
 
 That's it, done.
