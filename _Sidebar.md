@@ -5,3 +5,4 @@
 
 + Best Practices
   + [An User journey(CRUD operation) to a test case - Quick n easy](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
+  + [Array assertions made easy, incl. size and element finder](https://github.com/authorjapps/zerocode/wiki/Array-assertions-made-easy--e.g.-SIZE,-element-finder)
