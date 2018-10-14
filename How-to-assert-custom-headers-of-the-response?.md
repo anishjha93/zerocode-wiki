@@ -5,9 +5,9 @@ e.g.
             "assertions": {
                 "status": 200,
                 "headers" : {
-                    "X-Server-Token": 190215, //<--- e.g. If this is random, then use "$NOT.NULL"
+                    "X-Server-Token": 190215, //<--- e.g. If this is random or indeterministic, then use "$NOT.NULL"
                     "Server" : [ "hsbcbank.co.uk" ],
-                    "DateTime" : "$NOT.NULL" //<--- Not null due to undeterministic for every response 
+                    "DateTime" : "$NOT.NULL" //<--- Not null due to indeterministic for every response 
                 },
                 "body": {
                     "login" : "octocat",
@@ -16,6 +16,6 @@ e.g.
             }
 ```
 
- In case you want to use a custom header `token` for your **next step**, then just point your `JSON path` to that header. 
+In case you want to use a custom header `token` for your **next step**, then just point your `JSON path` to that header. 
  e.g.
- `${$.create_emp.response.headers.X-Server-Token}`  <--- This will resolve to 190215
+ > `${$.create_emp.response.headers.X-Server-Token}`  //<--- This will resolve to `190215`
