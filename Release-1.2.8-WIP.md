@@ -1,0 +1,3 @@
+- Iss-133 - Supports now `web.` - by CoolJavaDev
+- Iss-49 - New WireMock - by arunvelusamyd 
+- Iss-2 - JSON.File support - by Nirmal Fleet - WIP_
