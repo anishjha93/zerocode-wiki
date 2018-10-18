@@ -21,7 +21,11 @@ THEN I will fetch the employee details
 AND assert the status 200(OK) along with updated as well as non-updated fields 
 ```
 
-To write a test-case for the above CRUD operation scenario is quite easy, just your IDE's **JSON editor is enough**. And at the same time you **don't have to search** for or think hard of any **syntaxes** to do the job. That means, you are ready with a BDD scenario test in couple of minutes with simple JSON steps(see below).
+To write a test-case for the above CRUD operation scenario is quite easy, just your IDE's **JSON editor is enough** to hook these steps. Example of `POST` and `GET` step would look like below(simple and clean)
+
+<img width="624" alt="post_get_user" src="https://user-images.githubusercontent.com/12598420/47145467-bc089400-d2c1-11e8-8707-8e2d2e8c3127.png">
+
+And at the same time you **don't have to search** for or think hard of any **syntaxes** to do the job. That means, you are ready with a BDD scenario test in couple of minutes with simple JSON steps(see below).
 
 > _Note- The `Zerocode` lib takes care of the JSON comparison, you can choose to skip or ignore the fields you need_
 
