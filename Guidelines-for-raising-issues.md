@@ -10,3 +10,5 @@
 
 > Easiest is to fork this HelloWorld repo and push it. 
 _(Or if you need dev access, we can add you as a contributor to this.)_
+
+1. Clearly capture into the story/ticket what is actual and what is expected result
