@@ -2,124 +2,59 @@
 
 (For helps and usage- Visit [Table of Contents](https://github.com/authorjapps/zerocode#table-of-contents--))
 
-Zerocode helps you to design better Test Cases for your business features, maintain and update easily to avoid sleepless nights. It is built on extending the **Junit core runners**. You simply annotate your test method with JUnit **@Test** and run like unit tests, as well optionally you can use`Suite` Runner for CI builds. Testing becomes an easy and effortless job due to the **simplicity** nature of JSON and the native support by popular IDEs e.g. Eclipse /IntelliJ /NetBeans etc with no extra plugin. 
+[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) helps you to design better Test Cases for your business features, then maintain and update them easily to avoid sleepless nights. It is built on extending the **Junit core runners**. You simply annotate your test method with JUnit **@Test** and run like JUnit tests, as well as optionally you can use `Suite` Runners for CI builds and env switching. Testing becomes an easy and effortless job due to the **simplicity** nature of JSON and the native support by popular IDEs e.g. Eclipse /IntelliJ /NetBeans etc with no extra plugin. Super easy !
 
-Your tests will not be cumbersome and complex anymore. Zerocode makes your tests independent, complete and structured and easily maintainable by the team or the new comers. It enables you to write your `API End Point Tests`, `Consumer Contract Tests` and `End to End Tests` etc, at the **speed** of writing **JUnit** tests.
+Your tests will not be cumbersome and complex anymore. Zerocode makes your tests independent, complete and structured and easily maintainable by the team or the new comers. It enables you to write your `API End Point Tests`, `Consumer Contract Tests`, `End to End Tests` and `Performance Tests(Load/Stress)` etc, at the **speed** of writing **JUnit** tests with accuracy transparent to all stakeholders. 
 
-Zerocode at its core uses simple and powerful libs like `Jackson` for JSON assertions, `Apache HttpClient` for invoking REST and SOAP APIs, `Google Guice` for `DI` and Spring style place holders `${JSON Path}` for result assertions. It does not limit you to use Apache HttpClient, it enables you to easily override the framework behaviour with `@UseHttpClient` to use e.g. UniRest HttpClient, RestEasy HttpClient or any of your custom HttpClient that suits your project needs. 
+Zerocode at its core uses simple and powerful libs like `Jackson` for JSON assertions, `Apache HttpClient` for invoking REST and SOAP APIs, `Google Guice` for `DI` and Spring style place holders `${JSON Path}` for result assertions. It does not limit you to use Apache HttpClient, it enables you to easily override the framework behaviour with `@UseHttpClient` to use e.g. `UniRest` HttpClient, `RestEasy` HttpClient or any of your custom HttpClient that suits your project needs. 
 
-Zerocode gives you out of the box **SSL** enabled Http Client and **SOAP** Client along with the optional MIME type converters e.g. XML to JSON if needed to increase test readability. It provides you with the options to configure **Corporate Proxy** at runtime to authenticate API invocations.
+Zerocode gives you out of the box **SSL** enabled Http Client and **SOAP** Client along with the optional MIME type converters e.g. XML to JSON if needed to increase test readability. It provides you with the options to configure **Corporate Proxy** at runtime to allow API invocations via proxies.
 
-Zerocode has built general functionality which enables you to **extend** and enrich the **framework** behaviour by simply executing external Java methods to achieve busines goals rather than putting every feature into the core framework. 
+Zerocode has built general functionality which enables you to **extend** and enrich the **framework** behaviour by simply executing external Java methods to achieve business goals rather than putting every feature into the core framework. 
 
-Zerocode prints the request, response into the console as well as to the log file in the `/target` folder in a **human readable** format, along with producing granular report in the `CSV format` and `Interactive Fuzzy Search Enabled Chart report`. You can `search and filter` the junit report by `author` or `test-scenario` or `test-step` or any relevant matching text making it easy to trace the step in the context of a scenario or user journey.
+Zerocode prints the request, response into the console as well as to the log file in the `/target` folder in a **human/business readable** format, along with producing granular report in the `CSV format` and `Interactive Fuzzy Search Enabled Chart report`. You can `search and filter` the test report by `author` or `test-scenario` or `test-step` or any relevant matching text making it super easy to trace a step in the context of a scenario or user-journey.
 
-Zerocode aims to make development and testing **easier and faster**, not harder and slower. Allows both Dev team and Test team to contribute towards better test cases which finally makes a product better **quality**. Even the managers and BAs can read and understand the tests as the tests don't involve programming.
-Testing REST apis with Zero Code JSON assertion based REST test framework lib. Great tool for `REST api`, `SOAP api` and `DB integration` test automation and [much more](https://github.com/authorjapps/zerocode#table-of-contents--)!
+Zerocode aims to make development and testing **easier and faster**, not harder and slower. Allows both Dev team and Test team to collaborate towards better better **quality** of the software. Even the managers and BAs can read and understand the tests easily if they want to.
 
-Learn how the ZeroCode testing library can make your life easier and writing tests faster by simply putting your **thoughts** into **executable test** scenarios and **not enforcing** you to write boiler plate glue code and sticky wrappers around your tests. Tests become neat and clean as well as easily maintainable.
+Handy tool even for manual testers dealing with `REST api`, `SOAP api` and `DB integration` tests [much more](https://github.com/authorjapps/zerocode#table-of-contents--) to keep it side by side of Postman rest-client!
 
-You have still options to write the `glue code` if you have a need to do, also it allows to **override** the framework behavior by your own **java code** which becomes not only **reusable** but becomes **part of the framework**.
+Learn how the ZeroCode testing library can make your life easier and writing tests faster by simply putting your **thoughts** into **executable test** scenarios and **not enforcing** you to write boiler plate glue code and sticky wrappers around your tests adding extra overhead/maintenance.
+
+It allows you to **override** the framework behavior by your own **java code** which becomes not only **reusable** but becomes a **part of the framework**.
 
 See the [HelloWorldTest](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/java/org/jsmart/zerocode/testhelp/tests/HelloWorldTest.java)
 
-## Why?
-
-* It's simple and easy to use, no boiler-plate code needed for testers and developers or any stakeholders to understand what's being tested.
-
-* Automate and write your end-to-end tests and integration-tests at the speed of writing unit tests 
+## How?
 
 * Imagine you have a  REST api  to test with following behavior e.g.
 
-```
-Usecase scenario: REST API to get an empoyee details,
-URL: http://host:port/api/v1/persons/1001,
-Operation: GET,
-Expected JSON Response body as-
-{
-   "id": 1001,
-   "name": "Larry P",
-   "job": "Full Time"
-},
-Expected Response status: 200
-```
+e.g. Your below User-Journey or ACs(Acceptance Criterias) or a scenario,
+```java
+AC1:
+GIVEN- the POST api end point '/api/v1/users' to create an user,     
+WHEN- I invoke the API,     
+THEN- I will receive the 201 status with the a user ID and headers 
+AND- I will validate the response
 
-and your happy scenario test case code exactly looks like below e.g.
+AC2:
+GIVEN- the REST api GET end point '/api/v1/users/${created-User-Id}',     
+WHEN- I invoke the API,     
+THEN- I will receive the 200(Ok) status with body(user details) and headers
+AND- I will assert the response
+```
+translates to the below executable JSON in `Zerocode` - Simple and clean ! <br/>
+_(See here [a full blown CRUD operation scenario](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details) with POST, PUT, GET, DELETE example.)_ <br/>
 
-```javaScript
-{
-      "name": "get_emp_details",
-      "url": "http://host:port/api/v1/persons/1001,",
-      "operation": "GET",
-      "request": {},
-      "assertions": {
-          "status": 200,
-          "body": {
-             "id": 1001,
-             "name": "Larry P",
-             "job": "Full Time"
-          }
-      }
-}
-```
+<img width="624" alt="post_get_user" src="https://user-images.githubusercontent.com/12598420/47145467-bc089400-d2c1-11e8-8707-8e2d2e8c3127.png">
 
-, your negative scenario test case code exactly looks like below e.g.
-```
-{
-      "name": "get_not_existing_emp_details",
-      "url": "http://host:port/api/v1/persons/9999",
-      "operation": "GET",
-      "request": {},
-      "assertions": {
-          "status": 404,
-          "body": {
-             "message": "No such employee exists"
-          }
-      }
-}
-```
+and it is **declarative** DSL, with the `request/response` fields available for the next steps via the `JSON Path`.
 
-and if you need them together as a scenario, then the code looks exacly like below
-```
-{
-    "scenarioName": "GET Employee Details Happy and Sad path",
-    "steps": [
-        {
-            "name": "get_emp_details",
-            "url": "http://host:port/api/v1/persons/1001,",
-            "operation": "GET",
-            "request": {},
-            "assertions": {
-                "status": 200,
-                "body": {
-                    "id": 1001,
-                    "name": "Larry P",
-                    "job": "Full Time"
-                }
-            }
-        },
-        {
-            "name": "get_non_existing_emp_details",
-            "url": "http://host:port/api/v1/persons/9999",
-            "operation": "GET",
-            "request": {},
-            "assertions": {
-                "status": 404,
-                "body": {
-                    "message": "No such employee exists"
-                }
-            }
-        }
-    ]
-}
-```
+, then you just stick these into a JSON file named e.g. `post_n_get_vanila_test.json`, anywhere in the  `test/resources` folder,
 
-, then you just stick these into a JSON file named e.g.  `"get_happy_and_sad.json"`  anywhere in the  `test/resources` folder,
-
-and run the code like below  pointing to that JSON file  and then you are done with testing.
+and run the code like below pointing to that JSON file. That's it.
 ```
+@TargetEnv("github_host.properties")
 @RunWith(ZeroCodeUnitRunner.class)
-@HostProperties(host="http://localhost", port=8088, context = "")
 public class MyRestApiTest{
 
     @Test
@@ -128,57 +63,27 @@ public class MyRestApiTest{
     }
 }
 ```
+
+Keep in mind: It's simple JSON. <br/>
+~~_No feature files, no extra plugins, no statements or grammar syntax overhead._~~ 
+
 ## How?
-* Zerocode Examples and samples are here to [download or clone](https://github.com/authorjapps/helpme/tree/master/zerocode-rest-help)  
+* HelloWorld Examples and samples are here to [download or clone](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world)  
 
-* The  **latest**  maven dependency can be found here at [latest-maven-central-zerocode](http://search.maven.org/#search%7Cga%7C1%7Czerocode-rest-bdd)
+* The  **latest**  maven dependency can be found here at [Maven central](http://search.maven.org/#search%7Cga%7C1%7Czerocode-rest-bdd)
 
-```
+```xml
 <dependency>
     <groupId>org.jsmart</groupId>
     <artifactId>zerocode-rest-bdd</artifactId>
-    <version>1.1.27</version>
+    <version>1.2.x</version>
 </dependency>
 ```
 * You can organize and arrange the tests to suit your requirements, by folder/feature/release wise
 
-* You can add as many tests as you want by just annotating the test method. See [here](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/java/org/jsmart/zerocode/testhelp/tests/ZeroCodeSampleUnitRunner.java) some examples
-
-You can assert the entire JSON in the assertion block however complex and hierercical structure it might be, just by  copy paste  of the entire JSON. Hassle free, no serialize/deserialze is needed !
-
-You can also use only the perticular section or even an element of a JSON using JSON path e.g.  `$.get_emp_details.response.body.id`  which will resove to  1001  in the above case.
-
-You can test the consumer contract APIs by creating specific runners specific to clients.
-
-## Examples
-
-* Working examples of various use cases are here. 
-
-* You can use place holders for various outcomes when you need.
-
-* Examples of some features are here
-
-    * * Re-using [Request/Response](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/13_random_and_static_string_number_place_holders.json) via [JSON Path](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/15_place_holders_of_request_response.json)
-
-    * * Asserting [NULL or NOT NULL](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/06_asserting_null_or_notnull_json_content.json)
-
-    * * Executing [External Java Method](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/11_execute_local_java_program.json)
-
-    * * Chaining steps [using previous request or response](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/12_chaining_multiple_steps_with_prev_response.json) 
-
-    * * Generating [Custom ID example](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/01_vanila_placeholders/01_generatinng_ids_and_sharing_among_steps.json) .
-
-    * * Asserting  part of a string . See [$CONTAINS.STRING](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/09_asserting_string_messages.json)
-    
-    * * Using custom Http Client upon project demand. See [Using Custom Http Clinet](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/java/org/jsmart/zerocode/testhelp/zcmore/ZeroCodeUnitRunnerWithCustomHttpClient.java)
-    
-    * * Passing value in headers. See [headers example](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/16_passing_headers_to_rest_apis.json)
-
-    * *  More place holders and their usages are [here](https://github.com/authorjapps/zerocode#99) and the link to the [README](https://github.com/authorjapps/zerocode/blob/master/README.md) file is here.
-
 ## Test Report
 
-Test reports are generated into  `/target`  folder everytime the tests are run. Sample [reports are here](https://github.com/authorjapps/zerocode#generated-reports-and-charts) format. 
+Test reports are generated into  `/target`  folder every time the tests are run. Sample [reports are here](https://github.com/authorjapps/zerocode/blob/master/README.md#6) format. 
 
 ## Test Logs
 
