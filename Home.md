@@ -22,11 +22,9 @@ Learn how the ZeroCode testing library can make your life easier and writing tes
 
 It allows you to **override** the framework behavior by your own **java code** which becomes not only **reusable** but becomes a **part of the framework**.
 
-See the [HelloWorldTest](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/java/org/jsmart/zerocode/testhelp/tests/HelloWorldTest.java)
+See the [HelloWorldTest](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/java/org/jsmart/zerocode/testhelp/tests/helloworld/JustHelloWorldTest.java)
 
 ## How?
-
-* Imagine you have a  REST api  to test with following behavior e.g.
 
 e.g. Your below User-Journey or ACs(Acceptance Criterias) or a scenario,
 ```java
@@ -48,18 +46,17 @@ _(See here [a full blown CRUD operation scenario](https://github.com/authorjapps
 <img width="624" alt="post_get_user" src="https://user-images.githubusercontent.com/12598420/47145467-bc089400-d2c1-11e8-8707-8e2d2e8c3127.png">
 
 and it is **declarative** DSL, with the `request/response` fields available for the next steps via the `JSON Path`.
+Then you just stick this into a JSON file named e.g. `post_n_get_user_journey_test.json`, anywhere in the  `test/resources` folder,
 
-, then you just stick these into a JSON file named e.g. `post_n_get_vanila_test.json`, anywhere in the  `test/resources` folder,
-
-and run the code like below pointing to that JSON file. That's it.
+and run the code like below by pointing to that JSON file. That's it.
 ```
 @TargetEnv("github_host.properties")
 @RunWith(ZeroCodeUnitRunner.class)
 public class MyRestApiTest{
 
     @Test
-    @JsonTestCase("get_happy_and_sad.json")
-    public void testGetHappyAndSad() throws Exception {
+    @JsonTestCase("post_n_get_user_journey_test.json")
+    public void testPostAndGet_happy() throws Exception {
     }
 }
 ```
@@ -189,4 +186,4 @@ Assertion path '$.status' with actual value '200' did not match the expected val
 ```
 
 ## Contribute
-Raise [issues](https://github.com/authorjapps/zerocode/issues) and [contribute](https://github.com/authorjapps/zerocode/blob/master/CONTRIBUTING.md) to improve zerocode library and add more essential features which you might need by yourself.
+Raise [issues](https://github.com/authorjapps/zerocode/issues) and [contribute](https://github.com/authorjapps/zerocode/blob/master/CONTRIBUTING.md) to improve zerocode by becoming a contributor yourself.
