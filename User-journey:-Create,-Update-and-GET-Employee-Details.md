@@ -70,7 +70,7 @@ _If you have little more time to read below, see what all hassles you escaped an
 + No need to write pojos and builder for the domain objects(e.g. Employee here)
 + No need of any serialization/deserialization
 + No need of http client calls and read the response
-+ No need to `aseretThat(expected, is(actual))` etc multiple times
++ No need to `assertThat(expected, is(actual))` etc multiple times
 + No need of any feature files and syntax searchings
 + No need of English statements and grammars
 
@@ -160,3 +160,48 @@ JOURNEY1 :
 ~~assertThat(empFetched.getName(), is(empForUpdate.getName()))~~
 
 ~~assertThat(empFetched.getJob(), is(empForUpdate.getJob()))~~
+
+
+<br/>
+<br/>
+
+Also you escaped the **fancy and hard** way of doing things with special attention to English statements and grammars. See below:
+
+***
+
+This approach might take different `shapes and forms` for developers/testers with spending too much time in fitting the **ACs/User-Journeys** into the actual executable tests. 
+
+**e.g.** <br/>
+~~GIVEN- the REST api POST end point,~~ <br/>
+~~WHEN- I invoke the API with a payload,~~ <br/>
+~~THEN- I will receive 201(Created) status with a newly created ID and assert the response~~ <br/>
+
+or
+
+~~GIVEN- the REST url and the method POST,~~ <br/>
+~~WHEN- I invoke the API with a body,~~ <br/>
+~~THEN- I will receive 201(Created) status with newly created ID~~ <br/>
+~~AND assert the response~~ <br/>
+
+or
+
+~~GIVEN- the REST url /api/v1/persons/ ~~ <br/>
+~~AND the http method POST ~~ <br/>
+~~WHEN- I invoke the API using a HTTP client and send the body,~~ <br/>
+~~THEN- I will receive 200(OK) status with body~~ <br/>
+~~AND assert the response~~ <br/>
+
+> and so on...
+
+**Note**- Too much is going on the above around an `user journey`, in terms of writing correct sentences or **nearly** correct sentences/grammars to come up with a test scenario. 
+> And imagine the situation you will be when you have more number of steps in an user journey !
+
+<br/>
+
+Ok, then where does the english statements/grammars makes sense?
+
+***
+It makes sense when the **BAs**(Business Analysts) or **managers** or non-technology folks while creating the stories and defining the entry and exit criteria of the tickets for a business scenario or User-Journey. But technology folks simply picking these statements and trying hard syntactically to fit these into executable tests is bit too much of an overhead. 
+<br/>
+<br/>
+But you are free to choose the `tools`, `technologies` and `solutions` which best fits to your project and situation.
