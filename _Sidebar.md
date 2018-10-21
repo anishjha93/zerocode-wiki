@@ -9,7 +9,7 @@
   + [Array assertions made easy, incl. size and element finder](https://github.com/authorjapps/zerocode/wiki/Array-assertions-made-easy--e.g.-SIZE,-element-finder)
 
 + [Read Our Blogs](https://github.com/authorjapps/zerocode/wiki/Read-Our-Blogs)
-  + [Top 16 Open Source API Testing Tools For REST & SOAP Services](https://www.joecolantonio.com/12-open-source-api-testing-tools-rest-soap-services/) - joecolantonio (Lists popular tools - Global) 
+  + [Top 16 Open Source API Testing Tools For REST & SOAP Services](https://www.joecolantonio.com/12-open-source-api-testing-tools-rest-soap-services/) - joecolantonio (Lists popular tools - Globally) 
   + [Zero defect APIs - Build Pipe Line](https://medium.com/@bethecodewithyou/develop-zerodefect-apis-with-zerocode-cadd9dc2a430) - Medium
   + [Develop ZeroDefect API's with ZeroCode!](https://extremeportal.blogspot.com/2018/10/zerodefect-rest-apis-with-zerocode.html) - Extreme Portal ( A **must read** for all developers and test engineers)
   + [Performance testing using JUnit and maven](https://www.codeproject.com/Articles/1251046/How-to-do-performance-testing-using-JUnit-and-Mave) - Codeproject
@@ -18,10 +18,9 @@
   + [Testing need not be harder or slower, it should be easier and faster](https://dzone.com/articles/rest-api-testing-using-the-zerocode-json-based-bdd) - DZone
 
 + Extensions
-  + [In-Memory Spring-Boot Integration testing](TODO)
-  + [Load testing a Cassandra Application(Spring)](TODO)
+  + [In-Memory Spring-Boot Integration testing](https://github.com/authorjapps/spring-boot-integration-test)
+  + [Load testing a Cassandra Application(Spring)](https://github.com/authorjapps/zerocode-spring-junit)
 
 + Core Features
-  + [External JSON file as reusable content](TODO)
+  + [External JSON file as reusable content](https://github.com/authorjapps/zerocode/wiki/External-JSON-file-as-reusable-content)
   + [Env Switching - CI,DIT,SIT etc](TODO)
-  + 
