@@ -1,8 +1,9 @@
 The following examples shows how to **reuse** an external JSON file or files in the Zerocode test cases
 
-From this version onwards, Zerocode supports this feature. But there is a usage warning around it not to overuse this feature.
+From this version onwards, Zerocode supports this feature. But there is a **usage warning** around it not to overuse this feature.
 
 **Suggestions and Recommendations:**
+===
  * Try to keep the test cases as independent possible. Do not create too much dependencies on external files which will add unnecessary complexity to the project. 
  * The complexity could be in terms project maintenance or interpreting the test case itself. Traversing around the tests are painful and we pay a price for it if they not readable.
  * We should use the IDE features which now a days, makes it a lot easier in terms of dealing with JSON contents to keep the testing life cycle simple n clean.
