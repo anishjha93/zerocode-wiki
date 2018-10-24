@@ -25,11 +25,13 @@ public class EnvPropertyHelloWorldTest {
 }
 
 /**
- Set "env=ci" in Jenkins (or via .profile in a Unix machine, System/User properties in Windows)
- then the runner picks "hello_world_host_ci.properties" and runs.
+ Set "env=ci" in Jenkins (or via .profile in a Unix machine, 
+ System/User properties in Windows).  Then the runner picks "hello_world_host_ci.properties" 
+ and runs.
  if -Denv=sit, then runner looks for and picks "hello_world_host_sit.properties" and runs.
 
-If `env` not supplied, then defaults to "hello_world_host.properties" which by default mentioned mentioned via @TargetEnv
+ If `env` not supplied, then defaults to "hello_world_host.properties" 
+ which by default mentioned mentioned via @TargetEnv
  
  -or-
  
@@ -42,7 +44,8 @@ If `env` not supplied, then defaults to "hello_world_host.properties" which by d
  mvn clean install -Denv=sit
  
  and make sure:
- hello_world_host_ci.properties and hello_world_host_sit.properties etc are available in the resources folder or class path.
+ `hello_world_host_ci.properties` and hello_world_host_sit.properties etc are available in the 
+ resources folder or class path.
  */
 ```
 
