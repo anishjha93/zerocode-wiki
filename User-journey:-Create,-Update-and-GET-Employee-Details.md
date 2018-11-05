@@ -212,7 +212,7 @@ See this in action(HelloWorld):
 ===
 The simplified HelloWorld projects are in GitHub repo to clone and run locally
 
-Simple HelloWorld repo : https://github.com/authorjapps/zerocode-hello-world
+- Simple HelloWorld repo : https://github.com/authorjapps/zerocode-hello-world
 
-(More examples and usages : https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world )
+- (More examples and usages : https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world )
 
