@@ -1,6 +1,6 @@
 
 
-                                               ** USER JOURNEY **
+                                ** USER JOURNEY **
 + AC1
 ```
 GIVEN- The Create-API details
