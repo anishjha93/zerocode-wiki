@@ -1,4 +1,6 @@
-USER JOURNEY1
+
+
+                                               ** USER JOURNEY **
 + AC1
 ```
 GIVEN- The Create-API details
@@ -21,7 +23,7 @@ THEN I will fetch the employee details
 AND assert the status 200(OK) along with updated as well as non-updated fields 
 ```
 
-To write a test-case for the above CRUD operation scenario is quite easy, just your IDE's **JSON editor is enough** to hook these steps. Example of `POST` and `GET` step would look like below(simple and clean)
+To write a test-case for the above CRUD operation scenario is quite easy using [Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world), just your IDE's **JSON editor is enough** to hook these steps. Example of `POST` and `GET` step would look like below(simple and clean)
 
 <img width="624" alt="post_get_user" src="https://user-images.githubusercontent.com/12598420/47145467-bc089400-d2c1-11e8-8707-8e2d2e8c3127.png">
 
@@ -205,3 +207,12 @@ It makes sense when the **BAs**(Business Analysts) or **managers** or non-techno
 <br/>
 <br/>
 But you are free to choose the `tools`, `technologies` and `solutions` which best fits to your project and situation.
+
+See this in action(HelloWorld):
+===
+The simplified HelloWorld projects are in GitHub repo to clone and run locally
+
+Simple HelloWorld repo : https://github.com/authorjapps/zerocode-hello-world
+
+(More examples and usages : https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world )
+
