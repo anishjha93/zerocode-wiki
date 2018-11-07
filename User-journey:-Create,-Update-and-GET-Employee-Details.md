@@ -1,26 +1,29 @@
 
 
-                  ** USER JOURNEY **
+                  ** USER JOURNEY - Acceptance Criteria(AC) **
 + AC1
 ```
-GIVEN- The Create-API details
-WHEN I invoke the POST operation with a employee payload
+GIVEN- The Create API POST:"/api/v1/persons"
+WHEN I invoke the POST operation with a "person" payload
 THEN I will create a new employee 
-AND assert the 201(created) status and newly created employee ID.
+AND assert the 201(created) status 
+and newly created employee ID.
 ```
 + AC2
 ```
-GIVEN- The Update-API 
-WHEN I invoke the PUT operation to update the employee by the ID 
+GIVEN- The Update API PUT:"/api/v1/persons/{personId}"
+WHEN I invoke the PUT operation by the Id 
+with some "person" details
 THEN I will update the existing employee 
 AND assert the 200(OK) status and updated fields.
 ```
 + AC3
 ```
-GIVEN- The Get-API
+GIVEN- The Get API GET:"/api/v1/persons/{personId}"
 WHEN I invoke the GET operation
 THEN I will fetch the employee details 
-AND assert the status 200(OK) along with updated as well as non-updated fields 
+AND assert the status 200(OK) along with 
+updated as well as non-updated fields 
 ```
 
 To write a test-case for the above CRUD operation scenario is quite easy using [Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world), just your IDE's **JSON editor is enough** to hook these steps. Example of `POST` and `GET` step would look like below(simple and clean)
