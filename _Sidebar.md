@@ -24,6 +24,7 @@
 + Extensions
   + [In-Memory Spring-Boot Integration testing](https://github.com/authorjapps/spring-boot-integration-test)
   + [Load testing a Cassandra Application(Spring)](https://github.com/authorjapps/zerocode-spring-junit)
+  + [Gradle - Charts and Reports](https://github.com/authorjapps/zerocode/wiki/Gradle-build-for-JUnit-Smart-Chart-and-CSV-Reports)
 
 + [Read Our Blogs](https://github.com/authorjapps/zerocode/wiki/Read-Our-Blogs)
   + [Top 16 Open Source API Testing Tools For REST & SOAP Services](https://www.joecolantonio.com/12-open-source-api-testing-tools-rest-soap-services/) - joecolantonio (Lists popular tools - Globally) 
