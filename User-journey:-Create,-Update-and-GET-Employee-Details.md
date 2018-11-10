@@ -1,6 +1,6 @@
 
 
-                  ** USER JOURNEY - Acceptance Criteria(AC) **
+          ** USER JOURNEY - Acceptance Criteria(AC) **
 + AC1
 ```
 GIVEN- The Create API POST:"/api/v1/persons"
