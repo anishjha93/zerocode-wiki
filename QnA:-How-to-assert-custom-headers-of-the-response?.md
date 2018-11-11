@@ -26,5 +26,6 @@ e.g.
 > `${$.create_emp.response.headers.X-Client-Id}`  //<--- This will resolve to `xx-yy-zz`
 
 #### See below Hello World project for full working examples
-- GitHub basic Hello World repo: https://github.com/authorjapps/zerocode-hello-world
-- More Hello World repos: https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world
+- GitHub basic [Hello World repo](https://github.com/authorjapps/zerocode-hello-world) - Clone n run locally
+- More [Hello World repos](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world)
+
