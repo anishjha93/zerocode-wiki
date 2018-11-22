@@ -31,5 +31,58 @@ e.g.
 - Http/Https calling is handled by the framework
 - Test Reports are fuzzy search and filter enabled
 
+#### A test case template chaining two steps
+```javaScript
+{
+    "scenarioName": "Free text - Can put Given When Then BDDish style text",
+    "steps": [
+        {
+            "name": "a_step_name",
+            "url": "a relative or absolute url or java class name",
+            "operation": "a http method or java method",
+            "request": {
+                "headers": {
+                    "if_any_key": "a value"
+                },
+                "body": {
+                    "any_field": "a value"
+                }
+            },
+            "assertions": {
+                "status": 200,
+                "headers": {
+                    "if_any_key": "$NOT.NULL"
+                },
+                "body": {
+                    "id": "an expected value"
+                }
+            }
+        },
+        {
+            "name": "another_step_name",
+            "url": "a relative or absolute url or java class name",
+            "operation": "a http method or java method",
+            "request": {
+                "headers": {
+                    "if_any_key": "a value"
+                },
+                "body": {
+                    "any_field": "${$.a_step_name.request.body.any_field}"
+                }
+            },
+            "assertions": {
+                "status": 200,
+                "headers": {
+                    "if_any_key": "$NOT.NULL"
+                },
+                "body": {
+                    "id": "${$.a_step_name.response.body.id}"
+                }
+            }
+        }
+    ]
+}
+```
+
 See examples in the [README](https://github.com/authorjapps/zerocode)
 
