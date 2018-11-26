@@ -34,4 +34,10 @@ CI Build
 
 Running from IDE
 ===
+@TargetEnv("app_host.properties")  <--- Point this to any property file to run the tests against that env
 
+e.g.
+app_host.properties  <-- against localhost
+app_host_ci.properties  <--- against ci
+app_host_dit.properties <--- against dit
+app_host_sit.properties <--- against sst
