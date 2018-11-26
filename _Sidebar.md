@@ -23,6 +23,8 @@
 + Best Practices
   + [An User journey(CRUD operation) to a test case - Quick n easy](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
   + [Array assertions made easy, incl. size and element finder](https://github.com/authorjapps/zerocode/wiki/Array-assertions-made-easy--e.g.-SIZE,-element-finder)
+  + [Finished writing tests - Setting up CI Jenkins Build Pipe Line and More](https://github.com/authorjapps/zerocode/wiki/After-you-have-written-all-the-tests,-what's-next)
+
 
 + Extensions
   + [In-Memory Spring-Boot Integration testing](https://github.com/authorjapps/spring-boot-integration-test)
