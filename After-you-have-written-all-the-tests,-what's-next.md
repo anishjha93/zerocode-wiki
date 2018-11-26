@@ -11,7 +11,8 @@ Organization
      + Sometimes they are called `Happy` and `Sad` flows
      + Sometimes they are called `Sunny` and `Rainy` cenarios
   + If they are `Consumer` or `Boundary` contract tests
-     + Have you organized them by the aconsumera names or `boundary` names?
+     + Check you have organized them by the `consumer` names or `boundary` names.
+     + Bring up a single Suite runner pointing to the root of the tests(JSON test files). [See here](https://github.com/authorjapps/zerocode/wiki/Suite-Runner-Vs-Package-runner)
 
 Test Suite
 ===
