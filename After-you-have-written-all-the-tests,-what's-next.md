@@ -1,5 +1,5 @@
 #### After you have finished writing all your tests, what all things to take care next?
-These are general things to take care, nothing specific to `Zerocode`, but `Zerocode` makes it bit easy to achieve these things.
+These are general things to take care, nothing specific to `Zerocode`, but `Zerocode` makes your life very easy to achieve all these things.
 
 Organization
 ===
