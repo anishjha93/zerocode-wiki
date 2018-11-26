@@ -22,7 +22,18 @@ Test Suite
 + Create a Suite runner or a Package runner.
   + It's good to bring up a Package runner or Suite runner for all your tests or subset of your tests. [See here how](https://github.com/authorjapps/zerocode/wiki/Suite-Runner-Vs-Package-runner)
 
-CI Build
+e.g.
+```java
+@TargetEnv("app_host.properties")       // <--- "app_host_sst.properties" if running against 'sst'
+@TestPackageRoot("tests")               // <--- Root of the all tests folder in the test/resources
+@EnvProperty("_${env}")                 // <--- mvn clean install -Denv=ci1 or -Denv=sst1
+@RunWith(ZeroCodePackageRunner.class)
+public class ContractTestSuite{
+}
+```
+
+
+CI Build/Jenkins
 ===
 
 + Create a Jenkin Build Pipe line for your project.
@@ -30,12 +41,53 @@ CI Build
   + If you have multi-module maven project(POM or Gradle based), then you might need a pipe line
   + If you have only one `maven module` or only one type of `suite` or one regression `pack`, then you just need one Jenkin Job, not a Jenkins Pipe Line
 
+In the Jenkins `build goal`, you need to configure which suite you want to run,
+e.g.
+```java
+// ------------------------------------------------------------------------
+// Via mvn command -
+// $ mvn clean install -Denv=ci -Dtest=com.hsbc.regulatory.tests.ContractTestSuite
+// $ mvn clean install -Denv=dit -Dtest=com.hsbc.regulatory.tests.ContractTestSuite
+// $ mvn clean install -Denv=sst -Dtest=com.hsbc.regulatory.tests.ContractTestSuite
+// ------------------------------------------------------------------------
+
+```
+
+or
+
+- Configure your `sure fire` plugin (if you using POM) like [this](https://github.com/authorjapps/zerocode-hello-world/blob/master/pom.xml)
+```xml
+<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-surefire-plugin</artifactId>
+	<version>2.19.1</version>
+	<configuration>
+		<includes>
+			<include>com.hsbc.regulatory.tests.ContractTestSuite.class</include>
+		</includes>
+	</configuration>
+</plugin>
+```
+- Configure your `Task` fire(if you using Gradle) like [this](https://github.com/BeTheCodeWithYou/SpringBoot-Kotlin/blob/master/build.gradle)
+```java
+task integrationTests(type: Test) {
+    delete 'target/'
+    systemProperty 'zerocode.junit', 'gen-smart-charts-csv-reports'
+    include 'com/mastercard/vm/tests/ContractTestSuite.class'
+    testLogging {
+        showStandardStreams = true
+    }
+}
+```
+
 Running from IDE
 ===
 @TargetEnv("app_host.properties")  <--- Point this to any `properties file` to run the tests against that env
 
+```
 e.g.
 app_host.properties  <-- against localhost/or dev or default type env.
 app_host_ci.properties  <--- against ci
 app_host_dit.properties <--- against dit
 app_host_sit.properties <--- against sst
+```
