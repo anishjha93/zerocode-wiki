@@ -21,7 +21,7 @@ When to use JUnit Suite runner Vs Zerocode Package runner
 // ------------------------------------------------------------------------
 
 @TargetEnv("app_host.properties")       // <--- "app_host_sst.properties" if running against 'sst'
-@TestPackageRoot("tests")               // <--- Root of the resources package to pick all tests
+@TestPackageRoot("tests")               // <--- Root of the all tests folder in the test/resources
 @EnvProperty("_${env}")                 // <--- mvn clean install -Denv=ci1 or -Denv=sst1
 @RunWith(ZeroCodePackageRunner.class)
 public class ContractTestSuite{
@@ -29,8 +29,9 @@ public class ContractTestSuite{
 }
 ```
 
-Have your host properties present in the test/resourses folder.
+Have your host properties present in the `test/resources` folder.
 ```
+e.g.
 app_host.properties
 app_host_ci.properties
 app_host_dit.properties
