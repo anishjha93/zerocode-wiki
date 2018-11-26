@@ -55,7 +55,7 @@ e.g.
 
 or
 
-- Configure your `sure fire` plugin (if you using POM) like [this](https://github.com/authorjapps/zerocode-hello-world/blob/master/pom.xml)
++ Configure your `sure fire` plugin (if you using POM) like [this](https://github.com/authorjapps/zerocode-hello-world/blob/master/pom.xml)
 ```xml
 <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
@@ -77,24 +77,43 @@ Then your Jenkins build goal will be as below(bit shorter than earlier).
 // $ mvn clean install -Denv=dit 
 // $ mvn clean install -Denv=sst 
 // ------------------------------
+```
 
 _(Basically, it depends on the situation and varies from project to project how teh setup should be)_
-
 
 CI Build/Jenkins (Gradle)
 ===
 
-- Configure your `Task` fire(if you using Gradle) like [this](https://github.com/BeTheCodeWithYou/SpringBoot-Kotlin/blob/master/build.gradle)
++ Configure your `Task` fire(if you using Gradle) like [this](https://github.com/BeTheCodeWithYou/SpringBoot-Kotlin/blob/master/build.gradle)
+
 ```java
-task integrationTests(type: Test) {
+task integrationTestsDev(type: Test) {
     delete 'target/'
+    systemProperty 'env', 'dev'
     systemProperty 'zerocode.junit', 'gen-smart-charts-csv-reports'
     include 'com/mastercard/vm/tests/ContractTestSuite.class'
     testLogging {
         showStandardStreams = true
     }
 }
+
+task integrationTestsSst(type: Test) {
+    delete 'target/'
+    systemProperty 'env', 'sst'
+    systemProperty 'zerocode.junit', 'gen-smart-charts-csv-reports'
+    include 'com/mastercard/vm/tests/ContractTestSuite.class'
+    testLogging {
+        showStandardStreams = true
+    }
+}
+
 ```
+
+Then your Jenkins goal would be
+> gradle clean build integrationTestsDev  <---- For running against Dev pod
+
+> gradle clean build integrationTestsSst  <---- For running against Sst pod
+
 
 Running from IDE
 ===
