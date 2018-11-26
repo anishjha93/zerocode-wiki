@@ -33,7 +33,7 @@ public class ContractTestSuite{
 ```
 
 
-CI Build/Jenkins
+CI Build/Jenkins (POM)
 ===
 
 + Create a Jenkin Build Pipe line for your project.
@@ -69,7 +69,7 @@ or
 </plugin>
 ```
 Then your Jenkins build goal will be as below(bit shorter than earlier).
-_(Basically, it depends on the situation and varies from project to project how teh setup should be)_
+
 ```java
 // ------------------------------
 // Via mvn command -
@@ -77,6 +77,12 @@ _(Basically, it depends on the situation and varies from project to project how 
 // $ mvn clean install -Denv=dit 
 // $ mvn clean install -Denv=sst 
 // ------------------------------
+
+_(Basically, it depends on the situation and varies from project to project how teh setup should be)_
+
+
+CI Build/Jenkins (Gradle)
+===
 
 - Configure your `Task` fire(if you using Gradle) like [this](https://github.com/BeTheCodeWithYou/SpringBoot-Kotlin/blob/master/build.gradle)
 ```java
