@@ -68,6 +68,16 @@ or
 	</configuration>
 </plugin>
 ```
+Then your Jenkins build goal will be as below(bit shorter than earlier).
+_(Basically, it depends on the situation and varies from project to project how teh setup should be)_
+```java
+// ------------------------------
+// Via mvn command -
+// $ mvn clean install -Denv=ci 
+// $ mvn clean install -Denv=dit 
+// $ mvn clean install -Denv=sst 
+// ------------------------------
+
 - Configure your `Task` fire(if you using Gradle) like [this](https://github.com/BeTheCodeWithYou/SpringBoot-Kotlin/blob/master/build.gradle)
 ```java
 task integrationTests(type: Test) {
