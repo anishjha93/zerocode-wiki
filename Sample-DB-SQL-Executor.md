@@ -193,3 +193,16 @@ Response:
 } 
 -done-
 ```
+
+#### POM dependencies
+===
+This is for `PostGres` one, you need to add the similar driver dependencies for `Oracle` or `Sybase` or `MySql` etc.
+
+```xml
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${version.postgresql}</version>
+        </dependency>
+
+```
