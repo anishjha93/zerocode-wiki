@@ -2,6 +2,31 @@ Sample DB SQL Executor
 ===
 This is particularly useful where as part of your testing you are not satisfied only with the REST responses and you want to verify the DB changes has gone well or not. It's very easy to and sometimes it's a good practice to test this DB verification bit too.
 
+Postgres DB console
+===
+
+> IP: 172.16.123.1, Port:31435, Database name: postgres
+
+```
+postgres=# CREATE TABLE employees (
+postgres(#     id bigint NOT NULL,
+postgres(#     name character varying(10) NOT NULL
+postgres(# );
+CREATE TABLE
+postgres=# insert into employees(id, name) values(1, 'Jack');
+INSERT 0 1
+
+postgres=# insert into employees(id, name) values(2, 'Pulsar');
+INSERT 0 1
+postgres=# select * from employees;
+ id |  name  
+----+--------
+  1 | Jack
+  2 | Pulsar
+(2 rows)
+
+```
+
 How the tests will look
 ===
 The below are sample only, but you can extend this or devise your own execution method which makes your life easy.
