@@ -24,7 +24,8 @@ It allows you to **override** the framework behavior by your own **java code** w
 
 See the [HelloWorldTest](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/java/org/jsmart/zerocode/testhelp/tests/helloworld/JustHelloWorldTest.java)
 
-## How?
+## Why?
+Because there is a clear and obvious pattern for REST api or SOAP or any other api testing which Zerocode solves efficiently without adding any syntax overhead, that means it makes your testing process very very easy and accurate.
 
 e.g. Your below User-Journey or ACs(Acceptance Criterias) or a scenario,
 ```java
