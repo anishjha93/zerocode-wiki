@@ -2,6 +2,8 @@ Sample DB SQL Executor
 ===
 This is particularly useful where as part of your testing you are not satisfied only with the REST responses and you want to verify the DB changes has gone well or not. It's very easy to and sometimes it's a good practice to test this DB verification bit too.
 
+Woking example repo is here to clone and run from your IDE : https://github.com/BeTheCodeWithYou/SpringBoot-ZeroCode-Integration
+
 Postgres DB console
 ===
 
