@@ -32,7 +32,7 @@ To write a test-case for the above CRUD operation scenario is quite easy using [
 
 And at the same time you **don't have to search** for or think hard of any **syntaxes** to do the job. That means, you are ready with a BDD scenario test in couple of minutes with simple JSON steps(see below). Advantage here is the tests are instantly readable to anyone because it simple JSON payloads as it is.
 
-> _Note- The `Zerocode` lib takes care of the JSON comparison, you can choose to skip or ignore the fields you need_
+> _Note- The `Zerocode` lib takes care of the JSON comparison, where you can choose to skip or ignore the fields you do not need to assert_
 
 <img width="566" alt="expanded-simple" src="https://user-images.githubusercontent.com/12598420/45925725-fe34f480-bf12-11e8-941c-cb3ec8da6c3e.png"> <br />
 
