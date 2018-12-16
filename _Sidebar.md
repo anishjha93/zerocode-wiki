@@ -20,6 +20,7 @@
   + [How to pass custom security token into the request header?](https://github.com/authorjapps/zerocode/wiki/How-to-pass-custom-security-token-into-the-request-header-which-is-new-for-every-request%3F)
   + [When to use JUnit Suite runner and when Zerocode Package runner?](https://github.com/authorjapps/zerocode/wiki/Suite-Runner-Vs-Package-runner)
   + [How to execute DB SQL and assert?](https://github.com/authorjapps/zerocode/wiki/Sample-DB-SQL-Executor)
+  + [How to handle Http response other than utf-8 e.g. utf-16 or utf-32 ?](https://github.com/authorjapps/zerocode/wiki/Charset-UTF-8-or-UTF-16-or-UTF-32-etc-in-the-http-response)
 
 + Best Practices
   + [An User journey(CRUD operation) to a test case - Quick n easy](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
