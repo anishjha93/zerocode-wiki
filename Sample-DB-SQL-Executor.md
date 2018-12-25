@@ -7,7 +7,17 @@ Woking example repo is here to clone and run from your IDE : https://github.com/
 Postgres DB console
 ===
 
-> IP: 172.16.123.1, Port:31435, Database name: postgres
+See this [Wiki](https://github.com/authorjapps/zerocode-docker-factory/wiki/Docker-container-for-a-Postgres-DB) page for spinning up a docker container for a Postgres DB.
+
+> IP: localhost, Port:25432, Database name: postgres
+```
+db_host_url=jdbc:postgresql://localhost:35432/postgres
+db_username=postgres
+db_password=example
+
+```
+
+Docker DB logs below-
 
 ```
 postgres=# CREATE TABLE employees (
@@ -92,7 +102,7 @@ web.application.endpoint.context=
 ## ---------------------------
 ##  DB Host configs - Postgres
 ## ---------------------------
-db_host_url=jdbc:postgresql://172.16.123.1:31435/postgres
+db_host_url=jdbc:postgresql://localhost:31435/postgres
 db_username=replicaowner
 db_password=password
 
