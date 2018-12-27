@@ -1,3 +1,8 @@
+<pre> 
+If you are reading this wiki for the first time, this might take you around five minutes. 
+Afterwards, it will take just a min only !
+</pre>
+
 Sample DB SQL Executor
 ===
 This is particularly useful where as part of your testing you are not satisfied only with the REST responses and you want to verify the DB changes has gone well or not. It's very easy to and sometimes it's a good practice to test this DB verification bit too.
