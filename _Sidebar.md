@@ -17,9 +17,9 @@
   + [Analytics - Useful report(s) or statistics](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-generate-useful-reports-or-statistics-to-explain-the-behaviour-of-the-system-under-test)
 
 + Docker
-  + [Running Postgres DB in a container](#wip)
-  + [Running MySql DB in a container](#wip)
-  + [Picking host, port, user, password details](#wip)
+  + [Running Postgres DB in a container](https://github.com/authorjapps/zerocode-docker-factory/wiki/Docker-container-for-a-Postgres-DB)
+  + [Picking host, port, user, password details](https://github.com/authorjapps/zerocode/wiki/Sample-DB-SQL-Executor#config-properties)
+  + [Running DB executor and asserting SQL result sets](https://github.com/authorjapps/zerocode/wiki/Sample-DB-SQL-Executor)
 
 + Extensions
   + [In-Memory Spring-Boot Integration testing](https://github.com/authorjapps/spring-boot-integration-test)
