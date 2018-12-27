@@ -1,3 +1,8 @@
++ Best Practices
+  + [An User journey(CRUD operation) to a test case - Quick n easy](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
+  + [Array assertions made easy, incl. size and element finder](https://github.com/authorjapps/zerocode/wiki/Array-assertions-made-easy--e.g.-SIZE,-element-finder)
+  + [Finished writing tests - Setting up CI Jenkins Build Pipe Line and More](https://github.com/authorjapps/zerocode/wiki/After-you-have-written-all-the-tests,-what's-next)
+
 + Core Features
   + [External JSON file as reusable content](https://github.com/authorjapps/zerocode/wiki/External-JSON-file-as-reusable-content)
   + [Env Switching - CI,DIT,SIT etc](https://github.com/authorjapps/zerocode/wiki/Switching-Environment-to-CI-DIT-SIT-UAT-for-Test-Suite-or-Regression-Pack)
@@ -16,17 +21,11 @@
   + [Running MySql DB in a container](#wip)
   + [Picking host, port, user, password details](#wip)
 
-+ Best Practices
-  + [An User journey(CRUD operation) to a test case - Quick n easy](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
-  + [Array assertions made easy, incl. size and element finder](https://github.com/authorjapps/zerocode/wiki/Array-assertions-made-easy--e.g.-SIZE,-element-finder)
-  + [Finished writing tests - Setting up CI Jenkins Build Pipe Line and More](https://github.com/authorjapps/zerocode/wiki/After-you-have-written-all-the-tests,-what's-next)
-
 + Extensions
   + [In-Memory Spring-Boot Integration testing](https://github.com/authorjapps/spring-boot-integration-test)
   + [Load testing a Cassandra Application(Spring)](https://github.com/authorjapps/zerocode-spring-junit)
   + [Gradle - Charts and Reports](https://github.com/authorjapps/zerocode/wiki/Gradle-build-for-JUnit-Smart-Chart-and-CSV-Reports)
   + [Kotlin Integration Testing - Simlified via Zerocode](https://dzone.com/articles/kotlin-spring-bootspring-data-h2-db-rest-api) 
-
 
 + Questions And Answers
   + [What is Zerocode testing?](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)
