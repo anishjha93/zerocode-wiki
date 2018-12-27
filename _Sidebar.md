@@ -11,6 +11,23 @@
   + [Dynamically change the payload for every request](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-dynamically-change-the-payload-for-every-request-during-the-load-)
   + [Analytics - Useful report(s) or statistics](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-generate-useful-reports-or-statistics-to-explain-the-behaviour-of-the-system-under-test)
 
++ Docker
+  + [Running Postgres DB in a container](#wip)
+  + [Running MySql DB in a container](#wip)
+  + [Picking host, port, user, password details](#wip)
+
++ Best Practices
+  + [An User journey(CRUD operation) to a test case - Quick n easy](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
+  + [Array assertions made easy, incl. size and element finder](https://github.com/authorjapps/zerocode/wiki/Array-assertions-made-easy--e.g.-SIZE,-element-finder)
+  + [Finished writing tests - Setting up CI Jenkins Build Pipe Line and More](https://github.com/authorjapps/zerocode/wiki/After-you-have-written-all-the-tests,-what's-next)
+
++ Extensions
+  + [In-Memory Spring-Boot Integration testing](https://github.com/authorjapps/spring-boot-integration-test)
+  + [Load testing a Cassandra Application(Spring)](https://github.com/authorjapps/zerocode-spring-junit)
+  + [Gradle - Charts and Reports](https://github.com/authorjapps/zerocode/wiki/Gradle-build-for-JUnit-Smart-Chart-and-CSV-Reports)
+  + [Kotlin Integration Testing - Simlified via Zerocode](https://dzone.com/articles/kotlin-spring-bootspring-data-h2-db-rest-api) 
+
+
 + Questions And Answers
   + [What is Zerocode testing?](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)
   + [SSL http https connections supported?](https://github.com/authorjapps/zerocode/wiki/QnA:-Does-it-support-https-connections%3F)
@@ -22,17 +39,6 @@
   + [How to execute DB SQL and assert?](https://github.com/authorjapps/zerocode/wiki/Sample-DB-SQL-Executor)
   + [How to handle Http response other than utf-8 e.g. utf-16 or utf-32 ?](https://github.com/authorjapps/zerocode/wiki/Charset-UTF-8-or-UTF-16-or-UTF-32-etc-in-the-http-response)
 
-+ Best Practices
-  + [An User journey(CRUD operation) to a test case - Quick n easy](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
-  + [Array assertions made easy, incl. size and element finder](https://github.com/authorjapps/zerocode/wiki/Array-assertions-made-easy--e.g.-SIZE,-element-finder)
-  + [Finished writing tests - Setting up CI Jenkins Build Pipe Line and More](https://github.com/authorjapps/zerocode/wiki/After-you-have-written-all-the-tests,-what's-next)
-
-
-+ Extensions
-  + [In-Memory Spring-Boot Integration testing](https://github.com/authorjapps/spring-boot-integration-test)
-  + [Load testing a Cassandra Application(Spring)](https://github.com/authorjapps/zerocode-spring-junit)
-  + [Gradle - Charts and Reports](https://github.com/authorjapps/zerocode/wiki/Gradle-build-for-JUnit-Smart-Chart-and-CSV-Reports)
-
 + [Read Our Blogs](https://github.com/authorjapps/zerocode/wiki/Read-Our-Blogs)
   + [Top 16 Open Source API Testing Tools For REST & SOAP Services](https://www.joecolantonio.com/12-open-source-api-testing-tools-rest-soap-services/) - joecolantonio (Lists popular tools - Globally) 
   + [Zero defect APIs - Build Pipe Line](https://medium.com/@bethecodewithyou/develop-zerodefect-apis-with-zerocode-cadd9dc2a430) - Medium
@@ -41,8 +47,4 @@
   + [REST API or SOAP End Point Testing](https://www.codeproject.com/Articles/1242569/REST-API-or-SOAP-End-Point-Testing-with-ZeroCode-J) - Codeproject
   + [DZone- MuleSoft API Testing With Zerocode Test Framework](https://dzone.com/articles/zerocode-test-framework-for-restsoap-api-tddbdd-ap) - DZone
   + [Testing need not be harder or slower, it should be easier and faster](https://dzone.com/articles/rest-api-testing-using-the-zerocode-json-based-bdd) - DZone
-
-+ Docker
-  + [Running Postgres DB in a container](#wip)
-  + [Running MySql DB in a container](#wip)
-  + [Picking host, port, user, password details](#wip)
+  + [Kotlin Integration Testing simplified via Zerocode](https://extremeportal.blogspot.com/2018/11/kotlin-dev-spring-boot-rest-api-with.html) - Extreme portal
