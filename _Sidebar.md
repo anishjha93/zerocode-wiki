@@ -1,12 +1,22 @@
 + Best Practices
-  + [An User journey(CRUD operation) to a test case - Quick n easy](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
+  + [An User journey(CRUD operation)- Simple n easy](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
   + [Array assertions made easy, incl. size and element finder](https://github.com/authorjapps/zerocode/wiki/Array-assertions-made-easy--e.g.-SIZE,-element-finder)
-  + [Finished writing tests - Setting up CI Jenkins Build Pipe Line and More](https://github.com/authorjapps/zerocode/wiki/After-you-have-written-all-the-tests,-what's-next)
+  + [Finished writing tests - Setting up CI Jenkins Build Pipe Line](https://github.com/authorjapps/zerocode/wiki/After-you-have-written-all-the-tests,-what's-next)
 
-+ Core Features
-  + [External JSON file as reusable content](https://github.com/authorjapps/zerocode/wiki/External-JSON-file-as-reusable-content)
++ Http Testing
+  + [External JSON file content](https://github.com/authorjapps/zerocode/wiki/External-JSON-file-as-reusable-content)
   + [Env Switching - CI,DIT,SIT etc](https://github.com/authorjapps/zerocode/wiki/Switching-Environment-to-CI-DIT-SIT-UAT-for-Test-Suite-or-Regression-Pack)
   + [Sending "Content-Type": "application/x-www-form-urlencoded"](https://github.com/authorjapps/zerocode/wiki/application-x-www-form-urlencoded-urlencoded-with-KeyValue-params)
+
++ Kafka Testing
+  + [Produce raw message]()
+  + [Produce JSON message]()
+  + [Consume raw message]()
+  + [Consume JSON message]()
+
++ DB Testing
+  + [Postgres db easy assertions]()
+
 
 + Performance Testing - Load and Stress
   + [Performance Testing - via awesome JUnit runners](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based))
