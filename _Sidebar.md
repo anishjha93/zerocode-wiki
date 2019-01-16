@@ -18,6 +18,8 @@
   + [KSQL in action]()
   + [Produce multiple records]()
   + [Produce from file]()
+  + [Produce to a partition]()
+  + [Produce n assert partition ack]()
   + [Comsume and dump to file]()
   + [commitSync vs commitAsync]()
   + [Overriding config inside a test]()
@@ -25,6 +27,8 @@
   + [Chosing String or Int or Avro Deserializer]()
   + [Attaching  timestamp during load]()
   + [Default timestamp provided by Kafka]()
+  + [Consume and assert avro schema metadata]()
+  + [Error handling - produce via avro schema ]()
 
 + DB Testing
   + [Postgres db easy assertions]()
