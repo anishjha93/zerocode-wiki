@@ -13,6 +13,18 @@
   + [Consume raw message]()
   + [Produce JSON message]()
   + [Consume JSON message]()
+  + [Produce avro message]()
+  + [Consume avro message]()
+  + [KSQL in action]()
+  + [Produce multiple records]()
+  + [Produce from file]()
+  + [Comsume and dump to file]()
+  + [commitSync vs commitAsync]()
+  + [Overriding config inside a test]()
+  + [Chosing String or Int or Avro Serializer]()
+  + [Chosing String or Int or Avro Deserializer]()
+  + [Attaching  timestamp during load]()
+  + [Default timestamp provided by Kafka]()
 
 + DB Testing
   + [Postgres db easy assertions]()
