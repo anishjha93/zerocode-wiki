@@ -10,8 +10,8 @@
 
 + Kafka Testing
   + [Produce raw message]()
-  + [Produce JSON message]()
   + [Consume raw message]()
+  + [Produce JSON message]()
   + [Consume JSON message]()
 
 + DB Testing
