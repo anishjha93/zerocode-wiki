@@ -497,7 +497,7 @@ public class KafkaRestTest {
 See more RAW and JSON examples in the sidebar of the Wiki. :raised_hands:
 
 
-# 12.  Why do I need Zerocode TDD lib
+# 12.  Why do I need `zerocode-tdd` lib
 Zerocode is a light-weight, simple and extensible open-source framework for writing test intentions in a simple JSON format that facilitates both declarative configuration and automation. The framework manages the request payload handling and response assertions at the same time.
 
 Zerocode has taken a different approach to solve the fuss involved in the Kafka and REST API testing.
