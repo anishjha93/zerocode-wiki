@@ -242,14 +242,14 @@ Field orders doesn't really matter as long as the structure is maintained. 👍
 
 # 9.  Validating Kafka response after consuming
 We can simply tell the test to check that we have received number of records we intended to consume.
-```json
+```java
 "assertions": {
     "size" : 1
 }
 ```
 
 Or we can ask the test to assert number of records as well as the records i.e. field-by-filed of key/values. 
-```json
+```java
 "assertions": {
     "size": 1
     "records": [
@@ -263,7 +263,7 @@ Or we can ask the test to assert number of records as well as the records i.e. f
 
 Or we can ask the test to assert the records along with some metadata e.g. topic and partition info too. 
 
-```json
+```java
 "assertions": {
     "records": [
         {
@@ -282,6 +282,16 @@ Or we can ask the test to assert the records along with some metadata e.g. topic
 Field orders doesn't really matter as long as the structure is maintained. 👍 
 
 # 10.  Combining Kafka testing with REST api testing
+Most of the time we have situations to deal with Kafka and REST api testing. With `Zerocode` it's just zero effort when comes to this kind of situation or any API testing situation. You need to know four things only to write the tests 
+```
+1) The "url"
+2) The "operation"
+3) The "request"
+4) The "assertions" i.e. the expected response
+```
+
+Let's see how we can fit REST api validation along with Kafka produce/consume validation at same time.
+//WIP TODO
 
 # 11.  Producing RAW messages vs JSON messages
 
