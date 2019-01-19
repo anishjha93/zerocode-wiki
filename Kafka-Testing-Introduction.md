@@ -83,6 +83,12 @@ The full record with meta data information looks like below, which too you can v
 }
 ```
 # 2.5.  Writing tests for both produce and consume
+In the same test, you can hook two steps like below <br/>
++ Step-1) Produce to a topic e.g. `demo-topic` and validate `recordMetadata`
+  + e.g. Produce a record with "key":"1234", "value":"Hello World"
+
++ Step-2) Consume from the same topic i.e. `demo-topic` and validate `records`
+  + Assert that the same record was in the consumed records "key":"1234", "value":"Hello World", because we might have consumed more that one record if they were produced to the same topic. 
 
 # 3.  Writing your first produce and consume test
 
