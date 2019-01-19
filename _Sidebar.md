@@ -32,7 +32,7 @@
   + [Error handling - produce via avro schema ]()
 
 + DB Testing
-  + [Postgres db easy assertions]()
+  + [Postgres db data validation](https://github.com/authorjapps/zerocode/wiki/Sample-DB-SQL-Executor)
 
 
 + Performance Testing - Load and Stress
