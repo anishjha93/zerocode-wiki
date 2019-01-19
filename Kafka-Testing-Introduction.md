@@ -41,7 +41,7 @@ Response from broker after a successful "produce".
 
 # 2.4.  Writing tests only to consume
 When you read or consume from a topic you can verify the record(s) from the topics.
-Here you can validate/assert some of the meta data too, but most of the times you only need to deal with the records.
+Here you can validate/assert some of the meta data too, but most of the times you only need to deal with the records only(not the metadata).
 
 e.g.
 ```java
@@ -90,7 +90,101 @@ In the same test, you can hook two steps like below <br/>
 + Step-2) Consume from the same topic i.e. `demo-topic` and validate `records`
   + Assert that the same record was in the consumed records "key":"1234", "value":"Hello World", because we might have consumed more that one record if they were produced to the same topic. 
 
-# 3.  Writing your first produce and consume test
+
+# 3.1.  Writing your first produce test
+To write the tests for any of 'Produce' or 'Consume' tests, we need to know the following details
++ The topic name which is our "end point" aka "url"
+```
+
+"url": "kafka-topic: demo-topic"
+
+```
+
++ The operation i.e. `'produce' or 'consume'` 
+```
+
+"operation": "produce"
+
+```
+_Also you can use the `'load' or 'unload'` aka `'send' or 'receive'` which means the same._
+
++ While sending a message to the topic, we need to send as below
+```java
+
+"request": {
+    "records": [
+        {
+            "key": "KEY-1234",
+            "value": "Hello World"
+        }
+    ]
+}
+
+```
+
+Please visit these pages for examples and explanations.
++ [Produce a RAW message]()
++ [Produce a JSON message]()
+
+# 3.2.  Writing our first consume test
++ The topic name which is our "end point" aka "url"
+```
+
+"url": "kafka-topic: demo-topic"
+
+```
+
++ The operation i.e. 'consume'` 
+```
+
+"operation": "consume"
+
+```
+_Also you can use the `'unload'` aka `'receive'` which exactly means the same._
+
++ While consuming message(s) from the topic, we need to send as below
+```java
+
+"request": { },
+
+```
+That's do nothing simply consume.
+
+Or we we can configure our test to do certain stuff while consuming or after consuming the records.
+```
+"request": {
+    "consumerLocalConfigs": {
+        "commitSync": true,
+        "showRecordsConsumed": true,
+        "maxNoOfRetryPollsOrTimeouts": 3
+    }
+}
+
+```
+
+>         "commitSync": true,
+
+Here, we are telling the test to do a `commitSync` after consuming the message, that means, it won't read the message again when you `poll` next time. It will only read the new messages if any arrives on the topic.
+
+>        "showRecordsConsumed": true,  // Default is true
+Here, we are telling the test to show the consumed records in the response. If you set `"showRecordsConsumed": false`, then it will only show the size, not the actual records.
+
+>        "maxNoOfRetryPollsOrTimeouts": 3
+Here, we are telling the test to show poll 3 times maximum, then stop polling. If we have more records, we can set to a larger value. Default value is `100` mili sec.
+
+>        "pollingTime": 500   // Default is 100 mili sec
+Here, we are telling the test to poll for 500 mili sec each time it polls.
+
+- Visit this page [All configurable keys - ConsumerLocalConfigs]() for the source code.
+- Visit the [HelloWorld example]() to try it at home.
+
+### :::Note:::
+These config values can be set in the properties file, which means it will apply to all the tests in our test suite or test pack. Also any of the configs can be overridden by any particular test inside the suite. **Hence it gives us very flexibility for covering all test scenarios.**
+
+Please visit these pages for examples and explanations.
++ [Consume a RAW message]()
++ [Consume a JSON message]()
+
 
 # 8.  Validating Kafka response after producing
 
