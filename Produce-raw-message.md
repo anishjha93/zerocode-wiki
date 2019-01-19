@@ -4,8 +4,7 @@ In this Wiki page, we will see what is a RAW message and how to produce this kin
 For more details about Kafka testing, please visit [Kafka Testing Introduction - Baby Steps](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction)
 
 # 2.  What is RAW message
-RAW messages can be any kind of messages which may not have or may have structures, as well as the records may or may not conform to a specific data schema.
-
+RAW messages can be any kind of messages which may or may not have any defined structure, as well as the messages,  may or may not conform to a specific data schema. Think of a RAW message as plain text for now.
 
 # 3.  How to produce a RAW message to a Kafka topic
 We just need to specify the "recordType" as RAW while producing the record to a Kafka topic.
@@ -35,7 +34,8 @@ You can put anything into it and send to Kafka topic and Kafka broker will accep
 Then the consumer needs to decide how it should consume it, the best way to consume this kind of message is same as RAW. See the consumer example [Consume RAW message]() in the side bar.
 
 # 4.  Which SerDe is used for this kind of record
-What is SerDe? Ans: Serializer, Deserializer
+What is SerDe? **Ans:** Serializer, Deserializer.
+
 The best way to produce and consume RAW messages is use,
 + StringSerializer
   + key.serializer=org.apache.kafka.common.serialization.StringSerializer
@@ -95,7 +95,7 @@ public class KafkaProduceTest {
 }
 ```
 
-The "kafka_test_server.properties" file contains,
+Where, the "kafka_test_server.properties" file contains,
 ```properties
 kafka.bootstrap.servers=localhost:9092
 kafka.producer.properties=kafka_servers/kafka_producer.properties
@@ -119,6 +119,28 @@ e.g.
 A "DoubleSerializer" if the Key is a Double or Integer or Long value.
 > key.serializer=org.apache.kafka.common.serialization.DoubleSerializer
 
+# 8.  How to verify the record in the topic via `kafka-console-consumer`
+```java
+$ docker exec compose_kafka_1  kafka-console-consumer --bootstrap-server localhost:29092 --topic demo-ksql  --from-beginning
+Hello World
+```
+
+Where, "compose_kafka_1" is the name of the Kafka server container.
+
+# 9. Where is the docker file
+All Docker files are here in [zerocode-docker-factory](https://github.com/authorjapps/zerocode-docker-factory/tree/master/compose), but to run this test, you can use "kafka-single-node.yml" or "kafka-schema-registry.yml".
+
+See intructions in the side bar on how to run the "compose" files.
+In short,
+
+To bring the containers up,
+>   docker-compose -f kafka-single-node.yml up -d
+
+To bring the containers down,
+> docker-compose -f kafka-single-node.yml up -d
+
+To view the kafka server logs
+>  To bring the containers down,
+> docker logs <kafka_container_name>
 
 
-# 1.  Introduction
