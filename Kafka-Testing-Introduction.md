@@ -123,8 +123,8 @@ _Also you can use the `'load' or 'unload'` aka `'send' or 'receive'` which means
 ```
 
 Please visit these pages for examples and explanations.
-+ [Produce a RAW message]()
-+ [Produce a JSON message]()
++ [Produce a RAW message](https://github.com/authorjapps/zerocode/wiki/Produce-raw-message)
++ [Produce a JSON message](//TODO)
 
 # 3.1.  Writing our first "consume" test
 We need to know,
