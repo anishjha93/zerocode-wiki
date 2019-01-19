@@ -17,7 +17,7 @@ Kafka topics are divided into a number of partitions. Partitions allow you to pa
 `Consume` is simply reading one or more records from one or more topic(s).
 
 # 2.3.  Writing tests only to produce
-When you write or produce to a topic you can verify the acknowledgment from Kafka broker which is in the format of `recordMetadata`.
+When you write or produce to a topic you can verify the acknowledgment from a Kafka broker which is in the form of `recordMetadata`.
 
 e.g.
 ```java
@@ -41,7 +41,7 @@ Response from broker after a successful "produce".
 
 # 2.4.  Writing tests only to consume
 When you read or consume from a topic you can verify the record(s) from the topics.
-Here you can validate/assert some of the metadata too, but most of the times you only need to deal with the records only(not the metadata).
+Here you can validate/assert some of the metadata too, but most of the times you might only need to deal with the records only(not the metadata).
 
 e.g.
 ```java
@@ -57,7 +57,7 @@ Response from broker after a successful "consume".
     ]
 }
 ```
-The full record with meta data information looks like below, which too you can validate/assert in case you have a test requirement to do so.
+The full record with meta data information looks like below, which too you can validate/assert in case you have a test-requirement to do so.
 ```java
 {
     "records": [
@@ -83,15 +83,15 @@ The full record with meta data information looks like below, which too you can v
 }
 ```
 # 2.5.  Writing tests for both produce and consume
-In the same test, you can hook two steps like below <br/>
+In the same test, you can hook the two steps like below <br/>
 + Step-1) Produce to a topic e.g. `demo-topic` and validate `recordMetadata`
   + e.g. Produce a record with "key":"1234", "value":"Hello World"
 
 + Step-2) Consume from the same topic i.e. `demo-topic` and validate `records`
-  + Assert that the same record was in the consumed records "key": "1234", "value": "Hello World", because we might have consumed more that one record if they were produced to the same topic. 
+  + Assert that the same record was in the consumed records with "key": "1234", "value": "Hello World", because we might have consumed more that one record if they were produced to the same topic. 
 
 
-# 3.1.  Writing your first produce test
+# 3.  Writing your first produce test
 To write the tests for any of 'Produce' or 'Consume' tests, we need to know the following details
 + The topic name which is our "end point" aka "url"
 ```
@@ -126,7 +126,7 @@ Please visit these pages for examples and explanations.
 + [Produce a RAW message]()
 + [Produce a JSON message]()
 
-# 3.2.  Writing our first "consume" test
+# 3.1.  Writing our first "consume" test
 We need to know,
 + The topic name which is our "end point" aka "url"
 ```
@@ -187,7 +187,7 @@ Please visit these pages for examples and explanations.
 + [Consume a JSON message]()
 
 
-# 8.  Validating Kafka response after producing
+# 4.  Validating Kafka response after producing
 We can simply tell the test to check that it has been produced successfully as below
 ```JSON
 "assertions": {
@@ -223,7 +223,7 @@ Yes, just stick the JSON block as it is. Isn't it awesome and clean? Hasn't it t
 
 Or if you are not really bothered about some fields, you can simply put as `$NOT.NULL` against them as below or completely skip them from the "assertions block".
 
-:::NOTE:::
+### :::Note:::
 Field order doesn't really matter here as long as the structure is maintained. 👍 
 
 ```json
@@ -242,7 +242,7 @@ Field order doesn't really matter here as long as the structure is maintained. �
 }
 ```
 
-# 9.  Validating Kafka response after consuming
+# 5.  Validating Kafka response after consuming
 We can simply tell the test to check that we have received a number of records we intended to consume.
 ```java
 "assertions": {
@@ -281,10 +281,10 @@ Or we can ask the test to assert the records along with some metadata e.g. topic
 }
 ```
 
-:::NOTE:::
+### :::Note:::
 Field order doesn't really matter here as long as the structure is maintained. 👍 
 
-# 10.  Combining Kafka testing with REST API testing
+# 6.  Combining Kafka testing with REST API testing
 Most of the time we have situations to deal with Kafka and REST API testing. With `Zerocode` it's just zero effort when comes to this kind of situation or any API testing situation. You need to know four things only to write the tests 
 ```
 1) The "url"
@@ -295,13 +295,13 @@ Most of the time we have situations to deal with Kafka and REST API testing. Wit
 
 Let's see how we can fit REST API validation along with Kafka produce/consume validation at the same time.
 
-At the first place, this is not a big deal. Nothing really changes from a test perspective other than the "url".
+In the first place, this is not a big deal. Nothing really changes from a test perspective other than the "url".
 
 That means the "url" is a REST end point as below:
 
 >            "url": "/api/v1/persons"
 
-Then, the Zerocode framework picks the REST endpoint details from the "host.properties" and create the full URL and invokes the REST API and asserts the response. The effective url will be as below behind the scene 
+Then, the Zerocode framework picks the REST endpoint details from the "host.properties" and create the full URL and invokes the REST API and asserts the response. The effective URL will be as below behind the scene 
 
 >            "url": "http://localhost:8082/api/v1/persons"
 
@@ -455,7 +455,7 @@ test_kafka_and_rest.json
 ```
 
 
-# 11.  Producing RAW messages vs JSON messages
+# 7.  Producing RAW messages vs JSON messages
 When we have situation or requirements to produce simple texts which are not JSON records, then the framework takes care of it by default. Or for the test readability(you can even skip this field), you can mention it as below.
 >          "recordType" : "RAW",
 
@@ -497,16 +497,16 @@ public class KafkaRestTest {
 See more RAW and JSON examples in the sidebar of the Wiki. :raised_hands:
 
 
-# 12.  Why do I need `zerocode-tdd` lib
+# 8.  Why do I need `zerocode-tdd` lib
 Zerocode is a light-weight, simple and extensible open-source framework for writing test intentions in a simple JSON format that facilitates both declarative configuration and automation. The framework manages the request payload handling and response assertions at the same time.
 
 Zerocode has taken a different approach to solve the fuss involved in the Kafka and REST API testing.
 
-It has got the best of best ideas and practices from the community and the adoption is rapids growing in the developer/tester community. Even many times manual test engineers come out and help in automation due to the simplicity of writing tests.
+It has got the best of best ideas and practices from the community and the adoption is rapids growing among the developer/tester community. Even many times the manual test engineers come out and help in automation due to the simplicity of writing tests.
 
-# 13.  Conclusion
+# 9. Conclusion
 In this tutorial, we looked at some of the Kafka concepts and how to test Kafka applications using the Zerocode Testing Framework.
 
 The complete source code and all example code snippets for this Wiki page can be found over on [GitHub]().
 
-# Happy API Testing ! 🐼 
+# Happy API Testing! 🐼 
