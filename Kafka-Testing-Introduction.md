@@ -148,7 +148,7 @@ _Also you can use the `'unload'` aka `'receive'` which exactly means the same._
 "request": { },
 
 ```
-That's do nothing simply consume.
+That's do nothing, but simply consume.
 
 Or we we can configure our test to do certain stuff while consuming or after consuming the records.
 ```
@@ -241,6 +241,45 @@ Field orders doesn't really matter as long as the structure is maintained. 👍
 ```
 
 # 9.  Validating Kafka response after consuming
+We can simply tell the test to check that we have received number of records we intended to consume.
+```json
+"assertions": {
+    "size" : 1
+}
+```
+
+Or we can ask the test to assert number of records as well as the records i.e. field-by-filed of key/values. 
+```json
+"assertions": {
+    "size": 1
+    "records": [
+        {
+            "key": "1547792460796",
+            "value": "Hello World"
+        }
+    ]
+}
+```
+
+Or we can ask the test to assert the records along with some metadata e.g. topic and partition info too. 
+
+```json
+"assertions": {
+    "records": [
+        {
+            "key": "1547792460796",
+            "value": "Hello World",
+            "topic": "demo-ksql",
+            "partition": 0,
+            "offset": 3,
+            "timestamp": 1547792461364
+        }
+    ],
+    "size": 1
+}
+```
+:::NOTE:::
+Field orders doesn't really matter as long as the structure is maintained. 👍 
 
 # 10.  Combining Kafka testing with REST api testing
 
