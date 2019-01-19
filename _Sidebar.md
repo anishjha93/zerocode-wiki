@@ -9,6 +9,7 @@
   + [Sending "Content-Type": "application/x-www-form-urlencoded"](https://github.com/authorjapps/zerocode/wiki/application-x-www-form-urlencoded-urlencoded-with-KeyValue-params)
 
 + Kafka Testing
+  + [Introduction](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction)
   + [Produce raw message]()
   + [Consume raw message]()
   + [Produce JSON message]()
