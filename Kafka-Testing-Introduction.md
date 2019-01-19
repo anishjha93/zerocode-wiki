@@ -187,6 +187,58 @@ Please visit these pages for examples and explanations.
 
 
 # 8.  Validating Kafka response after producing
+We can simply tell the test to check that it has been produced successfully as below
+```json
+"assertions": {
+    "status": "Ok"
+}
+```
+
+Or we can ask the test to assert that we have received `not null` "recordMetadata" from the Kafka brokers
+```json
+"assertions": {
+    "status": "Ok",
+    "recordMetadata": "$NOT.NULL"
+}
+```
+
+Or we can ago further amd ask the test to assert the "recordMetadata" to verify it has written to correct `partition` of the correct `topic` and much more as below. 
+```json
+"assertions": {
+    "status": "Ok",
+    "recordMetadata": {
+        "offset": 0,
+        "serializedKeySize": 13,
+        "serializedValueSize": 34,
+        "topicPartition": {
+            "hash": 749715182,
+            "partition": 0,
+            "topic": "demo-topic"
+        }
+    }
+}
+```
+Yes, just stick the JSON block as it is. Isn't it awesome and clean? Hasn't it take away lot of hassles from us of doing a vicious deserialization of the `acknowledgement` or asserting field-by-field after that, making the test almost not-readable?
+
+Or if you are not really bothered about some fields, you can simply put as `$NOT.NULL` against them as below or completely skip them.
+:::NOTE:::
+Field orders doesn't really matter as long as the structure is maintained. 👍 
+
+```json
+{
+    "status": "Ok",
+    "recordMetadata": {
+        "topicPartition": {
+            "partition": 0,
+            "topic": "demo-2"
+        },
+        "offset": "$NOT.NULL",
+        "timestamp": "$NOT.NULL",
+        "serializedKeySize": "$NOT.NULL",
+        "serializedValueSize": "$NOT.NULL"
+    }
+}
+```
 
 # 9.  Validating Kafka response after consuming
 
