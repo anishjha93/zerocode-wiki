@@ -6,6 +6,8 @@ It is a light-weight, simple and extensible framework for writing test intention
 
 It eliminates the repetitive code such as step definitions, test assertions, payload parsing/SerDe and API calls such as Http, Kafka and DB Services. See an example [how](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details). It's powerful JSON comparison and assertions make the testing cycle a lot easy and clean.
 
+![zc_blocks2](https://user-images.githubusercontent.com/12598420/51440172-1dbf0c80-1cbc-11e9-925c-2afa2ef507c3.png)
+
 It has got best of best ideas and practices from the community to keep it super simple and the adoption is rapidly growing among the developer/tester community. It alleviates the pain and brings the simplicity in validating the APIs.
 
 It also helps in mocking/stubbing interfacing APIs during the testing cycle. Its approach to IDE based performance testing to generate load/stress on the target application is quite simple, flexible and efficient - It goes a step further enabling you to simply reuse the test(s) from your regression pack.
@@ -38,3 +40,5 @@ Keep in mind: It's simple JSON. <br/>
 And it is simple **declarative** JSON DSL, with the `request/response` fields available for the next steps via the `JSON Path`.
 
 See the [Table Of Contents](https://github.com/authorjapps/zerocode#table-of-contents--) for usages and examples.
+
+For Kafka testing approach, visit this page [Kafka-Testing Quick Start](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction).
