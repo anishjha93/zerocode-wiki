@@ -537,10 +537,10 @@ It has got the best of best ideas and practices from the community and the adopt
 In this tutorial, we looked at some of the Kafka concepts and how to test Kafka applications using the Zerocode Testing Framework.
 
 The complete source code and all example code snippets for this Wiki page can be found below.
-+ [Produce Tests](https://github.com/authorjapps/zerocode/tree/master/kafka-testing/src/test/resources/kafka/produce)
-+ [Produce Tests](https://github.com/authorjapps/zerocode/tree/master/kafka-testing/src/test/resources/kafka/consume)
-+ [KSQL Tests](https://github.com/authorjapps/zerocode/tree/master/kafka-testing/src/test/resources/kafka/consume/ksql)
-+ [Produce Records Directly From File](https://github.com/authorjapps/zerocode/tree/master/kafka-testing/src/test/resources/kafka/produce/file_produce)
-+ [Consume Records And Dump To File](https://github.com/authorjapps/zerocode/tree/master/kafka-testing/src/test/resources/kafka/consume/file_dump)
++ [Produce Tests](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka/produce)
++ [Consume Tests](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka/consume)
++ [KSQL Tests](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka/consume/ksql)
++ [Produce Records Directly From File](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka/produce/file_produce)
++ [Consume Records And Dump To File](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka/consume/file_dump)
 
 # Happy API Testing! 🐼 
