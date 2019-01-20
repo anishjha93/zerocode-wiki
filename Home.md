@@ -1,6 +1,7 @@
 ## Zerocode Wiki
 
-(For helps and usage- Visit [Table of Contents](https://github.com/authorjapps/zerocode#table-of-contents--))
+(For helps and usage- Visit [Table of Contents](https://github.com/authorjapps/zerocode#table-of-contents--). Visit here for a [Quick Introduction to Zerocode]())
+
 
 [Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) helps you to design better Test Cases for your business features, then maintain and update them easily to avoid sleepless nights. It is built on extending the **Junit core runners**. You simply annotate your test method with JUnit **@Test** and run like JUnit tests, as well as optionally you can use `Suite` Runners for CI builds and env switching. Testing becomes an easy and effortless job due to the **simplicity** nature of JSON and the native support by popular IDEs e.g. Eclipse /IntelliJ /NetBeans etc with no extra plugin. Super easy !
 
