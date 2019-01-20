@@ -11,9 +11,9 @@
 + Kafka Testing
   + [Introduction](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction)
   + [Produce raw message](https://github.com/authorjapps/zerocode/wiki/Produce-raw-message)
-  + [Consume raw message]()
-  + [Produce JSON message]()
-  + [Consume JSON message]()
+  + [Consume raw message](https://github.com/authorjapps/zerocode/wiki/Consume-RAW-message)
+  + [Produce JSON message](https://github.com/authorjapps/zerocode/wiki/Produce-JSON-message)
+  + [Consume JSON message](https://github.com/authorjapps/zerocode/wiki/Consume-JSON-message)
   + [Produce avro message]()
   + [Consume avro message]()
   + [KSQL in action]()
