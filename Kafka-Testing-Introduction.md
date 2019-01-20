@@ -10,11 +10,6 @@ Kafka testing framework in Zerocode has been built using Apache Kafka client and
 
 Click here to know about [What is Zerocode Testing](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)
 
-<details>
-  <summary>Click to expand</summary>
-  whatever
-</details>
-
 # 2.  Kafka Testing Concepts
 Kafka is a distributed messaging system. When we deal with a Kafka application, we need to know where the `topic` resides and what types of messages aka `records` are written aka `produced` to the topic, then what happens when the messages are `consumed` by the listeners.
 
