@@ -98,7 +98,7 @@ In the same test, you can hook the two steps like below <br/>
   + Assert that the same record was in the consumed records with "key": "1234", "value": "Hello World", because we might have consumed more that one record if they were produced to the same topic. 
 
 
-# 3.  Writing your first produce test
+# 3.  Writing our first produce test-case
 To write the tests for any of 'Produce' or 'Consume' tests, we need to know the following details
 + The topic name which is our "end point" aka "url"
 ```
@@ -129,11 +129,33 @@ _Also you can use the `'load' or 'unload'` aka `'send' or 'receive'` which means
 
 ```
 
+Now our test-case will look like below,
+```JSON
+{
+    "name": "produce_a_record",
+    "url": "kafka-topic:demo-topic",
+    "operation": "produce",
+    "request": {
+        "recordType" : "RAW",
+        "records": [
+            {
+                "key": 101,
+                "value": "Hello World"
+            }
+        ]
+    },
+    "assertions": {
+        "status": "Ok",
+        "recordMetadata": "$NOT.NULL"
+    }
+}
+```
+
 Please visit these pages for examples and explanations.
 + [Produce a RAW message](https://github.com/authorjapps/zerocode/wiki/Produce-raw-message)
-+ [Produce a JSON message](//TODO)
++ [Produce a JSON message](https://github.com/authorjapps/zerocode/wiki/Produce-JSON-message)
 
-# 3.1.  Writing our first "consume" test
+# 3.1.  Writing our first "consume" test-case
 We need to know,
 + The topic name which is our "end point" aka "url"
 ```
@@ -156,9 +178,9 @@ _Also you can use the `'unload'` aka `'receive'` which exactly means the same._
 "request": { },
 
 ```
-That's do nothing, but simply consume.
+The above means do nothing, but simply consume.
 
-Or we can configure our test to do certain stuff while consuming or after consuming the records.
+Or we can configure our test to do certain things while consuming or after consuming the records.
 ```
 "request": {
     "consumerLocalConfigs": {
@@ -183,15 +205,15 @@ Here, we are telling the test to show poll 3 times maximum, then stop polling. I
 >        "pollingTime": 500   // Default is 100 mili sec if you skip this flag.
 Here, we are telling the test to poll for 500 mili sec each time it polls.
 
-- Visit this page [All configurable keys - ConsumerLocalConfigs]() for the source code.
-- Visit the [HelloWorld example]() to try it at home.
+- Visit this page [All configurable keys - ConsumerLocalConfigs](https://github.com/authorjapps/zerocode/blob/master/core/src/main/java/org/jsmart/zerocode/core/kafka/consume/ConsumerLocalConfigs.java) for the source code.
+- Visit the [HelloWorld Kafka examples repo](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka) to try it at home.
 
 ### :::Note:::
 These config values can be set in the properties file global to all the tests, which means it will apply to all the tests in our test suite or the test pack. Also, we can override any of the configs for a particular test or tests inside the suite. **Hence it gives us very flexibility for covering all kind of test scenarios.**
 
 Please visit these pages for examples and explanations.
-+ [Consume a RAW message]()
-+ [Consume a JSON message]()
++ [Consume a RAW message](https://github.com/authorjapps/zerocode/wiki/Consume-RAW-message)
++ [Consume a JSON message](https://github.com/authorjapps/zerocode/wiki/Consume-JSON-message)
 
 
 # 4.  Validating Kafka response after producing
@@ -329,7 +351,7 @@ kafka-ksql-server-fqdn=http://localhost:8088
 
 ```
 
-If we are inside a micro-services deployment world, simply put more "url"s of your `Kubernetes` pods you need to deal with e.g. 
+If we are inside a micro-services deployment world, simply put more "url"s of our `Kubernetes` pods you need to deal with e.g. 
 
 >            "url": "${http-server-fqdn}/api/v1/persons"
 
