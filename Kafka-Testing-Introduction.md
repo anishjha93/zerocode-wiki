@@ -1,7 +1,12 @@
 # 1.  Introduction
-In this Wiki page, we will see various concepts of Kafka distributed streams and how to test an Application built using Kafka and REST APIs. 
+In this Wiki page, we will see various concepts of Kafka distributed streams and how to test an Application built using Kafka and REST APIs. We will also see how Zerocode brings simplicity to write tests and validate Kafka applications via JSON DSLs, over conventional way of testing directly via Kafka clients. 
 
 For more details about Kafka streams and how to develop a streaming application, please visit [Developing Streaming Applications](https://www.confluent.io/blog/stream-processing-part-1-tutorial-developing-streaming-applications).
+
+## :::Note:::
+Kafka testing framework in Zerocode has been built using Apache Kafka client and it abstracts the complexities of writing Java code to acieve the same end goal. It completely bypasses the Java layer to save us from the fire-fighting we need to do otherwise and enables us to focus on testing rather than solving coding issues involved in dealing with Java client and its configurations.
+
+> It enables us to keep the test-cases clean, readable, simple and elegant
 
 # 2.  Kafka Testing Concepts
 Kafka is a distributed messaging system. When we deal with a Kafka application, we need to know where the `topic` resides and what types of messages aka `records` are written aka `produced` to the topic, then what happens when the messages are `consumed` by the listeners.
