@@ -1,17 +1,24 @@
 # 1.  Introduction
-In this Wiki page, we will see various concepts of Kafka distributed streams and how to test an Application built using Kafka and REST APIs. We will also see how Zerocode brings simplicity to write tests and validate Kafka applications via JSON DSLs, over conventional way of testing directly via Kafka clients. 
+In this Wiki page, we will see various concepts of Kafka distributed streams and how to test an Application built using Kafka. We will also see how Zerocode will help us to write tests and validate Kafka applications using simple JSON DSLs, over conventional way of testing directly via Kafka clients. 
 
-For more details about Kafka streams and how to develop a streaming application, please visit [Developing Streaming Applications](https://www.confluent.io/blog/stream-processing-part-1-tutorial-developing-streaming-applications).
+_For more details about Kafka streams and how to develop a streaming application, please visit [Developing Streaming Applications](https://www.confluent.io/blog/stream-processing-part-1-tutorial-developing-streaming-applications)._
 
 ## :::Note:::
-Kafka testing framework in Zerocode has been built using Apache Kafka client and it abstracts the complexities of writing Java code to acieve the same end goal. It completely bypasses the Java layer to save us from the fire-fighting we need to do otherwise and enables us to focus on testing rather than solving coding issues involved in dealing with Java client and its configurations.
+Kafka testing framework in Zerocode has been built using Apache Kafka client and it abstracts the complexities of writing Java code to acieve the same end goal. It completely bypasses the Java layer to save us from the fire-fighting we need to do otherwise and enables us to focus on testing rather than solving coding issues. At the same time, along with the simplicity, it is also gives us the flexibility to even code with the Java client keeping the test-cases still declarative as they were.
 
 > It enables us to keep the test-cases clean, readable, simple and elegant
+
+Click here to know about [What is Zerocode Testing](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)
+
+<details>
+  <summary>Click to expand</summary>
+  whatever
+</details>
 
 # 2.  Kafka Testing Concepts
 Kafka is a distributed messaging system. When we deal with a Kafka application, we need to know where the `topic` resides and what types of messages aka `records` are written aka `produced` to the topic, then what happens when the messages are `consumed` by the listeners.
 
-Once we know these three things, we should be able to test a Kafka application easily.
+Once we know these four things, we should be able to test a Kafka application easily.
 
 # 2.1.  What is a Kafka topic
 Kafka topics are divided into a number of partitions. Partitions allow you to parallelize a topic by splitting the data in a particular topic across multiple brokers — each partition can be placed on a separate machine to allow for multiple consumers to read from a topic in parallel.
