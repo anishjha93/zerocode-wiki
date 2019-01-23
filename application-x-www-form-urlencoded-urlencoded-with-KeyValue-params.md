@@ -79,3 +79,13 @@ You can frame many variations of a test situation depending on your use-case. Th
    ]
 }
 ```
+
+Example source code
+===
++ GitHub link:
+https://github.com/authorjapps/spring-boot-integration-test/blob/master/src/test/resources/integration_tests/post/post_www_form_header_test.json
+  + Here the server end point expects the correct headers 
+  + If incorrect content-type is sent from the test, then the server complains
+  + The test steps verifies both scenario.
+  + See the controller layer how the end point is implemented
+     + Controller souce code - https://github.com/authorjapps/spring-boot-integration-test/blob/master/src/main/java/com/springboot/controller/CustomerController.java
