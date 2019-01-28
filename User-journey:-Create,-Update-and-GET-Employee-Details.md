@@ -171,11 +171,11 @@ JOURNEY1 :
 <br/>
 <br/>
 
-Also you escaped the **fancy and hard** way of doing things with special attention to English statements and grammars. See below:
+Also, you escaped the **hard** way of doing things with special attention to English statements and grammars. See below:
 
 ***
 
-This approach might take different `shapes and forms` for developers/testers with spending too much time in fitting the **ACs/User-Journeys** into the actual executable tests. 
+This approach might take different `shapes and forms` for developers/testers with spending too much time agreeing on the semantics than spending time in writing actual executable tests.
 
 **e.g.** <br/>
 ~~GIVEN- the REST api POST end point,~~ <br/>
@@ -205,6 +205,7 @@ or
 <br/>
 
 :::Note:::
+
 It makes sense when the **BAs**(Business Analysts) or **managers** or non-technology folks while creating the stories and defining the entry and exit criteria of the tickets for a business scenario or User-Journey. But technology folks simply picking these statements and trying hard syntactically to fit these into executable tests seems like bit too much of an overhead. 
 <br/>
 <br/>
