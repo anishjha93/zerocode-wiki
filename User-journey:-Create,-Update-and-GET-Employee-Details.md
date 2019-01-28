@@ -199,18 +199,16 @@ or
 
 > and so on...
 
-**Note**- Too much is going on the above around an `user journey`, in terms of writing correct sentences or **nearly** correct sentences/grammars to come up with a test scenario. 
+**Note**- Too much is going on the above around an `user journey`, in terms of writing correct sentences or **nearly** correct sentences/grammars, too many `assertThat`s to come up with a test scenario. 
 > And imagine the situation you will be when you have more number of steps in an user journey !
 
 <br/>
 
-Ok, then where does the english statements/grammars makes sense?
-
-***
-It makes sense when the **BAs**(Business Analysts) or **managers** or non-technology folks while creating the stories and defining the entry and exit criteria of the tickets for a business scenario or User-Journey. But technology folks simply picking these statements and trying hard syntactically to fit these into executable tests is bit too much of an overhead. 
+:::Note:::
+It makes sense when the **BAs**(Business Analysts) or **managers** or non-technology folks while creating the stories and defining the entry and exit criteria of the tickets for a business scenario or User-Journey. But technology folks simply picking these statements and trying hard syntactically to fit these into executable tests seems like bit too much of an overhead. 
 <br/>
 <br/>
-But you are free to choose the `tools`, `technologies` and `solutions` which best fits to your project and situation.
+But we should choose the `tools`, `technologies` and `solutions` which best fits to your project and situation and helps us solving the testing challenges.
 
 See this in action(HelloWorld):
 ===
