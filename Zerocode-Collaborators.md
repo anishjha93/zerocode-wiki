@@ -1,3 +1,8 @@
+
+<br/>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   <img width="135"  height="120" alt="Zerocode" src="https://user-images.githubusercontent.com/12598420/51964581-e5a78e80-245e-11e9-9400-72c4c02ac555.png">
+
 Smart People, Smart Ideas
 ===
 Zerocode has been developed with simple yet smart ideas from the collaborators across the world.
@@ -29,7 +34,7 @@ Smart Collaborators
 
 + **Santosh K**(Java/Kafka Team Lead and Developer, Chennai, India)
 
-+ **Sidd G**(Java/Kafka/BigData Tester, Chennai, India)
++ **Sidd G**(Java/Kafka Developer and Tester, London, Uk)
 
 + **Uttam S**(Cassandra/BigData Architect, Data Scientist, and Developer, NJ, USA)
 
