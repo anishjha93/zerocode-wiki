@@ -1,8 +1,18 @@
+Introduction
+===
+
 [Zerocode](https://github.com/authorjapps/zerocode) is an open source lib/framework enables API testing via simple declarative JSON steps - REST, SOAP, KAFKA, DB services and much more.
 
 ![declarative_v1](https://user-images.githubusercontent.com/12598420/51775337-51030080-20ed-11e9-80c3-825078f822cc.png)
 
 > Testing was _never_ so easy before.
+
+Field Meanings
+===
+
+
+Both Declarative and Extensible
+===
 
 It is a light-weight, simple and extensible framework for writing test intentions in simple JSON format that facilitates both declarative configuration and automation. The framework manages the request payload handling and response assertions at the same time, same place. 
 
