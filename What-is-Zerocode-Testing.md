@@ -69,20 +69,6 @@ For REST end-point or SOAP end-point, request details with _Headers_ and _Body_ 
             },
 ```
 
-Or with headers and body payload,
-```
-    "request": {
-                "headers": {
-                    "X-GOVT-TOKEN": "9-090-9-09-0-99"
-                },
-                "body": {
-                    "id": 1000,
-                    "name": "Titan"
-                }
-            },
-```
-
-
 Or when we need to call a _Java_ function with a SQL query as method parameter
 ```
     "request": "select id, name from customers"
@@ -124,6 +110,20 @@ Or while _Consuming_ we can specify whether to `commitSync` after consuming, `re
                     "recordType" : "JSON",
                     "commitSync": true,
                     "maxNoOfRetryPollsOrTimeouts": 3
+                }
+            },
+```
+
+### HEADERS
+Request with headers and body payload,
+```
+    "request": {
+                "headers": {
+                    "X-GOVT-TOKEN": "9-090-9-09-0-99"
+                },
+                "body": {
+                    "id": 1000,
+                    "name": "Titan"
                 }
             },
 ```
@@ -212,6 +212,17 @@ Or `size` with `records` assertion while _Consuming_
                 ]
             }
 ``` 
+
+### STATUS
+
+For REST services or SOAP, we need to put the expected response with response _Status_, _Headers_ and _Body_ payload.
+
+Only `status` assertion
+```
+           "assertions": {
+                "status": 200
+            }
+```
 
 More Practical Examples (Try at home)
 ===
