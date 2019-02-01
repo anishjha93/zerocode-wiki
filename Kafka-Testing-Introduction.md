@@ -279,7 +279,7 @@ We can simply tell the test to check that we have received a number of records w
 }
 ```
 
-Or we can ask the test to assert a record as not null or field-by-filed of key/values of that record. 
+Or we can ask the test to assert a record as not null or field-by-field of key/values of that record. 
 ```java
 "assertions": {
     "size": 1
@@ -316,7 +316,7 @@ Field order doesn't really matter here as long as the structure is maintained. ð
 # 6.  Combining Kafka testing with REST API testing
 Most of the time we have situations to deal with Kafka and REST API testing. With `Zerocode` it's just zero effort when comes to this kind of situation or any API testing situation. You need to know four things only to write the tests 
 ```
-1) The "url"
+1) The "URL"
 2) The "operation"
 3) The "request"
 4) The "assertions" i.e. the expected response
