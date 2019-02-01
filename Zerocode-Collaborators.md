@@ -20,6 +20,8 @@ Smart Collaborators
 
 + **Arun V**(Java Team Lead and Sr Developer, Bangalore, India)
 
++ **Dev K**(Sr Developer/Test Architect and Automation Tester, Govt, London, UK)
+
 + **Dinesh V**(Full Stack/Java/React-Js/Node-Js/Angular-Js/DB Sr Developer, London, UK)
 
 + **Dinesh Vi**(Artist and Java Developer, LA, USA)
