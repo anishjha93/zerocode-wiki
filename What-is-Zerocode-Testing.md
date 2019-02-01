@@ -8,7 +8,7 @@ Introduction
 <img width="607"  height="479" alt="ZerocodeLand" src="https://user-images.githubusercontent.com/12598420/52103949-15ca6b00-25e0-11e9-9d7b-b809a24f3659.png">
 
 
-TestCase Fields
+Test Case Fields
 ===
 
 ### URL
@@ -88,7 +88,7 @@ Or when we need to call a _Java_ function with a SQL query as method parameter
     "request": "select id, name from customers"
 ```
 
-Or when we need to produce or consume to/from a Kafka topic,
+Or when we need to _Produce_ or _Consume_ to/from a Kafka topic,
 - a `RAW` record
 ```
     "request": {
@@ -116,13 +116,44 @@ Or when we need to produce or consume to/from a Kafka topic,
             },
 ```
 
+Or while _Consuming_ we can specify whether to `commitSync` after consuming, `recordType` as RAW or JSON etc.
+
+```
+            "request": {
+                "consumerLocalConfigs": {
+                    "recordType" : "JSON",
+                    "commitSync": true,
+                    "maxNoOfRetryPollsOrTimeouts": 3
+                }
+            },
+```
 
 ### ASSERTIONS
 
-For REST services, we need to put the expected response with response _Status_, _Headers_ and _Body_ payload
+For REST services, we need to put the expected response with response _Status_, _Headers_ and _Body_ payload.
+
+Only `status` assertion
+```
+           "assertions": {
+                "status": 200
+            }
+```
+
+Or `status` and payload `id` assertions
+Only `status` assertion
+```
+           "assertions": {
+                "status": 200,
+                "body": {
+                    "id" : 583231
+                }
+            }
+```
+
+Or `partial` or `full` payload assertions 
 
 ```
-    "assertions": {
+            "assertions": {
                 "status": 200,
                 "body": {
                     "login" : "octocat",
@@ -134,11 +165,11 @@ For REST services, we need to put the expected response with response _Status_, 
 
 Or with response `headers` details
 ```
-    "assertions": {
+           "assertions": {
                 "status": 200,
                 "headers":{
                   "Server":"sit2.hsbc.co.uk",
-                  "X-HSBC-BANK":"0909-unique-token" //<--- We can put "$NOT.NULL" here if undeterministic
+                  "X-HSBC-BANK":"$NOT.NULL" //<--- "$NOT.NULL" if value is undeterministic
                 },
                 "body": {
                     "login" : "octocat",
@@ -147,6 +178,47 @@ Or with response `headers` details
                 }
             }
 ```
+
+
+For Kafka services, we can put the expected response with response _Status_, _RecordMetadata_.
+
+Only `status` assertion
+```
+           "assertions": {
+                "status": "Ok"
+            }
+```
+
+Or `status` with `recordMetadata` assertion while _Producing_
+```
+           "assertions": {
+                "status": "Ok",
+                "recordMetadata": "$NOT.NULL"
+            }
+```
+
+Or `size` with `records` assertion while _Consuming_
+```
+           "assertions": {
+                "size": 1,
+                "records": [
+                    {
+                        "key": 101,
+                        "value": {
+                            "name" : "Jey"
+                        }
+                    }
+
+                ]
+            }
+``` 
+
+More Practical Examples (Try at home)
+===
++ Http examples are here in [GitHub-Http](https://github.com/authorjapps/zerocode-hello-world/tree/master/src/test/resources)
++ Kafka examples are here in [GitHub-Kafka](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka)
++ Java Function Call examples are here in [GitHub-Java](https://github.com/authorjapps/zerocode-hello-world/tree/master/src/test/resources/helloworldjavaexec)
+
 
 Both Declarative and Extensible
 ===
@@ -170,36 +242,7 @@ It eliminates the repetitive code such as step definitions, test assertions, pay
 
 ![zc_blocks2](https://user-images.githubusercontent.com/12598420/51440172-1dbf0c80-1cbc-11e9-925c-2afa2ef507c3.png)
 
-It has got the best of best ideas and practices from the community to keep it super simple and the adoption is rapidly growing among the developer/tester community. It alleviates the pain and brings the simplicity in validating the APIs.
-
-It also helps in mocking/stubbing interfacing APIs during the testing cycle. Its approach to IDE based performance testing to generate load/stress on the target application is quite simple, flexible and efficient - It goes a step further enabling you to simply reuse the test(s) from your regression pack.
-
 > The purpose of Zerocode lib is to make your API tests easy to write, easy to change, easy to share.
-
-
-e.g. Your below User-Journey or ACs(Acceptance Criterias) or a scenario,
-```java
-AC1:
-GIVEN- the POST api end point '/api/v1/users' to create an user,     
-WHEN- I invoke the API,     
-THEN- I will receive the 201 status with the a user ID and headers 
-AND- I will validate the response
-
-AC2:
-GIVEN- the REST api GET end point '/api/v1/users/${created-User-Id}',     
-WHEN- I invoke the API,     
-THEN- I will receive the 200(Ok) status with body(user details) and headers
-AND- I will assert the response
-```
-translates to the below executable JSON in `Zerocode` - Simple and clean ! <br/>
-_(See here [a full blown CRUD operation scenario](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details) with POST, PUT, GET, DELETE example.)_ <br/>
-
-<img width="624" alt="post_get_user" src="https://user-images.githubusercontent.com/12598420/47145467-bc089400-d2c1-11e8-8707-8e2d2e8c3127.png">
-
-Keep in mind: It's simple JSON. <br/>
-~~_No feature files, no step-definition code, no extra plugins, no assertThat(...), no statements or grammar syntax overhead._~~ 
-
-And it is simple **declarative** JSON DSL, with the `request/response` fields available for the next steps via the `JSON Path`.
 
 See the [Table Of Contents](https://github.com/authorjapps/zerocode#table-of-contents--) for usages and examples.
 
