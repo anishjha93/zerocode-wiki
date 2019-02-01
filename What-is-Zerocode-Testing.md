@@ -34,7 +34,7 @@ Or you can mention the Kafka topic name
 Or you can mention the qualified Java class name,
 
 ```
-    "url": "okg.gov.DbSqlExecutor",
+    "url": "uk.gov.DbSqlExecutor",
 ```
 
 ### OPERATION
