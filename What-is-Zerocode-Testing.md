@@ -1,14 +1,121 @@
 Introduction
 ===
 
+> _Testing_ without writing code.
+
 [Zerocode](https://github.com/authorjapps/zerocode) is an open source lib/framework enables API testing via simple declarative JSON steps - REST, SOAP, KAFKA, DB services and much more.
 
-![declarative_v1](https://user-images.githubusercontent.com/12598420/51775337-51030080-20ed-11e9-80c3-825078f822cc.png)
+<img width="607"  height="479" alt="ZerocodeLand" src="https://user-images.githubusercontent.com/12598420/52103949-15ca6b00-25e0-11e9-9d7b-b809a24f3659.png">
 
-> Testing was _never_ so easy before.
 
-Field Meanings
+TestCase Fields
 ===
+
+### URL
+
+REST end-point or a SOAP end-point or a Kakfa topic or a fully qualified Java class name.
+
+```java
+    "url": "/api/v1/register/persons",
+```
+
+Or you can mention the FQDN with http or https with port 
+
+```
+    "url": "https://apphost.gov.uk/api/v1/register/persons",
+```
+
+Or you can mention the Kafka topic name
+
+```
+    "url": "kafka-topic:heathrow-inbound",
+```
+
+Or you can mention the qualified Java class name,
+
+```
+    "url": "okg.gov.DbSqlExecutor",
+```
+
+### OPERATION
+
+REST end-point or SOAP end-point
+All Http methods such as: POST, PUT, GET, PATCH, DELETE etc
+
+```
+    "operation": "POST",
+```
+
+Or when we need to call a Java function
+```
+    "operation": "executeSql",
+```
+
+Or when we need to `produce` or `consume` from/to a Kafka topic
+```
+    "operation": "produce",
+```
+
+### REQUEST
+
+For REST end-point or SOAP end-point, request details with _Headers_ and _Body_ payload
+
+```
+    "request": {
+                "body": {
+                    "id": 1000,
+                    "name": "Titan"
+                }
+            },
+```
+
+Or with headers and body payload,
+```
+    "request": {
+                "headers": {
+                    "X-GOVT-TOKEN": "9-090-9-09-0-99"
+                },
+                "body": {
+                    "id": 1000,
+                    "name": "Titan"
+                }
+            },
+```
+
+
+Or when we need to call a _Java_ function with a SQL query as method parameter
+```
+    "request": "select id, name from customers"
+```
+
+Or when we need to produce or consume to/from a Kafka topic,
+- a `RAW` record
+```
+    "request": {
+                "records": [
+                    {
+                        "key": "key-101",
+                        "value": "Hello Kafka"
+                    }
+                ]
+            },
+```
+
+- a JSON record
+```
+    "request": {
+                "recordType" : "JSON",
+                "records": [
+                    {
+                        "key": "key-101",
+                        "value": {
+                            "name" : "Jey"
+                        }
+                    }
+                ]
+            },
+```
+
 
 
 Both Declarative and Extensible
