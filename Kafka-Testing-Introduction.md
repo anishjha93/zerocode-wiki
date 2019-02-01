@@ -533,7 +533,7 @@ Zerocode has taken a different approach to solve the fuss involved in the Kafka 
 
 It has got the best of best ideas and practices from the community and the adoption is rapids growing among the developer/tester community. Even many times the manual test engineers come out and help in automation due to the simplicity of writing tests.
 
-# 9. Docker - Bringing up Kafka (Single and Multi-Node)
+# 9. Docker - Bringing up Kafka in a Container
 - [Single Node Kafka](https://github.com/authorjapps/zerocode-docker-factory/wiki/Docker-container-for-a-single-node-Kafka-broker)
 - [Kafka with Schema Registry and REST Proxy](https://github.com/authorjapps/zerocode-docker-factory/wiki/Docker-container-for-Kafka-and-Schema-Registry)
 
