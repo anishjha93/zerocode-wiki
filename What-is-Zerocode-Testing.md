@@ -61,7 +61,7 @@ Or when we need to `produce` or `consume` from/to a Kafka topic
 For REST end-point or SOAP end-point, request details with _Headers_ and _Body_ payload
 
 ```
-    "request": {
+           "request": {
                 "body": {
                     "id": 1000,
                     "name": "Titan"
@@ -77,7 +77,7 @@ Or when we need to call a _Java_ function with a SQL query as method parameter
 Or when we need to _Produce_ or _Consume_ to/from a Kafka topic,
 - a `RAW` record
 ```
-    "request": {
+           "request": {
                 "records": [
                     {
                         "key": "key-101",
@@ -89,7 +89,7 @@ Or when we need to _Produce_ or _Consume_ to/from a Kafka topic,
 
 - a JSON record
 ```
-    "request": {
+           "request": {
                 "recordType" : "JSON",
                 "records": [
                     {
@@ -117,7 +117,7 @@ Or while _Consuming_ we can specify whether to `commitSync` after consuming, `re
 ### HEADERS
 Request with headers and body payload,
 ```
-    "request": {
+           "request": {
                 "headers": {
                     "X-GOVT-TOKEN": "9-090-9-09-0-99"
                 },
