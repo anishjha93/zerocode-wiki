@@ -31,6 +31,6 @@ Smart Collaborators
 
 + **Sidd G**(Java/Kafka/BigData Tester, Chennai, India)
 
-+ **Uttam S**(Cassandra and BigData Architect, Data Scientist and Developer, New Jersey, USA)
++ **Uttam S**(Cassandra/BigData Architect, Data Scientist, and Developer, NJ, USA)
 
 + **Virendra J**(Kafka/BigData/Java/Python Architect, Tech Lead/Sr Developer, London, UK)
