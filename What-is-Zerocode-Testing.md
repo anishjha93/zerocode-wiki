@@ -117,6 +117,36 @@ Or when we need to produce or consume to/from a Kafka topic,
 ```
 
 
+### ASSERTIONS
+
+For REST services, we need to put the expected response with response _Status_, _Headers_ and _Body_ payload
+
+```
+    "assertions": {
+                "status": 200,
+                "body": {
+                    "login" : "octocat",
+                    "id" : 583231,
+                    "type" : "User"
+                }
+            }
+```
+
+Or with response `headers` details
+```
+    "assertions": {
+                "status": 200,
+                "headers":{
+                  "Server":"sit2.hsbc.co.uk",
+                  "X-HSBC-BANK":"0909-unique-token" //<--- We can put "$NOT.NULL" here if undeterministic
+                },
+                "body": {
+                    "login" : "octocat",
+                    "id" : 583231,
+                    "type" : "User"
+                }
+            }
+```
 
 Both Declarative and Extensible
 ===
