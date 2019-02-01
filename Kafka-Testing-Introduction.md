@@ -533,6 +533,10 @@ Zerocode has taken a different approach to solve the fuss involved in the Kafka 
 
 It has got the best of best ideas and practices from the community and the adoption is rapids growing among the developer/tester community. Even many times the manual test engineers come out and help in automation due to the simplicity of writing tests.
 
+# 8.1 Docker - Bringing up Kafka (Single and Multi-Node)
+- [Single Node Kafka](https://github.com/authorjapps/zerocode-docker-factory/wiki/Docker-container-for-a-single-node-Kafka-broker)
+- [Kafka with Schema Registry and REST Proxy](https://github.com/authorjapps/zerocode-docker-factory/wiki/Docker-container-for-Kafka-and-Schema-Registry)
+
 # 9. Conclusion
 In this tutorial, we looked at some of the Kafka concepts and how to test Kafka applications using the Zerocode Testing Framework.
 
