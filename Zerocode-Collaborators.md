@@ -12,7 +12,7 @@ Zerocode has been developed with simple yet smart ideas from the collaborators a
 Smart Collaborators
 ===
 
-> Alphabatically sorted
+> _Alphabetically sorted_
 
 + **Albert O**(Sr Java Dveloper, St Peerburg, Russia)
 
