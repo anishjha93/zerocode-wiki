@@ -41,3 +41,6 @@ Smart Collaborators
 + **Uttam S**(Cassandra/BigData Architect, Data Scientist, and Developer, NJ, USA)
 
 + **Virendra J**(Kafka/BigData/Java/Python Architect, Tech Lead/Sr Developer, London, UK)
+
++ **Sameer S**(/Business Analyst/ActiveMQ/JavaArchitect, BA/Tech Lead/Sr Developer, London, UK)
+
