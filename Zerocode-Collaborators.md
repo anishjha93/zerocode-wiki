@@ -36,11 +36,8 @@ Smart Collaborators
 
 + **Santosh K**(Java/Kafka Team Lead and Developer, Chennai, India)
 
-+ **Sidd G**(Java/Kafka Developer and Tester, London, Uk)
++ **Sameer S**(ActiveMQ/Java Architect, Business Analyst/Tech Lead/Sr Developer, London, UK)
 
 + **Uttam S**(Cassandra/BigData Architect, Data Scientist, and Developer, NJ, USA)
 
 + **Virendra J**(Kafka/BigData/Java/Python Architect, Tech Lead/Sr Developer, London, UK)
-
-+ **Sameer S**(/Business Analyst/ActiveMQ/JavaArchitect, BA/Tech Lead/Sr Developer, London, UK)
-
