@@ -38,9 +38,9 @@ Smart Collaborators
 
 + **Rohit P**(DevOps/Cloud/Java/Spring Tech Lead and Senior Dev, Banking/Govt, London, UK)
 
-+ **Santosh K**(Java/Kafka Team Lead and Developer, Product Company, Chennai, India)
-
 + **Sameer S**(MQ/Java/Mule Expert, Business Analyst/Tech Lead/Sr Developer, London, UK)
+
++ **Santosh K**(Java/Kafka Team Lead and Developer, Product Company, Chennai, India)
 
 + **Uttam S**(Cassandra/BigData Architect, Data Scientist, and Developer, NJ, USA)
 
