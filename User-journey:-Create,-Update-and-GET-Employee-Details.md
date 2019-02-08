@@ -1,6 +1,22 @@
 (Visit here for a quick introduction to [What is Zerocode](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing))
 
-    ** USER JOURNEY - Acceptance Criteria(AC) **
+::: _**Note**_ :::
+
+Here the framework here does the job for us behind the scene, i.e. 
++ Making Http calls to the target end-point, with our request payload
++ Receiving the server reseponse into the test case
++ Doing the JSON comparison of the actual vs expected response in the "assertions". 
+  + Here we can choose to skip the fields  we do not need to assert, in the "assertions" block
+
+> _It saved us from the hassles of writing any code to do the above repititive tasks._
+
+<br/>
+
+Let's see in an user journey, how it is applied.
+
+<br/>
+
+** **USER JOURNEY - Acceptance Criteria(AC)** **
 
 + AC1
 ```
@@ -33,12 +49,31 @@ To write a test-case for the above CRUD operation scenario is quite easy using [
 
 And at the same time you **don't have to search** for or think hard of any **syntaxes** to do the job. That means, you are ready with a BDD scenario test in couple of minutes with simple JSON steps(see below). Advantage here is the tests are instantly readable to anyone because it simple JSON payloads as it is.
 
-> _Note- The `Zerocode` lib takes care of the JSON comparison, where you can choose to skip or ignore the fields you do not need to assert_
-
 <img width="566" alt="expanded-simple" src="https://user-images.githubusercontent.com/12598420/45925725-fe34f480-bf12-11e8-941c-cb3ec8da6c3e.png"> <br />
 
-That's it, done.
+That's it, done. We are ready to run.
 
+***
+Then we stick the above json file to a JUnit runner and run. We can point to any `host` and `port` in the `Runner`. See the sample below.
+```java
+@TargetEnv("application_host.properties")
+@RunWith(ZeroCodeUnitRunner.class)
+public class JustHelloWorldTest {
+
+    @Test
+    @JsonTestCase("helloworld/hello_world_status_ok_assertions.json")
+    public void testGet() throws Exception {
+       // See, No code was needed here. What?
+    }
+}
+```
+
+the `application_host.properties` looks as below:
+```
+web.application.endpoint.host=https://hbc.banking.co.local.uk
+web.application.endpoint.port=443
+web.application.endpoint.context=
+```
 ***
 
 Let's put into the context n deep dive a bit.
