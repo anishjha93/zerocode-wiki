@@ -61,7 +61,7 @@ Then we stick the above json file to a JUnit runner and run. We can point to any
 public class JustHelloWorldTest {
 
     @Test
-    @JsonTestCase("helloworld/hello_world_status_ok_assertions.json")
+    @JsonTestCase("helloworld/user_crud_journey_test.json")
     public void testGet() throws Exception {
        // See, No code was needed here. What?
     }
