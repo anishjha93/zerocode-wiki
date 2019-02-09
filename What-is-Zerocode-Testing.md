@@ -1,9 +1,16 @@
+![zc_blocks2](https://user-images.githubusercontent.com/12598420/51440172-1dbf0c80-1cbc-11e9-925c-2afa2ef507c3.png)
+
+<br/>
+
 Advantages of _Declarative_ Testing
 ===
-Instead of writing code to achieve the testing goals, we write the test intentions in a defined structure.<br/>
-Here the framework, behind the scene, generates the necessary code to do the job for us. 
++ Instead of writing code to achieve the testing goals, we write the test intentions in a defined structure.<br/>
+
++ Here the framework, behind the scene, generates the necessary code to do the job for us. 
 
 + In this style we attempt to minimize or eliminate side effects by describing what the `test` must accomplish in terms of the business functionality, rather than describe how to accomplish it via programming or coding.
+
+<br/>
 
 > That makes things a lot easy and clean.
 
@@ -27,6 +34,8 @@ In the _Declarative Style_ **we don't need to write** any of the below.
 | Display **all** the mismatches and fail the test(time saver) | Stop at **first** mismatch and fail the test(unwanted delay in getting feedback)  |
 | Straight forward and easy | Step chaining is not straight forward   |
 
+<br/>
+
 Drawing a _Simile_
 ===
 
@@ -44,13 +53,18 @@ _Testing_ without writing code.
 
 <img width="450"  height="355" alt="ZerocodeLand" src="https://user-images.githubusercontent.com/12598420/52103949-15ca6b00-25e0-11e9-9d7b-b809a24f3659.png">
 
+<br/>
 
 Test Case Fields
 ===
 
++ **Http**(_REST API and SOAP_)
++ **Kafka** (_Produce, Consume RAW vs JSON_)
++ **Java Function** call e.g. _DB SQL Executror_
+
 ## _Http(REST API and SOAP)_
 
-### URL
+#### URL
 
 REST end-point or a SOAP end-point or a Kakfa topic or a fully qualified Java class name.
 
@@ -71,7 +85,7 @@ Or you can mention the qualified Java class name,
     "url": "uk.gov.DbSqlExecutor",
 ```
 
-### OPERATION
+#### OPERATION
 
 REST end-point or SOAP end-point
 All Http methods such as: POST, PUT, GET, PATCH, DELETE etc
@@ -86,7 +100,7 @@ Or when we need to call a Java function
 ```
 
 
-### REQUEST
+#### REQUEST
 
 For REST end-point or SOAP end-point, request details with _Headers_ and _Body_ payload
 
@@ -105,7 +119,7 @@ Or when we need to call a _Java_ function with a SQL query as method parameter
 ```
 
 
-### HEADERS
+#### HEADERS
 Request with headers and body payload,
 ```
            "request": {
@@ -119,7 +133,7 @@ Request with headers and body payload,
             },
 ```
 
-### ASSERTIONS
+#### ASSERTIONS
 
 For REST services, we need to put the expected response with response _Status_, _Headers_ and _Body_ payload.
 
@@ -172,7 +186,7 @@ Or with response `headers` details
 
 
 
-### STATUS
+#### STATUS
 
 For REST services or SOAP, we need to put the expected response with response _Status_, _Headers_ and _Body_ payload.
 
@@ -185,7 +199,7 @@ Only `status` assertion
 
 ## _Kafka_
 
-### URL
+#### URL
 
 We mention the Kafka topic name
 
@@ -194,7 +208,7 @@ We mention the Kafka topic name
 ```
 
 
-### OPERATION
+#### OPERATION
 
 We need to mention `produce` or `consume` from/to a Kafka topic
 ```
@@ -202,7 +216,7 @@ We need to mention `produce` or `consume` from/to a Kafka topic
 ```
 
 
-### REQUEST
+#### REQUEST
 
 We need to _Produce_ or _Consume_ to/from a Kafka topic,
 - a `RAW` record
@@ -245,7 +259,7 @@ Or while _Consuming_ we can specify whether to `commitSync` after consuming, `re
 ```
 
 
-### ASSERTIONS
+#### ASSERTIONS
 
 For Kafka services, we can put the expected response with response _Status_, _RecordMetadata_.
 
@@ -281,7 +295,7 @@ Or `size` with `records` assertion while _Consuming_
 ``` 
 
 
-More Practical Examples (Try at home)
+_HelloWorld_ Examples (Try at home)
 ===
 + Http examples are here in [GitHub-Http](https://github.com/authorjapps/zerocode-hello-world/tree/master/src/test/resources)
 + Kafka examples are here in [GitHub-Kafka](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka)
@@ -307,7 +321,6 @@ It is a light-weight, simple and extensible framework for writing test intention
 
 </details>
 
-![zc_blocks2](https://user-images.githubusercontent.com/12598420/51440172-1dbf0c80-1cbc-11e9-925c-2afa2ef507c3.png)
 
 > The purpose of Zerocode lib is to make your API tests easy to write, easy to change, easy to share.
 
