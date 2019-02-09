@@ -38,18 +38,17 @@ How neat is that?
 Just think of it, for instance, if we had to write code/shell-scripts for the same repetitive tasks, how much hassle we would have gone through!
 
 
-Introduction
+_Testing_ without writing code.
 ===
 
-> _Testing_ without writing code.
 
-[Zerocode](https://github.com/authorjapps/zerocode) is an open source lib/framework enables API testing via simple declarative JSON steps - REST, SOAP, KAFKA, DB services and much more.
-
-<img width="540"  height="426" alt="ZerocodeLand" src="https://user-images.githubusercontent.com/12598420/52103949-15ca6b00-25e0-11e9-9d7b-b809a24f3659.png">
+<img width="450"  height="355" alt="ZerocodeLand" src="https://user-images.githubusercontent.com/12598420/52103949-15ca6b00-25e0-11e9-9d7b-b809a24f3659.png">
 
 
 Test Case Fields
 ===
+
+## _Http(REST API and SOAP)_
 
 ### URL
 
@@ -65,11 +64,6 @@ Or you can mention the FQDN with http or https with port
     "url": "https://apphost.gov.uk/api/v1/register/persons",
 ```
 
-Or you can mention the Kafka topic name
-
-```
-    "url": "kafka-topic:heathrow-inbound",
-```
 
 Or you can mention the qualified Java class name,
 
@@ -91,10 +85,6 @@ Or when we need to call a Java function
     "operation": "executeSql",
 ```
 
-Or when we need to `produce` or `consume` from/to a Kafka topic
-```
-    "operation": "produce",
-```
 
 ### REQUEST
 
@@ -114,52 +104,13 @@ Or when we need to call a _Java_ function with a SQL query as method parameter
     "request": "select id, name from customers"
 ```
 
-Or when we need to _Produce_ or _Consume_ to/from a Kafka topic,
-- a `RAW` record
-```
-           "request": {
-                "records": [
-                    {
-                        "key": "key-101",
-                        "value": "Hello Kafka"
-                    }
-                ]
-            },
-```
-
-- a JSON record
-```
-           "request": {
-                "recordType" : "JSON",
-                "records": [
-                    {
-                        "key": "key-101",
-                        "value": {
-                            "name" : "Jey"
-                        }
-                    }
-                ]
-            },
-```
-
-Or while _Consuming_ we can specify whether to `commitSync` after consuming, `recordType` as RAW or JSON etc.
-
-```
-            "request": {
-                "consumerLocalConfigs": {
-                    "recordType" : "JSON",
-                    "commitSync": true,
-                    "maxNoOfRetryPollsOrTimeouts": 3
-                }
-            },
-```
 
 ### HEADERS
 Request with headers and body payload,
 ```
            "request": {
                 "headers": {
-                    "X-GOVT-TOKEN": "9-090-9-09-0-99"
+                    "X-GOVT-TOKEN": "90945"
                 },
                 "body": {
                     "id": 1000,
@@ -220,6 +171,82 @@ Or with response `headers` details
 ```
 
 
+
+### STATUS
+
+For REST services or SOAP, we need to put the expected response with response _Status_, _Headers_ and _Body_ payload.
+
+Only `status` assertion
+```
+           "assertions": {
+                "status": 200
+            }
+```
+
+## _Kafka_
+
+### URL
+
+We mention the Kafka topic name
+
+```
+    "url": "kafka-topic:heathrow-inbound",
+```
+
+
+### OPERATION
+
+We need to mention `produce` or `consume` from/to a Kafka topic
+```
+    "operation": "produce",
+```
+
+
+### REQUEST
+
+We need to _Produce_ or _Consume_ to/from a Kafka topic,
+- a `RAW` record
+```
+           "request": {
+                "records": [
+                    {
+                        "key": "key-101",
+                        "value": "Hello Kafka"
+                    }
+                ]
+            },
+```
+
+- a JSON record
+```
+           "request": {
+                "recordType" : "JSON",
+                "records": [
+                    {
+                        "key": "key-101",
+                        "value": {
+                            "name" : "Jey"
+                        }
+                    }
+                ]
+            },
+```
+
+Or while _Consuming_ we can specify whether to `commitSync` after consuming, `recordType` as RAW or JSON etc.
+
+```
+            "request": {
+                "consumerLocalConfigs": {
+                    "recordType" : "JSON",
+                    "commitSync": true,
+                    "maxNoOfRetryPollsOrTimeouts": 3
+                }
+            },
+```
+
+
+### ASSERTIONS
+
 For Kafka services, we can put the expected response with response _Status_, _RecordMetadata_.
 
 Only `status` assertion
@@ -253,16 +280,6 @@ Or `size` with `records` assertion while _Consuming_
             }
 ``` 
 
-### STATUS
-
-For REST services or SOAP, we need to put the expected response with response _Status_, _Headers_ and _Body_ payload.
-
-Only `status` assertion
-```
-           "assertions": {
-                "status": 200
-            }
-```
 
 More Practical Examples (Try at home)
 ===
@@ -276,7 +293,6 @@ Both Declarative and Extensible
 
 It is a light-weight, simple and extensible framework for writing test intentions in simple JSON format that facilitates both declarative configuration and automation. The framework manages the request payload handling and response assertions at the same time, same place. 
 
-It eliminates the repetitive code such as step definitions, test assertions, payload parsing/SerDe and API calls such as Http, Kafka and DB Services. See an example [how](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details). Its powerful JSON comparison and assertions make the testing cycle a lot easy and clean.
 
 <details>
   <summary>Click to expand</summary>
