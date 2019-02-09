@@ -7,23 +7,25 @@ Here the framework, behind the scene, generates the necessary code to do the job
 
 > That makes things a lot easy and clean.
 
+<br/>
+
 In the _Declarative Style_ **we don't need to write** any of the below.
-+ The Http or Kafka Client calls
++ The Http Client (or Kafka Client) calls for REST APIs
 + Request payload parsing
 + Response payload parsing
 + Code for assertions e.g. comparing actual vs expected response
 
 
 
-| Traditional Style                            | Declarative Style                                        |
+| Declarative Style                            | Traditional Style                                        |
 | -------------------------------------------- | -------------------------------------------------------- |
-| Create an _HttpClient_ object. Set the `url` to `"/api/v1/register/persons"` <br/> e.g. `RequestBuilder.setUri(httpUrl);` | `"url":"/api/v1/register/persons"`     |
-| Set this `POST` operaton to the _HttpClient_ object <br/> e.g. `RequestBuilder.create(methodName) .setUri(httpUrl);`| `"operation": "POST"`   |
-| Parse the request payload and set to HttpEntity. <br/> e.g. `HttpEntity httpEntity = EntityBuilder.create().setContentType(APPLICATION_JSON).setText(reqBody).build();` | `"request": { ... }` |
-| Parse the response to Java object or JSON String  | None |
-| Compare the actual response against expected field by field. <br/> - Use multiple `assertThat(...)`. <br/> - Traverse through the response Object field by field <br/> - Or use `JSON Path` to extract value | `"assertions": {JSON structure} `  |
-| Stop at **first** mismatch and fail the test  | Display **all** the mismatches and fail the test  |
-| Step chaining is not straight forward  | Straight forward and easy  |
+| `"url":"/api/v1/register/persons"`    | Create an _HttpClient_ object. Set the `url` to `"/api/v1/register/persons"` <br/> e.g. `RequestBuilder.setUri(httpUrl);`  |
+| `"operation": "POST"`  | Set this `POST` operaton to the _HttpClient_ object <br/> e.g. `RequestBuilder.create(methodName).setUri(httpUrl);`| 
+| `"request": { ... }` | Parse the request payload and set to HttpEntity. <br/> e.g. `HttpEntity httpEntity = EntityBuilder.create().setContentType(APPLICATION_JSON).setText(reqBody).build();` |
+| _None. Nothing to do._ | Parse the response to Java object or JSON String  |
+| `"assertions": {JSON structure} ` | Compare the actual response against expected field by field. <br/> - Use multiple `assertThat(...)`. <br/> - Traverse through the response Object field by field <br/> - Or use `JSON Path` to extract value |
+| Display **all** the mismatches and fail the test(time saver) | Stop at **first** mismatch and fail the test(unwanted delay in getting feedback)  |
+| Straight forward and easy | Step chaining is not straight forward   |
 
 Drawing a _Simile_
 ===
