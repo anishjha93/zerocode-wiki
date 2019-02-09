@@ -1,3 +1,41 @@
+Advantages of _Declarative_ Testing
+===
+Instead of writing code to achieve the testing goals, we write the test intentions in a defined structure.<br/>
+Here the framework, behind the scene, generates the necessary code to do the job for us. 
+
++ In this style we attempt to minimize or eliminate side effects by describing what the `test` must accomplish in terms of the business functionality, rather than describe how to accomplish it via programming or coding.
+
+> That makes things a lot easy and clean.
+
+In the _Declarative Style_ **we don't need to write** any of the below.
++ The Http or Kafka Client calls
++ Request payload parsing
++ Response payload parsing
++ Code for assertions e.g. comparing actual vs expected response
+
+
+
+| Traditional Style                            | Declarative Style                                        |
+| -------------------------------------------- | -------------------------------------------------------- |
+| Create an _HttpClient_ object. Set the `url` to `"/api/v1/register/persons"` <br/> e.g. `RequestBuilder.setUri(httpUrl);` | `"url":"/api/v1/register/persons"`     |
+| Set this `POST` operaton to the _HttpClient_ object <br/> e.g. `RequestBuilder.create(methodName) .setUri(httpUrl);`| `"operation": "POST"`   |
+| Parse the request payload and set to HttpEntity. <br/> e.g. `HttpEntity httpEntity = EntityBuilder.create().setContentType(APPLICATION_JSON).setText(reqBody).build();` | `"request": { ... }` |
+| Parse the response to Java object or JSON String  | None |
+| Compare the actual response against expected field by field. <br/> - Use multiple `assertThat(...)`. <br/> - Traverse through the response Object field by field <br/> - Or use `JSON Path` to extract value | `"assertions": {JSON structure} `  |
+| Stop at **first** mismatch and fail the test  | Display **all** the mismatches and fail the test  |
+| Step chaining is not straight forward  | Straight forward and easy  |
+
+Drawing a _Simile_
+===
+
+To draw a _simile_, we can observe an interesting thing in docker-compose. In `docker-compose` we tell the `Docker-Compose` framework(in a YAML file) to spin up certain things at certain ports etc, and then, things are done for us by the framework. 
+
+> _That's declarative way of doing things_
+
+How neat is that? 
+Just think of it, for instance, if we had to write code/shell-scripts for the same repetitive tasks, how much hassle we would have gone through!
+
+
 Introduction
 ===
 
