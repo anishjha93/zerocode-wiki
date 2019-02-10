@@ -1,3 +1,8 @@
+<br/>
+
+> _Visit here for a quick introduction to [What is Declarative Testing](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
+
+
 # 1.  Introduction
 In this Wiki page, we will see various concepts of Kafka distributed streams and how to test an Application built using Kafka. We will also see how Zerocode will help us to write tests and validate Kafka applications using simple JSON DSLs, over conventional way of testing directly via Kafka clients. 
 
