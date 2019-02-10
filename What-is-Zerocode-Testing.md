@@ -1,4 +1,3 @@
-
 <br/>
 
 Advantages of _Declarative_ Testing
