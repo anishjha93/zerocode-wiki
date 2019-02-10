@@ -1,4 +1,3 @@
-![zc_blocks2](https://user-images.githubusercontent.com/12598420/51440172-1dbf0c80-1cbc-11e9-925c-2afa2ef507c3.png)
 
 <br/>
 
@@ -12,7 +11,7 @@ Advantages of _Declarative_ Testing
 
 <br/>
 
-> That makes things a lot easy and clean.
+> That makes all things a lot easy and clean.
 
 <br/>
 
@@ -39,7 +38,7 @@ In the _Declarative Style_ **we don't need to write** any of the below.
 Drawing a _Simile_
 ===
 
-To draw a _simile_, we can observe an interesting thing in docker-compose. In `docker-compose` we tell the `Docker-Compose` framework(in a YAML file) to spin up certain things at certain ports etc, and then, things are done for us by the framework. 
+To draw a _simile_, we can pay attention to how docker-compose works. In `docker-compose` we tell the `Docker-Compose` framework(in a YAML file) to spin up certain things at certain ports etc, and then, things are done for us by the framework. 
 
 > _That's declarative way of doing things_
 
