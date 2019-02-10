@@ -1,14 +1,17 @@
-(Visit here for a quick introduction to [What is Zerocode](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing))
+<br/>
+
+> _Visit here for a quick introduction to [What is Declarative Testing And Zerocode](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
 
 ::: _**Note**_ :::
 
-Here the framework here does the job for us behind the scene, i.e. 
+In _Declarative Testing_, the framework here does the job for us behind the scene, i.e. 
 + Making Http calls to the target end-point, with our request payload
 + Receiving the server reseponse into the test case
-+ Doing the JSON comparison of the actual vs expected response in the "assertions". 
-  + Here we can choose to skip the fields  we do not need to assert, in the "assertions" block
++ Doing the JSON comparison of the **actual** vs **expected** response for our "_assertions_". 
+  + _Here we can choose to skip the fields  we do not need to assert_
+  + _We keep the payload as JSON with its structure intact_
 
-> _It saved us from the hassles of writing any code to do the above repititive tasks._
+> _It saves us from the hassles of writing any code to do the above repititive tasks._
 
 <br/>
 
