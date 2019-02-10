@@ -63,15 +63,16 @@ _Testing_ without writing code.
 <img width="450"  height="355" alt="ZerocodeLand" src="https://user-images.githubusercontent.com/12598420/52103949-15ca6b00-25e0-11e9-9d7b-b809a24f3659.png">
 
 <br/>
+<br/>
 
 Test Case Fields
 ===
 
-+ **Http**(_REST API and SOAP_)
-+ **Kafka** (_Produce, Consume RAW vs JSON_)
-+ **Java Function** call e.g. _DB SQL Executror_
+1. **Http**(_REST API and SOAP_)
+2. **Kafka** (_Produce, Consume RAW vs JSON_)
+3. **Java Function** call e.g. _DB SQL Executror_
 
-## _Http(REST API and SOAP)_
+## _1)Http(REST API and SOAP)_
 
 #### URL
 
@@ -206,7 +207,7 @@ Only `status` assertion
             }
 ```
 
-## _Kafka_
+## _2) Kafka_
 
 #### URL
 
@@ -303,6 +304,7 @@ Or `size` with `records` assertion while _Consuming_
             }
 ``` 
 
+<br/>
 
 _HelloWorld_ Examples (Try at home)
 ===
