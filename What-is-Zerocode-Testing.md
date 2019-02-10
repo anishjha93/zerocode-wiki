@@ -33,6 +33,18 @@ In the _Declarative Style_ **we don't need to write** any of the below.
 
 <br/>
 
+Both Declarative and Extensible
+===
+
+**While** the framework is light-weight and simple to write test intentions in simple JSON format, **at the same time** we can customize/extend it to add our own flavours. 
+
+For instance, we can add custom _Http Headers_ to the entire test-suite or an individual test-case, automate _OAuth2_, or use our own flavour of _Apache Kafka Client_ to deal with _Kafka Brokers_ and much more stuff.
+
+And making all these things is **super easy** and **straight forward**.
+
+
+<br/>
+
 Drawing a _Simile_
 ===
 
@@ -299,14 +311,8 @@ _HelloWorld_ Examples (Try at home)
 + Java Function Call examples are here in [GitHub-Java](https://github.com/authorjapps/zerocode-hello-world/tree/master/src/test/resources/helloworldjavaexec)
 
 
-Both Declarative and Extensible
-===
-
-It is a light-weight, simple and extensible framework for writing test intentions in simple JSON format that facilitates both declarative configuration and automation. The framework manages the request payload handling and response assertions at the same time, same place. 
-
-
 <details>
-  <summary>Click to expand</summary>
+  <summary>More About Kafka, DB, OAuth2, Http etc (Click to expand)</summary>
 
 + [Kafka application testing](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction)
 
@@ -318,6 +324,8 @@ It is a light-weight, simple and extensible framework for writing test intention
 
 </details>
 
+
+<br/>
 
 > The purpose of Zerocode lib is to make your API tests easy to write, easy to change, easy to share.
 
