@@ -1,14 +1,16 @@
 <br/>
 
-> _Visit here for a quick introduction to [What is Declarative Testing](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
+> _Visit here for a quick overview of [What is Declarative Testing and Its Advantages](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
 
 
 # 1.  Introduction
 In this Wiki page, we will see various concepts of Kafka distributed streams and how to test an Application built using Kafka. We will also see how Zerocode will help us to write tests and validate Kafka applications using simple JSON DSLs, over conventional way of testing directly via Kafka clients. 
 
+> If you are already aware of fundamental concepts, you can directly jump to `3. Writing our first produce test-case`
+
 _For more details about Kafka streams and how to develop a streaming application, please visit [Developing Streaming Applications](https://www.confluent.io/blog/stream-processing-part-1-tutorial-developing-streaming-applications)._
 
-## :::Note:::
+## _:::Note:::_
 Kafka testing framework in Zerocode has been built using Apache Kafka client and it abstracts the complexities of writing Java code to acieve the same end goal. It completely bypasses the Java layer to save us from the fire-fighting we need to do otherwise and enables us to focus on testing rather than solving coding issues. At the same time, along with the simplicity, it is also gives us the flexibility to even code with the Java client keeping the test-cases still declarative as they were.
 
 > It enables us to keep the test-cases clean, readable, simple and elegant
