@@ -3,6 +3,12 @@ In this Wiki page, we will see what is a RAW message and how to produce this kin
 
 For more details about Kafka testing, please visit [Kafka Testing Introduction - Baby Steps](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction)
 
+
+
+![kafka produce v2](https://user-images.githubusercontent.com/12598420/52596194-a3f7ea00-2e47-11e9-93c2-0895608ef93a.gif)
+
+
+
 # 2.  What is RAW message
 RAW messages can be any kind of messages which may or may not have any defined structure, as well as the messages,  may or may not conform to a specific data schema. Think of a RAW message as plain text for now.
 
