@@ -334,3 +334,23 @@ _HelloWorld_ Examples (Try at home)
 See the [Table Of Contents](https://github.com/authorjapps/zerocode#table-of-contents--) for usages and examples.
 
 For Kafka testing approach, visit this page [Kafka-Testing Quick Start](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction).
+
+Running the Tests using _JUnit_
+===
++ All examples above run via Junit `@Test` annotation like below.
+```java
+@TargetEnv("github_host.properties")
+@RunWith(ZeroCodeUnitRunner.class)
+public class JustHelloWorldTest {
+
+    @Test
+    @JsonTestCase("helloworld/hello_world_status_ok_assertions.json")
+    public void testGet() throws Exception {
+
+    }
+}
+```
+
+> You point to any JSON file and run. Hosts details are in the `.properties` file by `@TargetEnv`
+
++ Also you can run as a `Suite` pointing to the root of a `package`.
