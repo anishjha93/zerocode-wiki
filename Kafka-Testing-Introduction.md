@@ -6,7 +6,7 @@
 # 1.  Introduction
 In this Wiki page, we will see various concepts of Kafka distributed streams and how to test an Application built using Kafka. We will also see how Zerocode will help us to write tests and validate Kafka applications using simple JSON DSLs, over conventional way of testing directly via Kafka clients. 
 
-> If you are already aware of fundamental concepts, you can directly jump to `3. Writing our first produce test-case`
+> If you are already aware of fundamental concepts, you can directly jump to - [Section 3. Writing our first produce test-case](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction#3--writing-our-first-produce-test-case)
 
 _For more details about Kafka streams and how to develop a streaming application, please visit [Developing Streaming Applications](https://www.confluent.io/blog/stream-processing-part-1-tutorial-developing-streaming-applications)._
 
