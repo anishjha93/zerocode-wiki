@@ -6,14 +6,14 @@
 
 Smart People, Smart _Ideas_
 ===
-Zerocode has been developed with simple yet smart ideas from the collaborators across the world.
+Zerocode has been developed with simple yet smart ideas from automation-testers, developers and manual-testers across the world.
 
-> Testing was never so _easy_ before
+> Experience the simplicity in _Testing_
 
-_Apologies, if you didn't find your name here. If you have contributed directly or indirectly, then please write an email tous  @ `author.japps@gmail.com` with a brief details about you and your contribution; and we will be happy to display your details._
+_Apologies, if you didn't find your name here. If you have contributed directly or indirectly, then please write an email to us  @ `author.japps@gmail.com` with brief details about you and your contribution; and we will be glad to include your details in the below list._
 
 
-Smart Collaborators
+Smart Contributors
 ===
 
 > _Alphabetically sorted_
