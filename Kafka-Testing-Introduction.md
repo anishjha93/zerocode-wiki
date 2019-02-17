@@ -118,13 +118,13 @@ To write the tests for any of 'Produce' or 'Consume' tests, we need to know the 
 
 ```
 
-+ The operation i.e. `'produce' or 'consume'` 
++ The operation i.e. `'produce' (or 'consume'`)
 ```
 
 "operation": "produce"
 
 ```
-_Also you can use the `'load' or 'unload'` aka `'send' or 'receive'` which means the same._
+
 
 + While sending a message to the topic, we need to send as below
 ```java
@@ -181,7 +181,6 @@ We need to know,
 "operation": "consume"
 
 ```
-_Also you can use the `'unload'` aka `'receive'` which exactly means the same._
 
 + While consuming message(s) from the topic, we need to send as below
 ```java
