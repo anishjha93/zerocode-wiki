@@ -1,3 +1,5 @@
+> If you are reading this 1st time, then you might need 10 to 15 mins, but afterwards you can skip the intro topics and directly jump to [Docker - Kafka In a Container](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction/_edit#9-docker---bringing-up-kafka-in-a-container) section, then you need only 2mins.
+
 <br/>
 
 > _Visit here for a quick overview of [What is Declarative Testing and Its Advantages](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
@@ -210,7 +212,7 @@ Here, we are telling the test to do a `commitSync` after consuming the message, 
 Here, we are telling the test to show the consumed records in the response. If you set `"showRecordsConsumed": false`, then it will only show the size, not the actual records.
 
 >        "maxNoOfRetryPollsOrTimeouts": 3
-Here, we are telling the test to show poll 3 times maximum, then stop polling. If we have more records, we can set to a larger value. The default value is `100` mili sec.
+Here, we are telling the test to show poll 3 times maximum, then stop polling. If we have more records, we can set to a larger value. The default value is 5.
 
 >        "pollingTime": 500   // Default is 100 mili sec if you skip this flag.
 Here, we are telling the test to poll for 500 mili sec each time it polls.
