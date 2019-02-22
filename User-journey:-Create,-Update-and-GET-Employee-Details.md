@@ -4,20 +4,20 @@
 
 Introduction
 ===
-The awesomeness of the testing style that might surprise you...
+The awesomeness of this testing style that might surprise you...
 
 In _Declarative Testing_, the framework here does the job for us behind the scene i.e. 
 + Making Http calls to the target end-point, with our request payload
-+ Receiving the server reseponse into the test case
++ Receiving the server response into the test case
 + Doing the JSON comparison of the **actual** vs **expected** response for our "_assertions_". 
-  + _Here we can choose to skip the fields  we do not need to assert_
+  + _Here we can choose to skip the fields we do not need to assert_
   + _We keep the payload as JSON with its structure intact_
 
-> _It saves us from the hassles of writing any code to do the above repititive tasks._
+> _It saves us from the hassles of writing any code to do the above repetitive tasks._
 
 <br/>
 
-Let's see in an user journey, how it is applied.
+Let's see in a user journey, how it is applied.
 
 <br/>
 
@@ -53,7 +53,7 @@ To write a test-case for the above CRUD operation scenario is quite easy using [
 
 <img width="624" alt="post_get_user" src="https://user-images.githubusercontent.com/12598420/47145467-bc089400-d2c1-11e8-8707-8e2d2e8c3127.png">
 
-And at the same time you **don't have to search** for or think hard of any **syntaxes** to do the job. That means, you are ready with a BDD scenario test in couple of minutes with simple JSON steps(see below). Advantage here is the tests are instantly readable to anyone because it simple JSON payloads as it is.
+And at the same time you **don't have to search** for or think hard of any **syntaxes** to do the job. That means, you are ready with a BDD scenario test in a couple of minutes with simple JSON steps(see below). Advantage here is the tests are instantly readable to anyone because of, it enables simple JSON payloads as it is.
 
 <img width="566" alt="expanded-simple" src="https://user-images.githubusercontent.com/12598420/45925725-fe34f480-bf12-11e8-941c-cb3ec8da6c3e.png"> <br />
 
