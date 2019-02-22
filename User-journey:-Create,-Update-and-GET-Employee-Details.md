@@ -2,9 +2,11 @@
 
 > _Visit here for a quick introduction to [What is Declarative Testing And Zerocode](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
 
-::: _**Note**_ :::
+Introduction
+===
+The awesomeness of the lib that might surprise you...
 
-In _Declarative Testing_, the framework here does the job for us behind the scene, i.e. 
+In _Declarative Testing_, the framework here does the job for us behind the scene i.e. 
 + Making Http calls to the target end-point, with our request payload
 + Receiving the server reseponse into the test case
 + Doing the JSON comparison of the **actual** vs **expected** response for our "_assertions_". 
@@ -19,7 +21,8 @@ Let's see in an user journey, how it is applied.
 
 <br/>
 
-** **USER JOURNEY - Acceptance Criteria(AC)** **
+USER JOURNEY - Acceptance Criterias(ACs)
+===
 
 + AC1
 ```
@@ -55,6 +58,8 @@ And at the same time you **don't have to search** for or think hard of any **syn
 <img width="566" alt="expanded-simple" src="https://user-images.githubusercontent.com/12598420/45925725-fe34f480-bf12-11e8-941c-cb3ec8da6c3e.png"> <br />
 
 That's it, done. We are ready to run.
+
+The hosts and ports in the `url` fields are externalized as usual(explained below).
 
 ***
 Then we stick the above json file to a JUnit runner and run. We can point to any `host` and `port` in the `Runner`. See the sample below.
