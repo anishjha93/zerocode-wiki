@@ -4,7 +4,7 @@
 
 Introduction
 ===
-The awesomeness of the lib that might surprise you...
+The awesomeness of the testing style that might surprise you...
 
 In _Declarative Testing_, the framework here does the job for us behind the scene i.e. 
 + Making Http calls to the target end-point, with our request payload
