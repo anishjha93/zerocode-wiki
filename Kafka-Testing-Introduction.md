@@ -2,26 +2,20 @@
 
 <br/>
 
-_Visit here for a quick overview of [What is Declarative Testing and Its Advantages](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
-
-
-![kafka produce v2](https://user-images.githubusercontent.com/12598420/52596194-a3f7ea00-2e47-11e9-93c2-0895608ef93a.gif)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- _(Click [here](https://user-images.githubusercontent.com/12598420/52596194-a3f7ea00-2e47-11e9-93c2-0895608ef93a.gif) to see the enlarged clip)_
 
 # 1.  Introduction
-In this Wiki page, we will see various concepts of Kafka distributed streams and how to test an Application built using Kafka. We will also see how Zerocode will help us to write tests and validate Kafka applications using simple JSON DSLs, over conventional way of testing directly via Kafka clients. 
+In this Wiki page, we will see various concepts of Kafka distributed streams and how to test an Application built using Kafka. We will also see how Zerocode will help us to write tests and validate Kafka applications using simple _Declarative_ JSON DSLs, over conventional way of testing directly via Kafka clients. 
+
+We will learn how it enables us to keep the test-cases clean, readable, simple and elegant
+
 
 > If you are already aware of fundamental concepts, you can directly jump to - [Section 3. Writing our first produce test-case](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction#3--writing-our-first-produce-test-case)
 
-_For more details about Kafka streams and how to develop a streaming application, please visit [Developing Streaming Applications](https://www.confluent.io/blog/stream-processing-part-1-tutorial-developing-streaming-applications)._
+For more details about Kafka streams and how to develop a streaming application, please visit [Developing Streaming Applications](https://www.confluent.io/blog/stream-processing-part-1-tutorial-developing-streaming-applications).
 
-## _:::Note:::_
-Kafka testing framework in Zerocode has been built using Apache Kafka client and it abstracts the complexities of writing Java code to acieve the same end goal. It completely bypasses the Java layer to save us from the fire-fighting we need to do otherwise and enables us to focus on testing rather than solving coding issues. At the same time, along with the simplicity, it is also gives us the flexibility to even code with the Java client keeping the test-cases still declarative as they were.
 
-> It enables us to keep the test-cases clean, readable, simple and elegant
+_Visit here for a quick overview of [What is Declarative Testing and Its Advantages](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
 
-Click here to know about [What is Zerocode Testing](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)
 
 # 2.  Kafka Testing Concepts
 Kafka is a distributed messaging system. When we deal with a Kafka application, we need to know where the `topic` resides and what types of messages aka `records` are written aka `produced` to the topic, then what happens when the messages are `consumed` by the listeners.
@@ -58,6 +52,12 @@ Response from broker after a successful "produce".
     }
 }
 ```
+
+
+
+![kafka produce v2](https://user-images.githubusercontent.com/12598420/52596194-a3f7ea00-2e47-11e9-93c2-0895608ef93a.gif)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ _(Click [here](https://user-images.githubusercontent.com/12598420/52596194-a3f7ea00-2e47-11e9-93c2-0895608ef93a.gif) to see the enlarged clip)_
 
 # 2.4.  Writing tests only to consume
 When you read or consume from a topic you can verify the record(s) from the topics.
@@ -558,5 +558,8 @@ The complete source code and all example code snippets for this Wiki page can be
 + [KSQL Tests](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka/consume/ksql)
 + [Produce Records Directly From File](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka/produce/file_produce)
 + [Consume Records And Dump To File](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka/consume/file_dump)
+
+## _:::Note:::_
+Kafka testing framework in Zerocode has been built using Apache Kafka client and it abstracts the complexities of writing Java code to acieve the same end goal. It completely bypasses the Java layer to save us from the fire-fighting we need to do otherwise and enables us to focus on testing rather than solving coding issues. At the same time, along with the simplicity, it is also gives us the flexibility to even code with the Java client keeping the test-cases still declarative as they were.
 
 # Happy API Testing! 🐼 
