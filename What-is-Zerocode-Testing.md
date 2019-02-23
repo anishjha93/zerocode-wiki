@@ -1,5 +1,5 @@
 
-Advantages of _Declarative_ Testing
+Advantages of Declarative Testing
 ===
 + Instead of writing code to achieve the testing goals, we write the test intentions in a defined structure.<br/>
 
@@ -56,7 +56,7 @@ How neat is that?
 Just think of it, for instance, if we had to write code/shell-scripts for the same repetitive tasks, how much hassle we would have gone through!
 
 
-_Testing_ without writing code.
+Testing Without Writing Code.
 ===
 
 
@@ -306,7 +306,7 @@ Or `size` with `records` assertion while _Consuming_
 
 <br/>
 
-_HelloWorld_ Examples (Try at home)
+HelloWorld Examples (Try at home)
 ===
 + Http examples are here in [GitHub-Http](https://github.com/authorjapps/zerocode-hello-world/tree/master/src/test/resources)
 + Kafka examples are here in [GitHub-Kafka](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka)
