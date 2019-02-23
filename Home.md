@@ -1,3 +1,7 @@
+<br/>
+
+> _Use the sidebar on the right or "Ctrl+f" search for any topic_
+
 ## Zerocode Wiki
 
 _(For helps and usage- Visit [Table of Contents](https://github.com/authorjapps/zerocode#table-of-contents--). Visit here for a [Quick Introduction to Hassle-Free Declarative Testing](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing))_
