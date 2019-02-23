@@ -43,9 +43,8 @@ For instance, we can add custom _Http Headers_ to the entire test-suite or an in
 And making all these things is **super easy** and **straight forward**.
 
 
-<br/>
 
-Drawing a _Simile_
+Drawing a Simile
 ===
 
 To draw a _simile_, we can pay attention to how docker-compose works. In `docker-compose` we tell the `Docker-Compose` framework(in a YAML file) to spin up certain things at certain ports etc, and then, things are done for us by the framework. 
@@ -62,7 +61,8 @@ Testing Without Writing Code.
 
 <img width="450"  height="355" alt="ZerocodeLand" src="https://user-images.githubusercontent.com/12598420/52103949-15ca6b00-25e0-11e9-9d7b-b809a24f3659.png">
 
-<br/>
+> _That's declarative way what we discussed earlier_
+
 <br/>
 
 Test Case Fields
@@ -72,7 +72,7 @@ Test Case Fields
 2. **Kafka** (_Produce, Consume RAW vs JSON_)
 3. **Java Function** call e.g. _DB SQL Executror_
 
-## _1)Http(REST API and SOAP)_
+## _1) Http(REST API and SOAP)_
 
 #### URL
 
