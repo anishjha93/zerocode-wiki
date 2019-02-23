@@ -4,7 +4,7 @@
 
 
 # 1.  Introduction
-In this Wiki page, we will see various concepts of Kafka distributed streams and how to test an Application built using Kafka. We will also see how Zerocode will help us to write tests and validate Kafka applications using simple _Declarative_ JSON DSLs, over conventional way of testing directly via Kafka clients. 
+In this Wiki page, we will see various concepts of Kafka distributed streams and how to test an Application built using Kafka. We will explore basic to high-level approaches for testing microservices applications built involving Kafka and Http. Also, we will learn about the advantages of the declarative way of testing Kafka applications over the traditional/existing way of testing.
 
 We will learn how it enables us to keep the test-cases clean, readable, simple and elegant
 
