@@ -41,11 +41,9 @@ Response from broker after a successful "produce".
 {
     "recordMetadata": {
         "offset": 0,
-        "timestamp": 1547760760264,
         "serializedKeySize": 13,
         "serializedValueSize": 34,
         "topicPartition": {
-            "hash": 749715182,
             "partition": 0,
             "topic": "demo-topic"
         }
@@ -253,14 +251,15 @@ Or we can go further and ask the test to assert the "recordMetadata" field-by-fi
         "serializedKeySize": 13,
         "serializedValueSize": 34,
         "topicPartition": {
-            "hash": 749715182,
             "partition": 0,
             "topic": "demo-topic"
         }
     }
 }
 ```
-Yes, just stick the JSON block as it is. Isn't it awesome and clean? Hasn't it take away a lot of hassles from us of doing vicious deserialization of the `acknowledgment` or the asserting field-by-field, making the test almost not-readable?
+Yes, just stick the JSON block as it is. 
+
+Isn't it awesome and clean? Hasn't it take away a lot of hassles from us of doing vicious deserialization of the `acknowledgment` or the asserting field-by-field, making the test almost not-readable?
 
 Or if you are not really bothered about some fields, you can simply put as `$NOT.NULL` against them as below or completely skip them from the "assertions block".
 
@@ -560,6 +559,8 @@ The complete source code and all example code snippets for this Wiki page can be
 + [Consume Records And Dump To File](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka/consume/file_dump)
 
 ## _:::Note:::_
-Kafka testing framework in Zerocode has been built using Apache Kafka client and it abstracts the complexities of writing Java code to acieve the same end goal. It completely bypasses the Java layer to save us from the fire-fighting we need to do otherwise and enables us to focus on testing rather than solving coding issues. At the same time, along with the simplicity, it is also gives us the flexibility to even code with the Java client keeping the test-cases still declarative as they were.
++ Kafka testing framework in Zerocode has been built using Apache Kafka client and it abstracts the complexities of writing Java code to acieve the same end goal
++ It completely bypasses the Java layer to save us from the fire-fighting we need to do otherwise. It enables us to focus on testing rather than solving coding issues
++ At the same time, along with the simplicity, it is also gives us the flexibility to use the Java client, keeping the test-cases still declarative as they were
 
 # Happy API Testing! 🐼 
