@@ -552,11 +552,15 @@ It has got the best of best ideas and practices from the community and the adopt
 In this tutorial, we looked at some of the Kafka concepts and how to test Kafka applications using the Zerocode Testing Framework.
 
 The complete source code and all example code snippets for this Wiki page can be found below.
+
 + [Produce Tests](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka/produce)
 + [Consume Tests](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka/consume)
 + [KSQL Tests](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka/consume/ksql)
 + [Produce Records Directly From File](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka/produce/file_produce)
 + [Consume Records And Dump To File](https://github.com/authorjapps/hello-kafka-stream-testing/tree/master/src/test/resources/kafka/consume/file_dump)
+
+> To run any test(s), we can directly navigate to their corresponding JUnit @Test, under 'src/test/java' and run as JUnit. 
+Prior to that, we need to bring up Docker with Kafka(Spin up [kafka-schema-registry.yml (See Wiki)](https://github.com/authorjapps/zerocode-docker-factory/wiki/Docker-container-for-Kafka-and-Schema-Registry).
 
 ## _:::Note:::_
 + Kafka testing framework in Zerocode has been built using Apache Kafka client and it abstracts the complexities of writing Java code to acieve the same end goal
