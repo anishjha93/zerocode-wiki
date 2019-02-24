@@ -1,6 +1,6 @@
 <br/>
 
-> _If you are reading this 1st time, then you might need 10 to 15 mins, but afterwards you can skip the intro topics and directly jump to [Docker - Kafka In a Container](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction/_edit#9-docker---bringing-up-kafka-in-a-container) section, then you need only 2mins._
+> _If you are reading this 1st time, then you might need 10 to 15 mins, but afterwards you can skip the intro topics and directly jump to [Docker - Kafka In a Container](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction#9-docker---bringing-up-kafka-in-a-container) section, then you need only 2mins._
 
 
 # 1.  Introduction
