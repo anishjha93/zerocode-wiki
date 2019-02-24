@@ -1,6 +1,6 @@
 <br/>
 
-> _Use the sidebar on the right or "Ctrl+f" search for any topic_
+> _Use the sidebar on the right for all topics or "Ctrl+f" search for any topic_
 
 ## Zerocode Wiki
 
