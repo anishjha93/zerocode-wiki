@@ -8,10 +8,9 @@ In this Wiki page, we will see various concepts of Kafka distributed streams and
 
 We will learn how it enables us to keep the test-cases clean, readable, simple and elegant
 
+_For everything explained here, we can find a working code example in the [Conclusion](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction#10-conclusion) section_
 
 > If you are already aware of fundamental concepts, you can directly jump to - [Section 3. Writing our first produce test-case](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction#3--writing-our-first-produce-test-case)
-
-For more details about Kafka streams and how to develop a streaming application, please visit [Developing Streaming Applications](https://www.confluent.io/blog/stream-processing-part-1-tutorial-developing-streaming-applications).
 
 
 _Visit here for a quick overview of [What is Declarative Testing and Its Advantages](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
