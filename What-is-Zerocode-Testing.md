@@ -1,15 +1,15 @@
 
 Advantages of Declarative Testing
 ===
-+ Instead of writing code to achieve the testing goals, we write the test intentions in a defined structure.<br/>
++ Instead of writing code to achieve the testing goals, we write the test intentions including _assertions_.<br/>
 
-+ Here the framework, behind the scene, generates the necessary code to do the job for us. 
++ Here the framework, behind the scene, generates the necessary code to do the job for us e.g. API calls, DB calls etc. 
 
 + In this style we attempt to minimize or eliminate side effects by describing what the `test` must accomplish in terms of the business functionality, rather than describe how to accomplish it via programming or coding.
 
 <br/>
 
-> That makes all things a lot easy and clean.
+> That makes the automation a lot easy and clean.
 
 <br/>
 
@@ -32,16 +32,6 @@ In the _Declarative Style_ **we don't need to write** any of the below.
 | Straight forward and easy | Step chaining is not straight forward   |
 
 <br/>
-
-Both Declarative and Extensible
-===
-
-**While** the framework is light-weight and simple to write test intentions in simple JSON format, **at the same time** we can customize/extend it to add our own flavours. 
-
-For instance, we can add custom _Http Headers_ to the entire test-suite or an individual test-case, automate _OAuth2_, or use our own flavour of _Apache Kafka Client_ to deal with _Kafka Brokers_ and much more stuff.
-
-And making all these things is **super easy** and **straight forward**.
-
 
 
 Drawing a Simile
@@ -72,7 +62,7 @@ Test Case Fields
 2. **Kafka** (_Produce, Consume RAW vs JSON_)
 3. **Java Function** call e.g. _DB SQL Executror_
 
-## _1) Http(REST API and SOAP)_
+### Http(REST API and SOAP)
 
 #### URL
 
@@ -207,7 +197,7 @@ Only `status` assertion
             }
 ```
 
-## _2) Kafka_
+### Kafka
 
 #### URL
 
@@ -354,3 +344,13 @@ public class JustHelloWorldTest {
 > You point to any JSON file and run. Hosts details are in the `.properties` file by `@TargetEnv`
 
 + Also you can run as a `Suite` pointing to the root of a `package`.
+
+Both Declarative and Extensible
+===
+
+**While** Zerocode framework is light-weight and simple to write test intentions in JSON format, **at the same time** we can customize/extend it to add our own flavours. 
+
+For instance, we can add custom _Http Headers_ to the entire test-suite or an individual test-case, automate _OAuth2_, or use our own flavour of _Apache Kafka Client_ to deal with _Kafka Brokers_ and much more stuff.
+
+And making all these things is **super easy** and **straight forward**.
+
