@@ -107,6 +107,14 @@ In the same test, you can hook the two steps like below <br/>
 + Step-2) Consume from the same topic i.e. `demo-topic` and validate `records`
   + Assert that the same record was in the consumed records with "key": "1234", "value": "Hello World", because we might have consumed more that one record if they were produced to the same topic. 
 
+# 2.6. Knowing The Record Format
+A record is a message which can be written to or fetched from a topic. A record can be of various formats, e.g. RAW, JSON, CSV, AVROetc and many others.
+
+Records are represented in Key, Value pair. Also, it can have optional headers.
+
+> "key":"1234", "value":"Hello World" 
+
+Key can also be optional.
 
 # 3.  Writing our first produce test-case
 To write the tests for any of 'Produce' or 'Consume' tests, we need to know the following details
