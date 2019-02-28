@@ -1,8 +1,9 @@
-Demo Maven Project for CI Build set up
+GitHub Repo(Try it at home)
 ===
-https://github.com/authorjapps/performance-tests#performance-testing-testing-load-and-stress
+Visit [performance-testing-testing-load-and-stress](https://github.com/authorjapps/performance-tests#performance-testing-testing-load-and-stress) repo.
 
-How does it help when it is IDE/JUnit based? 
+
+How it helps? 
 ===
 https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#why-using-an-ide-
 
