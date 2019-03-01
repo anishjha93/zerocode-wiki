@@ -2,18 +2,13 @@ The following examples shows how to **reuse** an external JSON file or files in 
 
 From this version onwards, Zerocode supports this feature. But there is a **usage warning** around it not to overuse this feature.
 
-**Suggestions and Recommendations:**
-===
- * Try to keep the test cases as independent possible. Do not create too much dependencies on external files which will add unnecessary complexity to the project. 
- * The complexity could be in terms project maintenance or interpreting the test case itself. Traversing around the tests are painful and we pay a price for it if they not readable.
- * We should use the IDE features which now a days, makes it a lot easier in terms of dealing with JSON contents to keep the testing life cycle simple n clean.
 
 **Dependency:**
 ```xml
 <dependency>
     <groupId>org.jsmart</groupId>
-    <artifactId>zerocode-rest-bdd</artifactId>
-    <version>1.2.8</version>
+    <artifactId>zerocode-tdd</artifactId>
+    <version>check-latest-in-readme-github</version>
 </dependency>
 ```
 
@@ -75,3 +70,8 @@ You can pick the handy examples from our [HelloWorld repo](https://github.com/au
 ![hello_world_passed](https://user-images.githubusercontent.com/12598420/47264733-49dbbd80-d514-11e8-96db-4e593c68b96d.png)
 
 
+**Suggestions and Recommendations**
+===
+ * Try to keep the test cases as independent possible. Do not create too much dependencies on external files which will add unnecessary complexity to the project. 
+ * The complexity could be in terms project maintenance or interpreting the test case itself. Traversing around the tests are painful and we pay a price for it if they not readable.
+ * We should use the IDE features which now a days, makes it a lot easier in terms of dealing with JSON contents to keep the testing life cycle simple n clean.
