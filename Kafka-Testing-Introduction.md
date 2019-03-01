@@ -29,7 +29,7 @@ We can go for an end-to-end testing approach which will validate both producing,
 Here we pick a functionality, produce the desired data and validate, consume the intended data and validate, alongside of the HTTP REST or SOAP API validation which helps in keeping our tests much cleaner and less noisy.
 
 ![kafka_stream_clean](https://user-images.githubusercontent.com/12598420/53637422-0825f680-3c1b-11e9-99c9-4ad76a66d5a7.jpg)
-
+_Photo credit:[@jannerboy62:unsplash](https://unsplash.com/@jannerboy62)_
 
 We can do this by bringing up Kafka in dockerized containers or by pointing our tests to any integrated test environment somewhere in our Kubernetes-Kafka cluster or any other microservices infrastructure.
 # 2.  What We Need To Know To Test Kafka
