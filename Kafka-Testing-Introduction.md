@@ -4,7 +4,7 @@
 
 
 # 1.  Introduction
-In this Wiki page, we will see various concepts of Kafka distributed streams and how to test an Application built using Kafka. We will explore basic to high-level approaches for testing microservices applications built involving Kafka and Http. Also, we will learn about the advantages of the declarative way of testing Kafka applications over the traditional/existing way of testing.
+In this Wiki page, first we will discuss various concepts of Kafka distributed streams and then learn how to test an application built involving Kafka. We will explore basic to high-level approaches for testing microservices applications built involving Http and Kafka. Also, we will learn about the advantages of the declarative way of testing Kafka applications over the traditional/existing way of testing.
 
 We will learn how it enables us to keep the test-cases clean, readable, simple and elegant
 
@@ -15,6 +15,10 @@ _For everything explained here, we can find a working code example in the [Concl
 
 _Visit here for a quick overview of [What is Declarative Testing and Its Advantages](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
 
+# 1.1 Kafka Testing Challenges
+The difficult part is, some part of the application logic or a DB procedure keeps producing records to a topic and another part of the application keeps consuming the records and continuously processes them based on certain business rules.
+
+The records, partitions, offsets, exception scenarios etc keep on changing, making it difficult to think in terms of what to test, when to test, and how to test.
 
 # 2.  Kafka Testing Concepts
 Kafka is a distributed messaging system. When we deal with a Kafka application, we need to know where the `topic` resides and what types of messages aka `records` are written aka `produced` to the topic, then what happens when the messages are `consumed` by the listeners.
