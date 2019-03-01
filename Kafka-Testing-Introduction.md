@@ -594,9 +594,22 @@ Or directly visit the below executable test-cases.
 > To run any test(s), we can directly navigate to their corresponding JUnit @Test, under 'src/test/java' and run as JUnit. 
 Prior to that, we need to bring up Docker with Kafka(Spin up [kafka-schema-registry.yml (See Wiki)](https://github.com/authorjapps/zerocode-docker-factory/wiki/Docker-container-for-Kafka-and-Schema-Registry).
 
-## _:::Note:::_
+## _Note_
 + Kafka testing framework in Zerocode has been built using Apache Kafka client and it abstracts the complexities of writing Java code to acieve the same end goal
 + It completely bypasses the Java layer to save us from the fire-fighting we need to do otherwise. It enables us to focus on testing rather than solving coding issues
-+ At the same time, along with the simplicity, it is also gives us the flexibility to use the Java client, keeping the test-cases still declarative as they were
++ At the same time, along with the simplicity, it is also gives the flexibility to **still** use the Java client(s), to keep the test-cases _declarative_ as they were
+
+Maven Dependency
+===
+
+Visit [README](https://github.com/authorjapps/zerocode) page in GitHub.
+
+```
+<dependency>
+    <groupId>org.jsmart</groupId>
+    <artifactId>zerocode-tdd</artifactId>
+    <version>1.3.x</version> 
+</dependency>
+```
 
 # Happy API Testing! 🐼 
