@@ -20,6 +20,9 @@ The difficult part is, some part of the application logic or a DB procedure keep
 
 The records, partitions, offsets, exception scenarios etc keep on changing, making it difficult to think in terms of what to test, when to test, and how to test.
 
+![kafka_stream_loaded](https://user-images.githubusercontent.com/12598420/53636875-884b5c80-3c19-11e9-85fb-7812281353db.jpg)
+_Photo credit:[@dnevozhai:unsplash](https://unsplash.com/photos/7nrsVjvALnA)_
+
 # 2.  What We Need To Know To Test Kafka
 Kafka is a distributed messaging system. When we deal with a Kafka application, we need to know where the `topic` resides and what types of messages aka `records` are written aka `produced` to the topic, then what happens when the messages are `consumed` by the listeners.
 
