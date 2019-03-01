@@ -151,7 +151,7 @@ To write the tests for any of 'Produce' or 'Consume' tests, we need to know the 
 
 ```
 
-Now our test-case will look like below,
+Now our test-case looks like below,
 ```JSON
 {
     "name": "produce_a_record",
@@ -170,6 +170,14 @@ Now our test-case will look like below,
         "status": "Ok",
         "recordMetadata": "$NOT.NULL"
     }
+}
+```
+That's sit. Then we run this via a JUnit runner pointing to the above test-case e.g. `produce_test_case.json`.
+```
+@Test
+@JsonTest("produce_test_case.json")
+public void testProduceToATopic(){
+   //no code needed here
 }
 ```
 
