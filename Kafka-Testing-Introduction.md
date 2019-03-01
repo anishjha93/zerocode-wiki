@@ -23,6 +23,15 @@ The records, partitions, offsets, exception scenarios etc keep on changing, maki
 ![kafka_stream_loaded](https://user-images.githubusercontent.com/12598420/53636875-884b5c80-3c19-11e9-85fb-7812281353db.jpg)
 _Photo credit:[@dnevozhai:unsplash](https://unsplash.com/photos/7nrsVjvALnA)_
 
+# 1.2 Testing Solution Approach
+We can go for an end-to-end testing approach which will validate both producing, consuming, and DLQ records as well as the application processing logic. This will give us good confidence in releasing our application to higher environments.
+
+Here we pick a functionality, produce the desired data and validate, consume the intended data and validate, alongside of the HTTP REST or SOAP API validation which helps in keeping our tests much cleaner and less noisy.
+
+![kafka_stream_clean](https://user-images.githubusercontent.com/12598420/53637422-0825f680-3c1b-11e9-99c9-4ad76a66d5a7.jpg)
+
+
+We can do this by bringing up Kafka in dockerized containers or by pointing our tests to any integrated test environment somewhere in our Kubernetes-Kafka cluster or any other microservices infrastructure.
 # 2.  What We Need To Know To Test Kafka
 Kafka is a distributed messaging system. When we deal with a Kafka application, we need to know where the `topic` resides and what types of messages aka `records` are written aka `produced` to the topic, then what happens when the messages are `consumed` by the listeners.
 
