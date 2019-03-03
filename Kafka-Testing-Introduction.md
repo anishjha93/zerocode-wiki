@@ -8,7 +8,7 @@ In this Wiki page, first we will discuss various concepts of Kafka distributed s
 
 We will learn how it enables us to keep the test-cases clean, readable, simple and elegant
 
-_For everything explained here, we can find a working code example in the [Conclusion](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction#10-conclusion) section_
+_For everything explained here, we can find a **working code sample** in the [Conclusion](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction#10-conclusion) section_
 
 > If you are already aware of fundamental concepts, you can directly jump to - [Section 3. Writing our first produce test-case](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction#3--writing-our-first-produce-test-case)
 
@@ -580,7 +580,9 @@ It has got the best of best ideas and practices from the community and the adopt
 - [Kafka with Schema Registry and REST Proxy](https://github.com/authorjapps/zerocode-docker-factory/wiki/Docker-container-for-Kafka-and-Schema-Registry)
 
 # 10. Conclusion
-In this tutorial, we looked at some of the Kafka concepts and how to test Kafka applications using the Zerocode Testing Framework.
+In this tutorial, we looked at some of the Kafka concepts and how to test Kafka applications using the Zerocode Testing Framework. 
+
+Using this approach, we have tested and validated clustered Kafka Data Pipelines to Hadoop as well as Http REST APIs deployed in Kubernetes orchestrated pods. We found this approach very very straight forward and reduced complexity to maintain and promote the code to higher environments.
 
 The complete source code and all example code snippets for this Wiki page can be found in [GitHub Repo(Try at home)](https://github.com/authorjapps/hello-kafka-stream-testing).
 
@@ -611,5 +613,7 @@ Visit [README](https://github.com/authorjapps/zerocode) page in GitHub.
     <version>1.3.x</version> 
 </dependency>
 ```
+
+If you found this tutorial helpful for testing Kafka and HTTP APIs, then feel free to leave a "star" on [GitHub](https://github.com/authorjapps/zerocode/stargazers)!
 
 # Happy API Testing! 🐼 
