@@ -1,7 +1,7 @@
 Table of Contents
 * [Advantages of Declarative Testing](#advantages-of-declarative-testing)
 * [Drawing a Simile](#drawing-a-simile)
-* [Testing Without Writing Code.](#testing-without-writing-code)
+* [Testing Without Writing Code](#testing-without-writing-code)
 * [Test Case Fields](#test-case-fields)
      * [Http(REST API and SOAP)](#httprest-api-and-soap)
         * [URL](#url)
@@ -10,6 +10,7 @@ Table of Contents
         * [HEADERS](#headers)
         * [ASSERTIONS](#assertions)
         * [STATUS](#status)
+        * [BODY](#body)
      * [Kafka](#kafka)
         * [URL](#url-1)
         * [OPERATION](#operation-1)
@@ -214,6 +215,20 @@ Only `status` assertion
 ```
            "assertions": {
                 "status": 200
+            }
+```
+
+#### BODY
+The expected server response body can be placed as below for assertions i.e. comparing actual vs expected payload.
+
+````
+           "assertions": {
+                "status": 200
+                "body": {
+                    "login" : "octocat",
+                    "id" : 583231,
+                    "type" : "User"
+                }
             }
 ```
 
