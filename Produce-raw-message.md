@@ -1,3 +1,15 @@
+## Table Of Content
+* [1.  Introduction](#1--introduction)
+* [2.  What is RAW message](#2--what-is-raw-message)
+* [3.  How to produce a RAW message to a Kafka topic](#3--how-to-produce-a-raw-message-to-a-kafka-topic)
+* [4.  Which SerDe is used for this kind of record](#4--which-serde-is-used-for-this-kind-of-record)
+* [5.  How the SerDe is configured for a Kafka producer](#5--how-the-serde-is-configured-for-a-kafka-producer)
+* [6.  How does the full "produce" operation step looks like](#6--how-does-the-full-produce-operation-step-looks-like)
+* [7.  How to run the test](#7--how-to-run-the-test)
+  * [Point To Note](#note)
+* [8.  How to verify the record in the topic via kafka-console-consumer](#8--how-to-verify-the-record-in-the-topic-via-kafka-console-consumer)
+* [9. Where is the docker file](#9-where-is-the-docker-file)
+
 # 1.  Introduction
 In this Wiki page, we will see what is a RAW message and how to produce this kind of records to a Kafka topic.
 
