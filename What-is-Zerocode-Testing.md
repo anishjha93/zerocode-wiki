@@ -221,7 +221,7 @@ Only `status` assertion
 #### BODY
 The expected server response body can be placed as below for assertions i.e. comparing actual vs expected payload.
 
-````
+```
            "assertions": {
                 "status": 200
                 "body": {
