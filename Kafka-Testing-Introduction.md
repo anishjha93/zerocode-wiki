@@ -8,12 +8,39 @@ In this Wiki page, first we will discuss various concepts of Kafka distributed s
 
 We will learn how it enables us to keep the test-cases clean, readable, simple and elegant
 
-_For everything explained here, we can find a **working code sample** in the [Conclusion](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction#10-conclusion) section_
+For everything explained here, we can find a **working code sample** in the [Conclusion](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction#10-conclusion) section
 
-> If you are already aware of fundamental concepts, you can directly jump to - [Section 3. Writing our first produce test-case](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction#3--writing-our-first-produce-test-case)
-
+If you are already aware of fundamental concepts, you can directly jump to - [Section 3. Writing our first produce test-case](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction#3--writing-our-first-produce-test-case)
 
 _Visit here for a quick overview of [What is Declarative Testing and Its Advantages](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
+
+Table of Contents
+===
+* [1.  Introduction](#1--introduction)
+* [1.1 Kafka Testing Challenges](#11-kafka-testing-challenges)
+* [1.2 Testing Solution Approach](#12-testing-solution-approach)
+* [2.  What We Need To Know To Test Kafka](#2--what-we-need-to-know-to-test-kafka)
+* [2.1.  What is a Kafka topic](#21--what-is-a-kafka-topic)
+* [2.2.  What is produce and consume](#22--what-is-produce-and-consume)
+* [2.3.  Writing tests only to produce](#23--writing-tests-only-to-produce)
+* [2.4.  Writing tests only to consume](#24--writing-tests-only-to-consume)
+* [2.5.  Writing tests for both produce and consume](#25--writing-tests-for-both-produce-and-consume)
+* [2.6. Knowing The Record Format](#26-knowing-the-record-format)
+* [3.  Writing our first "produce" test-case](#3--writing-our-first-produce-test-case)
+* [3.1.  Writing our first "consume" test-case](#31--writing-our-first-consume-test-case)
+     * [Points To Note](#note)
+* [4.  Validating Kafka response after producing](#4--validating-kafka-response-after-producing)
+     * [Points To Note](#note-1)
+* [5.  Validating Kafka response after consuming](#5--validating-kafka-response-after-consuming)
+     * [Points To Note](#note-2)
+* [6.  Combining Kafka testing with REST API testing](#6--combining-kafka-testing-with-rest-api-testing)
+* [7.  Producing RAW messages vs JSON messages](#7--producing-raw-messages-vs-json-messages)
+* [8.  Why do I need zerocode-tdd lib](#8--why-do-i-need-zerocode-tdd-lib)
+* [9. Docker - Bringing up Kafka in a Container](#9-docker---bringing-up-kafka-in-a-container)
+* [10. Conclusion](#10-conclusion)
+  * [<em>Points To Note</em>](#note-3)
+* [Maven Dependency](#maven-dependency)
+* [Happy API Testing! <g-emoji class="g-emoji" alias="panda_face" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f43c.png">🐼</g-emoji>](#happy-api-testing-)
 
 # 1.1 Kafka Testing Challenges
 The difficult part is, some part of the application logic or a DB procedure keeps producing records to a topic and another part of the application keeps consuming the records and continuously processes them based on certain business rules.
