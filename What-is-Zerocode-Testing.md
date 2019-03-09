@@ -1,3 +1,23 @@
+Table of Contents
+* [Advantages of Declarative Testing](#advantages-of-declarative-testing)
+* [Drawing a Simile](#drawing-a-simile)
+* [Testing Without Writing Code.](#testing-without-writing-code)
+* [Test Case Fields](#test-case-fields)
+     * [Http(REST API and SOAP)](#httprest-api-and-soap)
+        * [URL](#url)
+        * [OPERATION](#operation)
+        * [REQUEST](#request)
+        * [HEADERS](#headers)
+        * [ASSERTIONS](#assertions)
+        * [STATUS](#status)
+     * [Kafka](#kafka)
+        * [URL](#url-1)
+        * [OPERATION](#operation-1)
+        * [REQUEST](#request-1)
+        * [ASSERTIONS](#assertions-1)
+* [HelloWorld Examples (Try at home)](#helloworld-examples-try-at-home)
+* [Running the Tests using <em>JUnit</em>](#running-the-tests-using-junit)
+* [Both Declarative and Extensible](#both-declarative-and-extensible)
 
 Advantages of Declarative Testing
 ===
