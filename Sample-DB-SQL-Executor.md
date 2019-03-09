@@ -3,6 +3,17 @@ If you are reading this wiki for the first time, this might take you around five
 Afterwards, it will take just a min only !
 </pre>
 
+## Table Of Content
+* [Sample DB SQL Executor](#sample-db-sql-executor)
+* [Postgres DB console](#postgres-db-console)
+* [How the tests will look](#how-the-tests-will-look)
+    * [Sample Test steps:](#sample-test-steps)
+    * [Config properties](#config-properties)
+    * [Executor code](#executor-code)
+    * [Test Logs](#test-logs)
+    * [POM dependencies](#pom-dependencies)
+    
+
 Sample DB SQL Executor
 ===
 This is particularly useful where as part of your testing you are not satisfied only with the REST responses and you want to verify the DB changes has gone well or not. It's very easy to and sometimes it's a good practice to test this DB verification bit too.
