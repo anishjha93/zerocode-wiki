@@ -2,6 +2,13 @@
 
 > _Visit here for a quick introduction to [What is Declarative Testing And Zerocode](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
 
+Covers
++ [Introduction]()
++ [User Journey To Test Case]()
++ [How Did It Work(Step By Step)]()
++ [If You Have Time to Read]()
++ [What We Did Not Have to Do(luckily)]()
++ [See Things In Action]()
 
 Introduction
 ===
@@ -87,6 +94,9 @@ web.application.endpoint.context=
 ```
 ***
 
+How Did It Work
+===
+
 Let's put into the context n deep dive a bit.
 
 We needed 3 steps here for the Happy case in the above journey-
@@ -116,6 +126,8 @@ Done. Happy days !
 
 ***
 
+If You Have Time To Read
+===
 
 _If we have little more time to read below, see what all hassles we escaped and how much time we saved !_
 
@@ -126,7 +138,7 @@ _If we have little more time to read below, see what all hassles we escaped and 
 + No need of any feature files and syntax searchings
 + No need of English statements and grammars
 
-See below what we did not have to do(luckily?) :
+What We Did Not Have to Do(luckily)
 ===
 JOURNEY1 :
 
