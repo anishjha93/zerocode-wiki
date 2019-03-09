@@ -26,8 +26,8 @@ e.g.
 The above name-value pair behind the scene is sent as below:
 > unit-no=12-07&country=Singapore&block-number=33&pin=87654321&state%2Fregion=Singapore+North
 
-### How does the server receives this?
-The server received them as MultiValue map. E.g. If your server implementation is as below, the paramMap gets populated with Key-Value pairs.
+### How does the server receive this?
+The server receives them as MultiValue map. E.g. If your server implementation is as below, the paramMap gets populated with Key-Value pairs.
 ```java
     @PostMapping(value = "/api/v1/issues/customer", consumes = {"application/x-www-form-urlencoded"})
     public ResponseEntity handleRequestCustomer( @RequestParam MultiValueMap paramMap ) {
@@ -60,12 +60,12 @@ You can frame many variations of a test situation depending on your use-case. Th
          }
       },
       {
-         "name": "check_json_header",
+         "name": "post_unsupported_header",
          "url": "/api/v1/issues/customer",
          "operation": "POST",
          "request": {
             "headers": {
-               "Content-Type": "application/json"
+               "Content-Type": "application/json" //<--- e.g. If the server doesn't support this
             }
          },
          "assertions": {
