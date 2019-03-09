@@ -2,25 +2,25 @@
 
 > _Visit here for a quick introduction to [What is Declarative Testing And Zerocode](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
 
+
 Introduction
 ===
 
-_The simplicity of this automated testing style that might surprise you..._
+_The simplicity of this automated testing style that might surprise we..._
 
 In _Declarative Testing_, the framework here does the job for us behind the scene i.e. 
 + Making Http calls to the target end-point, with our request payload
 + Receiving the server response into the test case
-+ Doing the JSON comparison of the **actual** vs **expected** response for our "_assertions_". 
-  + _Here we can choose to skip the fields we do not need to assert_
-  + _We keep the payload as JSON with its structure intact_
++ Doing the result comparison of the **actual** vs **expected** response for our "_assertions_". 
+  + Here we can choose to skip the fields we do not need to assert
+  + Or keep some fields as `not null` if server response is in-deterministic
+  + We keep the payload as JSON with its structure intact
 
-> _It saves us from the hassles of writing any code to do the above repetitive tasks._
+_It saves us from the major hassles of writing any code to do the above repetitive tasks._
 
-<br/>
 
-Let's see in a user journey, how it is applied.
+Let's see how it is applied in a user journey.
 
-<br/>
 
 USER JOURNEY - Acceptance Criterias(ACs)
 ===
@@ -50,11 +50,13 @@ AND assert the status 200(OK) along with
 updated as well as non-updated fields 
 ```
 
-To write a test-case for the above CRUD operation scenario is quite easy using [Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world), just your IDE's **JSON editor is enough** to hook these steps. Example of `POST` and `GET` step would look like below(simple and clean)
+To write a test-case for the above CRUD operation scenario is quite easy using [Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world), just our IDE's **JSON editor is easy enough** to hook these steps. For instance, `POST` and `GET` step would look like below(simple and clean).
 
 <img width="624" alt="post_get_user" src="https://user-images.githubusercontent.com/12598420/47145467-bc089400-d2c1-11e8-8707-8e2d2e8c3127.png">
 
-And at the same time you **don't have to search** for or think hard of any **syntaxes** to do the job. That means, you are ready with a BDD scenario test in a couple of minutes with simple JSON steps(see below). Advantage here is the tests are instantly readable to anyone because of, it enables simple JSON payloads as it is.
+> _Hosts and ports are externalized to a properties file as usual_
+
+And at the same time we **don't have to search** for or think hard of any **syntaxes** to do the job. That means, we are ready with a BDD scenario test in a couple of minutes with these simple JSON steps(see below). Advantage here is the tests are instantly readable to anyone because of, it enables the JSON payload structure as it is with no manipulation needed.
 
 <img width="566" alt="expanded-simple" src="https://user-images.githubusercontent.com/12598420/45925725-fe34f480-bf12-11e8-941c-cb3ec8da6c3e.png"> <br />
 
@@ -72,7 +74,7 @@ public class JustHelloWorldTest {
     @Test
     @JsonTestCase("helloworld/user_crud_journey_test.json")
     public void testGet() throws Exception {
-       // See, No code was needed here. What?
+       // No code was needed here. What?
     }
 }
 ```
@@ -94,7 +96,7 @@ We needed 3 steps here for the Happy case in the above journey-
 
 This is how somewhat we imagined to perform the steps-
 ![collapse-1v2](https://user-images.githubusercontent.com/12598420/45925386-fde52b00-bf0b-11e8-8162-ff478c9c037e.png)
-Note- _You can use any JSON editor to do the job for you -as simple as that_
+Note- _You can use any JSON editor to do the job for we -as simple as that_
 
 Next we get our API end points details from the spec or api-doc(e.g. swagger) and fit into the steps(it should look like below)
 <img width="772"  height="525" alt="Collapsed steps - bit extended" src="https://user-images.githubusercontent.com/12598420/46082518-2df42e80-c197-11e8-8007-adc9ce452123.png">
@@ -103,7 +105,7 @@ Next let's **Copy-Paste the payload and assertions** section which we might get 
 <img width="555"  height="726" alt="Full Blown steps" src="https://user-images.githubusercontent.com/12598420/45925567-ef007780-bf0f-11e8-8daf-12e7c8a12b82.png">
 
 
-To complete the `D` part the CRUD operation(if your application has implemented this operation), you can simply add one more step or 2 more steps as below to verify it works perfectly ok.
+To complete the `D` part the CRUD operation(if our application has implemented this operation), we can simply add one more step or 2 more steps as below to verify it works perfectly ok.
 
 <img width="504"  height="272" alt="Delete steps" src="https://user-images.githubusercontent.com/12598420/45928093-f2a6f500-bf35-11e8-8d4c-202849917c06.png">
 
@@ -115,7 +117,7 @@ Done. Happy days !
 ***
 
 
-_If you have little more time to read below, see what all hassles you escaped and how much time you saved !_
+_If we have little more time to read below, see what all hassles we escaped and how much time we saved !_
 
 + No need to write pojos and builder for the domain objects(e.g. Employee here)
 + No need of any serialization/deserialization
@@ -215,7 +217,7 @@ JOURNEY1 :
 <br/>
 <br/>
 
-Also, you escaped the **hard** way of doing things with special attention to English statements and grammars. See below:
+Also, we escaped the **hard** way of doing things with special attention to English statements and grammars. See below:
 
 ***
 
@@ -244,7 +246,7 @@ or
 > and so on...
 
 **Note**- Too much is going on the above around an `user journey`, in terms of writing correct sentences or **nearly** correct sentences/grammars, too many `assertThat`s to come up with a test scenario. 
-> And imagine the situation you will be when you have more number of steps in an user journey !
+> And imagine the situation we will be when we have more number of steps in an user journey !
 
 <br/>
 
@@ -253,7 +255,7 @@ or
 It makes sense when the **BAs**(Business Analysts) or **managers** or non-technology folks while creating the stories and defining the entry and exit criteria of the tickets for a business scenario or User-Journey. But technology folks simply picking these statements and trying hard syntactically to fit these into executable tests seems like bit too much of an overhead. 
 <br/>
 <br/>
-But we should choose the `tools`, `technologies` and `solutions` which best fits to your project and situation and helps us solving the testing challenges.
+But we should choose the `tools`, `technologies` and `solutions` which best fits to our project and situation and helps us solving the testing challenges.
 
 See this in action(HelloWorld):
 ===
