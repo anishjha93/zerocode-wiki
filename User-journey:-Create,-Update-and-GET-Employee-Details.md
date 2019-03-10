@@ -2,7 +2,7 @@
 
 > _Visit here for a quick introduction to [What is Declarative Testing And Zerocode](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
 
-_Table Of Content_
+## _Table Of Content_
 
 + [Introduction](#introduction)
 + [User Journey To Test Case](#user-journey---acceptance-criteriasacs)
