@@ -1,4 +1,4 @@
-User Version - [1.2.11](https://search.maven.org/search?q=zerocode-rest-bdd) or higher
+Use the version - [1.2.11](https://search.maven.org/search?q=zerocode-rest-bdd) or [higher](https://search.maven.org/search?q=zerocode-tdd)
 
 Gradle: `group: 'org.jsmart', name: 'zerocode-rest-bdd', version:'1.2.11'`
 
