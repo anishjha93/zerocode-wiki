@@ -2,10 +2,10 @@
 
 > _Visit here for a quick introduction to [What is Declarative Testing And Zerocode](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)_
 
-## _Table Of Content_
+## Table Of Content
 
 + [Introduction](#introduction)
-+ [User Journey To Test Case](#user-journey---acceptance-criteriasacs)
++ [User Journey To Test Case(example)](#user-journey---acceptance-criteriasacs)
 + [How Did It Work(Step By Step)](#how-did-it-work)
 + [If You Have Time to Read](#if-you-have-time-to-read)
 + [What We Did Not Have to Do(luckily)](#what-we-did-not-have-to-doluckily)
