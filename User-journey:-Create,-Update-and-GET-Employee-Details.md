@@ -82,7 +82,7 @@ public class JustHelloWorldTest {
     @Test
     @JsonTestCase("helloworld/user_crud_journey_test.json")
     public void testGet() throws Exception {
-       // No code was needed here. What?
+       // No code is needed here.
     }
 }
 ```
