@@ -383,13 +383,16 @@ Or we can ask the test to assert the records along with some metadata e.g. topic
 Field order doesn't really matter here as long as the structure is maintained. 👍 
 
 # 6.  Combining Kafka testing with REST API testing
-Most of the time we have situations to deal with Kafka and REST API testing. With `Zerocode` it's just zero effort when comes to this kind of situation or any API testing situation. You need to know four things only to write the tests 
-```
-1) The "URL"
-2) The "operation"
-3) The "request"
-4) The "assertions" i.e. the expected response
-```
+Most of the time we have situations to deal with Kafka and REST API testing. With `Zerocode` it's just zero effort when comes to this kind of situation or any API testing situation. You only need to hook below things to create a test-case 
+
+| FIELDS  | Usage |
+|---|---|
+| "url"  | The REST API Path or SOAP end point Path |
+| "operation"  |  Http verb e.g. PUT, POST, GET etc |
+| "request"  | Payload with Http headers and body  |
+| "headers"  | Http headers  |
+| "body"  | Http payload body  |
+| "assertions"  |  Expected response from server |
 
 Let's see how we can fit REST API validation along with Kafka produce/consume validation at the same time.
 
