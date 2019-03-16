@@ -4,14 +4,14 @@
 
 ## Table Of Content
 
-+ [Introduction](#introduction)
++ [Quick Overview](#quick-overview)
 + [User Journey To Test Case(example)](#user-journey---acceptance-criteriasacs)
 + [How Did It Work(Step By Step)](#how-did-it-work)
 + [If You Have Time to Read](#if-you-have-time-to-read)
 + [What We Did Not Have to Do(luckily)](#what-we-did-not-have-to-doluckily)
 + [See Things In Action](#see-this-in-actionhelloworld)
 
-Introduction
+Quick Overview
 ===
 
 _The simplicity of this automated testing style that might surprise we..._
