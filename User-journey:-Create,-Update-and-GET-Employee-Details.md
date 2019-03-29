@@ -14,7 +14,7 @@
 Quick Overview
 ===
 
-_The simplicity of this automated testing style that might surprise we..._
+_The simplicity of this automated testing style that might surprise you..._
 
 In _Declarative Testing_, the framework here does the job for us behind the scene i.e. 
 + Making Http calls to the target end-point, with our request payload
