@@ -9,7 +9,7 @@ There are many standalone tools available in the market which we need to install
 
 JUnit framework already provides various mechanisms to run the tests in parallel e.g. [ParallelComputer](https://junit.org/junit4/javadoc/4.12/org/junit/experimental/ParallelComputer.html) class or fork-options-and-parallel execution in the [Sure-Fire](http://maven.apache.org/surefire/maven-surefire-plugin/examples/fork-options-and-parallel-execution.html). These mechanisms also helps we to fire all tests in the suite in parallel and at the same time, as we can set it up simply inside a maven plugin; we don't need the pain of installing standalone or fancy products to this job.
 
-Furthermore when it comes to running a business scenario for our project need, we still need it be more flexible in terms of changing it, configuring it easily, picking and firing a particular test(s) at a particular time intervals, asserting the result, chaining one or more business test cases, running the tests for a certain configurable amount of time and retrieve an useful report and be able to share it with the stakeholders about the behaviour of the system under load/stress. 
+Furthermore when it comes to running a business scenario test-case, we still need this be more flexible in terms of changing the payload, configuring it easily, picking and firing a particular test(s) at a particular time intervals, asserting the result, chaining one or more business test cases, running the tests for a certain configurable amount of time and retrieve an useful report and be able to share it with the stakeholders about the behaviour of the system under load/stress. 
 
 This is where an extended custom JUnit runner specifically designed to do this job, can make our life easy.
 
