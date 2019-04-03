@@ -35,8 +35,8 @@
   + [Postgres db data validation](https://github.com/authorjapps/zerocode/wiki/Sample-DB-SQL-Executor)
 
 + Kotlin Testing
-  + [Testing Kotlin Application](https://github.com/authorjapps/zerocode/wiki/TODO)
-  + [Kotlin Performance testing](https://github.com/authorjapps/zerocode/wiki/TODO)
+  + [Testing Kotlin Application](https://github.com/authorjapps/zerocode/wiki/Testing-Kotlin-Application-using-Zerocode)
+  + [Kotlin Performance testing](https://github.com/authorjapps/zerocode/wiki/Kotlin-Performance-testing)
 
 + Performance Testing - Load and Stress
   + [Performance Testing - via awesome JUnit runners](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based))
