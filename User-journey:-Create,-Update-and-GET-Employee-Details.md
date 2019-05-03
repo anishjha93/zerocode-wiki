@@ -259,13 +259,13 @@ or
 > and so on...
 
 **Note**- Too much is going on the above around an `user journey`, in terms of writing correct sentences or **nearly** correct sentences/grammars, too many `assertThat`s to come up with a test scenario. 
-> And imagine the situation we will be when we have more number of steps in an user journey !
+> And imagine the maintenance overhead and difficulty in tracing the steps, when we have more number of steps in an user journey !
 
 <br/>
 
 :::Note:::
 
-It makes sense when the **BAs**(Business Analysts) or **managers** or non-technology folks while creating the stories and defining the entry and exit criteria of the tickets for a business scenario or User-Journey. But technology folks simply picking these statements and trying hard syntactically to fit these into executable tests seems like bit too much of an overhead. 
+It makes sense when the **BAs**(Business Analysts) or **managers** or non-technology folks while creating the stories and defining the entry and exit criteria of the tickets for a business scenario or User-Journey. But technology folks simply picking these statements and trying hard syntactically to fit these into executable tests seems like bit too much of a maintenance overhead. 
 <br/>
 <br/>
 But we should choose the `tools`, `technologies` and `solutions` which best fits to our project and situation and helps us solving the testing challenges.
