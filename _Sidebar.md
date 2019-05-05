@@ -57,6 +57,9 @@
   + [Gradle - Charts and Reports](https://github.com/authorjapps/zerocode/wiki/Gradle-build-for-JUnit-Smart-Chart-and-CSV-Reports)
   + [Kotlin Integration Testing - Simlified via Zerocode](https://dzone.com/articles/kotlin-spring-bootspring-data-h2-db-rest-api) 
 
++ JUnit5 Jupiter Test
+  + [JUnit5 Parallel Load Extension](https://github.com/authorjapps/zerocode/wiki/JUnit5-Jupiter-Parallel-Load-Extension)
+
 + Questions And Answers
   + [What is Zerocode testing?](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)
   + [SSL http https connections supported?](https://github.com/authorjapps/zerocode/wiki/QnA:-Does-it-support-https-connections%3F)
