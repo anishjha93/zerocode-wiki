@@ -112,6 +112,16 @@ which means, 50 `users` firing the requests in parallel with `1 sec` gap and the
 ### Running the Load tests as a Suite
 + This setup(JUnit5LoadDifferentLoadTest, JUnit5LoadCommonLoadTest) is already like a Suite setup
   + which means you don't need another Suite-Runner 
++ Nevertheless there will be always situations to bring up a load suite. 
+  + So we have put [an example here](https://github.com/authorjapps/performance-tests/blob/master/src/test/java/org/jsmart/zerocode/samplesjunit5/loadjupiter/ParallelLoadTestSuite.java) to get you covered, which looks like below. 
+```java
+@RunWith(JUnitPlatform.class)
+@IncludeEngines("junit-jupiter")
+@SelectPackages("org.jsmart.zerocode.samplesjunit5.loadjupiter")
+public class ParallelLoadTestSuite {
+   // Nothing goes in this space
+}
+```
 
 ### GitHub Repo - Examples
 + The regular `Junit` tests and the `load` generating tests are [here](https://github.com/authorjapps/performance-tests/tree/master/src/test/java/org/jsmart/zerocode/samplesjunit5)
