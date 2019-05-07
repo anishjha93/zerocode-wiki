@@ -16,7 +16,7 @@
 
 ### Tests
 
-> /src/test/java/org/jsmart/zerocode/samplesjunit5/jupiter/JUnit5Test.java
+> /src/test/java/.../samplesjunit5/jupiter/JUnit5Test.java
 ```java
 @ExtendWith({ExtensionA.class, ExtensionB.class}) //<--- Just for demonstration purpose
 public class JUnit5Test {
@@ -34,7 +34,7 @@ public class JUnit5Test {
 }
 ```
 
-> /src/test/java/org/jsmart/zerocode/samplesjunit5/jupiter/JUnit5MoreTest.java
+> /src/test/java/.../samplesjunit5/jupiter/JUnit5MoreTest.java
 ```java
 @ExtendWith({ExtensionA.class, ExtensionB.class})
 public class JUnit5MoreTest {
