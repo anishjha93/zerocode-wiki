@@ -14,6 +14,61 @@
 
 ## Parallel Running `as well as`, Load and Stress Testing of JUnit5 tests
 
+### Tests
+
+> /src/test/java/org/jsmart/zerocode/samplesjunit5/jupiter/JUnit5Test.java
+```java
+@ExtendWith({ExtensionA.class, ExtensionB.class}) //<--- Just for demonstration purpose
+public class JUnit5Test {
+
+    @Test
+    public void testX() {
+        assertTrue(2 == 2); //<--- jupiter assertion
+    }
+
+    @Test
+    public void testY() throws InterruptedException {
+        assertTrue(2 == 2); //<--- jupiter assertion
+    }
+
+}
+```
+
+> /src/test/java/org/jsmart/zerocode/samplesjunit5/jupiter/JUnit5MoreTest.java
+```java
+@ExtendWith({ExtensionA.class, ExtensionB.class})
+public class JUnit5MoreTest {
+
+    @Test
+    public void testZ() throws InterruptedException {
+        assertTrue(2 == 2); //jupiter assertion
+    }
+
+}
+```
+
+### Load
+
+> /src/test/java/org/jsmart/zerocode/samplesjunit5/loadjupiter/simpleload/JUnit5LoadTest.java
+```java
+@LoadWith("load_generation.properties")
+@ExtendWith({ParallelLoadExtension.class})
+public class JUnit5LoadCommonLoadTest {
+
+    @Test
+    @DisplayName("testing parallel load for X, Y and Z scenarios")
+    @TestMappings({
+            @TestMapping(testClass = JUnit5Test.class, testMethod = "testX"),
+            @TestMapping(testClass = JUnit5Test.class, testMethod = "testY"),
+            @TestMapping(testClass = JUnit5MoreTest.class, testMethod = "testZ")
+    })
+    public void testLoad_xyz() {
+        // This space remains empty
+    }
+
+}
+```
+
 ### Maven Dependencies
 + Add the following dependencies
 JUnit5/Jupiter Extension
