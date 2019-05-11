@@ -10,7 +10,10 @@
   * [What does JUnit5LoadDifferentLoadTest example do?](#what-does-junit5loaddifferentloadtest-example-do)
   * [Reports](#reports)
   * [Running the Load tests as a Suite](#running-the-load-tests-as-a-suite)
-  * [GitHub Repo - Examples](#github-repo---examples)
+  * [GitHub Repo - Examples - JUnit5](#github-repo---examples)
+    * [JUnit5 - Performance Testing Repo](https://github.com/authorjapps/performance-tests)
+    * _[Visit JUnit4 Samples - Parallel Load Runner](https://github.com/authorjapps/performance-tests/blob/master/src/test/java/org/jsmart/zerocode/samples/load/parallelget/LoadGetTest.java)_
+
 
 ## Parallel Running `as well as`, Load and Stress Testing of JUnit5 tests
 
