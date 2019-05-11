@@ -71,6 +71,7 @@
   + [How to execute DB SQL and assert?](https://github.com/authorjapps/zerocode/wiki/Sample-DB-SQL-Executor)
   + [How to handle Http response other than utf-8 e.g. utf-16 or utf-32 ?](https://github.com/authorjapps/zerocode/wiki/Charset-UTF-8-or-UTF-16-or-UTF-32-etc-in-the-http-response)
 
+### Blogs
 + [Read Our Blogs](https://github.com/authorjapps/zerocode/wiki/Read-Our-Blogs)
   + [Top 16 Open Source API Testing Tools For REST & SOAP Services](https://www.joecolantonio.com/12-open-source-api-testing-tools-rest-soap-services/) - joecolantonio (Lists popular tools - Globally) 
   + [OAuth2 Test Automation](https://dzone.com/articles/oauth2-authentication-in-zerocode) - DZone 2min Read
