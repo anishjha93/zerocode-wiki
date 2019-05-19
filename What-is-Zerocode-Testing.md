@@ -167,7 +167,7 @@ Request with headers and body payload,
 
 For REST services, we need to put the expected response with response _Status_, _Headers_ and _Body_ payload.
 
-Only `status` assertion
+Only `status` validation/assertion
 ```
            "assertions": {
                 "status": 200
