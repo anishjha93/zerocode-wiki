@@ -1,4 +1,5 @@
 Table of Contents
+* [What is Declarative Testing](#what-is-declarative-testing)
 * [Advantages of Declarative Testing](#advantages-of-declarative-testing)
 * [Drawing a Simile](#drawing-a-simile)
 * [Testing Without Writing Code](#testing-without-writing-code)
@@ -20,8 +21,16 @@ Table of Contents
 * [Running the Tests using <em>JUnit</em>](#running-the-tests-using-junit)
 * [Both Declarative and Extensible](#both-declarative-and-extensible)
 
+What Is Declarative Testing
+===
+Here is some similar insight from [IEEE](https://ieeexplore.ieee.org/document/5070714)- 
+> We propose a software testing paradigm called declarative testing. In declarative testing, a test scenario focuses on what to accomplish rather than on the imperative details of how to manipulate the state of an application under test and verify the final application state against an expected state. Declarative testing is a test design paradigm which separates test automation code into conceptual Answer, Executor, and Verifier entities. 
+
 Advantages of Declarative Testing
 ===
++ According to [IEEE](https://ieeexplore.ieee.org/document/5070714) - 
+> Preliminary experience with declarative testing suggests that the modular characteristics of the paradigm may significantly enhance the ability of a testing effort to keep pace with the evolution of a software application during the application's development process.
+
 + Instead of writing code to achieve the testing goals, we write the test intentions including _assertions_.<br/>
 
 + Here the framework, behind the scene, generates the necessary code to do the job for us e.g. API calls, DB calls etc. 
