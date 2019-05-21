@@ -26,6 +26,9 @@ What Is Declarative Testing
 Here is some similar insight from [IEEE](https://ieeexplore.ieee.org/document/5070714)- 
 > We propose a software testing paradigm called declarative testing. In declarative testing, a test scenario focuses on what to accomplish rather than on the imperative details of how to manipulate the state of an application under test and verify the final application state against an expected state. Declarative testing is a test design paradigm which separates test automation code into conceptual Answer, Executor, and Verifier entities. 
 
++ According to [Wikipedia](https://en.wikipedia.org/wiki/Declarative_programming) - 
+> In computer science, declarative programming is a programming paradigm—a style of building the structure and elements of computer programs—that expresses the logic of a computation without describing its control flow.
+
 Advantages of Declarative Testing
 ===
 + According to [IEEE](https://ieeexplore.ieee.org/document/5070714) - 
