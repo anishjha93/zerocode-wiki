@@ -72,6 +72,14 @@ public class JUnit5LoadCommonLoadTest {
 }
 ```
 
+> load_generation.properties
+
+```properties
+number.of.threads=50
+ramp.up.period.in.seconds=50
+loop.count=2
+````
+
 ### Maven Dependencies
 + Add the following dependencies
 JUnit5/Jupiter Extension
