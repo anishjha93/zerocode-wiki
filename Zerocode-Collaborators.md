@@ -50,3 +50,6 @@ Smart Contributors
 
 + **BartRobeyns**(Java, Tech Lead/Sr Developer,Belgium)
 
++ **James Neate - jneate**(Java, Developer, UK)
+
+
