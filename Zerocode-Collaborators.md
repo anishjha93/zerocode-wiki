@@ -45,3 +45,8 @@ Smart Contributors
 + **Uttam S**(Cassandra/BigData Architect, Data Scientist, and Developer, NJ, USA)
 
 + **Virendra J**(Kafka/BigData/AWS/Spark Architect, Tech Lead/Sr Developer, London, UK)
+
++ **jbonn360**(Java)
+
++ **BartRobeyns**(Java, Tech Lead/Sr Developer,Belgium)
+
