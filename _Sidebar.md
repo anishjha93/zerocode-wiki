@@ -60,7 +60,7 @@
 + JUnit5 Jupiter Test
   + [JUnit5 Parallel Load Extension](https://github.com/authorjapps/zerocode/wiki/JUnit5-Jupiter-Parallel-Load-Extension)
 
-+ Questions And Answers
++ Questions And Answers(FAQ)
   + [What is Zerocode testing?](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)
   + [SSL http https connections supported?](https://github.com/authorjapps/zerocode/wiki/QnA:-Does-it-support-https-connections%3F)
   + [How to assert array size Greater-Than Lesser-Than etc?](https://github.com/authorjapps/zerocode/wiki/QnA:-How-to-assert-an-array-in-the-response-with-SIZE-Greater-Than-or-Lesser-Than-etc%3F)
@@ -70,7 +70,7 @@
   + [When to use JUnit Suite runner and when Zerocode Package runner?](https://github.com/authorjapps/zerocode/wiki/Suite-Runner-Vs-Package-runner)
   + [How to execute DB SQL and assert?](https://github.com/authorjapps/zerocode/wiki/Sample-DB-SQL-Executor)
   + [How to handle Http response other than utf-8 e.g. utf-16 or utf-32 ?](https://github.com/authorjapps/zerocode/wiki/Charset-UTF-8-or-UTF-16-or-UTF-32-etc-in-the-http-response)
-
+  + [Random Number Generator Usage and Limits](https://github.com/authorjapps/zerocode/wiki/Random-Number-Token-Generator-Usage-and-Limits)
 ### Blogs
 + [Read Our Blogs](https://github.com/authorjapps/zerocode/wiki/Read-Our-Blogs)
   + [Top 16 Open Source API Testing Tools For REST & SOAP Services](https://www.joecolantonio.com/12-open-source-api-testing-tools-rest-soap-services/) - joecolantonio (Lists popular tools - Globally) 
