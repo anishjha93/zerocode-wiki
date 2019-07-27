@@ -12,3 +12,5 @@
 > Easiest is to fork the HelloWorld repo and push your changes to it. 
 
 5. Clearly capture into the story/ticket what is actual-result and what is the expected-result
+
+6. If you are simply asking a question or want to clarify something, please explain the issue in terms of what you want to achieve or which use-case you want to solve. Please explain this with clarity.
