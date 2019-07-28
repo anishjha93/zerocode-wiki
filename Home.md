@@ -2,12 +2,18 @@
 
 > _Use the sidebar on the right for all topics or "Ctrl+f" search for any topic_
 
-## Zerocode Wiki
+Welcome To Zerocode
+===
 
 _(For helps and usage- Visit [Table of Contents](https://github.com/authorjapps/zerocode#table-of-contents--). Visit here for a [Quick Introduction to Hassle-Free Declarative Testing](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing))_
 
+Super Easy to Write BDD Tests
+===
 
 [Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) helps you to design better Test Cases for your business features, then maintain and update them easily to avoid sleepless nights. It is built on extending the **Junit core runners**. You simply annotate your test method with JUnit **@Test** and run like JUnit tests, as well as optionally you can use `Suite` Runners for CI builds and env switching. Testing becomes an easy and effortless job due to the **simplicity** nature of JSON and the native support by popular IDEs e.g. Eclipse /IntelliJ /NetBeans etc with no extra plugin. Super easy !
+
+No Complexity Involved
+===
 
 Your tests will not be cumbersome and complex anymore. Zerocode makes your tests independent, complete and structured and easily maintainable by the team or the new comers. It enables you to write your `API End Point Tests`, `Consumer Contract Tests`, `End to End Tests` and `Performance Tests(Load/Stress)` etc, at the **speed** of writing **JUnit** tests with accuracy transparent to all stakeholders. 
 
@@ -17,9 +23,19 @@ Zerocode gives you out of the box **SSL** enabled Http Client and **SOAP** Clien
 
 Zerocode has built general functionality which enables you to **extend** and enrich the **framework** behaviour by simply executing external Java methods to achieve business goals rather than putting every feature into the core framework. 
 
+Beautiful and Useful Reporting
+===
+
 Zerocode prints the request, response into the console as well as to the log file in the `/target` folder in a **human/business readable** format, along with producing granular report in the `CSV format` and `Interactive Fuzzy Search Enabled Chart report`. You can `search and filter` the test report by `author` or `test-scenario` or `test-step` or any relevant matching text making it super easy to trace a step in the context of a scenario or user-journey.
 
+Easy to Collaborate
+===
+
 Zerocode aims to make development and testing **easier and faster**, not harder and slower. Allows both Dev team and Test team to collaborate towards better better **quality** of the software. Even the managers and BAs can read and understand the tests easily if they want to.
+
+
+Even Handy For Manual Tester
+===
 
 Handy tool even for manual testers dealing with `REST api`, `SOAP api` and `DB integration` tests [much more](https://github.com/authorjapps/zerocode#table-of-contents--) to keep it side by side of Postman rest-client!
 
@@ -84,11 +100,11 @@ Keep in mind: It's simple JSON. <br/>
 ```
 * You can organize and arrange the tests to suit your requirements, by folder/feature/release wise
 
-## Test Report
+## Sample Test Report
 
 Test reports are generated into  `/target`  folder every time the tests are run. Sample [reports are here](https://github.com/authorjapps/zerocode/blob/master/README.md#6) format. 
 
-## Test Logs
+## Sample Test Logs
 
 Test logs are generated in the console as well as into the log file in a readable JSON format  `target/logs/zerocode_rest_bdd_logs.log` . In case of a test failure it exactly lists which field or fields didn't match with their  JSON Path in a tree view.
 Note-
