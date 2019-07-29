@@ -36,7 +36,7 @@ Easy to Collaborate
 Zerocode aims to make development and testing **easier and faster**, not harder and slower. Allows both Dev team and Test team to collaborate towards better better **quality** of the software. Even the managers and BAs can read and understand the tests easily if they want to.
 
 
-Even Handy For Manual Tester
+Handy Even For Manual Testers or Architects
 ===
 
 Handy tool even for manual testers dealing with `REST api`, `SOAP api` and `DB integration` tests [much more](https://github.com/authorjapps/zerocode#table-of-contents--) to keep it side by side of Postman rest-client!
