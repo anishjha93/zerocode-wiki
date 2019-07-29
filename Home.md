@@ -19,6 +19,8 @@ Your tests will not be cumbersome and complex anymore. Zerocode makes your tests
 
 Zerocode at its core uses simple and powerful libs like `Jackson` for JSON assertions, `Apache HttpClient` for invoking REST and SOAP APIs, `Google Guice` for `DI` and Spring style place holders `${JSON Path}` for result assertions. It does not limit you to use Apache HttpClient, it enables you to easily override the framework behaviour with `@UseHttpClient` to use e.g. `UniRest` HttpClient, `RestEasy` HttpClient or any of your custom HttpClient that suits your project needs. 
 
+Plug and Play Security Testing
+===
 Zerocode gives you out of the box **SSL** enabled Http Client and **SOAP** Client along with the optional MIME type converters e.g. XML to JSON if needed to increase test readability. It provides you with the options to configure **Corporate Proxy** at runtime to allow API invocations via proxies.
 
 Zerocode has built general functionality which enables you to **extend** and enrich the **framework** behaviour by simply executing external Java methods to achieve business goals rather than putting every feature into the core framework. 
