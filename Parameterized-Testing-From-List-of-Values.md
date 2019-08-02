@@ -1,4 +1,4 @@
-Parameterized Testing From List of Values
+Introduction
 ===
 When the source is a simple list of values
 
