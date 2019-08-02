@@ -46,6 +46,10 @@
   + [Dynamically change the payload for every request](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-dynamically-change-the-payload-for-every-request-during-the-load-)
   + [Analytics - Useful report(s) or statistics](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#how-to-generate-useful-reports-or-statistics-to-explain-the-behaviour-of-the-system-under-test)
 
++ Parameterized Testing
+  + [Value source - List of values](https://github.com/authorjapps/zerocode/wiki/Parameterized-Testing-From-List-of-Values)
+  + [CSV source - List of comma separated values](https://github.com/authorjapps/zerocode/wiki/Parameterized-Testing-From-CSV-rows)
+
 + Docker
   + [Running Postgres DB in a container](https://github.com/authorjapps/zerocode-docker-factory/wiki/Docker-container-for-a-Postgres-DB)
   + [Picking host, port, user, password details](https://github.com/authorjapps/zerocode/wiki/Sample-DB-SQL-Executor#config-properties)
