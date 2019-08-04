@@ -1,5 +1,7 @@
 + Read Our Blogs
   + [Top 16 Open Source API Testing Tools For REST & SOAP Services](https://www.joecolantonio.com/12-open-source-api-testing-tools-rest-soap-services/) - joecolantonio (Lists popular tools - Globally) 
+  + [Kafka Quick and Practical Testing](https://dzone.com/articles/a-quick-and-practical-example-of-kafka-testing) - 20min read for the 1st time, 5min for the next time
+  + [Kafka Testing - Basics - What You Need to Know](https://dzone.com/articles/quick-overview-of-concepts-for-kafka-testing) - 10min Read
   + [OAuth2 Test Automation](https://dzone.com/articles/oauth2-authentication-in-zerocode) - DZone 2min Read
   + [SSE - Server Side Event Automated Testing](https://medium.com/@bethecodewithyou/server-sent-events-development-test-automation-9ec74e2f71a) - medium.com 10 min Read
   + [Zero defect APIs - Build Pipe Line](https://medium.com/@bethecodewithyou/develop-zerodefect-apis-with-zerocode-cadd9dc2a430) - Medium 15 min Read
