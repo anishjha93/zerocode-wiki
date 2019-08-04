@@ -91,13 +91,15 @@ Keep in mind: It's simple JSON. <br/>
 ## How?
 * HelloWorld Examples and samples are here to [download or clone](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world)  
 
-* The  **latest**  maven dependency can be found here at [Maven central](http://search.maven.org/#search%7Cga%7C1%7Czerocode-rest-bdd)
+* The  **latest**  maven dependency can be found here at 
+[Maven central - Old releases](https://mvnrepository.com/artifact/org.jsmart/zerocode-rest-bdd)
+[Maven central - New releases](https://mvnrepository.com/artifact/org.jsmart/zerocode-tdd)
 
 ```xml
 <dependency>
     <groupId>org.jsmart</groupId>
     <artifactId>zerocode-rest-bdd</artifactId>
-    <version>1.2.x</version>
+    <version>1.3.x</version>
 </dependency>
 ```
 * You can organize and arrange the tests to suit your requirements, by folder/feature/release wise
@@ -208,6 +210,28 @@ Failures:
 Assertion path '$.status' with actual value '200' did not match the expected value '400'
 
 ```
+
+Inspired By
+===
+### Honorable references and credits
+
+- [SkyScreamer](https://github.com/skyscreamer/JSONassert) 
+- [Pyresttest](https://github.com/svanoort/pyresttest) 
+- [Spring](https://spring.io)
+- [Apache JMeter](https://jmeter.apache.org/) 
+- [JUnit5 Jupiter Engine](https://junit.org/junit5/) 
+
+Pyresttest's JSON/YAML based test-DSL inspired many of Zerocode's Http DSL and test-config features.
+
+Apache JMeter's intuitive load configuration inspired various Zerocode's declarative Load Testing DSL.
+
+SkyScreamer's lenient mode smart JSON comparison inspired Zerocode's lenient JSON comparison feature.
+
+Spring's popular token/placeholder resolver inspired Zerocode's runtime token/placeholder resolver feature.
+
+Jupiter Junit5's easy and declarative approach to parameterized testing inspired Zerocode's parameterized testing feature.
+
+We also give credit to the team members at HomeOffice(GOV.UK), Mizuho Bank, CMC Markets, HSBC Bank, Barclays and Zohocorp whose comments have helped to shape the lib.
 
 ## Contribute
 Raise [issues](https://github.com/authorjapps/zerocode/issues) and [contribute](https://github.com/authorjapps/zerocode/blob/master/CONTRIBUTING.md) to improve zerocode by becoming a contributor yourself.
