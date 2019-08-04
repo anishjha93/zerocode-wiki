@@ -7,6 +7,22 @@ Welcome To Zerocode
 
 _(For helps and usage- Visit [Table of Contents](https://github.com/authorjapps/zerocode#table-of-contents--). Visit here for a [Quick Introduction to Hassle-Free Declarative Testing](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing))_
 
+## Table Of Contents
+   * [Welcome To Zerocode](#welcome-to-zerocode)
+   * [Super Easy to Write BDD Tests](#super-easy-to-write-bdd-tests)
+   * [No Complexity Involved](#no-complexity-involved)
+   * [Plug and Play Security Testing](#plug-and-play-security-testing)
+   * [Beautiful and Useful Reporting](#beautiful-and-useful-reporting)
+   * [Easy to Collaborate](#easy-to-collaborate)
+   * [Handy Even For Manual Testers or Architects](#handy-even-for-manual-testers-or-architects)
+      * [Why?](#why)
+      * [How?](#how)
+      * [Sample Test Report](#sample-test-report)
+      * [Sample Test Logs](#sample-test-logs)
+   * [Inspired By](#inspired-by)
+      * [Honorable references and credits](#honorable-references-and-credits)
+   * [Contribute](#contribute)
+
 Super Easy to Write BDD Tests
 ===
 
