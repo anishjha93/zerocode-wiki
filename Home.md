@@ -10,7 +10,7 @@ _(For helps and usage- Visit [Table of Contents](https://github.com/authorjapps/
 ## Table Of Contents
    * [Welcome To Zerocode](#welcome-to-zerocode)
    * [Super Easy to Write BDD Tests](#super-easy-to-write-bdd-tests)
-   * [Zerocode Tokens](https://github.com/authorjapps/zerocode/wiki/Zerocode-Tokens)
+   * [Zerocode Tokens](#zerocode-tokens)
    * [No Complexity Involved](#no-complexity-involved)
    * [Plug and Play Security Testing](#plug-and-play-security-testing)
    * [Beautiful and Useful Reporting](#beautiful-and-useful-reporting)
@@ -29,7 +29,23 @@ Super Easy to Write BDD Tests
 
 [Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) helps you to design better Test Cases for your business features, then maintain and update them easily to avoid sleepless nights. It is built on extending the **Junit core runners**. You simply annotate your test method with JUnit **@Test** and run like JUnit tests, as well as optionally you can use `Suite` Runners for CI builds and env switching. Testing becomes an easy and effortless job due to the **simplicity** nature of JSON and the native support by popular IDEs e.g. Eclipse /IntelliJ /NetBeans etc with no extra plugin. Super easy !
 
-No Complexity Involved
+Zerocode Tokens
+===
+
+[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) provides built-in tokens that help with your testing ranging from generating random numbers through to accessing system properties, currently Zerocode offers the following tokens:
+
++ [PREFIX_ASU](#todo)
++ [RANDOM_NUMBER](#todo)
++ [RANDOM_STRING_PREFIX](#todo)
++ [STATIC_ALPHABET](#todo)
++ [LOCALDATE_TODAY](#todo)
++ [LOCALDATETIME_NOW](#todo)
++ [SYSTEM_PROPERTY](#todo)
++ [SYSTEM_ENV](#todo)
++ [XML_FILE](#todo)
++ [RANDOM_UU_ID](#todo)
++ [RECORD_DUMP](#todo)
+
 ===
 
 Your tests will not be cumbersome and complex anymore. Zerocode makes your tests independent, complete and structured and easily maintainable by the team or the new comers. It enables you to write your `API End Point Tests`, `Consumer Contract Tests`, `End to End Tests` and `Performance Tests(Load/Stress)` etc, at the **speed** of writing **JUnit** tests with accuracy transparent to all stakeholders. 
