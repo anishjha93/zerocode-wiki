@@ -46,6 +46,7 @@ Zerocode Tokens
 + [RANDOM_UU_ID](#todo)
 + [RECORD_DUMP](#todo)
 
+No Complexity Involved
 ===
 
 Your tests will not be cumbersome and complex anymore. Zerocode makes your tests independent, complete and structured and easily maintainable by the team or the new comers. It enables you to write your `API End Point Tests`, `Consumer Contract Tests`, `End to End Tests` and `Performance Tests(Load/Stress)` etc, at the **speed** of writing **JUnit** tests with accuracy transparent to all stakeholders. 
