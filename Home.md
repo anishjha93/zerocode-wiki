@@ -10,6 +10,7 @@ _(For helps and usage- Visit [Table of Contents](https://github.com/authorjapps/
 ## Table Of Contents
    * [Welcome To Zerocode](#welcome-to-zerocode)
    * [Super Easy to Write BDD Tests](#super-easy-to-write-bdd-tests)
+   * [Zerocode Tokens](https://github.com/authorjapps/zerocode/wiki/Zerocode-Tokens)
    * [No Complexity Involved](#no-complexity-involved)
    * [Plug and Play Security Testing](#plug-and-play-security-testing)
    * [Beautiful and Useful Reporting](#beautiful-and-useful-reporting)
