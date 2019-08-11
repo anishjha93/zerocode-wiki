@@ -34,17 +34,16 @@ Zerocode Tokens
 
 [Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) provides built-in tokens that help with your testing ranging from generating random numbers through to accessing system properties, currently Zerocode offers the following tokens:
 
-+ [PREFIX_ASU](https://github.com/authorjapps/zerocode/wiki/Token:-Prefix-ASU)
-+ [RANDOM_NUMBER](https://github.com/authorjapps/zerocode/wiki/Token:-Random-Number)
-+ [RANDOM_STRING_PREFIX](https://github.com/authorjapps/zerocode/wiki/Token:-Random-String)
-+ [STATIC_ALPHABET](https://github.com/authorjapps/zerocode/wiki/Token:-Static-Alphabet)
 + [LOCALDATE_TODAY](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDate-Today)
 + [LOCALDATETIME_NOW](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDateTime-Now)
-+ [SYSTEM_PROPERTY](https://github.com/authorjapps/zerocode/wiki/Token:-System-Property)
-+ [SYSTEM_ENV](https://github.com/authorjapps/zerocode/wiki/Token:-System-Environment)
-+ [XML_FILE](https://github.com/authorjapps/zerocode/wiki/Token:-XML-File)
++ [RANDOM_NUMBER](https://github.com/authorjapps/zerocode/wiki/Token:-Random-Number)
++ [RANDOM_STRING_PREFIX](https://github.com/authorjapps/zerocode/wiki/Token:-Random-String)
 + [RANDOM_UUID](https://github.com/authorjapps/zerocode/wiki/Token:-Random-UUID)
 + [RECORD_DUMP](https://github.com/authorjapps/zerocode/wiki/Token:-Record-Dump)
++ [STATIC_ALPHABET](https://github.com/authorjapps/zerocode/wiki/Token:-Static-Alphabet)
++ [SYSTEM_ENV](https://github.com/authorjapps/zerocode/wiki/Token:-System-Environment)
++ [SYSTEM_PROPERTY](https://github.com/authorjapps/zerocode/wiki/Token:-System-Property)
++ [XML_FILE](https://github.com/authorjapps/zerocode/wiki/Token:-XML-File)
 
 No Complexity Involved
 ===
