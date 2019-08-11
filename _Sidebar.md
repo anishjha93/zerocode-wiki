@@ -4,17 +4,16 @@
   + [Finished writing tests - Setting up CI Jenkins Build Pipe Line](https://github.com/authorjapps/zerocode/wiki/After-you-have-written-all-the-tests,-what's-next)
 
 + Zerocode Tokens
-  + [PREFIX_ASU](https://github.com/authorjapps/zerocode/wiki/Token:-Prefix-ASU)
-  + [RANDOM_NUMBER](https://github.com/authorjapps/zerocode/wiki/Token:-Random-Number)
-  + [RANDOM_STRING_PREFIX](https://github.com/authorjapps/zerocode/wiki/Token:-Random-String)
-  + [STATIC_ALPHABET](https://github.com/authorjapps/zerocode/wiki/Token:-Static-Alphabet)
   + [LOCALDATE_TODAY](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDate-Today)
   + [LOCALDATETIME_NOW](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDateTime-Now)
+  + [RANDOM_NUMBER](https://github.com/authorjapps/zerocode/wiki/Token:-Random-Number)
+  + [RANDOM_STRING_PREFIX](https://github.com/authorjapps/zerocode/wiki/Token:-Random-String)
+  + [RANDOM_UUID](https://github.com/authorjapps/zerocode/wiki/Token:-Random-UUID)
+  + [RECORD_DUMP](https://github.com/authorjapps/zerocode/wiki/Token:-Record-Dump)
+  + [STATIC_ALPHABET](https://github.com/authorjapps/zerocode/wiki/Token:-Static-Alphabet)
+  + [SYSTEM_ENV](https://github.com/authorjapps/zerocode/wiki/Token:-System-Environment)
   + [SYSTEM_PROPERTY](https://github.com/authorjapps/zerocode/wiki/Token:-System-Property)
-  + [XML_FILE](https://github.com/authorjapps/zerocode/wiki/Token:-System-Environment)
-  + [RANDOM_UUID](https://github.com/authorjapps/zerocode/wiki/Token:-XML-File)
-  + [RECORD_DUMP](https://github.com/authorjapps/zerocode/wiki/Token:-Random-UUID)
-  + [SYSTEM_ENV](https://github.com/authorjapps/zerocode/wiki/Token:-Record-Dump)
+  + [XML_FILE](https://github.com/authorjapps/zerocode/wiki/Token:-XML-File)
 
 + Http Testing
   + [External JSON file content](https://github.com/authorjapps/zerocode/wiki/External-JSON-file-as-reusable-content)
