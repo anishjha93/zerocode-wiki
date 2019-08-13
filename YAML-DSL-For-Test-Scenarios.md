@@ -42,7 +42,85 @@ Where
 
 ## Using JayWay JSON Path Between The Steps
 The JSON Path can be used to pick an element/field and reuse it in subsequent steps
+In the below test scenario, please have a look at the 2nd step's `verifications` block where various JSON Paths are used to pick/reuse the desired fields rather than hard-coding.
+```yaml
+---
+scenarioName: As simple GET request response Multi STep
+steps:
+- name: find_match
+  url: "/api/v1/search/persons"
+  operation: GET
+  request:
+    queryParams:
+      lang: Amazing
+      city: Lon
+  assertions:
+    status: 200
+    body:
+      exactMatches: true
+      name: Mr Bean
+      lang: Amazing
+      city: Lon
+
+- name: find_match2
+  url: "/api/v1/search/persons"
+  operation: GET
+  request:
+    queryParams:
+      lang: Amazing
+      city: Lon
+  verifications:
+    status: "$EQ.${$.find_match.response.status}"
+    body:
+      exactMatches: true
+      name: "$CONTAINS.STRING:Bean"
+      lang: "${$.find_match.response.body.lang}"
+      city: "${$.find_match2.request.queryParams.city}"
+```
 
 ## Using Array in YAML
+e.g. the API responds with a `person` payload with array of `addresses`.
+
+```yaml
+---
+scenarioName: "A simple GET API Scenario" #comments allowed
+steps:
+- name: "find_match"
+  url: "/api/v1/persons/p001"
+  operation: "GET"
+  request:
+    headers:
+      x-api-key: "Ama-zing-key"
+      x-api-secret: "Sec-ret-stuff"
+  verifications:
+    status: 200 #comment - a http status code as int value
+    body:
+      exactMatches: true
+      name: "Mr Bean"
+      addresses:
+      - type: "office"
+        line1: "10 Random St"
+      - type: "home"
+        line1: "300 Random St"
+```
+
+Here `addresses` is a collection of individual address. The equivalent JSON is as follows.
+```json
+{
+        ...
+	"exactMatches": true,
+	"name": "Mr Bean",
+	"addresses": [{
+			"type": "office",
+			"line1": "10 Random St"
+		},
+		{
+			"type": "home",
+			"line1": "300 Random St"
+		}
+	]
+}
+```
 
 ## Conclusion
+In an YAML file if the line starts with a `-` mark, then the containing element is an `array`.
