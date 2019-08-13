@@ -86,8 +86,7 @@
   + [When to use JUnit Suite runner and when Zerocode Package runner?](https://github.com/authorjapps/zerocode/wiki/Suite-Runner-Vs-Package-runner)
   + [How to execute DB SQL and assert?](https://github.com/authorjapps/zerocode/wiki/Sample-DB-SQL-Executor)
   + [How to handle Http response other than utf-8 e.g. utf-16 or utf-32 ?](https://github.com/authorjapps/zerocode/wiki/Charset-UTF-8-or-UTF-16-or-UTF-32-etc-in-the-http-response)
-  + [Random Number Generator Usage and Limits](https://github.com/authorjapps/zerocode/wiki/Random-Number-Token-Generator-Usage-and-Limits)
-  + [Placeholders Usages and Limits](https://github.com/authorjapps/zerocode/wiki/Placeholders-Usage-and-Limits)
+  + [Random Number Generator Placeholders Usages and Limits](https://github.com/authorjapps/zerocode/wiki/Placeholders-Usage-and-Limits)
   + [Automation tests for Zerocode lib itself](https://github.com/authorjapps/zerocode/wiki/Automation-tests-for-Zerocode-lib-itself)
 ### Blogs
 + [Read Our Blogs](https://github.com/authorjapps/zerocode/wiki/Read-Our-Blogs)
