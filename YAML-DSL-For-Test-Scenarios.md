@@ -1,3 +1,11 @@
+## Table Of Contents
+* [Introduction](#introduction)
+* [A Test Scenario in YAML DSL format](#a-test-scenario-in-yaml-dsl-format)
+* [Using JayWay JSON Path in The YAML Steps](#using-jayway-json-path-between-the-steps)
+* [Using Array in YAML](#using-array-in-yaml)
+* [Conclusion](#conclusion)
+* [JSON to YAML and YAML to JSON Conversion](#json-to-yaml-and-yaml-to-json)
+
 ## Introduction
 Sometimes testers or developers need to describe their automation scenarios in YAML format. Zerocode provides the mechanism to achieve this using YAML.
 
@@ -127,3 +135,9 @@ The equivalent JSON looks like below.
 
 ## Conclusion
 We can find the examples in the HelloWorld GitHub repo under `yaml` folder.
+
+## JSON to YAML and YAML to JSON
+
+JSON to YAML : https://www.json2yaml.com/
+YAML to JSON : https://codebeautify.org/yaml-to-json-xml-csv
+JSON to YAML(another) : https://codebeautify.org/json-to-yaml
