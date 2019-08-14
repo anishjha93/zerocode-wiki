@@ -112,9 +112,6 @@ Here `addresses` in the response `body` is a collection of individual address.
 The equivalent JSON looks like below.
 ```json
 {
-  ...
-  "exactMatches": true,
-  "name": "Mr Bean",
   "addresses": [
     {
       "type": "office",
