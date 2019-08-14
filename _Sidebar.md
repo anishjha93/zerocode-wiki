@@ -15,6 +15,8 @@
   + [SYSTEM_PROPERTY](https://github.com/authorjapps/zerocode/wiki/Token:-System-Property)
   + [XML_FILE](https://github.com/authorjapps/zerocode/wiki/Token:-XML-File)
 
++ YAML DSL
+  + [YAML Based Test Scenario Automation](https://github.com/authorjapps/zerocode/wiki/YAML-DSL-For-Test-Scenarios)
 + Http Testing
   + [External JSON file content](https://github.com/authorjapps/zerocode/wiki/External-JSON-file-as-reusable-content)
   + [Env Switching - CI,DIT,SIT etc](https://github.com/authorjapps/zerocode/wiki/Switching-Environment-to-CI-DIT-SIT-UAT-for-Test-Suite-or-Regression-Pack)
