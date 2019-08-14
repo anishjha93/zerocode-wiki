@@ -41,8 +41,10 @@ Where
 + `status`: An http status code e.g. 200 is OK, 201 is CREATED etc.
 
 ## Using JayWay JSON Path Between The Steps
-The JSON Path can be used to pick an element/field and reuse it in subsequent steps
-In the below test scenario, please have a look at the 2nd step's `verifications` block where various JSON Paths are used to pick/reuse the desired fields rather than hard-coding.
+The JSON Path can be used to pick an element/field and reuse it in subsequent steps.
+
+In the below test scenario, please have a look at the 2nd step's `verifications` block where various JSON Paths are used to pick/reuse the desired fields rather than hard-coded values.
+
 ```yaml
 ---
 scenarioName: As simple GET request response Multi STep
@@ -81,6 +83,8 @@ steps:
 ## Using Array in YAML
 e.g. the API responds with a `person` payload with array of `addresses`.
 
+> In an YAML file if the line starts with a `-` mark, then the containing element is an `array`.
+
 ```yaml
 ---
 scenarioName: "A simple GET API Scenario" #comments allowed
@@ -104,23 +108,25 @@ steps:
         line1: "300 Random St"
 ```
 
-Here `addresses` is a collection of individual address. The equivalent JSON is as follows.
+Here `addresses` in the response `body` is a collection of individual address. 
+The equivalent JSON looks like below.
 ```json
 {
-        ...
-	"exactMatches": true,
-	"name": "Mr Bean",
-	"addresses": [{
-			"type": "office",
-			"line1": "10 Random St"
-		},
-		{
-			"type": "home",
-			"line1": "300 Random St"
-		}
-	]
+  ...
+  "exactMatches": true,
+  "name": "Mr Bean",
+  "addresses": [
+    {
+      "type": "office",
+      "line1": "10 Random St"
+    },
+    {
+      "type": "home",
+      "line1": "300 Random St"
+    }
+  ]
 }
 ```
 
 ## Conclusion
-In an YAML file if the line starts with a `-` mark, then the containing element is an `array`.
+We can find the examples in the HelloWorld GitHub repo under `yaml` folder.
