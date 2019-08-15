@@ -5,18 +5,19 @@ Table of Contents
 * [Testing Without Writing Code](#testing-without-writing-code)
 * [Test Case Fields](#test-case-fields)
      * [Http(REST API and SOAP)](#httprest-api-and-soap)
+        * [SCENARIO](#scenario)
         * [URL](#url)
         * [OPERATION](#operation)
         * [REQUEST](#request)
         * [HEADERS](#headers)
-        * [ASSERTIONS/VERIFICATIONS](#assertions)
+        * [VERIFICATIONS](#verifications)
         * [STATUS](#status)
         * [BODY](#body)
      * [Kafka](#kafka)
-        * [URL](#url-1)
+        * [TOPIC](#url-1)
         * [OPERATION](#operation-1)
-        * [REQUEST](#request-1)
-        * [ASSERTIONS/VERIFICATIONS](#assertions-1)
+        * [PRODUCE/CONSUME](#request-1)
+        * [VERIFICATIONS](#assertions-1)
 * [HelloWorld Examples (Try at home)](#helloworld-examples-try-at-home)
 * [Running the Tests using <em>JUnit</em>](#running-the-tests-using-junit)
 * [Both Declarative and Extensible](#both-declarative-and-extensible)
@@ -60,7 +61,7 @@ In the _Declarative Style_ **we don't need to write** any of the below.
 | `"operation": "POST"`  | Set this `POST` operaton to the _HttpClient_ object <br/> e.g. `RequestBuilder.create(methodName).setUri(httpUrl);`| 
 | `"request": { ... }` | Parse the request payload and set to HttpEntity. <br/> e.g. `HttpEntity httpEntity = EntityBuilder.create().setContentType(APPLICATION_JSON).setText(reqBody).build();` |
 | _None. Nothing to do._ | Parse the response to Java object or JSON String  |
-| `"assertions": {JSON as-it-is} ` | Compare the actual response against expected field by field. <br/> - Use multiple `assertThat(...)`. <br/> - Traverse through the response Object field by field <br/> - Or use `JSON Path` to extract value |
+| `"verifications": {JSON as-it-is} ` | Compare the actual response against expected field by field. <br/> - Use multiple `assertThat(...)`. <br/> - Traverse through the response Object field by field <br/> - Or use `JSON Path` to extract value |
 | Display **all** the mismatches and fail the test(time saver) | Stop at **first** mismatch and fail the test(unwanted delay in getting feedback)  |
 | Straight forward and easy | Step chaining is not straight forward   |
 
@@ -74,13 +75,52 @@ To draw a _simile_, we can pay attention to how docker-compose works. In `docker
 
 > _That's declarative way of doing things_
 
-How neat is that? 
+e.g. of a `compose YAML` file
+```yaml
+---
+version: '2'
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:5.0.1
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+  kafka:
+    image: confluentinc/cp-kafka:5.0.1
+    depends_on:
+      - zookeeper
+    ports:
+      - 9092:9092
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+```
+
+How neat and compact is that? 
 Just think of it, for instance, if we had to write code/shell-scripts for the same repetitive tasks, how much hassle we would have gone through!
 
+Example of a [Zerocode YAML Test Scenario](https://github.com/authorjapps/zerocode/wiki/YAML-DSL-For-Test-Scenarios) is below.
+
+```yaml
+---
+scenarioName: As simple GET request response
+steps:
+- name: "find_match"
+  url: "/api/v1/search/persons"
+  operation: "GET"
+  request:
+    queryParams:
+      lang: "Amazing"
+      city: "Lon"
+  verifications:
+    status: 200
+    body:
+      exactMatches: true
+      name: "Mr Bean"
+```
 
 Testing Without Writing Code.
 ===
-
 
 <img width="450"  height="355" alt="ZerocodeLand" src="https://user-images.githubusercontent.com/12598420/52103949-15ca6b00-25e0-11e9-9d7b-b809a24f3659.png">
 
@@ -96,6 +136,12 @@ Test Case Fields
 3. **Java Function** call e.g. _DB SQL Executror_
 
 ### Http(REST API and SOAP)
+
+#### SCENARIO
+`Scenario` means a Test-Scenario or an User-Journey or a Use-Case during test automation. It is represented in the following way.
+```
+"scenarioName": "Free text - Validate a POST and GET operation for a customer"
+```
 
 #### URL
 
@@ -166,21 +212,30 @@ Request with headers and body payload,
             },
 ```
 
-#### ASSERTIONS
+#### VERIFICATIONS
 
 For REST services, we need to put the expected response with response _Status_, _Headers_ and _Body_ payload.
 
-Only `status` validation/assertion
+Only `status` validation
 ```
-           "assertions": {
+           "verifications": {
                 "status": 200
             }
 ```
 
+or
+
+```
+           "verifications": {
+                "status": 200
+            }
+```
+
+
 Or `status` and payload `id` assertions
 Only `status` assertion
 ```
-           "assertions": {
+           "verifications": {
                 "status": 200,
                 "body": {
                     "id" : 583231
@@ -191,7 +246,7 @@ Only `status` assertion
 Or `partial` or `full` payload assertions 
 
 ```
-            "assertions": {
+            "verifications": {
                 "status": 200,
                 "body": {
                     "login" : "octocat",
@@ -203,7 +258,7 @@ Or `partial` or `full` payload assertions
 
 Or with response `headers` details
 ```
-           "assertions": {
+           "verifications": {
                 "status": 200,
                 "headers":{
                   "Server":"sit2.hsbc.co.uk",
@@ -225,7 +280,7 @@ For REST services or SOAP, we need to put the expected response with response _S
 
 Only `status` assertion
 ```
-           "assertions": {
+           "verifications": {
                 "status": 200
             }
 ```
@@ -234,7 +289,7 @@ Only `status` assertion
 The expected server response body can be placed as below for assertions i.e. comparing actual vs expected payload.
 
 ```
-           "assertions": {
+           "verifications": {
                 "status": 200
                 "body": {
                     "login" : "octocat",
@@ -246,7 +301,7 @@ The expected server response body can be placed as below for assertions i.e. com
 
 ### Kafka
 
-#### URL
+#### TOPIC
 
 We mention the Kafka topic name
 
@@ -262,6 +317,11 @@ We need to mention `produce` or `consume` from/to a Kafka topic
     "operation": "produce",
 ```
 
+or
+
+```
+    "operation": "consume",
+```
 
 #### REQUEST
 
@@ -312,14 +372,14 @@ For Kafka services, we can put the expected response with response _Status_, _Re
 
 Only `status` assertion
 ```
-           "assertions": {
+           "verifications": {
                 "status": "Ok"
             }
 ```
 
 Or `status` with `recordMetadata` assertion while _Producing_
 ```
-           "assertions": {
+           "verifications": {
                 "status": "Ok",
                 "recordMetadata": "$NOT.NULL"
             }
@@ -327,7 +387,7 @@ Or `status` with `recordMetadata` assertion while _Producing_
 
 Or `size` with `records` assertion while _Consuming_
 ```
-           "assertions": {
+           "verifications": {
                 "size": 1,
                 "records": [
                     {
@@ -400,4 +460,3 @@ Both Declarative and Extensible
 For instance, we can add custom _Http Headers_ to the entire test-suite or an individual test-case, automate _OAuth2_, or use our own flavour of _Apache Kafka Client_ to deal with _Kafka Brokers_ and much more stuff.
 
 And making all these things is **super easy** and **straight forward**.
-
