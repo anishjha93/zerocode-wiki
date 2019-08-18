@@ -53,6 +53,13 @@ returns
 
 
 ## Pick the value from single-value array
+To pick the 1st element, we can use the expression as below.
+
+> "${$...results[?(@.id=='2')].name.$VALUE}"
+
+will resolve to
+> "Bar"
+
 
 ## Pick a value from multi-value array
 
