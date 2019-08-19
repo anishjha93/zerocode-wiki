@@ -83,8 +83,9 @@ will resolve to
 
 ## Conclusion
 We learnt how to pick an element from an array of leaf nodes. 
+
 Please note-
-This works only when the JSON Path returns array of leaf nodes only(not the Key-Value pairs) as below.
+> This works only when the JSON Path returns array of leaf nodes only(not the Key-Value pairs) as below.
 
 (1) 
 ```json
