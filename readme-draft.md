@@ -34,7 +34,7 @@ Table of Contents
    * [Smart Projects Using Zerocode](#smart-projects-using-zerocode)
    * [Latest news/releases/features](#latest-newsreleasesfeatures)
    * [Getting started ⛹‍♂](#getting-started-)
-   * [Usage and Help - Table of Contents](#Usage-and-help---table-of-contents)
+   * [Usage and Help - Table of Contents - More >>](#Usage-and-help---table-of-contents)
    
 Introduction
 ===
@@ -364,7 +364,7 @@ Kafka Testing
 ===
 Visit the page [Kafka Testing Introduction](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction) for step-by-step approach.
 
-#### Current Release Covers
+### Current Release Covers
 + Kafka - Testing Distributed Data Stream application (Easy and fun) <br/>
   + Simple `produce` and `consume`
   + `produce` and `consume` RAW messages
@@ -372,13 +372,11 @@ Visit the page [Kafka Testing Introduction](https://github.com/authorjapps/zeroc
   + Test `avro` schema registry along with REST Proxy
 + Kafka - HelloWorld examples and Wiki on dockerized testinng  <br/>
 
-<br/>
 
 DataBase(DB) Integration Testing
 ===
 Visit the page [Database Validation](https://github.com/authorjapps/zerocode/wiki/Sample-DB-SQL-Executor) for step-by-step approach.
 
-<br/>
 
 Maven Dependencies 
 ===
@@ -386,7 +384,6 @@ Maven Dependencies
 
 [More (Wiki) >>](https://github.com/authorjapps/zerocode/wiki)
 
-<br/>
 
 Smart Projects Using Zerocode
 ===
@@ -400,7 +397,6 @@ Latest news/releases/features
 Follow us(Twitter) 
 <a href="https://twitter.com/ZerocodeEasyTDD"><img width="52" alt="download" src="https://user-images.githubusercontent.com/5318345/45001240-22bf4000-afe9-11e8-8695-f6791b69e07c.png"></a>
 
-<br/>
 
 Getting started ⛹‍♂
 ===
@@ -563,7 +559,7 @@ Usage and Help - Table of Contents
 * [References, Dicussions and articles](#references-dicussions-and-articles)
 * [Credits](#credits)
 
-#### Help and usage
+### Help and usage
 Download this help and usage project to try it yourself.
 
 - HelloWorld project: https://github.com/authorjapps/zerocode-hello-world
@@ -573,7 +569,7 @@ Download this help and usage project to try it yourself.
 - Git [Clone](https://github.com/authorjapps/zerocode-hello-world) or [Download](https://github.com/authorjapps/zerocode-hello-world/archive/master.zip) the zip file(contains a maven project) to run locally 
 
 
-#### Single Scenario with single step
+### Single Scenario with single step
 
 A scenario might consist of one or more steps. Let's start with a single step Test Case:
 ```javaScript
@@ -659,7 +655,7 @@ Because you are asserting with an expected status as 500, but the end point actu
 }
 ```
 
-#### Generating load for performance testing aka stress testing
+### Generating load for performance testing aka stress testing
 + Browse or clone this [sample performance-tests repo](https://github.com/authorjapps/performance-tests) with examples.
    + Take advantage of the following two extended Junit load runners from the lib-
 
@@ -723,7 +719,7 @@ or
 
 [More (Learn advantages of load testing using your IDE(Eclipse or Intellij etc)) >>](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based))
 
-#### Single step with more assertions
+### Single step with more assertions
 
 ```javaScript
 {
@@ -759,7 +755,7 @@ or
 The above Test Case will PASS as the assertions section has all expected values matching the end point's response.
 
 
-#### Running with scenario _loop_
+### Running with scenario _loop_
 
 Runs the entire scenario two times i.e. executing both the steps once for each time.
 
@@ -798,12 +794,12 @@ Runs the entire scenario two times i.e. executing both the steps once for each t
 }
 ```
 
-#### Paramterized scenario
+### Paramterized scenario
 To run the scenario steps for each parameter from a list of values or CSV rows.
 See Wiki for details.
 
 
-#### Generated reports and charts
+### Generated reports and charts
 
 _(For Gradle build setup - See [here - Wiki](https://github.com/authorjapps/zerocode/wiki/Gradle-build-for-JUnit-Smart-Chart-and-CSV-Reports))_
 
@@ -816,14 +812,14 @@ e.g. Look for-
 
 See some sample reports below:
 
-##### Spike Chart:
+#### Spike Chart:
 
 1. [Full coverage CSV report](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/zz_reports/zerocode_full_report_2016-07-30T11-44-14.512.csv)
 
 1. [Interactive - Chart(Filter by Author, Test name, status etc)](http://htmlpreview.github.io/?https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/zz_reports/zerocode-interactive.html)
 
 
-##### CSV Report:
+#### CSV Report:
 
 - See here : [Full coverage CSV report](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/zz_reports/zerocode_full_report_2016-07-30T11-44-14.512.csv)
 
@@ -839,10 +835,10 @@ Possible reasons-
 ----------------------------------------------------------------------------------------
 ```
 
-#### Step dealing with arrays
+### Step dealing with arrays
 Visit this [Wiki Page](https://github.com/authorjapps/zerocode/wiki/Array-assertions-made-easy--e.g.-SIZE,-element-finder).
 
-##### Finding the occurrence of an element in the array response
+#### Finding the occurrence of an element in the array response
 e.g. your actual response is like below, 
 Your use-case is, `Dan` and `Mike` might not be returned in the same order always, but they appear only once in the array.
 ```
@@ -902,7 +898,7 @@ Run [the above test case](https://github.com/authorjapps/consumer-contract-tests
 
 To pick a single element/leaf-value from the array, please visit this [Wiki Page](https://github.com/authorjapps/zerocode/wiki/When-JSON-Path-Matching-returns-value-or-values-as-an-array)
 
-#### Asserting an array SIZE
+### Asserting an array SIZE
 If your response contains the below:
 ```
 e.g. http response body:
@@ -949,7 +945,7 @@ etc
 
 See more SIZE examples [here](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/resources/helloworld_array_size/hello_world_array_size_assertions_test.json) in the [hello-world repo](https://github.com/authorjapps/zerocode-hello-world).
 
-#### Chaining multiple steps for a scenario
+### Chaining multiple steps for a scenario
 Chaining steps: Multi-Step REST calls with the earlier response(IDs etc) as input to next step
 
 ```javaScript
@@ -993,7 +989,7 @@ Chaining steps: Multi-Step REST calls with the earlier response(IDs etc) as inpu
 }
 ```
 
-#### Enabling ignoreStepFailures for executing all steps in a scenario
+### Enabling ignoreStepFailures for executing all steps in a scenario
 
 Setting `"ignoreStepFailures": true` will allow executing the next step even if the earlier step failed.
 
@@ -1009,7 +1005,7 @@ e.g.
 See HelloWorld repo for a running example.
 
 
-#### Generating random strings, random numbers and static strings
+### Generating random strings, random numbers and static strings
 
 Random UUID-
 ```javaScript
@@ -1152,7 +1148,7 @@ Response:
 
 ```
 
-#### Asserting general and exception messages
+### Asserting general and exception messages
 
 Asserting with $CONTAINS.STRING:
 
@@ -1171,7 +1167,7 @@ Asserting with $CONTAINS.STRING:
 
 - Similar way exception messages can be asserted for part or full message.
 
-#### Asserting with $GT or $LT
+### Asserting with $GT or $LT
 
 $GT.<any_number>
 
@@ -1198,7 +1194,7 @@ $LT.<any_number>
 
 ```
 
-#### Asserting an empty array with $[]
+### Asserting an empty array with $[]
 
 ```javaScript
     {
@@ -1214,7 +1210,7 @@ $LT.<any_number>
     }
 ```
 
-#### Asserting an array SIZE
+### Asserting an array SIZE
 If your response contains the below:
 ```
 e.g. http response body:
@@ -1262,7 +1258,7 @@ etc
 See more SIZE examples [here](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/resources/helloworld_array_size/hello_world_array_size_assertions_test.json) in the [hello-world repo](https://github.com/authorjapps/zerocode-hello-world).
 
 
-#### Calling java methods(apis) for doing specific tasks:
+### Calling java methods(apis) for doing specific tasks:
 + Sample tests are [here](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/java/org/jsmart/zerocode/testhelp/tests/helloworldjavaexec/HelloWorldJavaMethodExecTest.java)
     + Example of request response as JSON - [See here](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/resources/helloworldjavaexec/hello_world_javaexec_req_resp_as_json.json)
     + Example of passing a simple string e.g. DB SQL query for Postgres, MySql, Oracle etc - [See step-by-step details Wiki](https://github.com/authorjapps/zerocode/wiki/Sample-DB-SQL-Executor)
@@ -1347,7 +1343,7 @@ More examples here-
 - More [examples here](https://github.com/authorjapps/zerocode-hello-world/tree/master/src/test/resources/helloworldjavaexec)
 
 
-#### Overriding with Custom HttpClient with Project demand
+### Overriding with Custom HttpClient with Project demand
 
 See here how to pass custom headers in the HttpClient : [See usage of @UseHttpClient](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/java/org/jsmart/zerocode/testhelp/tests/HelloWorldCustomHttpClientSuite.java)
 
@@ -1364,7 +1360,7 @@ public class HelloWorldCustomHttpClientSuite {
 ```
 
 
-#### Externalizing RESTful host and port into properties file(s).
+### Externalizing RESTful host and port into properties file(s).
 
 Note:
 Each runner is capable of running with a properties file which can have host and port for specific to this runner.
@@ -1464,7 +1460,7 @@ public class ContractTestSuite {
 }
 ```
 
-#### Using any properties file key-value in the steps
+### Using any properties file key-value in the steps
 
 You can directly use the existing properties or introduce new common properties to be used in the test steps.
 Usage: `${my_new_url}`, `${web.application.endpoint.host}`, `${X-APP-SAML-TOKEN}` etc
@@ -1515,11 +1511,11 @@ Then, you can simply use the properties as below.
 }
 ```
 
-#### Bare JSON String, still a valid JSON
+### Bare JSON String, still a valid JSON
 
 - [See a running example](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/14_bare_string_json.json)
 
-#### Passing "Content-Type": "application/x-www-form-urlencoded" header
+### Passing "Content-Type": "application/x-www-form-urlencoded" header
 It is very easy to send this content-type in the header and assert the response.
 
 When you use this header, then you just need to put the `Key-Value` or `Name-Value` content under request `body` or request `queryParams` section. That's it.
@@ -1551,14 +1547,14 @@ The above name-value pair behind the scene is sent to the server as below:
 See more examples and usages in the [Wiki >>](https://github.com/authorjapps/zerocode/wiki/application-x-www-form-urlencoded-urlencoded-with-KeyValue-params)
 
 
-#### Handling Content-Type with charset-16 or charset-32
+### Handling Content-Type with charset-16 or charset-32
 When the http server sends response with charset other than utf-8 i.e. utf-16 or utf-32 etc, then the Zerocode framework automatically handles it correctly.
 See [Wiki - Charset in response](https://github.com/authorjapps/zerocode/wiki/Charset-UTF-8-or-UTF-16-or-UTF-32-etc-in-the-http-response) for details on how it handles.
 
 Also the framework enables you to override this behaviour/handling by overriding method `createCharsetResponse` in the class `BasicHttpClient.java`. See an example in the working code example of HelloWorld repo.
 
 
-#### Passing environment param via Jenkins and dynamically picking environment specific properties file in CI
+### Passing environment param via Jenkins and dynamically picking environment specific properties file in CI
 - [See a running example of passing envronment param and value](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/java/org/jsmart/zerocode/testhelp/tests/EnvPropertyHelloWorldTest.java)
 ```java
 package org.jsmart.zerocode.testhelp.tests;
@@ -1604,7 +1600,7 @@ If `env` not supplied, then defaults to "hello_world_host.properties" which by d
  */
 ```
 
-#### LocalDate and LocalDateTime format example
+### LocalDate and LocalDateTime format example
 
 ```javaScript
 {
@@ -1646,7 +1642,7 @@ output: 2018-02-11T21:31:21.77481041     // "uuuu-MM-dd'T'HH:mm:ss.A"
 output: 2018-02-14                       // "uuuu-MM-dd" or "yyyy-MM-dd"
 Default: date.toString(): 2018-02-11T21:31:20.989          // .toString()
 ```
-#### See here more-
+### See here more-
 https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
 
 ```
@@ -1671,7 +1667,7 @@ All letters 'A' to 'Z' and 'a' to 'z' are reserved as pattern letters. The follo
 ```
 
 
-#### SOAP method invocation example with xml input
+### SOAP method invocation example with xml input
 
 You can invoke SOAP as below which is already supported by zerocode lib, or you can write your own SOAP executor using Java(if 
 you want to, but you don't have to). 
@@ -1752,7 +1748,7 @@ Response:
  ```
 
 
-#### SOAP method invocation where Corporate Proxy enabled
+### SOAP method invocation where Corporate Proxy enabled
 You need to use a HttpClient ie override the BasicHttpClient and set proxies to it as below-
 ```java
         Step-1)
@@ -1872,9 +1868,9 @@ public class YourHttpClient {
 ```
 
 
-#### MIME Type Converters- XML to JSON, prettyfy XML etc
+### MIME Type Converters- XML to JSON, prettyfy XML etc
 e.g.
-##### xmlToJson
+#### xmlToJson
 ```javaScript
 {
             "name": "xml_to_json",
@@ -1898,7 +1894,7 @@ e.g.
         }
 ```
 
-##### jsonToJson
+#### jsonToJson
 Various input and output. Depending upon the usecase, you can use that method.
 
 ```javaScript
@@ -2010,7 +2006,7 @@ Available methods are-
 * prettyXml
 
 
-#### Using WireMock for mocking dependent end points
+### Using WireMock for mocking dependent end points
 See Issue #47 for the scenarios when WireMock becomes handy. 
 See examples here- 
 https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/resources/wiremock_tests/mock_via_wiremock_then_test_the_end_point.json
@@ -2071,7 +2067,7 @@ The below JSON block step will mock two end points using WireMock.
 ```
 
 
-#### Http Basic authentication step using zerocode
+### Http Basic authentication step using zerocode
 + How can I do basic http authentication in ZeroCode ?
    + Ans: You can do this in so many ways, it depends on your project requirement. Most simplest one is to pass the base64 basicAuth in the request headers as below - e.g. `USERNAME/PASSWORD` as `charaanuser/passtwitter`
 
@@ -2125,7 +2121,7 @@ You can refer to an example [test here](https://github.com/authorjapps/consumer-
 + In your custom http client, you add the header to the request at one place, which is common to all the API tests.
 See: `org.jsmart.zerocode.httpclient.CorpBankApcheHttpClient#addBasicAuthHeader` in the [http-client code](https://github.com/authorjapps/consumer-contract-tests/blob/master/src/main/java/org/jsmart/zerocode/httpclient/CorpBankApcheHttpClient.java) it uses.
 
-#### Sending query params in URL or separately
+### Sending query params in URL or separately
 You can pass query params in the usual way in the URL e.g. `?page=1&page_size=5` -or-
 You can pass them in the request as below.
 ```
@@ -2185,14 +2181,14 @@ See below both the examples( See this in the hello-world repo in action i.e. the
 ```
 
 
-#### Place holders for End Point Mocking
+### Place holders for End Point Mocking
 
 | Place Holder  | Output        | More  |
 | ------------- |:-------------| -----|
 | /$MOCK       | Signifies that this step will be used for mocking end points | Start with a front slash |
 | $USE.WIREMOCK      | Framework will use wiremock APIs to mock the end points defined in "mocks" section | Can use other mechanisms e.g. local REST api simulators |
 
-#### General place holders
+### General place holders
 
 | Place Holder  | Output        | More  |
 | ------------- |:-------------| -----|
@@ -2206,7 +2202,7 @@ See below both the examples( See this in the hello-world repo in action i.e. the
 | ${LOCAL.DATE.TODAY:yyyy-MM-dd}       | Resolves this today's date in the format yyyy-MM-dd or any suppliedformat| See format examples here https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/18_date_and_datetime_today_generator.json |
 | ${LOCAL.DATETIME.NOW:yyyy-MM-dd'T'HH:mm:ss.nnnnnnnnn}       | Resolves this today's datetime stamp in any supplied format| See format examples here https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/18_date_and_datetime_today_generator.json |
 
-#### Assertion place holders
+### Assertion place holders
 
 | Place Holder  | Output        | More  |
 | ------------- |:-------------| -----|
@@ -2224,7 +2220,7 @@ See below both the examples( See this in the hello-world repo in action i.e. the
 | $LOCAL.DATETIME.AFTER:2016-09-14T09:49:34.000Z       | Assertion passes if the actual date is later than this date | Otherwise fails |
 | $ONE.OF:[First Val, Second Val, Nth Val]       | Assertion passes if `currentStatus` actual value is one of the expected values supplied in the `array` | Otherwise fails. E.g. `"currentStatus": "$ONE.OF:[Found, Searching, Not Found]"` |
 
-#### Assertion Path holders
+### Assertion Path holders
 
 | Place Holder  | Output        | More  |
 | ------------- |:-------------| -----|
@@ -2233,19 +2229,19 @@ See below both the examples( See this in the hello-world repo in action i.e. the
 | `"<path.to.array>.SIZE":3`     | e.g. `"persons.SIZE" : 3` - Assertion passes if the array has exactly 3 elements | Search for `dealing with arrays` in this README for more usages |
 
 
-#### JSON Slice And Dice - Solved
+### JSON Slice And Dice - Solved
 + [Exapnd, Collapse, Remove Node and Traverse etc](https://jsoneditoronline.org/)
   + Tree structure viewing - Good for array traversing
   + Remove a node -> Click on left arrow
 + [Beautify, Minify, Copy Jayway JSON Pth](http://jsonpathfinder.com/)
 + [JSON Path Evaluator](http://jsonpath.herokuapp.com/?path=$.store.book[*].author)
 
-#### Video tutorials
+### Video tutorials
 * [RESTful testing with test cases in JSON](https://youtu.be/nSWq5SuyqxE) - YouTube
 * [Zerocode - Simple and powerful testing library - HelloWorld](https://www.youtube.com/watch?v=YCV1cqGt5e0) - YouTube
 * [Zerocode Query Params Demo](https://www.youtube.com/watch?v=a7JhwMxVcCM) - YouTube
 
-#### References, Dicussions and articles
+### References, Dicussions and articles
 * [Performance testing using JUnit and maven](https://www.codeproject.com/Articles/1251046/How-to-do-performance-testing-using-JUnit-and-Mave) - Codeproject
 * [REST API or SOAP End Point Testing](https://www.codeproject.com/Articles/1242569/REST-API-or-SOAP-End-Point-Testing-with-ZeroCode-J) - Codeproject
 * [DZone- MuleSoft API Testing With Zerocode Test Framework](https://dzone.com/articles/zerocode-test-framework-for-restsoap-api-tddbdd-ap) - DZone
@@ -2253,6 +2249,5 @@ See below both the examples( See this in the hello-world repo in action i.e. the
 * [Kafka - Quick and Practical Testing With Zerocode](https://dzone.com/articles/a-quick-and-practical-example-of-kafka-testing) - DZone
 * [Kotlin Apps Testing With Zerocode](https://dzone.com/articles/kotlin-spring-bootspring-data-h2-db-rest-api) - DZone
 
-#### Credits
+### Credits
 ![Jetbrains](images/jetbrains.svg)
-
