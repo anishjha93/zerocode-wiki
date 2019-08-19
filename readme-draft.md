@@ -1171,6 +1171,48 @@ Asserting with $CONTAINS.STRING:
 
 - Similar way exception messages can be asserted for part or full message.
 
+#### Asserting with $GT or $LT
+
+$GT.<any_number>
+
+```javaScript
+{
+  ...
+  ...
+  "assertions": {
+    "status": "$GT.198"   //<--- PASS: 200 is greater than 198
+  }
+}
+
+```
+
+$LT.<any_number>
+```javaScript
+{
+  ...
+  ...
+  "assertions": {
+      "status": "$LT.500"   //<--- PASS: 200 is lesser than 500
+  }
+}
+
+```
+
+#### Asserting an empty array with $[]
+
+```javaScript
+    {
+      ...
+      ...
+      "assertions": {
+        "status": 200,
+        "body": {
+          "id": "$NOT.NULL",
+          "vehicles": "$[]"         //<--- PASS: if the response has empty "vehicles"
+        }
+      }
+    }
+```
 
 #### Asserting an array SIZE
 If your response contains the below:
@@ -1473,21 +1515,9 @@ Then, you can simply use the properties as below.
 }
 ```
 
-
-#### Generating IDs and sharing across steps
-
-- [See a running example](https://github.com/authorjapps/helpme/tree/master/zerocode-rest-help/src/test/resources/tests/01_vanila_placeholders)
-
-
 #### Bare JSON String, still a valid JSON
 
 - [See a running example](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/14_bare_string_json.json)
-
-
-#### Passing Headers to the REST API
-
-- [See a running example](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/tests/00_sample_test_scenarios/16_passing_headers_to_rest_apis.json)
-
 
 #### Passing "Content-Type": "application/x-www-form-urlencoded" header
 It is very easy to send this content-type in the header and assert the response.
@@ -1573,8 +1603,6 @@ If `env` not supplied, then defaults to "hello_world_host.properties" which by d
  hello_world_host_ci.properties and hello_world_host_sit.properties etc are available in the resources folder or class path.
  */
 ```
-
-
 
 #### LocalDate and LocalDateTime format example
 
