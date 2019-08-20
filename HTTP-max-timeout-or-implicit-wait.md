@@ -10,7 +10,7 @@
   + In this case - 
     + e.g. if the server takes more time to respond, the client will keep on waiting till the server responds or till a network-timeout occurs.
 
-## Configuring Max Implicit Delay
+## Configuring Max Timeout
 
 ```properties
 http.max.timeout.milliseconds=5000
