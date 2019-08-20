@@ -7,7 +7,7 @@
 * [JSON to YAML and YAML to JSON Conversion](#json-to-yaml-and-yaml-to-json)
 
 ## Introduction
-Sometimes testers or developers need to describe their automation scenarios in YAML format. Zerocode provides the mechanism to achieve this using YAML.
+Many projects need to orchestrate their automation scenarios in YAML due to its easy human-readable format. Zerocode provides the super-easy way to achieve this using YAML.
 
 ## A Test Scenario in YAML DSL format
 For example, if we have an `GET` API `/api/v1/search/persons` which returns the Http status as `200` and the below response payload,
