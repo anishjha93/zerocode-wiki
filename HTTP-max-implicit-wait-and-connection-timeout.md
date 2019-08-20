@@ -3,7 +3,7 @@
 
 + If this is configured, then the client will implicitly wait till the configured amount of time for the server response
   + Then, if it doesn't receive the response from the server within that time, then it will throw `java.net.SocketTimeoutException`
-  + This test-step is marked as FAIL and the execution will not continue to the next step. _If you want to forcefully continue the execution, then you can use `ignoreStepFailures` flag_
+  + And this test-step will be marked as FAIL and the execution will not continue to the next step. _If you want to forcefully continue the execution, then you can use `ignoreStepFailures` flag_
   + If the client/step receives the response before the configured `max implicit wait` time, then the execution will not continue to the next step as usual
 
 + If this is not configured, then the client will continue working as usual.
