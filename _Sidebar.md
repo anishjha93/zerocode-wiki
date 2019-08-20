@@ -90,6 +90,8 @@
   + [How to handle Http response other than utf-8 e.g. utf-16 or utf-32 ?](https://github.com/authorjapps/zerocode/wiki/Charset-UTF-8-or-UTF-16-or-UTF-32-etc-in-the-http-response)
   + [Random Number Generator Placeholders Usages and Limits](https://github.com/authorjapps/zerocode/wiki/Placeholders-Usage-and-Limits)
   + [Automation tests for Zerocode lib itself](https://github.com/authorjapps/zerocode/wiki/Automation-tests-for-Zerocode-lib-itself)
+  + [Picking a leaf value from the array matching JSON Path](https://github.com/authorjapps/zerocode/wiki/When-JSON-Path-Matching-returns-value-or-values-as-an-array)
+
 ### Blogs
 + [Read Our Blogs](https://github.com/authorjapps/zerocode/wiki/Read-Our-Blogs)
   + [Top 16 Open Source API Testing Tools For REST & SOAP Services](https://www.joecolantonio.com/12-open-source-api-testing-tools-rest-soap-services/) - joecolantonio (Lists popular tools - Globally) 
