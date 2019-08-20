@@ -21,6 +21,7 @@
   + [External JSON file content](https://github.com/authorjapps/zerocode/wiki/External-JSON-file-as-reusable-content)
   + [Env Switching - CI,DIT,SIT etc](https://github.com/authorjapps/zerocode/wiki/Switching-Environment-to-CI-DIT-SIT-UAT-for-Test-Suite-or-Regression-Pack)
   + [Sending "Content-Type": "application/x-www-form-urlencoded"](https://github.com/authorjapps/zerocode/wiki/application-x-www-form-urlencoded-urlencoded-with-KeyValue-params)
+  + [Http max implicit delay and connection timeout](#)
 
 + Kafka Testing
   + [Introduction](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction)
