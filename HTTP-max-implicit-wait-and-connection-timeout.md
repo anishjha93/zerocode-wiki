@@ -13,7 +13,7 @@
 ## Configuring Max Implicit Delay
 
 ```properties
-http.max.implicit.wait.milliseconds=5000
+http.max.timeout.milliseconds=5000
 ```
 Configure the above flag in the `application host` properties. That's it 👍 
 
