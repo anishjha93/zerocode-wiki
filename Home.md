@@ -48,13 +48,13 @@ Zerocode Tokens
 _Verifications/Assertions Tokens:_
 + [CONTAINS.STRING]()
 + [CONTAINS.STRING.IGNORECASE]()
++ [MATCHES.STRING]()
 + [IS.ONE.OF]()
 + [IS.NULL]()
 + [IS.NOTNULL]()
 + [GT]()
 + [LT]()
 + [SIZE]()
-+ [MATCHES.STRING]()
 + [LOCAL.DATETIME.AFTER]()
 + [LOCAL.DATETIME.BEFORE]()
 
