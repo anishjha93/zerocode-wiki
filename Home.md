@@ -45,6 +45,19 @@ Zerocode Tokens
 + [SYSTEM_PROPERTY](https://github.com/authorjapps/zerocode/wiki/Token:-System-Property)
 + [XML_FILE](https://github.com/authorjapps/zerocode/wiki/Token:-XML-File)
 
+_Verifications/Assertions Tokens:_
++ [CONTAINS.STRING]()
++ [CONTAINS.STRING.IGNORECASE]()
++ [IS.ONE.OF]()
++ [IS.NULL]()
++ [IS.NOTNULL]()
++ [GT]()
++ [LT]()
++ [SIZE]()
++ [MATCHES.STRING]()
++ [LOCAL.DATETIME.AFTER]()
++ [LOCAL.DATETIME.BEFORE]()
+
 No Complexity Involved
 ===
 
@@ -264,7 +277,10 @@ Spring's popular token/placeholder resolver inspired Zerocode's runtime token/pl
 
 Jupiter Junit5's easy and declarative approach to parameterized testing inspired Zerocode's parameterized testing feature.
 
-We also give credit to the team members at HomeOffice(GOV.UK), Mizuho Bank, CMC Markets, HSBC Bank, Barclays and Zohocorp whose comments have helped to shape the lib.
+Powered by [open-source software](https://github.com/authorjapps/zerocode/wiki/Powered-by-open-source-software).
+
+IDE Credits
+![Jetbrains](https://github.com/authorjapps/zerocode/blob/master/images/jetbrains.svg)
 
 ## Contribute
 Raise [issues](https://github.com/authorjapps/zerocode/issues) and [contribute](https://github.com/authorjapps/zerocode/blob/master/CONTRIBUTING.md) to improve zerocode by becoming a contributor yourself.
