@@ -27,7 +27,9 @@ _(For helps and usage- Visit [Table of Contents](https://github.com/authorjapps/
 Super Easy to Write BDD Tests
 ===
 
-[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) helps you to design better Test Cases for your business features, then maintain and update them easily to avoid sleepless nights. It is built on extending the **Junit core runners**. You simply annotate your test method with JUnit **@Test** and run like JUnit tests, as well as optionally you can use `Suite` Runners for CI builds and env switching. Testing becomes an easy and effortless job due to the **simplicity** nature of JSON and the native support by popular IDEs e.g. Eclipse /IntelliJ /NetBeans etc with no extra plugin. Super easy !
+[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) helps you to design better Test Cases for your business features, then maintain and update them easily to avoid sleepless nights. It is built on extending the **Junit core runners**. You simply annotate your test method with JUnit **@Test** and run like JUnit tests. 
+
+Testing becomes an easy and effortless job due to the **simplicity** nature of YAML/JSON native support by popular IDEs e.g. Eclipse /IntelliJ /NetBeans etc with no extra plugin. Super easy!
 
 Zerocode Tokens
 ===
@@ -61,9 +63,11 @@ _Verifications/Assertions Tokens:_
 No Complexity Involved
 ===
 
-Your tests will not be cumbersome and complex anymore. Zerocode makes your tests independent, complete and structured and easily maintainable by the team or the new comers. It enables you to write your `API End Point Tests`, `Consumer Contract Tests`, `End to End Tests` and `Performance Tests(Load/Stress)` etc, at the **speed** of writing **JUnit** tests with accuracy transparent to all stakeholders. 
+Your tests will not be cumbersome and complex anymore. Zerocode makes your tests independent, complete and structured and easily maintainable by the team or the newcomers. It enables you to write your `API End Point Tests`, `Consumer Contract Tests`, `End to End Tests`, `In Memory Application Tests`, `Performance Tests(Load/Stress)` and `API Security Tests` etc, at the **speed** of writing **JUnit** tests with the accuracy, transparent to all stakeholders. 
 
-Zerocode at its core uses simple and powerful libs like `Jackson` for JSON assertions, `Apache HttpClient` for invoking REST and SOAP APIs, `Google Guice` for `DI` and Spring style place holders `${JSON Path}` for result assertions. It does not limit you to use Apache HttpClient, it enables you to easily override the framework behaviour with `@UseHttpClient` to use e.g. `UniRest` HttpClient, `RestEasy` HttpClient or any of your custom HttpClient that suits your project needs. 
+Zerocode at its core uses simple and powerful libs like `Jackson` for JSON assertions, `Apache HttpClient` for invoking REST and SOAP APIs, `Google Guice` for `DI` and Spring style place holders `${JSON Path}` for result validations. 
+
+It does not limit you to use _Apache HttpClient_, it enables you to easily override the framework behavior with `@UseHttpClient` to use e.g. `UniRest` HttpClient, `RestEasy` HttpClient or any of your custom HttpClient that suits your project needs. 
 
 Plug and Play Security Testing
 ===
@@ -79,13 +83,12 @@ Zerocode prints the request, response into the console as well as to the log fil
 Easy to Collaborate
 ===
 
-Zerocode aims to make development and testing **easier and faster**, not harder and slower. Allows both Dev team and Test team to collaborate towards better better **quality** of the software. Even the managers and BAs can read and understand the tests easily if they want to.
-
+Zerocode aims to make development and testing **easier and faster**, not harder and slower. Allows both Dev team and Test team to collaborate towards better better **quality** of the software. Even the managers and BAs can read and understand the tests easily.
 
 Handy Even For Manual Testers or Architects
 ===
 
-Handy tool even for manual testers dealing with `REST api`, `SOAP api` and `DB integration` tests [much more](https://github.com/authorjapps/zerocode#table-of-contents--) to keep it side by side of Postman rest-client!
+It's used as a handy tool even for manual testers dealing with `Kafka Data Pipeline`, `REST API`, `SOAP API` and `DB Integrity` tests [much more](https://github.com/authorjapps/zerocode#table-of-contents--) to keep it side by side of Postman rest-client!
 
 Learn how the ZeroCode testing library can make your life easier and writing tests faster by simply putting your **thoughts** into **executable test** scenarios and **not enforcing** you to write boiler plate glue code and sticky wrappers around your tests adding extra overhead/maintenance.
 
