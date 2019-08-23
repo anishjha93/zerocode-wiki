@@ -9,7 +9,7 @@
 
 Zerocode makes it easy to create and maintain automated tests with absolute minimum overhead for [REST](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details),[SOAP](https://github.com/authorjapps/zerocode/blob/master/README.md#soap-method-invocation-example-with-xml-input), [Kafka](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction), [DB services](https://github.com/authorjapps/zerocode/wiki/Sample-DB-SQL-Executor) and more. Jump to the [quick-start section](https://github.com/authorjapps/zerocode/blob/master/README.md#getting-started-) or [HelloWorld](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world-) section to explore more. 
 
-Zerocode is used by many companies such as Vocalink, HSBC, HomeOffice(Gov) and [others](https://github.com/authorjapps/zerocode/blob/master/README.md#smart-projects-using-zerocode) to achieve accurate production drop of their micro-services.
+Zerocode is used by many companies such as Vocalink, HSBC, HomeOffice(Gov) and [others](https://github.com/authorjapps/zerocode/blob/master/README.md#smart-projects-using-zerocode) to achieve accurate production drop of their micro-services. It has got best of best ideas and practices from the community to keep it super simple and the adoption is rapidly growing among the developer/tester community.
 
 Table of Contents
 ===
@@ -107,7 +107,7 @@ and run it simply by pointing to the above JSON/YAML file from a JUnit `@Test` m
 ```java
    @Test
    @Scenario("test_customer_get_api.json")
-   public void getCustomerHappy(){
+   public void getCustomer_happyCase(){
         // No code goes here. This remains empty.
    }
 ```
@@ -210,56 +210,25 @@ Use Zerocode declarative [parallel load generation](https://github.com/authorjap
 
 YAML DSL
 ===
-Zerocode supports YAML DSLs for writing Test Scenarios. Please visit [YAML Example](https://github.com/authorjapps/zerocode/wiki/YAML-DSL-For-Test-Scenarios) page for usages and examples.
+To write Test-Scenarios using YAML, please visit [YAML Example](https://github.com/authorjapps/zerocode/wiki/YAML-DSL-For-Test-Scenarios) page for usages and examples.
 
 JSON DSL
 ===
-Zerocode supports JSON DSLs for writing Test Scenarios. Please visit [JSON Example](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details) page for usages and examples.
+Zerocode supports JSON DSLs. For writing Test Scenarios. Please visit [JSON Example](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details) page for usages and examples.
 
 Declarative TestCase - Hooking BDD Scenario Steps
 ===
 
-![declarative_reduced](https://user-images.githubusercontent.com/12598420/53393304-ee26b280-3993-11e9-8522-983635c054d7.png)
+With the  **declarative** JSON/YAML DSL, the state of `request/response` payload/headers is available for the subsequent steps via the `JSON Path`.
 
-It eliminates the repetitive code such as Java step definitions, test assertions, payload parsing, API calls such as Http, Kafka, DB Services and much more. See an example [how](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details). It's powerful JSON comparison and assertions make the testing cycle a lot easy and clean.
++ YAML
+<img width="521" alt="YAML large" src="https://user-images.githubusercontent.com/12598420/63574532-29f0ac80-c5b2-11e9-8631-f33b2ce1889a.png">
 
-It has got best of best ideas and practices from the community to keep it super simple and the adoption is rapidly growing among the developer/tester community. It alleviates pain and brings the simplicity in validating the APIs.
++ JSON
+<img width="521" alt="JSON online" src="https://user-images.githubusercontent.com/12598420/63574794-d599fc80-c5b2-11e9-87bd-51d9e1c714a1.png">
 
-It also helps in mocking/stubbing interfacing APIs during the testing cycle in a declarative-fashion. 
-
-Its approach to IDE based performance testing to generate load/stress on the target application is quite simple, flexible and efficient - Enables us to simply reuse the test(s) from our regression pack.
-
-Here the host and port are maintained in a properties file to enable easy environment-switching.
-```
-host_env1.properties
---------------------
-web.application.endpoint.host=https://api.github.com
-web.application.endpoint.port=443
-```
-
-e.g. Our below User-Journey or AC(Acceptance Criteria) or a Scenario,
-```JSON
-AC1:
-GIVEN- the POST api end point '/api/v1/users' to create an user,     
-WHEN- I invoke the API,     
-THEN- I will receive the 201 response status with the a {created-User-Id}
-AND- I will validate the response
-
-AC2:
-GIVEN- the REST api GET end point '/api/v1/users/${id}',     
-WHEN- I invoke the API,     
-THEN- I will receive the 200(Ok) response status with body(user details) and headers
-AND- I will validate the response
-```
-translates to the below executable JSON steps in `Zerocode` - Simple and clean ! <br/>
-_(See here [a full blown CRUD operation scenario](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details) with POST, PUT, GET, DELETE example.)_ <br/>
-
-<img width="624" alt="post_get_user" src="https://user-images.githubusercontent.com/12598420/47145467-bc089400-d2c1-11e8-8707-8e2d2e8c3127.png">
-
-That's it, the simple JSON steps. No other step definition coding needed. <br/>
+That's it, the simple YAML/JSON steps. No other BDD step definition coding needed. <br/>
 ~~_No feature files, no extra plugins, no assertThat(...), no statements or grammar syntax overhead._~~ 
-
-And it is **declarative** JSON DSL, with the `request/response` fields available for the step chaining via the `JSON Path`.
 
 See the [Table Of Contents](https://github.com/authorjapps/zerocode#table-of-contents--) for usages and examples.
 
@@ -437,7 +406,7 @@ Where, the `hello_world_status_ok_assertions.json` looks like below.
 
 ```javaScript
 {
-    "scenarioName": "Invoke the GET api and assert the response",
+    "scenarioName": "Invoke the GET api and validate the response",
     "steps": [
         {
             "name": "get_user_details",
@@ -445,7 +414,7 @@ Where, the `hello_world_status_ok_assertions.json` looks like below.
             "operation": "GET",
             "request": {
             },
-            "assertions": {
+            "verifications": {
                 "status": 200,
                 "body": {
                     "login" : "octocat",
@@ -466,7 +435,8 @@ web.application.endpoint.context=
 
 Note the `assertThat(...)`, `GIVEN-WHEN-THEN` statements have become implicit here and we have overcome two major overheads. 
 
-We don't have to deal with them explicitly as the framework handles these complexities and makes the testing cycle very very easy for us <br/>
+We don't have to deal with them explicitly as the framework handles these complexities for us and makes the testing cycle very very easy.
+<br/>
 
 ~~GIVEN- the GitHub REST api GET end point,~~ <br/>
 ~~WHEN- I invoke the API,~~ <br/>
@@ -520,7 +490,8 @@ Usage and Help - Table of Contents
 * [Generating load for performance testing aka stress testing](#generating-load-for-performance-testing-aka-stress-testing)
 * [A Single step scenario with more assertions](#single-step-with-more-assertions)
 * [Running with scenario <em>loop</em>](#running-with-scenario-loop)
-* [Paramterized Scenario Testing](#paramterized-scenario)
+* [Paramterized Scenario](#paramterized-scenario)
+* [Http Max TimeOut or Implicit Wait](#http-max-timeout-or-implicit-wait)
 * [Generated reports and charts](#generated-reports-and-charts)
    * [Spike Chart:](#spike-chart)
    * [CSV Report:](#csv-report)
@@ -546,7 +517,7 @@ Usage and Help - Table of Contents
 * [SOAP method invocation where Corporate Proxy enabled](#soap-method-invocation-where-corporate-proxy-enabled)
 * [MIME Type Converters- XML to JSON, prettyfy XML etc](#mime-type-converters--xml-to-json-prettyfy-xml-etc)
    * [xmlToJson](#xmltojson)
-   * [jsonToJson](#jsontojson)
+   * [jsonStringToJson](#jsontojson)
 * [Using WireMock for mocking dependent end points](#using-wiremock-for-mocking-dependent-end-points)
 * [Http Basic authentication step using zerocode](#http-basic-authentication-step-using-zerocode)
 * [Sending query params in URL or separately](#sending-query-params-in-url-or-separately)
@@ -580,9 +551,8 @@ A scenario might consist of one or more steps. Let's start with a single step Te
       "name": "step1_get_google_emp_details",
       "url": "http://localhost:9998/google-emp-services/home/employees/999",
       "operation": "GET",
-      "request": {
-      },
-      "assertions": {
+      "request": {},
+      "verifications": {
         "status": 200
       }
     }
@@ -591,24 +561,27 @@ A scenario might consist of one or more steps. Let's start with a single step Te
 ```
 
 Note:
-The above JSON block is a test case where we asked the test framework to hit the 
+The above JSON block is a test case where we asked the test framework to invoke the
 > REST end point : http://localhost:9998/google-emp-services/home/employees/999
 
-> with method: GET 
+> using method: GET
 
-> and asserting the REST response with an  
+> and verify the REST response with an
 
 > expected status: 200
 
-> where, step "name" is a meaningful step name, which is significant when multiple steps are run. See a multi-step example.
+where,
+
+> "scenarioName" - Free text describing the use-case or user-journey
+
+> "step.name" - Free text without any space
+
+> "verifications" or "assertions" - The response payload to validate
+
+> "status" - A HTTP status code returned from the server
 
 Note:
-> scenarioname : is free text
-
-> step name: free text without any space
-
-
-The above test case will PASS as the end point actually responds as below. Look at the "response" section below.
+- The above scenario will PASS as the end point actually responds as below. Look at the "response" section below.
 ```javaScript
         {
           "name": "Sample_Get_Employee_by_Id",
@@ -633,9 +606,9 @@ The above test case will PASS as the end point actually responds as below. Look 
         }
 ```
 
-The following Test Case will fail. Why? 
+- The following scenario will fail. Why?
 
-Because you are asserting with an expected status as 500, but the end point actually returns 200.
+Because we are asserting with an expected status as 500, but the end point actually returns 200.
 
 ```javaScript
 {
@@ -647,7 +620,7 @@ Because you are asserting with an expected status as 500, but the end point actu
       "operation": "GET",
       "request": {
       },
-      "assertions": {
+      "verifications": {
         "status": 500
       }
     }
@@ -657,7 +630,7 @@ Because you are asserting with an expected status as 500, but the end point actu
 
 ### Generating load for performance testing aka stress testing
 + Browse or clone this [sample performance-tests repo](https://github.com/authorjapps/performance-tests) with examples.
-   + Take advantage of the following two extended Junit load runners from the lib-
+   + Take advantage of the below Junit load-runners provided by Zerocode
 
 > @RunWith(ZeroCodeLoadRunner.class)
 
@@ -695,9 +668,8 @@ which verifies the response in the `assertions` section -
             "name": "get_user_details",
             "url": "/users/octocat",
             "operation": "GET",
-            "request": {
-            },
-            "assertions": {
+            "request": {},
+            "verifications": {
                 "status": 200,
                 "body": {
                     "login" : "octocat",
@@ -712,10 +684,6 @@ which verifies the response in the `assertions` section -
     ]
 }
 ```
-- In one of the response during the load, if the `actual response` does not match the `expected response` i.e. in the `assertions` section above, then the test will fail.
-- [Browse the above example](https://github.com/authorjapps/zerocode-hello-world) in GitHub.
-or 
-- [Download as zip](https://github.com/authorjapps/zerocode-hello-world/archive/master.zip) the above maven project to run from your IDE. 
 
 [More (Learn advantages of load testing using your IDE(Eclipse or Intellij etc)) >>](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based))
 
@@ -731,7 +699,7 @@ or
       "operation": "GET",
       "request": {
       },
-      "assertions": {
+      "verifications": {
         "status": 200,
         "body": {
           "id": 999,
@@ -752,7 +720,7 @@ or
 }
 ```
 
-The above Test Case will PASS as the assertions section has all expected values matching the end point's response.
+The above scenario will `pass` as the `verifications`(`assertions`) section has the payload matching the REST API response.
 
 
 ### Running with scenario _loop_
@@ -770,7 +738,7 @@ Runs the entire scenario two times i.e. executing both the steps once for each t
       "operation": "GET",
       "request": {
       },
-      "assertions": {
+      "verifications": {
         "status": 200,
         "body": {
           "id": 101
@@ -783,7 +751,7 @@ Runs the entire scenario two times i.e. executing both the steps once for each t
       "operation": "GET",
       "request": {
       },
-      "assertions": {
+      "verifications": {
         "status": 200,
         "body": {
           "id": 102
@@ -796,8 +764,13 @@ Runs the entire scenario two times i.e. executing both the steps once for each t
 
 ### Paramterized scenario
 To run the scenario steps for each parameter from a list of values or CSV rows.
-See Wiki for details.
 
+Visit Wiki for details.
++ [Parameters as values - Wiki](https://github.com/authorjapps/zerocode/wiki/Parameterized-Testing-From-List-of-Values)
++ [Parameters as CSV rows - Wiki](https://github.com/authorjapps/zerocode/wiki/Parameterized-Testing-From-CSV-rows)
+
+### Http Max TimeOut or Implicit Wait
+please visit configuring [Http max timeout or implicit wait - Wiki](https://github.com/authorjapps/zerocode/wiki/HTTP-max-timeout-or-implicit-wait) during the API validation, 
 
 ### Generated reports and charts
 
@@ -874,7 +847,7 @@ To assert the above situation, you can find the element using `JSON path` as bel
             "operation": "GET",
             "request": {
             },
-            "assertions": {
+            "verifications": {
                 "status": 200,
                 "body": {
                     "type": "HIGH-VALUE",
@@ -921,7 +894,7 @@ Then you can assert many ways for the desired result-
 ```javaScript
         {
       ...
-            "assertions": {
+            "verifications": {
                 "results.SIZE": 2
             }
         }
@@ -929,21 +902,21 @@ Then you can assert many ways for the desired result-
 -or-
         {
       ...
-            "assertions": {
+            "verifications": {
                 "results.SIZE": "$GT.1"
             }
         }
 -or-
         {
       ...
-            "assertions": {
+            "verifications": {
                 "results.SIZE": "$LT.3"
             }
         }
 etc
 ```
 
-See more SIZE examples [here](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/resources/helloworld_array_size/hello_world_array_size_assertions_test.json) in the [hello-world repo](https://github.com/authorjapps/zerocode-hello-world).
+See more SIZE examples [here](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/resources/helloworld_array_size/hello_world_array_n_size_assertions_test.json) in the [hello-world repo](https://github.com/authorjapps/zerocode-hello-world).
 
 ### Chaining multiple steps for a scenario
 Chaining steps: Multi-Step REST calls with the earlier response(IDs etc) as input to next step
@@ -957,7 +930,7 @@ Chaining steps: Multi-Step REST calls with the earlier response(IDs etc) as inpu
             "url": "http://localhost:9998/google-emp-services/home/employees",
             "operation": "POST",
             "request": {},
-            "assertions": {
+            "verifications": {
                 "status": 201,
                 "body": {
                     "id": 1000
@@ -969,7 +942,7 @@ Chaining steps: Multi-Step REST calls with the earlier response(IDs etc) as inpu
             "url": "http://localhost:9998/google-emp-services/home/employees/${$.create_new_employee.response.body.id}", //<-- ID from previous response
             "operation": "GET",
             "request": {},
-            "assertions": {
+            "verifications": {
                 "status": 200,
                 "body": {
                     "id": 1000,
@@ -1022,7 +995,7 @@ Random UUID-
           "name": "Elen M"   
         }
       },
-      "assertions": {
+      "verifications": {
         "status": 201
       }
     }
@@ -1043,7 +1016,7 @@ Resolves to-
           "name": "Elen M"   
         }
       },
-      "assertions": {
+      "verifications": {
         "status": 201
       }
     }
@@ -1067,7 +1040,7 @@ Random String of specific length-
           "password": "${RANDOM.STRING:10}"     //<-- Random number of length 10 chars
         }
       },
-      "assertions": {
+      "verifications": {
         "status": 201
       }
     }
@@ -1156,7 +1129,7 @@ Asserting with $CONTAINS.STRING:
 {
       ...
       ...
-      "assertions": {
+      "verifications": {
         "status": 200,
         "body": {
           "name": "$CONTAINS.STRING:Larry"   //<-- PASS: If the "name" field in the response contains "Larry".
@@ -1175,7 +1148,7 @@ $GT.<any_number>
 {
   ...
   ...
-  "assertions": {
+  "verifications": {
     "status": "$GT.198"   //<--- PASS: 200 is greater than 198
   }
 }
@@ -1187,7 +1160,7 @@ $LT.<any_number>
 {
   ...
   ...
-  "assertions": {
+  "verifications": {
       "status": "$LT.500"   //<--- PASS: 200 is lesser than 500
   }
 }
@@ -1200,7 +1173,7 @@ $LT.<any_number>
     {
       ...
       ...
-      "assertions": {
+      "verifications": {
         "status": 200,
         "body": {
           "id": "$NOT.NULL",
@@ -1233,7 +1206,7 @@ Then you can assert many ways for the desired result-
 ```javaScript
         {
       ...
-            "assertions": {
+            "verifications": {
                 "results.SIZE": 2
             }
         }
@@ -1241,14 +1214,14 @@ Then you can assert many ways for the desired result-
 -or-
         {
       ...
-            "assertions": {
+            "verifications": {
                 "results.SIZE": "$GT.1"
             }
         }
 -or-
         {
       ...
-            "assertions": {
+            "verifications": {
                 "results.SIZE": "$LT.3"
             }
         }
@@ -1278,7 +1251,7 @@ In case of - Java method request, response as JSON:
                 "itemName" : "Mango",
                 "quantity" : 15000
             },
-            "assertions": {
+            "verifications": {
                 "orderId" : 1020301,
                 "itemName" : "Mango",
                 "quantity" : 15000
@@ -1409,7 +1382,7 @@ public class ScreeningServiceContractTest {
             "operation": "GET",
             "request": {
             },
-            "assertions": {
+            "verifications": {
                 "status": 200,
                 "body": {
                     "login" : "octocat",
@@ -1492,7 +1465,7 @@ Then, you can simply use the properties as below.
             "operation": "GET",
             "request": {
             },
-            "assertions": {
+            "verifications": {
                 "status": 200
             }
         },
@@ -1502,7 +1475,7 @@ Then, you can simply use the properties as below.
             "operation": "GET",
             "request": {
             },
-            "assertions": {
+            "verifications": {
                 "status": 200
             }
         }
@@ -1691,7 +1664,7 @@ you want to, but you don't have to).
                 -or- // pick from- src/test/resources/soap_requests/xml_files/soap_request.xml
                 "body": "${XML.FILE:soap_requests/xml_files/soap_request.xml}" 
             },
-            "assertions": {
+            "verifications": {
                 "status": 200
             }
         }
@@ -1723,7 +1696,7 @@ So better to test against an available SOAP service to you or a local stub servi
                 // -or- 
                 // "body": "${XML.FILE:soap_requests/xml_files/soap_request.xml}"
             },
-            "assertions": {
+            "verifications": {
                 "status": 200
             }
         }
@@ -1877,7 +1850,7 @@ e.g.
             "url": "org.jsmart.zerocode.converter.MimeTypeConverter",
             "operation": "xmlToJson",
             "request": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <ConversionRate xmlns=\"http://www.webserviceX.NET/\">\n      <FromCurrency>AFA</FromCurrency>\n      <ToCurrency>GBP</ToCurrency>\n    </ConversionRate>\n  </soap:Body>\n</soap:Envelope>",
-            "assertions": {
+            "verifications": {
                 "soap:Envelope": {
                     "xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
                     "xmlns:soap": "http://schemas.xmlsoap.org/soap/envelope/",
@@ -1921,7 +1894,7 @@ Various input and output. Depending upon the usecase, you can use that method.
                     ]
                 }
             },
-            "assertions": {
+            "verifications": {
                 "headers": {
                     "hdrX": "valueX"
                 },
@@ -1943,7 +1916,7 @@ Various input and output. Depending upon the usecase, you can use that method.
             "url": "org.jsmart.zerocode.converter.MimeTypeConverter",
             "operation": "jsonToJson",
             "request": "${$.json_block_to_json.request.headers}",
-            "assertions": {
+            "verifications": {
                 "hdrX": "valueX"
             }
         },
@@ -1952,7 +1925,7 @@ Various input and output. Depending upon the usecase, you can use that method.
             "url": "org.jsmart.zerocode.converter.MimeTypeConverter",
             "operation": "jsonToJson",
             "request": "${$.json_block_to_json.request.body}",
-            "assertions": {
+            "verifications": {
                 "id": 1001,
                 "addresses": [
                     {
@@ -1981,7 +1954,7 @@ Various input and output. Depending upon the usecase, you can use that method.
                     ]
                 }
             },
-            "assertions": {
+            "verifications": {
                 "headers": {
                     "hdrX": "valueX"
                 },
@@ -2059,7 +2032,7 @@ The below JSON block step will mock two end points using WireMock.
                     }
                 ]
             },
-            "assertions": {
+            "verifications": {
                 "status": 200
             }
         }
@@ -2085,7 +2058,7 @@ Zerocode framework helps you to achieve this, but has nothing to do with Basic-A
             "Authorization": "Basic Y2hhcmFhbnVzZXI6cGFzc3R3aXR0ZXI=" // You can generate this using Postman or java code
         }
     },
-    "assertions": {
+    "verifications": {
         "status": 200, // 401 - if unauthorised. See negatibe test below
         "body": {
             "id": "WP-001",
@@ -2107,7 +2080,7 @@ Zerocode framework helps you to achieve this, but has nothing to do with Basic-A
             "Authorization": "Basic aWRONG-PASSWORD"
         }
     },
-    "assertions": {
+    "verifications": {
         "status": 401 //401(or simillar code whatever the server responds), you can assert here.
         "body": {
             "message": "Unauthorised" 
@@ -2145,7 +2118,7 @@ See below both the examples( See this in the hello-world repo in action i.e. the
             "operation": "GET",
             "request": {
             },
-            "assertions": {
+            "verifications": {
                 "status": 200,
                 "body.SIZE": 6
             }
@@ -2160,7 +2133,7 @@ See below both the examples( See this in the hello-world repo in action i.e. the
                     "per_page":6
                 }
             },
-            "assertions": {
+            "verifications": {
                 "status": 200,
                 "body.SIZE": 6
             }
@@ -2171,7 +2144,7 @@ See below both the examples( See this in the hello-world repo in action i.e. the
             "operation": "GET",
             "request": {
             },
-            "assertions": {
+            "verifications": {
                 "status": 200,
                 "body.SIZE": 8
             }
