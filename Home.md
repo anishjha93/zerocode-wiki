@@ -5,7 +5,7 @@
 Welcome To Zerocode
 ===
 
-_(For helps and usage- Visit [Table of Contents](https://github.com/authorjapps/zerocode#table-of-contents--). Visit here for a [Quick Introduction to Hassle-Free Declarative Testing](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing))_
+_(For helps and usage- Visit [Table of Contents](https://github.com/authorjapps/zerocode#usage-and-help---table-of-contents). Visit here for a [Quick Introduction to Hassle-Free Declarative Testing](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing))_
 
 ## Table Of Contents
    * [Welcome To Zerocode](#welcome-to-zerocode)
