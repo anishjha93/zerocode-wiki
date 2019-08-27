@@ -100,8 +100,8 @@ While driving the tests from the set of input data, all input field are `String`
     ],
     "parameterized": {
         "csvSource":[
-              "octocat,      The Octocat,     San Francisco,       583231",
-              "foo,          Foo Is My Name,  Bar City,            112233"
+              "octocat,      The Octocat,     San Francisco,       583231, false",
+              "foo,          Foo Is My Name,  Bar City,            112233, true"
         ]
     }
 }
