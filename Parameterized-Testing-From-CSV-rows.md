@@ -1,6 +1,14 @@
+Table Of Contents
+===
+   * [Introduction](#introduction)
+   * [Example Input Data](#example-input-data)
+   * [Test Scenario](#test-scenario)
+   * [Type Casting](#type-casting)
+   * [Conclusion](#conclusion)
+
 Introduction
 ===
-During the user journey when the scenario is to be validated has a number of similar set of input, then we can arrange them by `comma separated values` called CSV and fire the tests.
+During the user journey, if the scenario to be validated has a number of similar set of input, then we can arrange them by `comma separated values` called CSV and fire the tests.
 
 Example Input Data
 ===
@@ -31,7 +39,7 @@ In `Zerocode` we arrange the test input like below:
     }
 ```
 
-The full `test scenario` looks like below and runs twice for two(2) of the CSV rows
+The full `test scenario` looks like below and runs twice for two(2) for the CSV rows i.e. once for each row.
 ```json
 {
     "scenarioName": "Fetch and assert GitHub userIds by their userNames",
