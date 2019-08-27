@@ -1,5 +1,5 @@
 ## Introduction
-When JSON path is used for finding one or more dynamic elements in an array, it always returns the matching result as an array. This means even it finds just one matching element, it returns that element as an array.
+When Jayway JSON path is used for finding one or more dynamic elements in an array, it always returns the matching result as an array. This means even it finds just one matching element, it returns that element as an array.
 
 This makes it difficult to reuse that `leaf element` as a single field or single value.
 
@@ -102,6 +102,6 @@ Please note-
 ]
 ```
 
-When we point the `n` in `$VALUE[n]` to a wrong index, we get a `ArrayIndexOutOfBound` exception.
+**_Warning_** - When we point the `n` in `$VALUE[n]` to a wrong index, we get a `ArrayIndexOutOfBound` exception.
 
 We can find the running examples in HelloWorld repo of the Zerocode.
