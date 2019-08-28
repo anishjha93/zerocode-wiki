@@ -127,6 +127,16 @@ Done. Happy days !
 
 ***
 
+_:::Note:::_
+
+`verifications` and `assertions` mean the same and are used for the same purpose where,
++ `verifications` is very common as well as easily understandable and 
++ `assertions` term is slightly technical
+
+Visit [Verification and validation Wiki](https://en.wikipedia.org/wiki/Verification_and_validation) to understand the difference. Zerocode supports both making the testing cycle hassle-free.
+
+***
+
 If You Have Time To Read
 ===
 
