@@ -116,8 +116,6 @@ AND- I will assert the response
 translates to the below executable JSON in `Zerocode` - Simple and clean ! <br/>
 _(See here [a full blown CRUD operation scenario](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details) with POST, PUT, GET, DELETE example.)_ <br/>
 
-<img width="624" alt="post_get_user" src="https://user-images.githubusercontent.com/12598420/47145467-bc089400-d2c1-11e8-8707-8e2d2e8c3127.png">
-
 and it is **declarative** DSL, with the `request/response` fields available for the next steps via the `JSON Path`.
 Then you just stick this into a JSON file named e.g. `post_n_get_user_journey_test.json`, anywhere in the  `test/resources` folder,
 
