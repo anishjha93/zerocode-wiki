@@ -60,9 +60,9 @@ updated as well as non-updated fields
 
 To write a test-case for the above CRUD operation scenario is quite easy using [Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world), just our IDE's **JSON editor is easy enough** to hook these steps. For instance, `POST` and `GET` step would look like below(simple and clean).
 
-<img width="624" alt="post_get_user" src="https://user-images.githubusercontent.com/12598420/47145467-bc089400-d2c1-11e8-8707-8e2d2e8c3127.png">
+<img width="647" alt="scenario image" src="https://user-images.githubusercontent.com/12598420/63822915-27a89c80-c97c-11e9-9444-b8ca7330278f.png">
 
-> _Hosts and ports are externalized to a properties file as usual_
+> _Hosts and ports are externalized to a properties file for env switching_
 
 And at the same time we **don't have to search** for or think hard of any **syntaxes** to do the job. That means, we are ready with a BDD scenario test in a couple of minutes with these simple JSON steps(see below). Advantage here is the tests are instantly readable to anyone because of, it enables the JSON payload structure as it is with no manipulation needed.
 
