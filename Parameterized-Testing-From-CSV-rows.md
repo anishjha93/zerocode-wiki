@@ -3,7 +3,7 @@ Table Of Contents
    * [Introduction](#introduction)
    * [Example Input Data](#example-input-data)
    * [Test Scenario](#test-scenario)
-   * [Type Casting](#type-casting)
+   * [Type Casting(optional)](#type-castingoptional)
    * [Conclusion](#conclusion)
 
 Introduction
@@ -71,7 +71,7 @@ The full `test scenario` looks like below and runs twice for two(2) for the CSV 
 }
 ```
 
-Type Casting
+Type Casting(optional)
 ===
 While driving the tests from the set of input data, all input field are `String` by default. But if we want to use any of the fields as `(int)` or `(decimal)` or `(boolean)` etc, then we can cast them to the needed type as below.
 
