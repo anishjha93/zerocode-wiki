@@ -213,6 +213,9 @@ Request with headers and body payload,
 ```
 
 #### VERIFICATIONS
+`Verifications` and `Assertions` are used for the same purpose where,
++ `verifications` is very common as well as easily understandable and 
++ `assertions` is slightly technical. 
 
 For REST services, we need to put the expected response with response _Status_, _Headers_ and _Body_ payload.
 
