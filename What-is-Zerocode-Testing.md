@@ -455,8 +455,8 @@ public class JustHelloWorldTest {
 Both Declarative and Extensible
 ===
 
-**While** Zerocode framework is light-weight and simple to write test intentions in JSON format, **at the same time** we can customize/extend it to add our own flavours. 
+**While** Zerocode framework is light-weight and simple to write test intentions in JSON/YAML format, **at the same time** we can customize/extend it to add our own flavours. 
 
-For instance, we can add custom _Http Headers_ to the entire test-suite or an individual test-case, automate _OAuth2_, or use our own flavour of _Apache Kafka Client_ to deal with _Kafka Brokers_ and much more stuff.
+For instance, we can add custom _Http Headers_ to the entire test-suite or an individual test-case, automate _OAuth2_ secured APIs, or use our own flavour of _Apache Kafka Client_ to deal with _Kafka Brokers_ and much more stuff.
 
-And making all these things is **super easy** and **straight forward**.
+...making all these things **super easy** and **straight forward**.
