@@ -16,7 +16,7 @@ Table of Contents
         * [STATUS](#status)
         * [BODY](#body)
      * [Kafka](#kafka)
-        * [TOPIC](#url-1)
+        * [TOPIC](#topic)
         * [OPERATION](#operation-1)
         * [PRODUCE/CONSUME](#request-1)
         * [VERIFICATIONS](#assertions-1)
