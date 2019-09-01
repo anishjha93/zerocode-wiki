@@ -6,8 +6,10 @@ Table of Contents
 * [Test Case Fields](#test-case-fields)
      * [Http(REST API and SOAP)](#httprest-api-and-soap)
         * [SCENARIO](#scenario)
+        * [LOOP](#loop)
         * [URL](#url)
         * [OPERATION](#operation)
+        * [RETRY](#retry)
         * [REQUEST](#request)
         * [HEADERS](#headers)
         * [VERIFICATIONS](#verifications)
@@ -142,6 +144,14 @@ Test Case Fields
 ```
 "scenarioName": "Free text - Validate a POST and GET operation for a customer"
 ```
+#### LOOP
+`loop` means the same Test-Scenario to be executed a number of times.
+
+e.g.
+```java
+    "scenarioName": "Free text - A scenario"
+    "loop": 3
+```
 
 #### URL
 
@@ -177,6 +187,16 @@ Or when we need to call a Java function
 ```
     "operation": "executeSql",
 ```
+
+#### RETRY
+`Retry` comes handy when the actual response doesn't match the expected values in certain use-cases.
+```
+           "retry": {
+                "max": 5,
+                "delay": 2000
+            },
+```
+The above settings will retry maximum of `5` times with 2sec delay between teh retries.
 
 
 #### REQUEST
