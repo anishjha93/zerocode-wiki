@@ -21,25 +21,24 @@ Table of Contents
         * [TOPIC](#topic)
         * [OPERATION](#operation-1)
         * [PRODUCE/CONSUME](#request-1)
-        * [RECORDTYPE](#)
-        * [RECORDS](#)
-        * [VERIFICATIONS](#assertions-1)
-        * [RECORDMETADATA](#recordMetadata)
      * [Kafka Produce](#)
         * [RECORDTYPE](#)
         * [RECORDS](#)
         * [RECORDMETADATA](#recordMetadata)
         * [LOAD](#)
+        * [STATUS](#)
+        * [OFFSET](#)
+        * [TIMESTAMP](#)
+        * [PARTITION](#)
      * [Kafka Consume](#)
-        * [RECORDMETADATA](#recordMetadata)
-        * [FILEDUMPTO](#)
-        * [UNLOAD](#)
         * [COMMITSYNC](#)
+        * [POLLINGTIME](#)
         * [SHOWRECORDSCONSUMED](#)
         * [MAXNOOFRETRYPOLLSORTIMEOUTS](#)
         * [FILEDUMPTO](#)
-        * [POLLINGTIME](#)
-
+        * [CONSUMERLOCALCONFIGS](#)
+        * [UNLOAD](#)
+        * [FILEDUMPTO](#)
 * [HelloWorld Examples (Try at home)](#helloworld-examples-try-at-home)
 * [Running the Tests using <em>JUnit</em>](#running-the-tests-using-junit)
 * [Both Declarative and Extensible](#both-declarative-and-extensible)
@@ -143,8 +142,11 @@ steps:
 
 Testing Without Writing Code.
 ===
++ YAML
+<img width="521" alt="YAML large" src="https://user-images.githubusercontent.com/12598420/63574532-29f0ac80-c5b2-11e9-8631-f33b2ce1889a.png">
 
-<img width="450"  height="355" alt="ZerocodeLand" src="https://user-images.githubusercontent.com/12598420/52103949-15ca6b00-25e0-11e9-9d7b-b809a24f3659.png">
++ JSON
+<img width="521" alt="JSON online" src="https://user-images.githubusercontent.com/12598420/63574794-d599fc80-c5b2-11e9-87bd-51d9e1c714a1.png">
 
 > _That's declarative way what we discussed earlier_
 
