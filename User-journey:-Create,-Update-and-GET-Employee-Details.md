@@ -60,11 +60,11 @@ updated as well as non-updated fields
 
 To write a test-case for the above CRUD operation scenario is quite easy using [Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world), just our IDE's **JSON editor is easy enough** to hook these steps. For instance, `POST` and `GET` step would look like below(simple and clean).
 
-<img width="647" alt="scenario image" src="https://user-images.githubusercontent.com/12598420/63822915-27a89c80-c97c-11e9-9444-b8ca7330278f.png">
+<img width="643" alt="scenario basic" src="https://user-images.githubusercontent.com/12598420/64479251-324d0800-d1ac-11e9-8e5a-ac6e2a7dce0d.png">
 
 > _Hosts and ports are externalized to a properties file for env switching_
 
-And at the same time we **don't have to search** for or think hard of any **syntaxes** to do the job. That means, we are ready with a BDD scenario test in a couple of minutes with these simple JSON steps(see below). Advantage here is the tests are instantly readable to anyone because of, it enables the JSON payload structure as it is with no manipulation needed.
+And at the same time we **don't have to search** for or think hard of any **syntaxes** to do the job. That means, we are ready with a BDD scenario test in a couple of minutes with these simple JSON steps(see below). The advantage here is the tests are instantly readable to anyone.
 
 <img width="566" alt="expanded-simple" src="https://user-images.githubusercontent.com/12598420/45925725-fe34f480-bf12-11e8-941c-cb3ec8da6c3e.png"> <br />
 
@@ -120,20 +120,18 @@ To complete the `D` part the CRUD operation(if our application has implemented t
 
 <img width="504"  height="272" alt="Delete steps" src="https://user-images.githubusercontent.com/12598420/45928093-f2a6f500-bf35-11e8-8d4c-202849917c06.png">
 
-
-
 > 
-Done. Happy days !
+Done. Happy days!
 
 ***
 
 _:::Note:::_
 
-`verifications` and `assertions` mean the same and are used for the same purpose where,
-+ `verifications` is very common as well as easily understandable and 
-+ `assertions` term is slightly technical
+Whilst `verifications` and `assertions` mean the same, they are used for slightly different purpose where,
++ `verifications` is widely used and easily understandable wrt a `Spec`
++ `assertions` is used for `validating` subset of payload/information
 
-Visit [Verification and validation Wiki](https://en.wikipedia.org/wiki/Verification_and_validation) to understand the difference. Zerocode supports both making the testing cycle hassle-free.
+Visit [Verification and validation Wiki](https://en.wikipedia.org/wiki/Verification_and_validation) to understand the difference. Zerocode supports both which makes the testing cycle a minimum fuss.
 
 ***
 
