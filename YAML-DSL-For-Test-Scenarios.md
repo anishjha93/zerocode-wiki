@@ -22,11 +22,11 @@ then we can write the automation Test-case as below.
 
 ```yaml
 ---
-scenarioName: As simple GET request response
+scenarioName: Validate a GET API
 steps:
 - name: "find_match"
   url: "/api/v1/search/persons"
-  operation: "GET"
+  method: "GET"
   request:
     queryParams:
       lang: "Amazing"
@@ -43,7 +43,7 @@ Where
 + `scenarioName`: Unique Free text string describing precisely what is being tested
 + `name`: Unique name of this step wrt this scenario
 + `url` : Relative URL path or FQDN of the API end points
-+ `operation` : An http operation e.g. GET, POST, PUT, DELETE, HEAD etc
++ `method` : An http method e.g. GET, POST, PUT, DELETE, HEAD etc
 + `request` : The request `payload` with http `headers` and/or `query parameters`
 + `verifications` : The expected http status and response payload
 + `status`: An http status code e.g. 200 is OK, 201 is CREATED etc.
@@ -59,7 +59,7 @@ scenarioName: As simple GET request response Multi STep
 steps:
 - name: find_match
   url: "/api/v1/search/persons"
-  operation: GET
+  method: GET
   request:
     queryParams:
       lang: Amazing
@@ -74,7 +74,7 @@ steps:
 
 - name: find_match2
   url: "/api/v1/search/persons"
-  operation: GET
+  method: GET
   request:
     queryParams:
       lang: Amazing
@@ -99,7 +99,7 @@ scenarioName: "A simple GET API Scenario" #comments allowed
 steps:
 - name: "find_match"
   url: "/api/v1/persons/p001"
-  operation: "GET"
+  method: "GET"
   request:
     headers:
       x-api-key: "Ama-zing-key"
@@ -138,6 +138,6 @@ We can find the examples in the HelloWorld GitHub repo under `yaml` folder.
 
 ## JSON to YAML and YAML to JSON
 
-JSON to YAML : https://www.json2yaml.com/
-YAML to JSON : https://codebeautify.org/yaml-to-json-xml-csv
-JSON to YAML(another) : https://codebeautify.org/json-to-yaml
++ JSON to YAML : https://www.json2yaml.com/
++ YAML to JSON : https://codebeautify.org/yaml-to-json-xml-csv
++ JSON to YAML(another) : https://codebeautify.org/json-to-yaml
