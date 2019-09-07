@@ -157,12 +157,15 @@ Test reports are generated into  `/target`  folder every time the tests are run.
 
 ## Sample Test Logs
 
-Test logs are generated in the console as well as into the log file in a readable JSON format  `target/logs/zerocode_rest_bdd_logs.log` . In case of a test failure it exactly lists which field or fields didn't match with their  JSON Path in a tree view.
+Test logs are generated in the console as well as written to a user-defined log file in a human-readable JSON format. Default log location is  `target/logs/zerocode_rest_bdd_logs.log` . 
+
+In case of a test failure, it exactly lists which step failed due to fields didn't match.
+
 Note-
-Every **step** is assigned with an **auto** generated **STEP-ID** to relate request with response of that **step**.
+Every **step** is assigned with an **auto** generated **STEP-ID** to correlate a request with its response.
 
 e.g.
-If test passed: 
+### If the test passed: 
 ```
 --------- CORRELATION-ID: e6170365-94e7-49dc-a1a3-5e102468acc2 ---------
 requestTimeStamp:2017-12-20T10:00:48.840
@@ -194,7 +197,7 @@ Response:
 }
 *responseTimeStamp:2017-12-20T10:00:48.847 
 *Response delay:7.0 milli-secs 
----------> Assertion: <----------
+---------> Expected Response: <----------
 {
   "status" : 200,
   "body" : {
@@ -204,7 +207,7 @@ Response:
 -done-
 ```
 
-If test failed: 
+### If the test failed: 
 ```
 --------- CORRELATION-ID: 8ad5c1fe-31cb-4e46-a8ba-7500a00c2199 ---------
 requestTimeStamp:2017-12-20T10:02:01.163
@@ -236,7 +239,7 @@ Response:
 }
 *responseTimeStamp:2017-12-20T10:02:01.315 
 *Response delay:152.0 milli-secs 
----------> Assertion: <----------
+---------> Expected Response: <----------
 {
   "status" : 400,
   "body" : {
@@ -245,7 +248,7 @@ Response:
 } 
 -done-
 
-java.lang.RuntimeException: Assertion failed for :- 
+Assertion failed for :- 
 
 [test_get_request_response_rainy_scene.json] 
 	|
