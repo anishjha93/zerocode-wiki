@@ -40,6 +40,7 @@ Table of Contents
 * [10. Conclusion](#10-conclusion)
   * [<em>Points To Note</em>](#note-3)
 * [Maven Dependency](#maven-dependency)
+* [Support <g-emoji class="g-emoji" alias="call_me_hand" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f919.png">🤙</g-emoji>](#support-)
 * [Happy API Testing! <g-emoji class="g-emoji" alias="panda_face" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f43c.png">🐼</g-emoji>](#happy-api-testing-)
 
 # 1.1 Kafka Testing Challenges
@@ -645,5 +646,8 @@ Visit [README](https://github.com/authorjapps/zerocode) page in GitHub.
 ```
 
 If you found this tutorial helpful for testing Kafka and HTTP APIs, then feel free to leave a "star" on [GitHub](https://github.com/authorjapps/zerocode/stargazers)!
+
+# Support 🤙
+For services and support, please contact us at info@zerocode.io
 
 # Happy API Testing! 🐼 
