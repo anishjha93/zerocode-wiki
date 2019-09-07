@@ -45,6 +45,7 @@ Where
 + `url` : Relative URL path or FQDN of the API end points
 + `method` : An http method e.g. GET, POST, PUT, DELETE, HEAD etc
 + `request` : The request `payload` with http `headers` and/or `query parameters`
++ `queryParams` : Http query-parameters to pass and filter the result
 + `verifications` : The expected http status and response payload
 + `status`: An http status code e.g. 200 is OK, 201 is CREATED etc.
 
