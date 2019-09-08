@@ -7,7 +7,7 @@
 * [JSON to YAML and YAML to JSON Conversion](#json-to-yaml-and-yaml-to-json)
 
 ## Introduction
-Many projects need to orchestrate their automation scenarios in YAML due to its easy human-readable format. Zerocode provides the super-easy way to achieve this using YAML.
+YAML is a human-readable format to configure/declare the outcome of a system. Many projects orchestrate their automation scenarios using YAML due to its easy readable/manageable format(e.g. Kubernetes/Docker provides declarative/configurable `.yml` files to manage the containers). Zerocode provides the super-easy way to achieve this using YAML.
 
 ## A Test Scenario in YAML DSL format
 For example, if we have an `GET` API `/api/v1/search/persons` which returns the Http status as `200` and the below response payload,
