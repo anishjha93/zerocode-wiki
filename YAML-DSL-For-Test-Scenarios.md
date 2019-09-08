@@ -36,7 +36,6 @@ steps:
     body:
       exactMatches: true
       name: "Mr Bean"
-      city: "Lon"
 ``` 
 
 Where
@@ -70,8 +69,6 @@ steps:
     body:
       exactMatches: true
       name: Mr Bean
-      lang: Amazing
-      city: Lon
 
 - name: find_match2
   url: "/api/v1/search/persons"
@@ -85,7 +82,6 @@ steps:
     body:
       exactMatches: true
       name: "$CONTAINS.STRING:Bean"
-      lang: "${$.find_match.response.body.lang}"
       city: "${$.find_match2.request.queryParams.city}"
 ```
 
