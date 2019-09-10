@@ -14,7 +14,7 @@ Table of Contents
         * [REQUEST](#request)
         * [QUERYPARAMS](#queryparams)
         * [HEADERS](#headers)
-        * [VERIFICATIONS](#verifications)
+        * [VERIFY](#verify)
         * [STATUS](#status)
         * [BODY](#body)
      * [Kafka](#kafka)
@@ -82,7 +82,7 @@ In the _Declarative Style_ **we don't need to write** any of the below.
 | `"operation": "POST"`  | Set this `POST` operaton to the _HttpClient_ object <br/> e.g. `RequestBuilder.create(methodName).setUri(httpUrl);`| 
 | `"request": { ... }` | Parse the request payload and set to HttpEntity. <br/> e.g. `HttpEntity httpEntity = EntityBuilder.create().setContentType(APPLICATION_JSON).setText(reqBody).build();` |
 | _None. Nothing to do._ | Parse the response to Java object or JSON String  |
-| `"verifications": {JSON as-it-is} ` | Compare the actual response against expected field by field. <br/> - Use multiple `assertThat(...)`. <br/> - Traverse through the response Object field by field <br/> - Or use `JSON Path` to extract value |
+| `"verify": {JSON as-it-is} ` | Compare the actual response against expected field by field. <br/> - Use multiple `assertThat(...)`. <br/> - Traverse through the response Object field by field <br/> - Or use `JSON Path` to extract value |
 | Display **all** the mismatches and fail the test(time saver) | Stop at **first** mismatch and fail the test(unwanted delay in getting feedback)  |
 | Straight forward and easy | Step chaining is not straight forward   |
 
@@ -133,7 +133,7 @@ steps:
     queryParams:
       lang: "Amazing"
       city: "Lon"
-  verifications:
+  verify:
     status: 200
     body:
       exactMatches: true
@@ -254,16 +254,16 @@ Request with headers and body payload,
             },
 ```
 
-#### VERIFICATIONS
-`Verifications` and `Assertions` are used for the same purpose where,
-+ `verifications` is very common as well as easily understandable and 
-+ `assertions` is slightly technical. 
+#### VERIFY
+`Verifications` and `Assertions` are used for the simillar purpose where,
++ `verify` is mostly used for `verification` of an implementation against a Spec
++ `assertions` is mostly used for `validation` an implementation
 
 For REST services, we need to put the expected response with response _Status_, _Headers_ and _Body_ payload.
 
 Only `status` validation
 ```
-           "verifications": {
+           "verify": {
                 "status": 200
             }
 ```
@@ -271,7 +271,7 @@ Only `status` validation
 or
 
 ```
-           "verifications": {
+           "verify": {
                 "status": 200
             }
 ```
@@ -280,7 +280,7 @@ or
 Or `status` and payload `id` assertions
 Only `status` assertion
 ```
-           "verifications": {
+           "verify": {
                 "status": 200,
                 "body": {
                     "id" : 583231
@@ -291,7 +291,7 @@ Only `status` assertion
 Or `partial` or `full` payload assertions 
 
 ```
-            "verifications": {
+            "verify": {
                 "status": 200,
                 "body": {
                     "login" : "octocat",
@@ -303,7 +303,7 @@ Or `partial` or `full` payload assertions
 
 Or with response `headers` details
 ```
-           "verifications": {
+           "verify": {
                 "status": 200,
                 "headers":{
                   "Server":"sit2.hsbc.co.uk",
@@ -325,7 +325,7 @@ For REST services or SOAP, we need to put the expected response with response _S
 
 Only `status` assertion
 ```
-           "verifications": {
+           "verify": {
                 "status": 200
             }
 ```
@@ -334,7 +334,7 @@ Only `status` assertion
 The expected server response body can be placed as below for assertions i.e. comparing actual vs expected payload.
 
 ```
-           "verifications": {
+           "verify": {
                 "status": 200
                 "body": {
                     "login" : "octocat",
@@ -417,14 +417,14 @@ For Kafka services, we can put the expected response with response _Status_, _Re
 
 Only `status` assertion
 ```
-           "verifications": {
+           "verify": {
                 "status": "Ok"
             }
 ```
 
 Or `status` with `recordMetadata` assertion while _Producing_
 ```
-           "verifications": {
+           "verify": {
                 "status": "Ok",
                 "recordMetadata": "$NOT.NULL"
             }
@@ -432,7 +432,7 @@ Or `status` with `recordMetadata` assertion while _Producing_
 
 Or `size` with `records` assertion while _Consuming_
 ```
-           "verifications": {
+           "verify": {
                 "size": 1,
                 "records": [
                     {
