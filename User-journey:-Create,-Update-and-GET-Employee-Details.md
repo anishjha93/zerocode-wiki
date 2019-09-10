@@ -60,11 +60,11 @@ updated as well as non-updated fields
 
 To write a test-case for the above CRUD operation scenario is quite easy using [Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world), just our IDE's **JSON editor is easy enough** to hook these steps. For instance, `POST` and `GET` step would look like below(simple and clean).
 
-<img width="643" alt="scenario basic" src="https://user-images.githubusercontent.com/12598420/64479251-324d0800-d1ac-11e9-8e5a-ac6e2a7dce0d.png">
+<img width="632" alt="verify" src="https://user-images.githubusercontent.com/12598420/64495520-36a02080-d293-11e9-8710-9dfb5cc122ae.png">
 
 > _Hosts and ports are externalized to a properties file for env switching_
 
-And at the same time we **don't have to search** for or think hard of any **syntaxes** to do the job. That means, we are ready with a BDD scenario test in a couple of minutes with these simple JSON steps(see below). The advantage here is the tests are instantly readable to anyone.
+And at the same time we **don't have to search** for or think hard of any **syntaxes** to do the job. That means, we are ready with a BDD test scenario quickly with these simple JSON steps(see below). The advantage here is the tests are instantly readable to anyone.
 
 <img width="566" alt="expanded-simple" src="https://user-images.githubusercontent.com/12598420/45925725-fe34f480-bf12-11e8-941c-cb3ec8da6c3e.png"> <br />
 
@@ -80,7 +80,7 @@ Then we stick the above json file to a JUnit runner and run. We can point to any
 public class JustHelloWorldTest {
 
     @Test
-    @JsonTestCase("helloworld/user_crud_journey_test.json")
+    @Scenario("helloworld/user_crud_journey_test.json")
     public void testGet() throws Exception {
        // No code is needed here.
     }
