@@ -5,7 +5,8 @@
 Welcome To Zerocode
 ===
 
-_(For helps and usage- Visit [Table of Contents](https://github.com/authorjapps/zerocode#usage-and-help---table-of-contents). Visit here for a [Quick Introduction to Hassle-Free Declarative Testing](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing))_
++ For helps and usage- Visit [Developer's Table of Contents](https://github.com/authorjapps/zerocode#usage-and-help---table-of-contents). 
++ Visit here for a [Quick Introduction to Declarative Testing](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)
 
 ## Table Of Contents
    * [Welcome To Zerocode](#welcome-to-zerocode)
@@ -15,8 +16,7 @@ _(For helps and usage- Visit [Table of Contents](https://github.com/authorjapps/
    * [Plug and Play Security Testing](#plug-and-play-security-testing)
    * [Beautiful and Useful Reporting](#beautiful-and-useful-reporting)
    * [Easy to Collaborate](#easy-to-collaborate)
-   * [Handy Even For Manual Testers or Architects](#handy-even-for-manual-testers-or-architects)
-      * [Why?](#why)
+   * [Handy Even For Manual Testers](#handy-even-for-manual-testers-or-architects)
       * [How?](#how)
       * [Sample Test Report](#sample-test-report)
       * [Sample Test Logs](#sample-test-logs)
@@ -77,62 +77,21 @@ Zerocode has built general functionality which enables you to **extend** and enr
 
 Beautiful and Useful Reporting
 ===
-
 Zerocode prints the request, response into the console as well as to the log file in the `/target` folder in a **human/business readable** format, along with producing granular report in the `CSV format` and `Interactive Fuzzy Search Enabled Chart report`. You can `search and filter` the test report by `author` or `test-scenario` or `test-step` or any relevant matching text making it super easy to trace a step in the context of a scenario or user-journey.
 
 Easy to Collaborate
 ===
-
 Zerocode aims to make development and testing **easier and faster**, not harder and slower. Allows both Dev team and Test team to collaborate towards better better **quality** of the software. Even the managers and BAs can read and understand the tests easily.
 
 Handy Even For Manual Testers or Architects
 ===
 
-It's used as a handy tool even for manual testers dealing with `Kafka Data Pipeline`, `REST API`, `SOAP API` and `DB Integrity` tests [much more](https://github.com/authorjapps/zerocode#table-of-contents--) to keep it side by side of Postman rest-client!
-
-Learn how the ZeroCode testing library can make your life easier and writing tests faster by simply putting your **thoughts** into **executable test** scenarios and **not enforcing** you to write boiler plate glue code and sticky wrappers around your tests adding extra overhead/maintenance.
+It's used as a handy tool even for manual testers dealing with `Kafka Data Pipeline`, `REST API`, `SOAP API` and `DB Integrity` tests [much more](https://github.com/authorjapps/zerocode#usage-and-help---table-of-contents) to keep it side by side of Postman rest-client!
 
 It allows you to **override** the framework behavior by your own **java code** which becomes not only **reusable** but becomes a **part of the framework**.
 
 See the [HelloWorldTest](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/java/org/jsmart/zerocode/testhelp/tests/helloworld/JustHelloWorldTest.java)
 
-## Why?
-Because there is a clear and obvious pattern for REST api or SOAP or any other api testing which Zerocode solves efficiently without adding any syntax overhead, that means it makes your testing process very very easy and accurate.
-
-e.g. Your below User-Journey or ACs(Acceptance Criterias) or a scenario,
-```java
-AC1:
-GIVEN- the POST api end point '/api/v1/users' to create an user,     
-WHEN- I invoke the API,     
-THEN- I will receive the 201 status with the a user ID and headers 
-AND- I will validate the response
-
-AC2:
-GIVEN- the REST api GET end point '/api/v1/users/${created-User-Id}',     
-WHEN- I invoke the API,     
-THEN- I will receive the 200(Ok) status with body(user details) and headers
-AND- I will assert the response
-```
-translates to the below executable JSON in `Zerocode` - Simple and clean ! <br/>
-_(See here [a full blown CRUD operation scenario](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details) with POST, PUT, GET, DELETE example.)_ <br/>
-
-and it is **declarative** DSL, with the `request/response` fields available for the next steps via the `JSON Path`.
-Then you just stick this into a JSON file named e.g. `post_n_get_user_journey_test.json`, anywhere in the  `test/resources` folder,
-
-and run the code like below by pointing to that JSON file. That's it.
-```
-@TargetEnv("github_host.properties")
-@RunWith(ZeroCodeUnitRunner.class)
-public class MyRestApiTest{
-
-    @Test
-    @JsonTestCase("post_n_get_user_journey_test.json")
-    public void testPostAndGet_happy() throws Exception {
-    }
-}
-```
-
-Keep in mind: It's simple JSON. <br/>
 ~~_No feature files, no extra plugins, no statements or grammar syntax overhead._~~ 
 
 ## How?
@@ -145,11 +104,10 @@ Keep in mind: It's simple JSON. <br/>
 ```xml
 <dependency>
     <groupId>org.jsmart</groupId>
-    <artifactId>zerocode-rest-bdd</artifactId>
+    <artifactId>zerocode-tdd</artifactId>
     <version>1.3.x</version>
 </dependency>
 ```
-* You can organize and arrange the tests to suit your requirements, by folder/feature/release wise
 
 ## Sample Test Report
 
