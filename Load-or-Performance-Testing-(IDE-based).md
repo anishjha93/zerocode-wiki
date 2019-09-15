@@ -1,3 +1,5 @@
+> _For reading this first time it might take around 15 min, afterward it should not take more than 5mins. 
+But if you are already familiar with the load/stress generation concepts, then you can directly jump to the [try-at-home source code section here](#download-or-browse-demo-project)._
 
 ## Why using an IDE ?
 Performance testing could be simple, easy and flexible to match our project need if it is based from our IDE!
@@ -301,8 +303,8 @@ For any queries please write to `author.japps@gmail.com`
 ### Download or browse demo project
 + Browse 
   + [The load generating test class](https://github.com/authorjapps/performance-tests/blob/master/src/test/java/org/jsmart/zerocode/samples/load/parallelget/LoadGetTest.java), 
-  + [The test-case containing the payload with assertions](https://github.com/authorjapps/performance-tests/blob/master/src/test/resources/load_tests/get/get_screening_details_by_custid.json) and 
-  + [The JUnit test method pointing the JSON testcase](https://github.com/authorjapps/performance-tests/blob/master/src/test/java/org/jsmart/zerocode/samples/tests/get/GetScreeningServiceTest.java)
+  + [The scenario file containing the payload with assertions](https://github.com/authorjapps/performance-tests/blob/master/src/test/resources/load_tests/get/get_screening_details_by_custid.json) and 
+  + [The JUnit test method pointing the scenario file](https://github.com/authorjapps/performance-tests/blob/master/src/test/java/org/jsmart/zerocode/samples/tests/get/GetScreeningServiceTest.java)
 
 or
 
@@ -310,5 +312,10 @@ or
 
 or
 
-+ [Download the demo maven performance-test project](https://github.com/authorjapps/performance-tests/archive/master.zip) and run a sample load test e.g. `org.jsmart.zerocode.samples.load.parallelget.LoadGetTest` as simple JUnit from our IDE or using `maven` command e.g.
++ [Download the demo maven performance-test project](https://github.com/authorjapps/performance-tests/archive/master.zip) and run a sample load test via your IDE.
+
+Run 
+> `org.jsmart.zerocode.samples.load.parallelget.LoadGetTest` 
+
+using simple `maven` command e.g.
 > mvn test -Dtest=org.jsmart.zerocode.samples.load.parallelget.LoadGetTest
