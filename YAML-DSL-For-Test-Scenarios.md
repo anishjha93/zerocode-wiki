@@ -62,7 +62,7 @@ steps:
   method: GET
   request:
     queryParams:
-      char: Funny,
+      char: Funny
       city: Lon
   verify:
     status: 200
@@ -75,7 +75,7 @@ steps:
   method: GET
   request:
     queryParams:
-      char: Kids,
+      char: Kids
       city: Lon
   verify:
     status: "$EQ.${$.find_match.response.status}"
