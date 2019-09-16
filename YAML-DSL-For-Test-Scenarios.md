@@ -24,18 +24,18 @@ then we can write the automation Test-case as below.
 ---
 scenarioName: Validate a GET API
 steps:
-- name: "find_match"
+- name: find_match
   url: "/api/v1/search/persons"
-  method: "GET"
+  method: GET
   request:
     queryParams:
-      lang: "Amazing"
-      city: "Lon"
-  verifications:
+      city: Lon
+      char: Funny
+  verify:
     status: 200
     body:
       exactMatches: true
-      name: "Mr Bean"
+      name: Mr Bean
 ``` 
 
 Where
@@ -45,7 +45,7 @@ Where
 + `method` : An http method e.g. GET, POST, PUT, DELETE, HEAD etc
 + `request` : The request `payload` with http `headers` and/or `query parameters`
 + `queryParams` : Http query-parameters to pass and filter the result
-+ `verifications` : The expected http status and response payload
++ `verify` : The expected http status and response payload
 + `status`: An http status code e.g. 200 is OK, 201 is CREATED etc.
 
 ## Using JayWay JSON Path Between The Steps
@@ -62,9 +62,9 @@ steps:
   method: GET
   request:
     queryParams:
-      lang: Amazing
+      char: Funny,
       city: Lon
-  assertions:
+  verify:
     status: 200
     body:
       exactMatches: true
@@ -75,9 +75,9 @@ steps:
   method: GET
   request:
     queryParams:
-      lang: Amazing
+      char: Kids,
       city: Lon
-  verifications:
+  verify:
     status: "$EQ.${$.find_match.response.status}"
     body:
       exactMatches: true
@@ -101,7 +101,7 @@ steps:
     headers:
       x-api-key: "Ama-zing-key"
       x-api-secret: "Sec-ret-stuff"
-  verifications:
+  verify:
     status: 200 #comment - a http status code as int value
     body:
       exactMatches: true
