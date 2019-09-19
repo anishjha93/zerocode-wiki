@@ -9,11 +9,12 @@ Table of Contents
         * [LOOP](#loop)
         * [IGNORESTEPFAILURES](#ignorestepfailures)
         * [URL](#url)
-        * [OPERATION](#operation)
+        * [METHOD](#method)
         * [RETRY](#retry)
         * [REQUEST](#request)
         * [QUERYPARAMS](#queryparams)
         * [HEADERS](#headers)
+        * [VERIFYMODE](#verifymode)
         * [VERIFY](#verify)
         * [STATUS](#status)
         * [BODY](#body)
@@ -79,7 +80,7 @@ In the _Declarative Style_ **we don't need to write** any of the below.
 | Declarative Style                            | Traditional Style                                        |
 | -------------------------------------------- | -------------------------------------------------------- |
 | `"url":"/api/v1/register/persons"`    | Create an _HttpClient_ object. Set the `url` to `"/api/v1/register/persons"` <br/> e.g. `RequestBuilder.setUri(httpUrl);`  |
-| `"operation": "POST"`  | Set this `POST` operaton to the _HttpClient_ object <br/> e.g. `RequestBuilder.create(methodName).setUri(httpUrl);`| 
+| `"method": "POST"`  | Set this `POST` operaton to the _HttpClient_ object <br/> e.g. `RequestBuilder.create(methodName).setUri(httpUrl);`| 
 | `"request": { ... }` | Parse the request payload and set to HttpEntity. <br/> e.g. `HttpEntity httpEntity = EntityBuilder.create().setContentType(APPLICATION_JSON).setText(reqBody).build();` |
 | _None. Nothing to do._ | Parse the response to Java object or JSON String  |
 | `"verify": {JSON as-it-is} ` | Compare the actual response against expected field by field. <br/> - Use multiple `assertThat(...)`. <br/> - Traverse through the response Object field by field <br/> - Or use `JSON Path` to extract value |
@@ -128,7 +129,7 @@ scenarioName: As simple GET request response
 steps:
 - name: "find_match"
   url: "/api/v1/search/persons"
-  operation: "GET"
+  method: "GET"
   request:
     queryParams:
       lang: "Amazing"
@@ -164,7 +165,7 @@ Test Case Fields
 #### SCENARIO
 `Scenario` means a Test-Scenario or an User-Journey or a Use-Case during test automation. It is represented in the following way.
 ```
-"scenarioName": "Free text - Validate a POST and GET operation for a customer"
+"scenarioName": "Free text - Validate a POST and GET method for a customer"
 ```
 #### LOOP
 `loop` means the same Test-Scenario to be executed a number of times.
@@ -196,18 +197,27 @@ Or you can mention the qualified Java class name,
     "url": "uk.gov.DbSqlExecutor",
 ```
 
-#### OPERATION
+#### METHOD
 
 REST end-point or SOAP end-point
 All Http methods such as: POST, PUT, GET, PATCH, DELETE etc
 
 ```
-    "operation": "POST",
+    "method": "POST",
 ```
 
 Or when we need to call a Java function
 ```
-    "operation": "executeSql",
+    "method": "executeSql",
+```
+
+Or when we need to validate Kafka events
+```
+    "operation": "produce",
+or
+    "operation": "consume",
+
+_(See Kafka DSLs below)_
 ```
 
 #### RETRY
@@ -254,8 +264,23 @@ Request with headers and body payload,
             },
 ```
 
+#### VERIFYMODE
++ `verifyMode` is STRICT or LENIENT
+
+```json
+{
+   "verifyMode": "STRICT",
+   "verify":{
+      ...
+   }
+}
+```
+When we specify `STRICT` mode, then the actual payload has to exactly match the expected payload.
+
+`LENIENT` is the default mode even if we do not mention it.
+
 #### VERIFY
-`Verifications` and `Assertions` are used for the simillar purpose where,
+`Verifications` and `Assertions` are used for the similar purpose where,
 + `verify` is mostly used for `verification` of an implementation against a Spec
 + `assertions` is mostly used for `validation` an implementation
 
