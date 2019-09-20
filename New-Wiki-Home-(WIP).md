@@ -2,37 +2,64 @@
 Welcome To Zerocode Wiki
 ===
 
-Use the **sidebar** on the **right** to locate a topic or use **"Ctrl+f"** to **search** a topic
+Use the **sidebar** on the **right** to locate a topic or use **"Ctrl+f"** to **search** a topic 👉
 
-Table Of Contents
+Jump to [Developer's TOC]() for technical Help and Usage.
+
+Features
 ===
-
-   * [Welcome To Zerocode](#welcome-to-zerocode)
-   * [Super Easy to Write BDD Tests](#super-easy-to-write-bdd-tests)
-   * [Zerocode Tokens](#zerocode-tokens)
-   * [No Complexity Involved](#no-complexity-involved)
+   * [Introduction](#introduction)
+   * [Super Easy and Reduced Complexity](#super-easy-to-write-bdd-tests)
+   * [Plug and Play Load Testing](#plug-and-play-security-testing)
    * [Plug and Play Security Testing](#plug-and-play-security-testing)
    * [Beautiful and Useful Reporting](#beautiful-and-useful-reporting)
    * [Easy to Collaborate](#easy-to-collaborate)
-   * [Handy Even For Manual Testers](#handy-even-for-manual-testers-or-architects)
-      * [How?](#how)
-      * [Sample Test Report](#sample-test-report)
-      * [Sample Test Logs](#sample-test-logs)
-   * [Inspired By](#inspired-by)
-      * [Honorable references and credits](#honorable-references-and-credits)
+   * [Inspired By and Credits](#inspired-by)
    * [Contribute](#contribute)
+   * [Copyrights](#copyright)
 
-Super Easy to Write BDD Tests
+Developer Resources
 ===
+   * [Lenient and Strict Matchers](#zerocode-tokens)
+   * [Zerocode Tokens](#zerocode-tokens)
+   * [Zerocode Tokens](#zerocode-tokens)
+   * [Zerocode Tokens](#zerocode-tokens)
 
-[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) helps you to design better Test Cases for your business features, then maintain and update them easily to avoid sleepless nights. It is built on extending the **Junit core runners**. You simply annotate your test method with JUnit **@Test** and run like JUnit tests. 
+Introduction
+===
+[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) helps us to design better Test Cases for our business functionalities, then maintain and update them easily to avoid sleepless nights. 
 
-Testing becomes an easy and effortless job due to the **simplicity** nature of YAML/JSON native support by popular IDEs e.g. Eclipse /IntelliJ /NetBeans etc with no extra plugin. Super easy!
+Super Easy and Reduced Complexity
+===
+Simply annotate your test method with **@Test** and run like `JUnit` tests. 
+
+Testing becomes an easy and effortless job due to the **simplicity** nature of YAML/JSON formats and their native support by popular IDEs e.g. `Eclipse /IntelliJ /NetBeans` etc with no extra plugin. Super easy!
+
+Reduced Complexity
+===
+It enables us to write tests for our `API End Point Validations`, `Performance(Load/Stress) Validations`, `Consumer Contract Validations`, `End to End User Journey`, `In Memory Application Validations`  and `API Security Validations` etc, at the **speed** of writing **JUnit** tests.
+
+> It makes the tests declarative, configurable, and accurate.
+
+Plug and Play Security Testing
+===
+Zerocode gives you out of the box **SSL** enabled Http Client and **SOAP** Client along with the optional MIME type converters e.g. XML to JSON if needed to increase test readability. It provides you with the options to configure **Corporate Proxy** at runtime to allow API invocations via `corporate-proxies`.
+
+Zerocode has built general functionality which enables you to **extend** and enrich the **framework** behaviour by simply executing external Java methods as utility-functions to achieve business goals rather than putting every feature into the core framework. 
+
+Beautiful and Useful Reporting
+===
+Zerocode prints the request, response into the console as well as to the log file in the `/target` folder in a **human/business readable** format, along with producing granular report in the `CSV format` and `Interactive Fuzzy Search Enabled Chart report`. 
+
+You can `search and filter` the test report by `author` or `test-scenario` or `test-step` or any relevant matching text making it super easy to trace a step in the context of a scenario or user-journey.
+
+Easy to Collaborate
+===
+Zerocode aims to make development and testing **easier and faster**, not harder and slower. Allows both Dev team and Test team to collaborate towards the better **quality** of the software. 
 
 Zerocode Tokens
 ===
-
-[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) provides built-in tokens that help with your testing ranging from generating random numbers through to accessing system properties, currently Zerocode offers the following tokens:
+[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) provides built-in tokens that help with your testing ranging from generating random numbers through to accessing system properties. Currently Zerocode offers the following tokens:
 
 + [LOCALDATE.TODAY](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDate-Today)
 + [LOCALDATETIME.NOW](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDateTime-Now)
@@ -58,97 +85,42 @@ _Verifications/Assertions Tokens:_
 + [LOCAL.DATETIME.AFTER]()
 + [LOCAL.DATETIME.BEFORE]()
 
-No Complexity Involved
+Sample Test Report
 ===
-
-Your tests will not be cumbersome and complex anymore. Zerocode makes your tests independent, complete and structured and easily maintainable by the team or the newcomers. It enables you to write your `API End Point Tests`, `Consumer Contract Tests`, `End to End Tests`, `In Memory Application Tests`, `Performance Tests(Load/Stress)` and `API Security Tests` etc, at the **speed** of writing **JUnit** tests with the accuracy, transparent to all stakeholders. 
-
-Zerocode at its core uses simple and powerful libs like `Jackson` for JSON assertions, `Apache HttpClient` for invoking REST and SOAP APIs, `Google Guice` for `DI` and Spring style place holders `${JSON Path}` for result validations. 
-
-It does not limit you to use _Apache HttpClient_, it enables you to easily override the framework behavior with `@UseHttpClient` to use e.g. `UniRest` HttpClient, `RestEasy` HttpClient or any of your custom HttpClient that suits your project needs. 
-
-Plug and Play Security Testing
-===
-Zerocode gives you out of the box **SSL** enabled Http Client and **SOAP** Client along with the optional MIME type converters e.g. XML to JSON if needed to increase test readability. It provides you with the options to configure **Corporate Proxy** at runtime to allow API invocations via proxies.
-
-Zerocode has built general functionality which enables you to **extend** and enrich the **framework** behaviour by simply executing external Java methods to achieve business goals rather than putting every feature into the core framework. 
-
-Beautiful and Useful Reporting
-===
-Zerocode prints the request, response into the console as well as to the log file in the `/target` folder in a **human/business readable** format, along with producing granular report in the `CSV format` and `Interactive Fuzzy Search Enabled Chart report`. You can `search and filter` the test report by `author` or `test-scenario` or `test-step` or any relevant matching text making it super easy to trace a step in the context of a scenario or user-journey.
-
-Easy to Collaborate
-===
-Zerocode aims to make development and testing **easier and faster**, not harder and slower. Allows both Dev team and Test team to collaborate towards better better **quality** of the software. Even the managers and BAs can read and understand the tests easily.
-
-Handy Even For Manual Testers or Architects
-===
-
-It's used as a handy tool even for manual testers dealing with `Kafka Data Pipeline`, `REST API`, `SOAP API` and `DB Integrity` tests [much more](https://github.com/authorjapps/zerocode#usage-and-help---table-of-contents) to keep it side by side of Postman rest-client!
-
-It allows you to **override** the framework behavior by your own **java code** which becomes not only **reusable** but becomes a **part of the framework**.
-
-See the [HelloWorldTest](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/java/org/jsmart/zerocode/testhelp/tests/helloworld/JustHelloWorldTest.java)
-
-~~_No feature files, no extra plugins, no statements or grammar syntax overhead._~~ 
-
-## How?
-* HelloWorld Examples and samples are here to [download or clone](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world)  
-
-* The  **latest**  maven dependency can be found here at 
-[Maven central - Old releases](https://mvnrepository.com/artifact/org.jsmart/zerocode-rest-bdd)
-[Maven central - New releases](https://mvnrepository.com/artifact/org.jsmart/zerocode-tdd)
-
-```xml
-<dependency>
-    <groupId>org.jsmart</groupId>
-    <artifactId>zerocode-tdd</artifactId>
-    <version>1.3.x</version>
-</dependency>
-```
-
-## Sample Test Report
 
 Test reports are generated into  `/target`  folder every time the tests are run. Sample [reports are here](https://github.com/authorjapps/zerocode/blob/master/README.md#6) format. 
 
-## Sample Test Logs
+Traceable Test Logs
+===
+Test logs are generated in the console as well as an user-defined log file. Default log location is  `target/logs/zerocode_rest_bdd_logs.log` . 
 
-Test logs are generated in the console as well as written to a user-defined log file in a human-readable JSON format. Default log location is  `target/logs/zerocode_rest_bdd_logs.log` . 
-
-In case of a test failure, it exactly lists which step failed due to fields didn't match.
-
-Note-
-Every **step** is assigned with an **auto** generated **STEP-ID** to correlate a request with its response.
+_::Note::_
+Every **step** can be traced with an **auto** generated **STEP-ID** to correlate a request with its response.
 
 e.g.
 ### If the test passed: 
-```
---------- CORRELATION-ID: e6170365-94e7-49dc-a1a3-5e102468acc2 ---------
+```java
+--------- CORRELATION-ID: e6170365-94e7-49dc-a1a3-5e102468acd9 ---------
 requestTimeStamp:2017-12-20T10:00:48.840
 step:get_same_employee
 url:http://localhost:9999/api/testing/v1/persons/UK1001
 method:GET
 request:
 { } 
---------- CORRELATION-ID: e6170365-94e7-49dc-a1a3-5e102468acc2 ---------
+--------- CORRELATION-ID: e6170365-94e7-49dc-a1a3-5e102468acd9 ---------
 Response:
 {
   "status" : 200,
   "headers" : {
-    "Date" : [ [ "Wed, 20 Dec 2017 03:00:48 GMT" ] ],
-    "Last-Modified" : [ [ "Wed, 20 Dec 2017 03:00:48 GMT" ] ],
-    "Transfer-Encoding" : [ [ "chunked" ] ],
-    "Content-Type" : [ [ "application/json" ] ],
-    "Connection" : [ [ "keep-alive" ] ]
+    "Date" : [ [ "Wed, 20 Dec 2016 03:00:48 GMT" ] ]
   },
   "body" : {
     "id" : "UK1001",
-    "name" : "Bobby Lion",
+    "name" : "Gov UK",
     "addresses" : [ {
       "line1" : "HOME, AECS Layout, ZIP-56094"
-    }, {
-      "line1" : "OFFICE, Newark, ZIP-730290"
-    } ]
+      }
+    ]
   }
 }
 *responseTimeStamp:2017-12-20T10:00:48.847 
@@ -164,48 +136,10 @@ Response:
 ```
 
 ### If the test failed: 
-```
---------- CORRELATION-ID: 8ad5c1fe-31cb-4e46-a8ba-7500a00c2199 ---------
-requestTimeStamp:2017-12-20T10:02:01.163
-step:get_an_employee_detail
-url:http://localhost:9999/api/testing/v1/persons/UK1001
-method:GET
-request:
-{ } 
---------- CORRELATION-ID: 8ad5c1fe-31cb-4e46-a8ba-7500a00c2199 ---------
-Response:
-{
-  "status" : 200,
-  "headers" : {
-    "Date" : [ [ "Wed, 20 Dec 2017 03:02:01 GMT" ] ],
-    "Last-Modified" : [ [ "Wed, 20 Dec 2017 03:02:01 GMT" ] ],
-    "Transfer-Encoding" : [ [ "chunked" ] ],
-    "Content-Type" : [ [ "application/json" ] ],
-    "Connection" : [ [ "keep-alive" ] ]
-  },
-  "body" : {
-    "id" : "UK1001",
-    "name" : "Bobby Lion",
-    "addresses" : [ {
-      "line1" : "HOME, AECS Layout, ZIP-56094"
-    }, {
-      "line1" : "OFFICE, Newark, ZIP-730290"
-    } ]
-  }
-}
-*responseTimeStamp:2017-12-20T10:02:01.315 
-*Response delay:152.0 milli-secs 
----------> Expected Response: <----------
-{
-  "status" : 400,
-  "body" : {
-    "id" : "UK1001"
-  }
-} 
--done-
 
-Assertion failed for :- 
+Scenario failed for :- 
 
+```java
 [test_get_request_response_rainy_scene.json] 
 	|
 	|
@@ -214,7 +148,6 @@ Assertion failed for :-
 Failures:
 --------- 
 Assertion path '$.status' with actual value '200' did not match the expected value '400'
-
 ```
 
 Inspired By
