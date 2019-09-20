@@ -3,6 +3,11 @@
   + [Array assertions made easy, incl. size and element finder](https://github.com/authorjapps/zerocode/wiki/Array-assertions-made-easy--e.g.-SIZE,-element-finder)
   + [Finished writing tests - Setting up CI Jenkins Build Pipe Line](https://github.com/authorjapps/zerocode/wiki/After-you-have-written-all-the-tests,-what's-next)
 
++ Matchers
+  + [Strict Mode](https://github.com/authorjapps/zerocode/wiki/Strict-Mode-Payload-Comparison)
+  + [Lenient Mode](#TODO)
+  + [Available Matchers](#TODO)
+
 + Zerocode Tokens
   + [LOCALDATE_TODAY](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDate-Today)
   + [LOCALDATETIME_NOW](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDateTime-Now)
