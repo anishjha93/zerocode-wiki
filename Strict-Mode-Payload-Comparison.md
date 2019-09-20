@@ -42,46 +42,10 @@ steps:
 ``` 
 
 ## Using STRICT mode for Payload verification
-The below test scenario shows an example of `STRICT` mode payload comparison.
-
-```json
-{
-    "scenarioName": "As simple GET API - Strict validation",
-    "steps": [
-        {
-            "name": "find_match",
-            "url": "/api/v1/search/people",
-            "method": "GET",
-            "request": {
-                "queryParams": {
-                    "city": "Lon"
-                }
-            },
-            "verifyMode":"STRICT",
-            "verify": {
-                "status": 200,
-                "body": {
-                    "exactMatches": false,
-                    "bio": "name-only",
-                    "searchMatches":[
-                        {
-                            "name": "Mr Bean",
-                            "char": "Kids"
-                        },
-                        {
-                            "name": "Mr Bean",
-                            "char": "Adults"
-                        }
-                    ]
-                }
-            }
-        }
-    ]
-}
+The test will pass only if the actual response exactly contains the expected fields, if there are extra properties in the actual response, then you will receive the following message:
+```java
+Assertion jsonPath [extra property name]' with actual value 'Unexpected: [extra property name]' did not match the expected value
 ```
 
-The above test will pass only if the actual response exactly contains the expected fields, if there are extra properties in the actual response, then you will receive the following message:
-`Assertion jsonPath [extra property name]' with actual value 'Unexpected: [extra property name]' did not match the expected value`
-
 ## Conclusion
-`STRICT` mode can be very useful in testing use cases where the application wants to restrict the response only to expected fields
+`STRICT` mode can be very useful in testing use cases where the application wants to restrict the response only to the expected fields both qualitatively as well as quantitatively.
