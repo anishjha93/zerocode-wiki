@@ -1,5 +1,5 @@
-> _For reading this first time it might take around 15 min, afterward it should not take more than 5mins. 
-But if you are already familiar with the load/stress generation concepts, then you can directly jump to the [try-at-home source code section here](#download-or-browse-demo-project)._
+> _For reading this first time it might take around 15 min, afterward it should take 2 to 5mins. 
+But if you are already familiar with the concepts of load/stress generation on the target server, then you can directly jump to the [try-at-home source code section here](#download-or-browse-demo-project)._
 
 ## Why using an IDE ?
 Performance testing could be simple, easy and flexible to match our project need if it is based from our IDE!
