@@ -14,10 +14,13 @@ Features
    * [Dev/Test/BA Collaboration Made Easy](#collaboration-made-easy)
    * [Smart Projects Using Zerocode](#smart-projects-using-zerocode)
 
-Developer Resources
+Developer Guide
 ===
 * [Getting started ⛹‍♂](#getting-started-)
 * [Running a scenario](#running-a-single-scenario-test)
+* [Performance Testing - Automating HTTP load generation](#)
+* [Performance Testing - JUnit4](#)
+* [Performance Testing - JUnit5](#)
 * [Supported testing frameworks](#supported-testing-frameworks)
 * [A HTTP REST scenario or an user journey](#single-scenario-with-single-step)
 * [Kafka Validation](#kafka-testing)
@@ -32,10 +35,6 @@ Developer Resources
 * [Dealing with dynamic arrays](#step-dealing-with-arrays)
 * [Chaining multiple steps for a scenario](#chaining-multiple-steps-for-a-scenario)
 * [Ignoring step failures](#enabling-ignorestepfailures-for-executing-all-steps-in-a-scenario)
-* [Performance Testing - HTTP load and stress](#)
-* [Performance Testing - JUnit4](#)
-* [Performance Testing - JUnit5](#)
-* [Python DSL](#python)
 * [Running a Suite of Tests](#running-a-suite-of-tests)
 * [Zerocode test-input tokens](#generating-random-strings-random-numbers-and-static-strings)
 * [Verifying HTTP error messages](#asserting-general-and-exception-messages)
@@ -50,6 +49,7 @@ Developer Resources
 * [Using WireMock for mocking dependent end points](#using-wiremock-for-mocking-dependent-end-points)
 * [Sending query params to HTTP hosts](#sending-query-params-in-url-or-separately)
 * [Chatbot Validation](#chatbot-validation)
+* [Python DSL](#python)
 * [YAML and JSON Slice And Dice - Solved](#json-slice-and-dice---solved)
 * [Inspired by and credits]()
 * [References, Discussions and articles](#references-dicussions-and-articles)
