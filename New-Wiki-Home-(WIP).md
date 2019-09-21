@@ -1,17 +1,17 @@
 Welcome To Zerocode Wiki. Use the sidebar on the right to locate a topic or use **"Ctrl+f"** to find a topic 👉
 
-If you are not sure where to start why not take a look at the [What is Zerocode](), then jump to the [Developer's Guide]().
+If you are not sure where to start, why not take a look at the [What is Zerocode](), then jump to the [Developer's Guide]().
 
 Features
 ===
    * [Introduction](#introduction)
-   * [Super Easy and Reduced Complexity](#super-easy-to-write-bdd-tests)
-   * [Lenient and Strict Matching](#)
-   * [Validation and Verification](#)
-   * [Load Testing Made Easy](#plug-and-play-security-testing)
-   * [Security Testing Made Easy](#plug-and-play-security-testing)
-   * [Useful Reports and Dashboards](#beautiful-and-useful-reporting)
-   * [Easy to Collaborate](#easy-to-collaborate)
+   * [Super Easy and Reduced Complexity](#super-easy-and-reduced-complexity)
+   * [Lenient and Strict Matching](#lenient-and-strict-matching)
+   * [Validation and Verification](#validation-and-verification)
+   * [Load Testing Made Easy](#load-testing-made-easy)
+   * [Security Testing Made Easy](#security-testing-made-easy)
+   * [Useful Reports and Dashboards](#useful-reports-and-dashboards)
+   * [Collaboration Made Easy](#collaboration-made-easy)
 
 Developer Resources
 ===
@@ -22,7 +22,7 @@ Developer Resources
 
 Introduction
 ===
-[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) helps us to design better Test Cases for our business functionalities and then maintain them easily to avoid sleepless nights. We do this simply by configuring, declaring and executing by completely avoiding the glue or boilerplate code.
+[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) helps you to design better Test Cases for your business functionalities and then maintain them easily to avoid sleepless nights. You do this simply by configuring, declaring and executing the scenario-files enabling you to completely eliminate the glue or boilerplate coding.
 
 Super Easy and Reduced Complexity
 ===
@@ -30,63 +30,52 @@ Simply annotate your test method with **@Test** and run like `JUnit` tests.
 
 Testing becomes an easy and effortless job due to the **simplicity** nature of YAML/JSON formats and their native support by popular IDEs e.g. `Eclipse /IntelliJ /NetBeans` etc with no extra plugin. Super easy!
 
-Reduced Complexity
-===
-It enables us to write tests for our `API End Point Validations`, `Performance(Load/Stress) Validations`, `Consumer Contract Validations`, `End to End User Journey`, `In Memory Application Validations`  and `API Security Validations` etc, at the **speed** of writing **JUnit** tests.
+### Reduced Complexity
+It enables us to write automation tests for our 
++ `API End Point Validations`, 
++ `Performance(Load/Stress) Validations`, 
++ `Consumer Contract Validations`, 
++ `End to End User Journey`, 
++ `In Memory Application Validations`  and 
++ `API Security Validations` etc, 
+
+at the **speed** of writing **JUnit** tests.
 
 > It makes the tests declarative, configurable, and accurate.
 
-Plug and Play Security Testing
+Lenient and Strict Matching
+===
+Zerocode provides both [LENIENT and STRICT](https://github.com/authorjapps/zerocode/wiki/Strict-Mode-Payload-Comparison) matching mode for result comparison.
+
+
+Validation and Verification
+===
+Zerocode enables you to achieve both [Verification and Validation](https://en.wikipedia.org/wiki/Verification_and_validation).
+
+
+Load Testing Made Easy
+===
+Visit here to learn [JUnit way of load and stress generation](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based))
+
+Security Testing Made Easy
 ===
 Zerocode gives you out of the box **SSL** enabled Http Client and **SOAP** Client along with the optional MIME type converters e.g. XML to JSON if needed to increase test readability. It provides you with the options to configure **Corporate Proxy** at runtime to allow API invocations via `corporate-proxies`.
 
 Zerocode has built general functionality which enables you to **extend** and enrich the **framework** behaviour by simply executing external Java methods as utility-functions to achieve business goals rather than putting every feature into the core framework. 
 
-Beautiful and Useful Reporting
+
+Useful Reports and Dashboards
 ===
 Zerocode prints the request, response into the console as well as to the log file in the `/target` folder in a **human/business readable** format, along with producing granular report in the `CSV format` and `Interactive Fuzzy Search Enabled Chart report`. 
 
 You can `search and filter` the test report by `author` or `test-scenario` or `test-step` or any relevant matching text making it super easy to trace a step in the context of a scenario or user-journey.
 
-Easy to Collaborate
-===
-Zerocode aims to make development and testing **easier and faster**, not harder and slower. Allows both Dev team and Test team to collaborate towards the better **quality** of the software. 
-
-Zerocode Tokens
-===
-[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) provides built-in tokens that help with your testing ranging from generating random numbers through to accessing system properties. Currently Zerocode offers the following tokens:
-
-+ [LOCALDATE.TODAY](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDate-Today)
-+ [LOCALDATETIME.NOW](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDateTime-Now)
-+ [RANDOM.NUMBER](https://github.com/authorjapps/zerocode/wiki/Token:-Random-Number)
-+ [RANDOM.STRING.PREFIX](https://github.com/authorjapps/zerocode/wiki/Token:-Random-String)
-+ [RANDOM.UUID](https://github.com/authorjapps/zerocode/wiki/Token:-Random-UUID)
-+ [RECORD.DUMP](https://github.com/authorjapps/zerocode/wiki/Token:-Record-Dump)
-+ [STATIC.ALPHABET](https://github.com/authorjapps/zerocode/wiki/Token:-Static-Alphabet)
-+ [SYSTEM.ENV](https://github.com/authorjapps/zerocode/wiki/Token:-System-Environment)
-+ [SYSTEM.PROPERTY](https://github.com/authorjapps/zerocode/wiki/Token:-System-Property)
-+ [XML.FILE](https://github.com/authorjapps/zerocode/wiki/Token:-XML-File)
-
-_Verifications/Assertions Tokens:_
-+ [CONTAINS.STRING]()
-+ [CONTAINS.STRING.IGNORECASE]()
-+ [MATCHES.STRING]()
-+ [IS.ONE.OF]()
-+ [IS.NULL]()
-+ [IS.NOTNULL]()
-+ [GT]()
-+ [LT]()
-+ [SIZE]()
-+ [LOCAL.DATETIME.AFTER]()
-+ [LOCAL.DATETIME.BEFORE]()
-
-Sample Test Report
-===
+### Sample Test Report
 
 Test reports are generated into  `/target`  folder every time the tests are run. Sample [reports are here](https://github.com/authorjapps/zerocode/blob/master/README.md#6) format. 
 
-Traceable Test Logs
-===
+### Traceable Test Logs
+
 Test logs are generated in the console as well as an user-defined log file. Default log location is  `target/logs/zerocode_rest_bdd_logs.log` . 
 
 _::Note::_
@@ -145,6 +134,41 @@ Failures:
 Assertion path '$.status' with actual value '200' did not match the expected value '400'
 ```
 
+
+Collaboration Made Easy
+===
+Zerocode aims to make development and testing **easier and faster**, not _harder and slower_. Allows both Dev-team and Test-team to collaborate towards the highest **quality** of the software. 
+
+
+Zerocode Tokens
+===
+[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) provides built-in tokens that help with your testing ranging from generating random numbers through to accessing system properties. Currently Zerocode offers the following tokens:
+
++ [LOCALDATE.TODAY](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDate-Today)
++ [LOCALDATETIME.NOW](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDateTime-Now)
++ [RANDOM.NUMBER](https://github.com/authorjapps/zerocode/wiki/Token:-Random-Number)
++ [RANDOM.STRING.PREFIX](https://github.com/authorjapps/zerocode/wiki/Token:-Random-String)
++ [RANDOM.UUID](https://github.com/authorjapps/zerocode/wiki/Token:-Random-UUID)
++ [RECORD.DUMP](https://github.com/authorjapps/zerocode/wiki/Token:-Record-Dump)
++ [STATIC.ALPHABET](https://github.com/authorjapps/zerocode/wiki/Token:-Static-Alphabet)
++ [SYSTEM.ENV](https://github.com/authorjapps/zerocode/wiki/Token:-System-Environment)
++ [SYSTEM.PROPERTY](https://github.com/authorjapps/zerocode/wiki/Token:-System-Property)
++ [XML.FILE](https://github.com/authorjapps/zerocode/wiki/Token:-XML-File)
+
+_Verifications/Assertions Tokens:_
++ [CONTAINS.STRING]()
++ [CONTAINS.STRING.IGNORECASE]()
++ [MATCHES.STRING]()
++ [IS.ONE.OF]()
++ [IS.NULL]()
++ [IS.NOTNULL]()
++ [GT]()
++ [LT]()
++ [SIZE]()
++ [LOCAL.DATETIME.AFTER]()
++ [LOCAL.DATETIME.BEFORE]()
+
+
 Inspired By
 ===
 ### Honorable references and credits
@@ -159,11 +183,11 @@ Pyresttest's JSON/YAML based test-DSL inspired many of Zerocode's Http DSL and t
 
 Apache JMeter's intuitive load configuration inspired various Zerocode's declarative Load Testing DSL.
 
-SkyScreamer's lenient mode smart JSON comparison inspired Zerocode's lenient JSON comparison feature.
+SkyScreamer's lenient/ and strict mode JSON comparison inspired Zerocode's result matching features.
 
-Spring's popular token/placeholder resolver inspired Zerocode's runtime token/placeholder resolver feature.
+Spring's popular token/placeholder resolver inspired Zerocode's test-input token/placeholder resolving feature.
 
-Jupiter Junit5's easy and declarative approach to parameterized testing inspired Zerocode's parameterized testing feature.
+JUnit5 Jupiter engine's easy and declarative approach to parameterized testing inspired Zerocode's parameterized testing feature.
 
 Powered by [open-source software](https://github.com/authorjapps/zerocode/wiki/Powered-by-open-source-software).
 
