@@ -134,65 +134,6 @@ Failures:
 Assertion path '$.status' with actual value '200' did not match the expected value '400'
 ```
 
-
 Collaboration Made Easy
 ===
 Zerocode aims to make development and testing **easier and faster**, not _harder and slower_. Allows both Dev-team and Test-team to collaborate towards the highest **quality** of the software. 
-
-
-Zerocode Tokens
-===
-[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) provides built-in tokens that help with your testing ranging from generating random numbers through to accessing system properties. Currently Zerocode offers the following tokens:
-
-+ [LOCALDATE.TODAY](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDate-Today)
-+ [LOCALDATETIME.NOW](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDateTime-Now)
-+ [RANDOM.NUMBER](https://github.com/authorjapps/zerocode/wiki/Token:-Random-Number)
-+ [RANDOM.STRING.PREFIX](https://github.com/authorjapps/zerocode/wiki/Token:-Random-String)
-+ [RANDOM.UUID](https://github.com/authorjapps/zerocode/wiki/Token:-Random-UUID)
-+ [RECORD.DUMP](https://github.com/authorjapps/zerocode/wiki/Token:-Record-Dump)
-+ [STATIC.ALPHABET](https://github.com/authorjapps/zerocode/wiki/Token:-Static-Alphabet)
-+ [SYSTEM.ENV](https://github.com/authorjapps/zerocode/wiki/Token:-System-Environment)
-+ [SYSTEM.PROPERTY](https://github.com/authorjapps/zerocode/wiki/Token:-System-Property)
-+ [XML.FILE](https://github.com/authorjapps/zerocode/wiki/Token:-XML-File)
-
-_Verifications/Assertions Tokens:_
-+ [CONTAINS.STRING]()
-+ [CONTAINS.STRING.IGNORECASE]()
-+ [MATCHES.STRING]()
-+ [IS.ONE.OF]()
-+ [IS.NULL]()
-+ [IS.NOTNULL]()
-+ [GT]()
-+ [LT]()
-+ [SIZE]()
-+ [LOCAL.DATETIME.AFTER]()
-+ [LOCAL.DATETIME.BEFORE]()
-
-
-Inspired By
-===
-### Honorable references and credits
-
-- [SkyScreamer](https://github.com/skyscreamer/JSONassert) 
-- [Pyresttest](https://github.com/svanoort/pyresttest) 
-- [Spring](https://spring.io)
-- [Apache JMeter](https://jmeter.apache.org/) 
-- [JUnit5 Jupiter Engine](https://junit.org/junit5/) 
-
-Pyresttest's JSON/YAML based test-DSL inspired many of Zerocode's Http DSL and test-config features.
-
-Apache JMeter's intuitive load configuration inspired various Zerocode's declarative Load Testing DSL.
-
-SkyScreamer's lenient/ and strict mode JSON comparison inspired Zerocode's result matching features.
-
-Spring's popular token/placeholder resolver inspired Zerocode's test-input token/placeholder resolving feature.
-
-JUnit5 Jupiter engine's easy and declarative approach to parameterized testing inspired Zerocode's parameterized testing feature.
-
-Powered by [open-source software](https://github.com/authorjapps/zerocode/wiki/Powered-by-open-source-software).
-
-IDE Credits
-![Jetbrains](https://github.com/authorjapps/zerocode/blob/master/images/jetbrains.svg)
-
-## Contribute
-Raise [issues](https://github.com/authorjapps/zerocode/issues) and [contribute](https://github.com/authorjapps/zerocode/blob/master/CONTRIBUTING.md) to improve zerocode by becoming a contributor yourself.
