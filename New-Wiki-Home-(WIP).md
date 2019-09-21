@@ -1,6 +1,6 @@
 Welcome To Zerocode Wiki. Use the sidebar on the right to locate a topic or use **"Ctrl+f"** to find a topic 👉
 
-If you are not sure where to start, why not take a look at the [What is Zerocode](), then jump to the [Developer's Guide]().
+If you are not sure where to start, why not take a look at the [What is Zerocode](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing), then jump to the [Developer's Guide]().
 
 Features
 ===
