@@ -171,4 +171,13 @@ Collaboration Made Easy
 ===
 Zerocode aims to make development and testing **easier and faster**, not _harder and slower_. Enables both Dev-team and Test-team to collaborate towards the highest **quality** of the software. 
 
+<br/>
+<br/>
 
+                                               Developer's Guide
+
+
+Supported testing frameworks
+===
+ * [JUnit4)](http://junit.org)
+ * [JUnit5 Jupiter](https://github.com/authorjapps/zerocode/wiki/JUnit5-Jupiter-Parallel-Load-Extension)
