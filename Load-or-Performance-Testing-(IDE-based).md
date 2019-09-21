@@ -139,7 +139,7 @@ So the test case looks like:
         {
             "name": "create_emp",
             "url": "/api/v1/abc-bank/employees",
-            "operation": "POST",
+            "method": "POST",
             "request": {
                 "body": {
                     "id": "EMP-300000001",
@@ -165,7 +165,7 @@ where the full test case will actually look like below which asserts the result 
         {
             "name": "create_emp",
             "url": "/api/v1/abc-bank/employees",
-            "operation": "POST",
+            "method": "POST",
             "request": {
                 "body": {
                     "id": "EMP-${RANDOM.NUMBER}",
@@ -173,7 +173,7 @@ where the full test case will actually look like below which asserts the result 
                     "address": "Piscataway, NJ Turn Pike, ZIP-300009"
                 }
             },
-            "assertions": {
+            "verify": {
                 "status": 201
             }
         }
@@ -197,11 +197,11 @@ e.g. if the response of our API produces the following-
     }
 }                 
 ```
-Then, we simply put our expectations into the `assertions` section as below-
+Then, we simply put our expectations into the `verify` section as below-
 ```javaScript
 {
     ...
-    "assertions": {
+    "verify": {
         "status": 201,
         "body": {
             "id": "EMP-300000001"
@@ -214,7 +214,7 @@ and the entire test case looks like following-
         {
             "name": "create_emp",
             "url": "/api/v1/abc-bank/employees",
-            "operation": "POST",
+            "method": "POST",
             "request": {
                 "body": {
                     "id": "EMP-300000001",
@@ -222,7 +222,7 @@ and the entire test case looks like following-
                     "address": "Piscataway, NJ Turn Pike, ZIP-300009"
                 }
             },
-            "assertions": {
+            "verify": {
                 "status": 201,
                 "body": {
                     "id": "${create_emp.request.body.id}"
