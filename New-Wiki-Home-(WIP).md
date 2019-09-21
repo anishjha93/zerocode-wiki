@@ -15,9 +15,6 @@ Features
 
 Developer Resources
 ===
-   * [Lenient and Strict Matchers](#zerocode-tokens)
-   * [Zerocode Tokens](#zerocode-tokens)
-   * [Zerocode Tokens](#zerocode-tokens)
    * [Zerocode Tokens](#zerocode-tokens)
    * [Inspired By and Credits](#inspired-by)
    * [Contribute](#contribute)
