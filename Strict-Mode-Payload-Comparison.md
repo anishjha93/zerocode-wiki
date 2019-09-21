@@ -35,7 +35,8 @@ then we can write the automation Test-case as below.
 ---
 scenarioName: Validate a GET API
 steps:
--     ...
+-     
+  ...
   verifyMode: STRICT
   verify:
       ...
