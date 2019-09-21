@@ -10,13 +10,12 @@ Features
 ===
    * [Introduction](#introduction)
    * [Super Easy and Reduced Complexity](#super-easy-to-write-bdd-tests)
-   * [Plug and Play Load Testing](#plug-and-play-security-testing)
-   * [Plug and Play Security Testing](#plug-and-play-security-testing)
-   * [Beautiful and Useful Reporting](#beautiful-and-useful-reporting)
+   * [Lenient and Strict Matching](#)
+   * [Validation and Verification](#)
+   * [Load Testing Made Easy](#plug-and-play-security-testing)
+   * [Security Testing Made Easy](#plug-and-play-security-testing)
+   * [Useful Reports and Dashboards](#beautiful-and-useful-reporting)
    * [Easy to Collaborate](#easy-to-collaborate)
-   * [Inspired By and Credits](#inspired-by)
-   * [Contribute](#contribute)
-   * [Copyrights](#copyright)
 
 Developer Resources
 ===
@@ -24,10 +23,13 @@ Developer Resources
    * [Zerocode Tokens](#zerocode-tokens)
    * [Zerocode Tokens](#zerocode-tokens)
    * [Zerocode Tokens](#zerocode-tokens)
+   * [Inspired By and Credits](#inspired-by)
+   * [Contribute](#contribute)
+   * [Copyrights](#copyright)
 
 Introduction
 ===
-[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) helps us to design better Test Cases for our business functionalities, then maintain and update them easily to avoid sleepless nights. 
+[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) helps us to design better Test Cases for our business functionalities and then maintain them easily to avoid sleepless nights. We do this simply by configuring, declaring and executing by completely avoiding the glue or boilerplate code.
 
 Super Easy and Reduced Complexity
 ===
