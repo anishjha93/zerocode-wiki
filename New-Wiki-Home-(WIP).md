@@ -11,7 +11,7 @@ Features
    * [Load Testing Made Easy](#load-testing-made-easy)
    * [Security Testing Made Easy](#security-testing-made-easy)
    * [Useful Reports and Dashboards](#useful-reports-and-dashboards)
-   * [Collaboration Made Easy](#collaboration-made-easy)
+   * [Dev/Test/BA Collaboration Made Easy](#collaboration-made-easy)
    * [Smart Projects Using Zerocode](#smart-projects-using-zerocode)
 
 Developer Resources
