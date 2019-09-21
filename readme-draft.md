@@ -12,5 +12,5 @@ Zerocode makes it easy to create and maintain automated tests with absolute mini
 Zerocode is used by many companies such as Vocalink, HSBC, HomeOffice(Gov) and [others](https://github.com/authorjapps/zerocode/blob/master/README.md#smart-projects-using-zerocode) to achieve accurate production drop of their micro-services. It has got best of best ideas and practices from the community to keep it super simple and the adoption is rapidly growing among the developer/tester community.
 
 
-For a quick introduction to Zerocode and its features, visit the [Zerocode Wiki](). After that, check out our [user's guide](). 
+For a quick introduction to Zerocode and its features, visit the [Zerocode Wiki](https://github.com/authorjapps/zerocode/wiki). After that, check out our [user's guide](https://github.com/authorjapps/zerocode/wiki#developer-guide). 
 
