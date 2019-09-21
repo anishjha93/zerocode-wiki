@@ -1,6 +1,6 @@
-Welcome To Zerocode Wiki. Use the sidebar on the right to locate a topic or use **"Ctrl+f"** to find a topic 👉
+Welcome To Zerocode Wiki. Use the sidebar on the right to locate a topic or use **"Ctrl+f"** to find a topic. 👉
 
-If you are not sure where to start, why not take a look at the [What is Zerocode](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing), then jump to the [Developer's Guide]().
+If you are not sure where to start, why not take a look at the [What is Zerocode](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing), then jump to the [Developer's Guide]().👇
 
 Features
 ===
@@ -10,22 +10,23 @@ Features
    * [Validation and Verification](#validation-and-verification)
    * [Load Testing Made Easy](#load-testing-made-easy)
    * [Security Testing Made Easy](#security-testing-made-easy)
-   * [Useful Reports and Dashboards](#useful-reports-and-dashboards)
    * [Dev/Test/BA Collaboration Made Easy](#collaboration-made-easy)
+   * [Useful Reports and Dashboards](#useful-reports-and-dashboards)
    * [Smart Projects Using Zerocode](#smart-projects-using-zerocode)
 
 Developer Guide
 ===
 * [Getting started ⛹‍♂](#getting-started-)
-* [Running a scenario](#running-a-single-scenario-test)
-* [Performance Testing - Automating HTTP load generation](#)
-* [Performance Testing - JUnit4](#)
-* [Performance Testing - JUnit5](#)
 * [Supported testing frameworks](#supported-testing-frameworks)
 * [A HTTP REST scenario or an user journey](#single-scenario-with-single-step)
+* [Running a scenario](#running-a-single-scenario-test)
+* [Performance Testing - Auto HTTP load generation](#)
+* [Performance Testing - JUnit4](#)
+* [Performance Testing - JUnit5](#)
 * [Kafka Validation](#kafka-testing)
 * [Parameterized Scenario](#paramterized-scenario)
 * [Using Custom HttpClient](#overriding-with-custom-httpclient-with-project-demand)
+* [Sending query params to HTTP hosts](#sending-query-params-in-url-or-separately)
 * [Http Basic-Auth security validation](#http-basic-authentication-step-using-zerocode)
 * [Boundary End Point Mocking](#place-holders-for-end-point-mocking)
 * [Externalizing RESTful host and port](#externalizing-restful-host-and-port-into-properties-files)
@@ -46,8 +47,6 @@ Developer Guide
 * [Environment switching in build pipeline](#)
 * [SOAP method invocation with xml input](#soap-method-invocation-example-with-xml-input)
 * [SOAP method invocation via Corporate Proxy](#soap-method-invocation-where-corporate-proxy-enabled)
-* [Using WireMock for mocking dependent end points](#using-wiremock-for-mocking-dependent-end-points)
-* [Sending query params to HTTP hosts](#sending-query-params-in-url-or-separately)
 * [Chatbot Validation](#chatbot-validation)
 * [Python DSL](#python)
 * [YAML and JSON Slice And Dice - Solved](#json-slice-and-dice---solved)
