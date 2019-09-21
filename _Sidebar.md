@@ -1,6 +1,6 @@
-+ Best Practices
++ User's Guide
+  + [What is Zerocode](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing)
   + [An User journey(CRUD operation)- Simple n easy](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
-  + [Array assertions made easy, incl. size and element finder](https://github.com/authorjapps/zerocode/wiki/Array-assertions-made-easy--e.g.-SIZE,-element-finder)
   + [Finished writing tests - Setting up CI Jenkins Build Pipe Line](https://github.com/authorjapps/zerocode/wiki/After-you-have-written-all-the-tests,-what's-next)
 
 + Matchers
@@ -97,6 +97,7 @@
   + [Random Number Generator Placeholders Usages and Limits](https://github.com/authorjapps/zerocode/wiki/Placeholders-Usage-and-Limits)
   + [Automation tests for Zerocode lib itself](https://github.com/authorjapps/zerocode/wiki/Automation-tests-for-Zerocode-lib-itself)
   + [Picking a leaf value from the array matching JSON Path](https://github.com/authorjapps/zerocode/wiki/When-JSON-Path-Matching-returns-value-or-values-as-an-array)
+  + [Array assertions made easy, incl. size and element finder](https://github.com/authorjapps/zerocode/wiki/Array-assertions-made-easy--e.g.-SIZE,-element-finder)
 
 ### Blogs
 + [Read Our Blogs](https://github.com/authorjapps/zerocode/wiki/Read-Our-Blogs)
