@@ -32,8 +32,8 @@ public class JustHelloWorldTest {
 Where, the `hello_world_scenario_happy_path.json` looks like below.
 
 ```javaScript
-                                     hello_world_scenario_happy_path.json
-                                     ------------------------------------
+                          hello_world_scenario_happy_path.json
+                          ------------------------------------
 {
     "scenarioName": "Validate the GET api @@Richard",
     "steps": [
@@ -70,9 +70,9 @@ web.application.endpoint.context=
 ***
 
 YAML Test case:
-```yaml
-                                     hello_world_scenario_happy_path.yaml
-                                     ------------------------------------
+```yml
+                       hello_world_scenario_happy_path.yaml
+                       ------------------------------------
 
 ---
 scenarioName: Validate the GET api @@Richard
