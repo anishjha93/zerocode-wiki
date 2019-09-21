@@ -16,7 +16,7 @@ Features
 
 Developer Guide
 ===
-* [Getting started ⛹‍♂](#getting-started-)
+* [Getting started ⛹‍♂](https://github.com/authorjapps/zerocode/wiki/Getting-Started)
 * [Supported testing frameworks](#supported-testing-frameworks)
 * [A HTTP REST scenario or an user journey](#single-scenario-with-single-step)
 * [Running a scenario](#running-a-single-scenario-test)
@@ -169,4 +169,6 @@ Assertion path '$.status' with actual value '200' did not match the expected val
 
 Collaboration Made Easy
 ===
-Zerocode aims to make development and testing **easier and faster**, not _harder and slower_. Allows both Dev-team and Test-team to collaborate towards the highest **quality** of the software. 
+Zerocode aims to make development and testing **easier and faster**, not _harder and slower_. Enables both Dev-team and Test-team to collaborate towards the highest **quality** of the software. 
+
+
