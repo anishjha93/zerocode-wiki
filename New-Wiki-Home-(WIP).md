@@ -1,10 +1,6 @@
+Welcome To Zerocode Wiki. Use the sidebar on the right to locate a topic or use **"Ctrl+f"** to **search** a topic 👉
 
-Welcome To Zerocode Wiki
-===
-
-Use the **sidebar** on the **right** to locate a topic or use **"Ctrl+f"** to **search** a topic 👉
-
-Jump to [Developer's TOC]() for technical Help and Usage.
+If you are not sure where to start why not take a look at the [What is Zerocode](), then jump to the [Developer's Guide]().
 
 Features
 ===
