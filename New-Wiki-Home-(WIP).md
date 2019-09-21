@@ -179,5 +179,5 @@ Zerocode aims to make development and testing **easier and faster**, not _harder
 
 Supported testing frameworks
 ===
- * [JUnit4)](http://junit.org)
+ * [JUnit4](http://junit.org)
  * [JUnit5 Jupiter](https://github.com/authorjapps/zerocode/wiki/JUnit5-Jupiter-Parallel-Load-Extension)
