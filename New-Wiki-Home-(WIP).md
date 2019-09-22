@@ -47,13 +47,13 @@ Developer Guide
 * [Zerocode test-input tokens](#zerocode-tokens)
 * [Verifying HTTP error messages](#verifying-http-error-messages)
 * [Invoking java utility methods](#invoking-java-utility-methods)
-* [Re-Using custom properties](#using-any-properties-file-key-value-in-the-steps)
-* [Bare JSON Strings as payload](#bare-json-string-still-a-valid-json)
-* [Empty HTTP body payload](#bare-json-string-still-a-valid-json)
+* [Re-Using or injecting custom properties](#re-using-or-injecting-custom-properties)
+* [Bare JSON Strings as payload](#bare-json-strings-as-payload)
+* [Empty HTTP body payload](#empty-http-body-payload)
 * [Handling Content-Type with charset-16 or charset-32](#handling-content-type-with-charset-16-or-charset-32)
-* [Environment switching in build pipeline](#)
-* [SOAP method invocation with xml input](#soap-method-invocation-example-with-xml-input)
-* [SOAP method invocation via Corporate Proxy](#soap-method-invocation-where-corporate-proxy-enabled)
+* [Environment switching in build pipeline](https://github.com/authorjapps/zerocode/wiki/After-you-have-written-all-the-tests,-what's-next)
+* [SOAP method invocation with xml input](https://github.com/authorjapps/zerocode/wiki/SOAP-method-validation-with-xml-input)
+* [SOAP method invocation via Corporate Proxy](https://github.com/authorjapps/zerocode/wiki/SOAP-method-invocation-through-Corporate-Proxy)
 * [Chatbot Validation](#chatbot-validation)
 * [Python DSL](#python)
 * [YAML and JSON Slice And Dice - Solved](#json-slice-and-dice---solved)
@@ -588,3 +588,110 @@ public class Order {
         return quantity;
     }
 ```
+
+Re-Using or injecting custom properties
+===
+You can directly use the framework properties or introduce new properties to be used in the test steps.
+
+e.g. `${my_new_url}`, `${web.application.endpoint.host}`, `${X-APP-SAML-TOKEN}` etc
+
+This is particularly useful when you want to introduce one or more common properties to use them across the test suite. :+1:
+
+(Clone [HelloWorld repo](https://github.com/authorjapps/zerocode-hello-world) to run this from your IDE)
+
+e.g.
+
+"config_hosts_sample.properties"
+
+```
+web.application.endpoint.host=http://{host-name-or-ip}
+web.application.endpoint.port=9998
+web.application.endpoint.context=/gov-products
+# or e.g. some new properties you introduced
+my_new_url=http://localhost:9998
+X-APP-SAML-TOKEN=<SAML>token-xyz</SAML>
+```
+
+Then, you can simply use the properties as below.
+```json
+{
+    "scenarioName": "New property keys from host config file",
+    "steps": [
+        {
+            "name": "get_api_call",
+            "url": "${web.application.endpoint.host}:${web.application.endpoint.port}/v1/screenings",
+            ...
+        },
+        {
+            "name": "get_call_via_new_url",
+            "url": "${my_new_url}/v1/sanctions",
+            ...
+        }
+
+    ]
+}
+```
+
+
+Bare JSON Strings as payload
+===
+
+e.g.
+```json
+{
+  "scenarioName": "Bare string as json @@Oliver",
+  "steps": [
+    {
+      "name": "bare_string",
+      "url": "http://localhost:9999/api/v1/status",
+      "operation": "GET",
+      "assertions": {
+        "status": 200,
+        "body" : "completed" //<----- Base string as JSON
+      }
+    }
+  ]
+}
+```
+
+Empty HTTP body payload
+===
+e.g.
+```json
+{
+  "scenarioName": "Empty body or no-body as payload @@John Smart@@",
+  "steps": [
+    {
+      "operation": "GET OR POST",
+      "request": {
+           // No body content 
+      }
+    }
+  ]
+}
+```
+
+Handling Content-Type with charset-16 or charset-32
+===
+When the http server sends response with charset other than utf-8 i.e. utf-16 or utf-32 etc, then the Zerocode framework automatically handles it legally.
+See [Wiki - Charset in response](https://github.com/authorjapps/zerocode/wiki/Charset-UTF-8-or-UTF-16-or-UTF-32-etc-in-the-http-response) for details on how it handles.
+
+Also the framework enables you to override this behaviour/handling by overriding method `createCharsetResponse` in the class `BasicHttpClient.java`. See an example in the working code example of HelloWorld repo.
+
+Chatbot Validation
+===
+When you have series of questions and answers to be validated, you can arrange them in a CSV format and drive a test.
+Which means, for a given scenario, you just need to write `one` scenario and multiple CSV rows of input/output data nicely arranged to validate the Chatbot APIs.
+
+e.g.
+
+```
+"parameterized": {
+    "csvSource": [
+        "What do you want to buy?,  Laptop, Color(Red or Blue)?,    Red,   RAM(16 or 32GB),    32,       2000 USD",
+        "What do you want to buy?,  Laptop, Color(Red or Blue)?,    Blue,  RAM(16 or 32GB),    16,       1500 USD",
+        "What do you want to buy?,  Mouse,  Color(Black or White)?, White, Wired or Wireless?, Wireless, 100 USD"
+    ]
+}
+```
+
