@@ -175,7 +175,7 @@ Zerocode aims to make development and testing **easier and faster**, not _harder
 <br/>
 <br/>
 
-                                               Developer's Guide
+                         Developer's Guide
 
 
 Supported testing frameworks
