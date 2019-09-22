@@ -6,7 +6,6 @@
 
 + [Quick Overview](#quick-overview)
 + [User Journey To Test Case(example)](#user-journey---acceptance-criteriasacs)
-+ [How Did It Work(Step By Step)](#how-did-it-work)
 + [If You Have Time to Read](#if-you-have-time-to-read)
 + [What We Did Not Have to Do(luckily)](#what-we-did-not-have-to-doluckily)
 + [See Things In Action](#see-this-in-actionhelloworld)
@@ -58,6 +57,7 @@ And at the same time we **don't have to search** for or think hard of any **synt
 
 > The advantage here is the tests are instantly readable to anyone.
 
++ JSON DSL (Or yaml dsl)
 ```javaScript
 {
     "scenarioName": "Validate the POST and GET employee API",
@@ -114,8 +114,52 @@ That's it, done. We are ready to run the above scenario.
 
 The hosts and ports in the `url` fields are externalized as usual(explained below).
 
+<details>
+<summary>YAML DSL</summary>
+<p>
+
+#### Or you can use YAML DSL(e.g. when inside a Kubernetes/docker based infrastructure)
++ YAML DSL
+```yaml
+---
+scenarioName: Validate the POST and GET employee API
+steps:
+- name: create_emp
+  url: "/api/v1/employees"
+  method: POST
+  request:
+    headers:
+      Content-Type: application/json
+    body:
+      id: GOV-CROY-9001
+      name: Oliver
+      postcode: EC2 9XY
+  verify:
+    status: 201
+    body:
+      id: GOV-CROY-9001
+  verifyMode: STRICT
+- name: get_emp
+  url: "/api/v1/employees/${$.create_emp.response.body.id}"
+  method: GET
+  retry:
+    max: 5
+    delay: 1000
+  request:
+    headers:
+      Content-Type: application/json
+  verify:
+    status: 200
+    body:
+      id: "${$.create_emp.response.body.id}"
+      deptCode: GOV.ASY
+  verifyMode: LENIENT
+```
+</p>
+</details>
+
 ***
-Then we stick the above json file to a JUnit runner and run. We can point to any `host` and `port` in the `Runner`. See the sample below.
+Then we stick the above json/yml file to a JUnit runner and run. We can point to any `host` and `port` in the `Runner`. See the sample below.
 ```java
 @TargetEnv("application_host.properties")
 @RunWith(ZeroCodeUnitRunner.class)
