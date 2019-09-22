@@ -29,9 +29,9 @@ Developer Guide
 * [Parameterized Scenario](#parameterized-scenario)
 * [Using Custom HttpClient](#using-custom-httpclient)
 * [Sending query params to HTTP hosts](#sending-query-params-to-http-hosts)
-* [Http Basic-Auth security validation](#)
-* [Boundary End Point Mocking](#place-holders-for-end-point-mocking)
-* [Externalizing RESTful host and port](#externalizing-restful-host-and-port-into-properties-files)
+* [Http Basic-Auth security validation](#http-basic-auth-security-validation)
+* [Boundary End Point Mocking](#boundary-end-point-mocking)
+* [Externalizing RESTful host and port]()
 * [Running a scenario in loop](#running-with-scenario-loop)
 * [Passing Content-Type header](#passing-content-type-applicationx-www-form-urlencoded-header)
 * [Http Max TimeOut or Implicit Wait](#http-max-timeout-or-implicit-wait)
@@ -228,7 +228,7 @@ Using Custom HttpClient
 Visit [HelloWorld](https://github.com/authorjapps/zerocode-hello-world) repo to see an example.
 
 See example code:
-> http-testing/src/main/java/org/jsmart/zerocode/zerocodejavaexec/httpclient/CustomHttpClient.java
+> java/org/jsmart/zerocode/zerocodejavaexec/httpclient/CustomHttpClient.java
 
 e.g.
 ```java
@@ -306,3 +306,9 @@ Visit here to see an [example scenario](https://github.com/authorjapps/consumer-
 
 + In your custom http-client, you add the header to the request at one central place, which is common to all the API tests.
 See: `org.jsmart.zerocode.httpclient.CorpBankApcheHttpClient#addBasicAuthHeader` in the [http-client code](https://github.com/authorjapps/consumer-contract-tests/blob/master/src/main/java/org/jsmart/zerocode/httpclient/CorpBankApcheHttpClient.java) it uses.
+
+Boundary End Point Mocking
+===
+Visit HelloWorld example repo and see the following example.
+
+> src/test/resources/wiremock_tests/mock_via_wiremock_then_test_the_end_point.json
