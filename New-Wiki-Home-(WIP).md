@@ -31,15 +31,15 @@ Developer Guide
 * [Sending query params to HTTP hosts](#sending-query-params-to-http-hosts)
 * [Http Basic-Auth security validation](#http-basic-auth-security-validation)
 * [Boundary End Point Mocking](#boundary-end-point-mocking)
-* [Externalizing RESTful host and port]()
-* [Running a scenario in loop](#running-with-scenario-loop)
-* [Passing Content-Type header](#passing-content-type-applicationx-www-form-urlencoded-header)
-* [Http Max TimeOut or Implicit Wait](#http-max-timeout-or-implicit-wait)
-* [Dealing with dynamic arrays](#step-dealing-with-arrays)
-* [Chaining multiple steps for a scenario](#chaining-multiple-steps-for-a-scenario)
-* [Ignoring step failures](#enabling-ignorestepfailures-for-executing-all-steps-in-a-scenario)
+* [Externalizing RESTful host and port](#externalizing-restful-host-and-port)
+* [Running a scenario in loop](#running-a-scenario-in-loop)
+* [Passing Content-Type header](#passing-content-type-header)
+* [Http Max TimeOut or Implicit Wait](https://github.com/authorjapps/zerocode/wiki/HTTP-max-timeout-or-implicit-wait)
+* [Dealing with dynamic arrays](https://github.com/authorjapps/zerocode/wiki/When-JSON-Path-Matching-returns-value-or-values-as-an-array)
+* [Chaining multiple steps for a scenario](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
+* [Ignoring step failures](#ignoring-step-failures)
 * [Running a Suite of Tests](#running-a-suite-of-tests)
-* [Zerocode test-input tokens](#generating-random-strings-random-numbers-and-static-strings)
+* [Zerocode test-input tokens](#zerocode-tokens)
 * [Verifying HTTP error messages](#asserting-general-and-exception-messages)
 * [Invoking java utility methods](#calling-java-methodsapis-for-doing-specific-tasks)
 * [Re-Using custom properties](#using-any-properties-file-key-value-in-the-steps)
@@ -312,3 +312,173 @@ Boundary End Point Mocking
 Visit HelloWorld example repo and see the following example.
 
 > src/test/resources/wiremock_tests/mock_via_wiremock_then_test_the_end_point.json
+
+
+Externalizing RESTful host and port
+===
+
+Note:
+Each runner is capable of running with a properties file which can have host and port for specific to this runner.
+- So one can have a single properties file per runner which means you can run the tests against multiple environments
+-OR-
+- can have a single properties file shared across all the runners means running as a `suite` against the same environment.
+
+** Note - As per Latest config update, we have updated endpoint configuration fields.
+From the release 1.2.8 onwards we will be allowing `web.` and deprecating `restful.` in endpoint configurations.
+We will take away support for `restful.` from endpoint configuration in the future releases.
+Version 1.2.8 will work for both as we have made the framework backward compatible.
+
+e.g.
+
+```properties
+              "config_hosts_sample.properties"
+              --------------------------------
+
+web.application.endpoint.host=http://{host-name-or-ip}
+web.application.endpoint.port=9998
+web.application.endpoint.context=/gov-uk-services
+```
+
+The runner looks like this:
+```
+@TargetEnv("config_hosts_sample.properties")
+@RunWith(ZeroCodeUnitRunner.class)
+public class ScreeningServiceContractTest {
+
+    @Test
+    @Scenario("contract_tests/screeningservice/get_screening_details_by_id.json")
+    public void testScreeningLocalAndGlobal() throws Exception {
+    }
+}
+```
+
+
+Running a scenario in loop
+===
+Runs the entire scenario two times i.e. executing both the steps once for each time.
+
+```javaScript
+{
+  "scenarioName": "Execute multiple times - Scenario",
+  "loop": 2,
+  "steps": [
+    {
+      "name": "create_emp",
+      ...
+    },
+    {
+      "name": "get_emp",
+      ...
+    }
+  ]
+}
+```
+
+Passing Content-Type header
+===
+It is very easy to send this content-type in the header and verify the response.
+
+When you use this header, then you just need to put the `Key-Value` or `Name-Value` content under request `body` or request `queryParams` section. That's it.
+
+e.g.
+```javaScript
+         "request": {
+            "headers": {
+               "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "body": {
+               "unit-no": "12-07",
+               "block-number": 33,
+               "state/region": "Singapore North",
+               "country": "Singapore",
+               "pin": "87654321",
+            }
+         }
+```
+
+- What happens if my **Key** contains a `space` or front slash `/` etc?
+
+This is automatically taken care by `Apache Http Client`. That means it gets converted to the equivalent encoded char which is understood by the server(e.g. Spring boot or Jersey or Tomcat etc ).
+
+e.g. 
+The above name-value pair behind the scene is sent to the server as below:
+> unit-no=12-07&country=Singapore&block-number=33&pin=87654321&state%2Fregion=Singapore+North
+
+See more examples and usages in the [Wiki >>](https://github.com/authorjapps/zerocode/wiki/application-x-www-form-urlencoded-urlencoded-with-KeyValue-params)
+
+Ignoring step failures
+===
+Setting `"ignoreStepFailures": true` will allow executing the next step even if the earlier step failed.
+
+e.g.
+```
+{
+    "scenarioName": "Multi step - ignoreStepFailures",
+    "ignoreStepFailures": true,
+    "steps": [...]
+}
+```
+
+See HelloWorld repo for a running example.
+
+Running a Suite of Tests
+===
+
++ Selecting all tests as usual `JUnit Suite`
+
+```java
+@RunWith(Suite.class)       
+@Suite.SuiteClasses({       
+  HelloWorldSimpleTest.class,
+  HelloWorldMoreTest.class,       
+})    
+
+public class HelloWorldJunitSuite {
+    // This class remains empty   
+}
+```
+
+Or
++ Selecting tests by cherry-picking from test resources
+```java
+@TargetEnv("app_dev1.properties")
+@UseHttpClient(CustomHttpClient.class)
+@RunWith(ZeroCodePackageRunner.class)
+@Scenarios({
+        @Scenario("path1/test_case_scenario_1.yml"),
+        @Scenario("path2/test_case_scenario_2.json"),
+})
+// Or a folder containng the scenario-files
+public class HelloWorldSelectedGitHubSuite {
+    // This space remains empty
+}
+```
+
+Zerocode Tokens
+===
+[Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md) provides built-in tokens that help with your testing ranging from generating random numbers through to accessing system properties. Currently Zerocode offers the following tokens:
+
++ [LOCALDATE.TODAY](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDate-Today)
++ [LOCALDATETIME.NOW](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDateTime-Now)
++ [RANDOM.NUMBER](https://github.com/authorjapps/zerocode/wiki/Token:-Random-Number)
++ [RANDOM.STRING.PREFIX](https://github.com/authorjapps/zerocode/wiki/Token:-Random-String)
++ [RANDOM.UUID](https://github.com/authorjapps/zerocode/wiki/Token:-Random-UUID)
++ [RECORD.DUMP](https://github.com/authorjapps/zerocode/wiki/Token:-Record-Dump)
++ [STATIC.ALPHABET](https://github.com/authorjapps/zerocode/wiki/Token:-Static-Alphabet)
++ [SYSTEM.ENV](https://github.com/authorjapps/zerocode/wiki/Token:-System-Environment)
++ [SYSTEM.PROPERTY](https://github.com/authorjapps/zerocode/wiki/Token:-System-Property)
++ [XML.FILE](https://github.com/authorjapps/zerocode/wiki/Token:-XML-File)
+
+_Verifications/Matcher Tokens:_
++ [CONTAINS.STRING]()
++ [CONTAINS.STRING.IGNORECASE]()
++ [MATCHES.STRING]()
++ [IS.ONE.OF]()
++ [IS.NULL]()
++ [IS.NOTNULL]()
++ [GT]()
++ [LT]()
++ [SIZE]()
++ [LOCAL.DATETIME.AFTER]()
++ [LOCAL.DATETIME.BEFORE]()
+
