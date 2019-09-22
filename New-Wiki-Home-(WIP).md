@@ -1,4 +1,4 @@
-                                        Welcome to the zerocode wiki
+                        Welcome to the zerocode wiki
 
 Use the sidebar on the right to locate a topic or use **"Ctrl+f"** to find a topic. 👉
 
@@ -26,10 +26,10 @@ Developer Guide
 * [Performance Testing - JUnit4](https://github.com/authorjapps/performance-tests#multi-scenario-parallel-load)
 * [Performance Testing - JUnit5](https://github.com/authorjapps/zerocode/wiki/JUnit5-Jupiter-Parallel-Load-Extension)
 * [Kafka Validation](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction)
-* [Parameterized Scenario](#paramterized-scenario)
-* [Using Custom HttpClient](#overriding-with-custom-httpclient-with-project-demand)
-* [Sending query params to HTTP hosts](#sending-query-params-in-url-or-separately)
-* [Http Basic-Auth security validation](#http-basic-authentication-step-using-zerocode)
+* [Parameterized Scenario](#parameterized-scenario)
+* [Using Custom HttpClient](#using-custom-httpclient)
+* [Sending query params to HTTP hosts](#sending-query-params-to-http-hosts)
+* [Http Basic-Auth security validation](#)
 * [Boundary End Point Mocking](#place-holders-for-end-point-mocking)
 * [Externalizing RESTful host and port](#externalizing-restful-host-and-port-into-properties-files)
 * [Running a scenario in loop](#running-with-scenario-loop)
@@ -207,3 +207,102 @@ public class GitHubHelloWorldTest {
 
 }
 ```
+
+Parameterized scenario
+===
+To run the scenario steps for each parameter from a list of values or CSV rows.
+
+Examples:
++ YAML
+<img width="460" alt="para yaml" src="https://user-images.githubusercontent.com/12598420/63848014-35304780-c9b9-11e9-85da-8419b5e49ded.png">
+
++ JSON
+<img width="470" alt="para json" src="https://user-images.githubusercontent.com/12598420/63848012-35304780-c9b9-11e9-9e49-99b475ed0fa8.png">
+
+Visit Wiki for details.
++ [Parameters as values - Wiki](https://github.com/authorjapps/zerocode/wiki/Parameterized-Testing-From-List-of-Values)
++ [Parameters as CSV rows - Wiki](https://github.com/authorjapps/zerocode/wiki/Parameterized-Testing-From-CSV-rows)
+
+Using Custom HttpClient
+===
+Visit [HelloWorld](https://github.com/authorjapps/zerocode-hello-world) repo to see an example.
+
+See example code:
+> http-testing/src/main/java/org/jsmart/zerocode/zerocodejavaexec/httpclient/CustomHttpClient.java
+
+e.g.
+```java
+@TargetEnv("apihost_env1.properties")
+@UseHttpClient(CustomHttpClient.class) //<--- Use your own HTTP client.
+@RunWith(ZeroCodeUnitRunner.class)
+public class HelloWorldCustomHttpClientSuite {
+}
+```
+
+Sending query params to HTTP hosts
+===
+You can pass query params in the usual way in the URL e.g. `?page=1&page_size=5` -or-
+You can pass them in the request as below.
+```
+...
+            "request": {
+                "queryParams":{
+                    "page":1,
+                    "per_page":6
+                }
+            }
+...
+```
+
+Http Basic-Auth security validation
+===
+You can validate `Basic Auth` in so many ways, it depends on your project requirement. Most simplest one is to pass the `base64 basicAuth` in the request headers as below - e.g. `USERNAME/PASSWORD` as `charaanuser/passtwitter`
+
+Zerocode framework helps you to achieve this, but has nothing to do with Basic-Auth. It uses `Apache Http Client` behind the scenes, this means whatever you can do using `Apache Http Client`, you can do it simply using `Zerocode`.
+
++ Positive scenario
+```javaScript
+{
+    "name": "get_book_using_basic_auth",
+    "url": "http://localhost:8088/api/v1/white-papers/WP-001",
+    "method": "GET",
+    "request": {
+        "headers": {
+            "Authorization": "Basic Y2hhcmFhbnVzZXI6cGFzc3R3aXR0ZXI=" // You can generate this using Postman or java code
+        }
+    },
+    "verify": {
+        "status": 200, // 401 - if unauthorized. See negative test below
+        "body": {
+            "id": "WP-001",
+            "type": "pdf"
+        }
+    }
+}        
+```
+
++ Negative scenario
+```
+{
+    "name": "get_book_using_wrong_auth",
+    "url": "http://localhost:8088/api/v1/white-papers/WP-001",
+    "method": "GET",
+    "request": {
+        "headers": {
+            "Authorization": "Basic aWRONG-PASSWORD"
+        }
+    },
+    "verify": {
+        "status": 401 //401(or similar code whatever the server responds), you can assert here.
+        "body": {
+            "message": "Unauthorized" 
+        }
+    }
+}        
+```
++ If your requirement is to put basic auth for all the API tests e.g. GET, POST, PUT, DELETE etc commonly in the regression suite, then you can put this `"Authorization"` header into your SSL client code. 
+
+Visit here to see an [example scenario](https://github.com/authorjapps/consumer-contract-tests/blob/master/src/test/java/org/jsmart/zerocode/testhelp/tests/basicauth/BasicAuthContractTest.java).
+
++ In your custom http-client, you add the header to the request at one central place, which is common to all the API tests.
+See: `org.jsmart.zerocode.httpclient.CorpBankApcheHttpClient#addBasicAuthHeader` in the [http-client code](https://github.com/authorjapps/consumer-contract-tests/blob/master/src/main/java/org/jsmart/zerocode/httpclient/CorpBankApcheHttpClient.java) it uses.
