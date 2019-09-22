@@ -12,9 +12,6 @@
 
 Quick Overview
 ===
-
-_The simplicity of this automated testing style that might surprise you..._
-
 In _Declarative Testing_, the framework here does the job for us behind the scene i.e. 
 + Making Http calls to the target end-point, with our request payload
 + Receiving the server response into the test case
@@ -35,9 +32,10 @@ USER JOURNEY - Acceptance Criterias(ACs)
 + AC1
 ```
 GIVEN- The Create API POST:"/api/v1/employees"
-WHEN I invoke the POST operation with a "employee" payload and content-type as "application/json"
+WHEN I invoke the POST operation with a "employee" payload 
+and content-type as "application/json"
 THEN I will create a new employee 
-AND assert the 201(created) status 
+AND verify the 201(created) status 
 and newly created employee ID(only).
 ```
 + AC2
@@ -45,8 +43,8 @@ and newly created employee ID(only).
 GIVEN- The Get API GET:"/api/v1/employees/{personId}"
 WHEN I invoke the GET operation with 5 retries with 1sec gap
 THEN I will fetch the employee details 
-AND assert the status as 200(OK) along with 
-employee payload as body(lenient match only interested fields).
+AND validate the status as 200(OK) along with 
+employee payload(lenient match only interested fields).
 ```
 
 To write a test-case for the above CRUD operation scenario is quite easy using [Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world), just our IDE's **JSON editor is easy enough** to hook these rwo steps/ACs. For instance, `POST` and `GET` step would look like below(simple and clean).
@@ -330,7 +328,4 @@ See this in action(HelloWorld):
 ===
 The simplified HelloWorld projects are in GitHub repo to clone and run locally
 
-- Simple HelloWorld repo : https://github.com/authorjapps/zerocode-hello-world
-
-- (More examples and usages : https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world )
-
++ Simple HelloWorld repo : https://github.com/authorjapps/zerocode-hello-world
