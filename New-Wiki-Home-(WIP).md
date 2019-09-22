@@ -40,8 +40,8 @@ Developer Guide
 * [Ignoring step failures](#ignoring-step-failures)
 * [Running a Suite of Tests](#running-a-suite-of-tests)
 * [Zerocode test-input tokens](#zerocode-tokens)
-* [Verifying HTTP error messages](#asserting-general-and-exception-messages)
-* [Invoking java utility methods](#calling-java-methodsapis-for-doing-specific-tasks)
+* [Verifying HTTP error messages](#verifying-http-error-messages)
+* [Invoking java utility methods](#invoking-java-utility-methods)
 * [Re-Using custom properties](#using-any-properties-file-key-value-in-the-steps)
 * [Bare JSON Strings as payload](#bare-json-string-still-a-valid-json)
 * [Empty HTTP body payload](#bare-json-string-still-a-valid-json)
@@ -482,3 +482,104 @@ _Verifications/Matcher Tokens:_
 + [LOCAL.DATETIME.AFTER]()
 + [LOCAL.DATETIME.BEFORE]()
 
+Verifying HTTP error messages
+===
+Validating with `$CONTAINS.STRING:`
+
+```javaScript
+{
+      ...
+      ...
+      "verify": {
+        "status": 201,
+        "body": {
+          "name": "$CONTAINS.STRING:Larry"   //<-- PASS: If the "name" field in the response contains "Larry".
+        }
+      }
+}
+```
+
+- Similar way exception messages can be validated for part or full message.
+
++ Validating with `$GT` or `$LT`
+
+$GT.<any_number>
+
+```javaScript
+{
+  ...
+  ...
+  "verify": {
+    "status": "$GT.200"   //<--- PASS: 201 or 200+ is greater than 200
+  }
+}
+```
+
+$LT.<any_number>
+```javaScript
+{
+  ...
+  ...
+  "verify": {
+      "status": "$LT.500"   //<--- PASS: 200 is lesser than 500
+  }
+}
+```
+
+Invoking java utility methods
+===
+Sometimes it is handy to invoke a Java utility method to performa specific task e.g. simply generating a `custom random-ID` or any complex operation specific to scenario automation.
+
+e.g.
+
+```javaScript
+{
+    "scenarioName": "Java method request, response as JSON",
+    "steps": [
+        {
+            "name": "execute_java_method",
+            "url": "org.jsmart.zerocode.zerocodejavaexec.OrderCreator",
+            "method": "createOrder",
+            "request": {
+                "itemName" : "Tier4 Visa",
+                "quantity" : 15
+            },
+            "verify": {
+                "orderId" : 1020301,
+                "itemName" : "Tier4 Visa",
+                "quantity" : 15
+            }
+        }
+    ]
+}
+```
+
+Order `pojo` looks like below, [full pojo src here](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/main/java/org/jsmart/zerocode/zerocodejavaexec/pojo/Order.java)-
+```java
+public class Order {
+    private Integer orderId;
+    private String itemName;
+    private Long quantity;
+
+    @JsonCreator
+    public Order(
+            @JsonProperty("orderId")Integer orderId,
+            @JsonProperty("itemName")String itemName,
+            @JsonProperty("quantity")Long quantity) {
+        this.orderId = orderId;
+        this.itemName = itemName;
+        this.quantity = quantity;
+    }
+
+    public Integer getOrderId() {
+        return orderId;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public Long getQuantity() {
+        return quantity;
+    }
+```
