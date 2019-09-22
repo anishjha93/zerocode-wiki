@@ -14,6 +14,51 @@ Organization
      + Check you have organized them by the `consumer` names or `boundary` names.
      + Bring up a single Suite runner pointing to the root of the tests(JSON test files). [See here how](https://github.com/authorjapps/zerocode/wiki/Suite-Runner-Vs-Package-runner)
 
+Individual Test Classes
+===
+```java
+import org.jsmart.zerocode.core.domain.EnvProperty;
+import org.jsmart.zerocode.core.domain.Scenario;
+import org.jsmart.zerocode.core.domain.TargetEnv;
+import org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+@EnvProperty("_${env}") //any meaningful string e.g. `env.name` or `envName` or `app.env` etc
+@TargetEnv("hello_world_host.properties")
+@RunWith(ZeroCodeUnitRunner.class)
+public class EnvPropertyHelloWorldTest {
+
+    @Test
+    @Scenario("hello_world/hello_world_get.json")
+    public void testRunAgainstConfigPropertySetViaJenkins() throws Exception {
+        
+    }
+}
+
+/**
+ Set "env=ci" in Jenkins (or via .profile in a Unix machine, System/User properties in Windows)
+ then the runner picks "hello_world_host_ci.properties" and runs.
+ if -Denv=sit, then runner looks for and picks "hello_world_host_sit.properties" and runs.
+
+If `env` not supplied, then defaults to "hello_world_host.properties" which by default mentioned mentioned via @TargetEnv
+ 
+ -or-
+ 
+ Configure the below `mvn goal` when you run via Jenkins goal in the specific environment e.g. -
+ 
+ For CI :
+ mvn clean install -Denv=ci
+ 
+ For SIT:
+ mvn clean install -Denv=sit
+ 
+ and make sure:
+ hello_world_host_ci.properties and hello_world_host_sit.properties etc are available in the resources folder or class path.
+ */
+```
+
+
 Test Suite
 ===
 + Create a `package` of tests aka `suite` of tests
