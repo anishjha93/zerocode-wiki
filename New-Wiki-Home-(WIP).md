@@ -55,10 +55,10 @@ Developer Guide
 * [SOAP method invocation with xml input](https://github.com/authorjapps/zerocode/wiki/SOAP-method-validation-with-xml-input)
 * [SOAP method invocation via Corporate Proxy](https://github.com/authorjapps/zerocode/wiki/SOAP-method-invocation-through-Corporate-Proxy)
 * [Chatbot Validation](#chatbot-validation)
-* [Python DSL](#python)
-* [YAML and JSON Slice And Dice - Solved](#json-slice-and-dice---solved)
-* [Inspired by and credits]()
-* [References, Discussions and articles](#references-dicussions-and-articles)
+* [Python DSL](#python-dsl)
+* [YAML and JSON Slice And Dice - Solved](#yaml-and-json-slice-and-dice)
+* [Inspired by and credits](#inspired-by)
+* [References, Discussions and articles](#references-discussions-and-articles)
 
 Introduction
 ===
@@ -695,3 +695,72 @@ e.g.
 }
 ```
 
+Python DSL
+===
+If you are looking for simillar REST API validation DSL in Python using YAML/JSON,
+then visit this open-source [pyresttest](https://github.com/svanoort/pyresttest#sample-test) lib in the GitHub.
+
+```yaml
+- test: # create entity by PUT
+    - name: "Create or update a person"
+    - url: "/api/person/1/"
+    - method: "PUT"
+    - body: '{"first_name": "Gaius","id": 1,"last_name": "Baltar","login": "gbaltar"}'
+    - headers: {'Content-Type': 'application/json'}
+    - validators:  # This is how we do more complex testing!
+        - compare: {header: content-type, comparator: contains, expected:'json'}
+        - compare: {jsonpath_mini: 'login', expected: 'gbaltar'}  # JSON extraction
+        - compare: {raw_body:"", comparator:contains, expected: 'Baltar' }  # Tests on raw response
+```
+
+The [Quick-Start](https://github.com/svanoort/pyresttest/blob/master/quickstart.md) guide explains how to bring up a REST end point and run the tests.
+
+Zerocode equivalent of the above example is
++ `validators` / `comparator` is equivalent to `verify` / `assertions`
++ `raw_body` is equivalent to `rawBody`
+
+YAML and JSON Slice And Dice
+===
+Handy JSON and YAML slice/dice, format conversion, JSON Path evaluations tools can be found below:
++ [JSON to YAML and vice versa](https://www.json2yaml.com/)
++ [Expand, Collapse, Remove Node and Traverse etc](https://jsoneditoronline.org/)
+  + Tree structure viewing - Good for array traversing
+  + Remove a node -> Click on left arrow
++ [Beautify, Minify, Copy Jayway JSON Path](http://jsonpathfinder.com/)
++ [JSON Path Evaluator](http://jsonpath.herokuapp.com/?path=$.store.book[*].author)
+
+Inspired By
+===
+### Honorable references and credits
+
+- [Pyresttest](https://github.com/svanoort/pyresttest) 
+- [SkyScreamer](https://github.com/skyscreamer/JSONassert) 
+- [Apache JMeter](https://github.com/apache/jmeter) 
+- [JUnit5 Jupiter Engine](https://github.com/junit-team/junit5/) 
+
+Pyresttest's JSON/YAML based test-DSL inspired many of Zerocode's Http DSL and test-config features.
+
+Apache JMeter's intuitive load configuration inspired various Zerocode's declarative Load Testing DSL.
+
+SkyScreamer's lenient and strict mode JSON matchers inspired various Zerocode's result matching features.
+
+JUnit5 Jupiter engine's easy and declarative approach to parameterized testing inspired Zerocode's parameterized testing feature.
+
+Credits to Jetbrains for IDE licenses
+![Jetbrains](https://github.com/authorjapps/zerocode/blob/master/images/jetbrains.svg).
+
+Credits to the team members at HomeOffice(GOV.UK), Mizuho Bank, CMC Markets, HSBC Bank, Barclays and Zohocorp whose comments have helped to shape the lib.
+
+Powered by [open-source software](https://github.com/authorjapps/zerocode/wiki/Powered-by-open-source-software).
+
+References, Discussions and articles
+===
+* [Performance testing using JUnit and maven](https://www.codeproject.com/Articles/1251046/How-to-do-performance-testing-using-JUnit-and-Mave) - Codeproject
+* [REST API or SOAP End Point Testing](https://www.codeproject.com/Articles/1242569/REST-API-or-SOAP-End-Point-Testing-with-ZeroCode-J) - Codeproject
+* [DZone- MuleSoft API Testing With Zerocode Test Framework](https://dzone.com/articles/zerocode-test-framework-for-restsoap-api-tddbdd-ap) - DZone
+* [Testing need not be harder or slower, it should be easier and faster](https://dzone.com/articles/rest-api-testing-using-the-zerocode-json-based-bdd) - DZone
+* [Kafka - Quick and Practical Testing With Zerocode](https://dzone.com/articles/a-quick-and-practical-example-of-kafka-testing) - DZone
+* [Kotlin Apps Testing With Zerocode](https://dzone.com/articles/kotlin-spring-bootspring-data-h2-db-rest-api) - DZone
+* [Google - Zerocode Kafka Testing](https://www.google.com/search?q=zerocode+kafka+testing&oq=zerocode+kafka+testing)
+* [Google - Zerocode API Testing](https://www.google.com/search?q=zerocode+api+testing)
+* [Google - Zerocode Mulesoft Testing](https://www.google.com/search?q=zerocode+mulesoft+testing)
