@@ -31,7 +31,7 @@ Then, you can simply assert by keeping the JSON structure as it is like below,
 Note- Order of the element doesn't matter, you can keep them in any order
 
 ```
-"assertions" : {
+"verify" : {
                 "status": 200,
                 "body": {
                     "type" : "HIGH-VALUE",
@@ -51,7 +51,7 @@ Note- Order of the element doesn't matter, you can keep them in any order
 
 Also, you can skip some fields you don't want to assert, e.g. let's skip the `name` field from both the elements of the array,
 ```
-"assertions" : {
+"verify" : {
                 "status": 200,
                 "body": {
                     "type" : "HIGH-VALUE",
@@ -72,7 +72,7 @@ Also, you can skip some fields you don't want to assert, e.g. let's skip the `na
 we want to assert that the 2nd element has `name` called `Mike`, it's quite easy like below,
 
 ```
-"assertions" : {
+"verify" : {
                 "status": 200,
                 "body": {
                     "persons[1].name": "Mike"
@@ -103,7 +103,7 @@ Then you can assert the array size in one of the many ways as needed,
 ```javaScript
         {
 	    ...
-            "assertions": {
+            "verify": {
                 "results.SIZE": 2
             }
         }
@@ -111,14 +111,14 @@ Then you can assert the array size in one of the many ways as needed,
 -or-
         {
 	    ...
-            "assertions": {
+            "verify": {
                 "results.SIZE": "$GT.1"
             }
         }
 -or-
         {
 	    ...
-            "assertions": {
+            "verify": {
                 "results.SIZE": "$LT.3"
             }
         }
@@ -142,7 +142,7 @@ To assert the above criteria, you can find the element using `JSON path` as belo
             "operation": "GET",
             "request": {
             },
-            "assertions": {
+            "verify": {
                 "status": 200,
                 "body": {
                     "type": "HIGH-VALUE",
