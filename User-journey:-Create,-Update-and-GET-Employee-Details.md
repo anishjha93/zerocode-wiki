@@ -35,40 +35,82 @@ USER JOURNEY - Acceptance Criterias(ACs)
 
 + AC1
 ```
-GIVEN- The Create API POST:"/api/v1/persons"
-WHEN I invoke the POST operation with a "person" payload
+GIVEN- The Create API POST:"/api/v1/employees"
+WHEN I invoke the POST operation with a "employee" payload and content-type as "application/json"
 THEN I will create a new employee 
 AND assert the 201(created) status 
-and newly created employee ID.
+and newly created employee ID(only).
 ```
 + AC2
 ```
-GIVEN- The Update API PUT:"/api/v1/persons/{personId}"
-WHEN I invoke the PUT operation by the Id 
-with some "person" details
-THEN I will update the existing employee 
-AND assert the 200(OK) status and updated fields.
-```
-+ AC3
-```
-GIVEN- The Get API GET:"/api/v1/persons/{personId}"
-WHEN I invoke the GET operation
+GIVEN- The Get API GET:"/api/v1/employees/{personId}"
+WHEN I invoke the GET operation with 5 retries with 1sec gap
 THEN I will fetch the employee details 
-AND assert the status 200(OK) along with 
-updated as well as non-updated fields 
+AND assert the status as 200(OK) along with 
+employee payload as body(lenient match only interested fields).
 ```
 
-To write a test-case for the above CRUD operation scenario is quite easy using [Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world), just our IDE's **JSON editor is easy enough** to hook these steps. For instance, `POST` and `GET` step would look like below(simple and clean).
-
-<img width="632" alt="verify" src="https://user-images.githubusercontent.com/12598420/64495520-36a02080-d293-11e9-8710-9dfb5cc122ae.png">
+To write a test-case for the above CRUD operation scenario is quite easy using [Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world), just our IDE's **JSON editor is easy enough** to hook these rwo steps/ACs. For instance, `POST` and `GET` step would look like below(simple and clean).
 
 > _Hosts and ports are externalized to a properties file for env switching_
 
-And at the same time we **don't have to search** for or think hard of any **syntaxes** to do the job. That means, we are ready with a BDD test scenario quickly with these simple JSON steps(see below). The advantage here is the tests are instantly readable to anyone.
+And at the same time we **don't have to search** for or think hard of any **syntaxes** to do the job. That means, we are ready with a BDD test scenario quickly with these simple JSON steps(see below). 
 
-<img width="566" alt="expanded-simple" src="https://user-images.githubusercontent.com/12598420/45925725-fe34f480-bf12-11e8-941c-cb3ec8da6c3e.png"> <br />
+> The advantage here is the tests are instantly readable to anyone.
 
-That's it, done. We are ready to run.
+```javaScript
+{
+    "scenarioName": "Validate the POST and GET employee API",
+    "steps": [
+        {
+            "name": "create_emp",
+            "url": "/api/v1/employees",
+            "method": "POST",
+            "request": {
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "id": "GOV-CROY-9001",
+                    "name": "Oliver",
+                    "postcode": "EC2 9XY"
+                }
+            },
+            "verify": {
+                "status": 201,
+                "body": {
+                    "id": "GOV-CROY-9001"
+                }
+            },
+            "verifyMode": "STRICT"
+        },
+        {
+            "name": "get_emp",
+            "url": "/api/v1/employees/${$.create_emp.response.body.id}",
+            "method": "GET",
+            "retry": {
+                "max": 5,
+                "delay": 1000
+            },
+            "request": {
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "verify": {
+                "status": 200,
+                "body": {
+                    "id": "${$.create_emp.response.body.id}",
+                    "deptCode": "GOV.ASY"
+                }
+            },
+            "verifyMode": "LENIENT"
+        }
+    ]
+}
+```
+
+That's it, done. We are ready to run the above scenario.
 
 The hosts and ports in the `url` fields are externalized as usual(explained below).
 
@@ -93,46 +135,8 @@ web.application.endpoint.host=https://hbc.banking.co.local.uk
 web.application.endpoint.port=443
 web.application.endpoint.context=
 ```
-***
 
-How Did It Work
-===
-
-Let's put into the context n deep dive a bit.
-
-We needed 3 steps here for the Happy case in the above journey-
-+ POST - To create the new employee (e.g. created employee ID will be `1001`)
-+ PUT - To update the same employee
-+ GET - To verify that UPDATE has gone fine
-
-This is how somewhat we imagined to perform the steps-
-![collapse-1v2](https://user-images.githubusercontent.com/12598420/45925386-fde52b00-bf0b-11e8-8162-ff478c9c037e.png)
-Note- _You can use any JSON editor to do the job for we -as simple as that_
-
-Next we get our API end points details from the spec or api-doc(e.g. swagger) and fit into the steps(it should look like below)
-<img width="772"  height="525" alt="Collapsed steps - bit extended" src="https://user-images.githubusercontent.com/12598420/46082518-2df42e80-c197-11e8-8007-adc9ce452123.png">
-
-Next let's **Copy-Paste the payload and assertions** section which we might get it from the `spec` or api-doc(swagger). See below the **full-blown** steps(That's it - _we are ready to run._) How simple was that !
-<img width="555"  height="726" alt="Full Blown steps" src="https://user-images.githubusercontent.com/12598420/45925567-ef007780-bf0f-11e8-8daf-12e7c8a12b82.png">
-
-
-To complete the `D` part the CRUD operation(if our application has implemented this operation), we can simply add one more step or 2 more steps as below to verify it works perfectly ok.
-
-<img width="504"  height="272" alt="Delete steps" src="https://user-images.githubusercontent.com/12598420/45928093-f2a6f500-bf35-11e8-8d4c-202849917c06.png">
-
-> 
-Done. Happy days!
-
-***
-
-_:::Note:::_
-
-Whilst `verifications` and `assertions` mean the same, they are used for slightly different purpose where,
-+ `verifications` is widely used and easily understandable wrt a `Spec`
-+ `assertions` is used for `validating` subset of payload/information
-
-Visit [Verification and validation Wiki](https://en.wikipedia.org/wiki/Verification_and_validation) to understand the difference. Zerocode supports both which makes the testing cycle a minimum fuss.
-
+                                 Done. Happy days!
 ***
 
 If You Have Time To Read
@@ -242,7 +246,7 @@ Also, we escaped the **hard** way of doing things with special attention to Engl
 
 ***
 
-This approach might take different `shapes and forms` for developers/testers with spending too much time agreeing on the semantics than spending time in writing actual executable tests.
+This approach might take different `shapes and forms` for developers/test-engineers who need to spend lot of time agreeing on the semantics rather than spending time in creating actual executable test-scenarios.
 
 **e.g.** <br/>
 ~~GIVEN- the REST api POST end point,~~ <br/>
@@ -273,10 +277,10 @@ or
 
 :::Note:::
 
-It makes sense when the **BAs**(Business Analysts) or **managers** or non-technology folks while creating the stories and defining the entry and exit criteria of the tickets for a business scenario or User-Journey. But technology folks simply picking these statements and trying hard syntactically to fit these into executable tests seems like bit too much of a maintenance overhead. 
+It might(arguably) make sense for the **BAs**(Business Analysts) or non-technology folks while creating the stories and defining the entry and exit criteria of the tickets for a business scenario or User-Journey. But the techincal folks simply picking these statements and trying hard syntactically to fit these into the executable scenarios seems like bit too much of a wastage of time and maintenance overhead. 
 <br/>
 <br/>
-But we should choose the `tools`, `technologies` and `solutions` which best fits to our project and situation and helps us solving the testing challenges.
+But we should choose the `tools`, `technologies` and `solutions` which best fits to our project and situation and really helps us solving the testing challenges.
 
 See this in action(HelloWorld):
 ===
