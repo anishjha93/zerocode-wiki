@@ -1,3 +1,7 @@
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img width="135"  height="120" alt="Zerocode" src="https://upload.wikimedia.org/wikipedia/commons/9/98/New-Bouncywikilogo.gif">
+
+
                         Welcome to the zerocode wiki
 
 Use the sidebar on the right to locate a topic or use **"Ctrl+f"** to find a topic. 👉
