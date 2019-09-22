@@ -40,7 +40,6 @@ Table of Contents
 * [10. Conclusion](#10-conclusion)
   * [<em>Points To Note</em>](#note-3)
 * [Maven Dependency](#maven-dependency)
-* [Support <g-emoji class="g-emoji" alias="call_me_hand" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f919.png">🤙</g-emoji>](#support-)
 * [Happy API Testing! <g-emoji class="g-emoji" alias="panda_face" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f43c.png">🐼</g-emoji>](#happy-api-testing-)
 
 # 1.1 Kafka Testing Challenges
@@ -206,7 +205,7 @@ Now our test-case looks like below,
             }
         ]
     },
-    "assertions": {
+    "verify": {
         "status": "Ok",
         "recordMetadata": "$NOT.NULL"
     }
@@ -288,14 +287,14 @@ Please visit these pages for examples and explanations.
 # 4.  Validating Kafka response after producing
 We can simply tell the test to check that it has been produced successfully as below
 ```JSON
-"assertions": {
+"verify": {
     "status": "Ok"
 }
 ```
 
 Or we can ask the test to assert that we have received `not null` "recordMetadata" from the Kafka brokers
 ```json
-"assertions": {
+"verify": {
     "status": "Ok",
     "recordMetadata": "$NOT.NULL"
 }
@@ -303,7 +302,7 @@ Or we can ask the test to assert that we have received `not null` "recordMetadat
 
 Or we can go further and ask the test to assert the "recordMetadata" field-by-field to verify it has written to correct `partition` of the correct `topic` and much more as below. 
 ```json
-"assertions": {
+"verify": {
     "status": "Ok",
     "recordMetadata": {
         "offset": 0,
@@ -320,7 +319,7 @@ Yes, just stick the JSON block as it is.
 
 Isn't it awesome and clean? Hasn't it take away a lot of hassles from us of doing vicious deserialization of the `acknowledgment` or the asserting field-by-field, making the test almost not-readable?
 
-Or if you are not really bothered about some fields, you can simply put as `$NOT.NULL` against them as below or completely skip them from the "assertions block".
+Or if you are not really bothered about some fields, you can simply put as `$NOT.NULL` against them as below or completely skip them from the "verify block".
 
 ### :::Note:::
 Field order doesn't really matter here as long as the structure is maintained. 👍 
@@ -344,14 +343,14 @@ Field order doesn't really matter here as long as the structure is maintained. �
 # 5.  Validating Kafka response after consuming
 We can simply tell the test to check that we have received a number of records we intended to consume.
 ```java
-"assertions": {
+"verify": {
     "size" : 1
 }
 ```
 
 Or we can ask the test to assert a record as not null or field-by-field of key/values of that record. 
 ```java
-"assertions": {
+"verify": {
     "size": 1
     "records": [
         {
@@ -365,7 +364,7 @@ Or we can ask the test to assert a record as not null or field-by-field of key/v
 Or we can ask the test to assert the records along with some metadata e.g. topic and partition info too. 
 
 ```java
-"assertions": {
+"verify": {
     "records": [
         {
             "key": "1547792460796",
@@ -393,7 +392,7 @@ Most of the time we have situations to deal with Kafka and REST API testing. Wit
 | "request"  | Payload with Http headers and body  |
 | "headers"  | Http headers  |
 | "body"  | Http payload body  |
-| "assertions"  |  Expected response from server |
+| "verify"  |  Expected response from server |
 
 Let's see how we can fit REST API validation along with Kafka produce/consume validation at the same time.
 
@@ -467,7 +466,7 @@ Step-1 (AC1)
             }
         ]
     },
-    "assertions": {
+    "verify": {
         "status": "Ok",
         "recordMetadata" : "$NOT.NULL"
     }
@@ -486,7 +485,7 @@ Step-2 (AC2)
             "X-GOVT-API-KEY": "top-key-only-known-to-secu-cleared" // Skip this if Auth key not needed
         }
     },
-    "assertions": {
+    "verify": {
         "status": 200,
         "value": {
             "id": "id-lon-123",
@@ -529,7 +528,7 @@ test_kafka_and_rest.json
                     }
                 ]
             },
-            "assertions": {
+            "verify": {
                 "status": "Ok",
                 "recordMetadata" : "$NOT.NULL"
             }
@@ -543,7 +542,7 @@ test_kafka_and_rest.json
                     "X-GOVT-API-KEY": "top-key-only-known-to-secu-cleared"
                 }
             },
-            "assertions": {
+            "verify": {
                 "status": 200,
                 "value": {
                     "id": "${$.produce_to_kafka.request.records[0].value.id}",
@@ -600,7 +599,7 @@ See more RAW and JSON examples in the sidebar of the Wiki. :raised_hands:
 
 
 # 8.  Why do I need `zerocode-tdd` lib
-Zerocode is a light-weight, simple and extensible open-source framework for writing test intentions in a simple JSON format that facilitates both declarative configuration and automation. The framework manages the request payload handling and response assertions at the same time.
+Zerocode is a light-weight, simple and extensible open-source framework for writing test intentions in a simple JSON format that facilitates both declarative configuration and automation. The framework manages the request payload handling and response verifications at the same time.
 
 Zerocode has taken a different approach to solve the fuss involved in the Kafka and REST API testing.
 
@@ -646,8 +645,5 @@ Visit [README](https://github.com/authorjapps/zerocode) page in GitHub.
 ```
 
 If you found this tutorial helpful for testing Kafka and HTTP APIs, then feel free to leave a "star" on [GitHub](https://github.com/authorjapps/zerocode/stargazers)!
-
-# Support 🤙
-For services and support, please contact us at info@zerocode.io
 
 # Happy API Testing! 🐼 
