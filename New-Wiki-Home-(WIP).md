@@ -2,12 +2,12 @@
 
 Use the sidebar on the right to locate a topic or use **"Ctrl+f"** to find a topic. 👉
 
-If you are not sure where to start, why not take a look at the [What is Zerocode](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing), then jump to the [Developer's Guide]().👇
+If you are not sure where to start, why not take a look at the [What is Zerocode](https://github.com/authorjapps/zerocode/wiki/What-is-Zerocode-testing), then jump to the [Developer's Guide]() below.
 
 Features
 ===
    * [Introduction](#introduction)
-   * [Super Easy and Reduced Complexity](#super-easy-and-reduced-complexity)
+   * [Super Easy and Zero Complexity](#super-easy-and-reduced-complexity)
    * [Lenient and Strict Matching](#lenient-and-strict-matching)
    * [Validation and Verification](#validation-and-verification)
    * [Load Testing Made Easy](#load-testing-made-easy)
@@ -20,12 +20,12 @@ Developer Guide
 ===
 * [Getting started ⛹‍♂](https://github.com/authorjapps/zerocode/wiki/Getting-Started)
 * [Supported testing frameworks](#supported-testing-frameworks)
-* [A HTTP REST scenario or an user journey](#single-scenario-with-single-step)
-* [Running a scenario](#running-a-single-scenario-test)
-* [Performance Testing - Auto HTTP load generation](#)
-* [Performance Testing - JUnit4](#)
-* [Performance Testing - JUnit5](#)
-* [Kafka Validation](#kafka-testing)
+* [A HTTP REST scenario or an user journey](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
+* [Running one or more scenarios](#running-a-scenario)
+* [Performance Testing - Auto HTTP load generation](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based))
+* [Performance Testing - JUnit4](https://github.com/authorjapps/performance-tests#multi-scenario-parallel-load)
+* [Performance Testing - JUnit5](https://github.com/authorjapps/zerocode/wiki/JUnit5-Jupiter-Parallel-Load-Extension)
+* [Kafka Validation](https://github.com/authorjapps/zerocode/wiki/Kafka-Testing-Introduction)
 * [Parameterized Scenario](#paramterized-scenario)
 * [Using Custom HttpClient](#overriding-with-custom-httpclient-with-project-demand)
 * [Sending query params to HTTP hosts](#sending-query-params-in-url-or-separately)
@@ -183,3 +183,27 @@ Supported testing frameworks
 ===
  * [JUnit4](http://junit.org)
  * [JUnit5 Jupiter](https://github.com/authorjapps/zerocode/wiki/JUnit5-Jupiter-Parallel-Load-Extension)
+
+
+Running a scenario
+===
+`ZeroCodeUnitRunner` is the JUnit runner which enables us to run a single or more test-cases from a JUnit test-class.
+
+e.g.
+```java
+@TargetEnv("app_sit1.properties")
+@RunWith(ZeroCodeUnitRunner.class)
+public class GitHubHelloWorldTest {
+
+   @Test
+   @Scenario("screening_tests/test_happy_flow.yml")
+   public void testHappyFlow(){
+   }
+
+   @Test
+   @Scenario("screening_tests/test_negative_flow.yml")
+   public void testNegativeFlow(){
+   }
+
+}
+```
