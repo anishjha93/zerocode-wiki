@@ -10,7 +10,7 @@ Features
    * [Validation and Verification](#validation-and-verification)
    * [Load Testing Made Easy](#load-testing-made-easy)
    * [Security Testing Made Easy](#security-testing-made-easy)
-   * [Dev/Test/BA Collaboration Made Easy](#collaboration-made-easy)
+   * [Collaboration Made Easy among Dev/Test/BA](#collaboration-made-easy)
    * [Useful Reports and Dashboards](#useful-reports-and-dashboards)
    * [Smart Projects Using Zerocode](#smart-projects-using-zerocode)
 
@@ -171,6 +171,15 @@ Assertion path '$.status' with actual value '200' did not match the expected val
 Collaboration Made Easy
 ===
 Zerocode aims to make development and testing **easier and faster**, not _harder and slower_. Enables both Dev-team and Test-team to collaborate towards the highest **quality** of the software. 
+
+Smart Projects Using Zerocode
+===
+ + [Vocalink (A Mastercard company)](https://www.vocalink.com/) - REST API testing for virtualization software 
+ + [HSBC Bank](https://www.hsbc.co.uk/) - MuleSoft application REST API Contract testing, E2E Integration Testing, Oracle DB API testing, SOAP testing and Load/Stress aka Performance testing
+ + [Barclays Bank](https://www.barclays.co.uk/) - Micro-Services API Contract Validation for System APIs build using Spring Boot
+ + [Home Office(GOV.UK)](https://www.gov.uk/government/organisations/home-office) - Micro-Services REST API Contract testing, HDFS/HBase REST end point testing, Kafka Data-pipeline testing, Authentication testing
+ + [Deloitte(Australia)](https://www2.deloitte.com/au/en.html) - Kafka data pipeline end to end validations
+ + [Yandex Search Engine(Russia)](https://yandex.com/) - Load and Stress Testing aka Performance Testing
 
 <br/>
 <br/>
