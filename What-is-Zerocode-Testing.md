@@ -2,6 +2,7 @@ Table of Contents
 * [What is Declarative Testing](#what-is-declarative-testing)
 * [Advantages of Declarative Testing](#advantages-of-declarative-testing)
 * [Drawing a Simile](#drawing-a-simile)
+* [YAML or JSON based test-scenarios](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details#using-json)
 * [Testing Without Writing Code](#testing-without-writing-code)
 * [Test Case Fields](#test-case-fields)
      * [Http(REST API and SOAP)](#httprest-api-and-soap)
@@ -143,13 +144,11 @@ steps:
 
 Testing Without Writing Code.
 ===
-+ YAML
-<img width="521" alt="YAML large" src="https://user-images.githubusercontent.com/12598420/63574532-29f0ac80-c5b2-11e9-8631-f33b2ce1889a.png">
+e.g.
 
-+ JSON
-<img width="521" alt="JSON online" src="https://user-images.githubusercontent.com/12598420/63574794-d599fc80-c5b2-11e9-87bd-51d9e1c714a1.png">
+<img width="521" alt="YAML large" src="https://www.codeproject.com/KB/applications/1242569/bf168275-8d2f-4969-82a1-51b4e640dad9.Png">
 
-> _That's declarative way what we discussed earlier_
+> _That's the declarative way of validating an API what we discussed earlier_
 
 <br/>
 
