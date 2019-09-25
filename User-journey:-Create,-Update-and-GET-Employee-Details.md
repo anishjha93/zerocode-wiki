@@ -6,6 +6,8 @@
 
 + [Quick Overview](#quick-overview)
 + [User Journey To Test Case(example)](#user-journey---acceptance-criteriasacs)
+  + [Using JSON](#using-json)
+  + [Using YAML](#using-yaml)
 + [If You Have Time to Read](#if-you-have-time-to-read)
 + [What We Did Not Have to Do(luckily)](#what-we-did-not-have-to-doluckily)
 + [See Things In Action](#see-this-in-actionhelloworld)
@@ -53,9 +55,15 @@ To write a test-case for the above CRUD operation scenario is quite easy using [
 
 And at the same time we **don't have to search** for or think hard of any **syntaxes** to do the job. That means, we are ready with a BDD test scenario quickly with these simple JSON steps(see below). 
 
-> The advantage here is the tests are instantly readable to anyone.
+>The advantage here is the tests are instantly readable to any stakeholder
 
-+ JSON DSL (Or yaml dsl)
+View the JSON or YAML based test-scenario below.
+
+### Using JSON
+<details>
+<summary>JSON (Click to expand)</summary>
+<p>
+
 ```javaScript
 {
     "scenarioName": "Validate the POST and GET employee API",
@@ -107,13 +115,13 @@ And at the same time we **don't have to search** for or think hard of any **synt
     ]
 }
 ```
+</p>
+</details>
 
-That's it, done. We are ready to run the above scenario.
-
-The hosts and ports in the `url` fields are externalized as usual(explained below).
+### Using YAML
 
 <details>
-<summary>YAML DSL</summary>
+<summary>YAML (Click to expand)</summary>
 <p>
 
 #### Or you can use YAML DSL(e.g. when inside a Kubernetes/docker based infrastructure)
@@ -155,6 +163,10 @@ steps:
 ```
 </p>
 </details>
+
+That's it, done. We are ready to run the above scenario.
+
+The hosts and ports in the `url` fields are externalized as usual(explained below).
 
 ***
 Then we stick the above json/yml file to a JUnit runner and run. We can point to any `host` and `port` in the `Runner`. See the sample below.
