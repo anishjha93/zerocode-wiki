@@ -35,16 +35,16 @@ GIVEN- The Create API POST:"/api/v1/employees"
 WHEN I invoke the POST operation with a "employee" payload 
 and content-type as "application/json"
 THEN I will create a new employee 
-AND verify the 201(created) status 
-and newly created employee ID(only).
+AND validate the 201(created) status 
+and verify the response has only the employeeId(strict matching).
 ```
 + AC2
 ```
-GIVEN- The Get API GET:"/api/v1/employees/{personId}"
-WHEN I invoke the GET operation with 5 retries with 1sec gap
+GIVEN- The Get API GET:"/api/v1/employees/{employeeId}"
+WHEN I invoke the GET operation with max 5 retries with 1sec gap
 THEN I will fetch the employee details 
 AND validate the status as 200(OK) along with 
-employee payload(lenient match only interested fields).
+AND response has the expected payload with the required fields(lenient matching).
 ```
 
 To write a test-case for the above CRUD operation scenario is quite easy using [Zerocode](https://github.com/authorjapps/zerocode/blob/master/README.md#hello-world), just our IDE's **JSON editor is easy enough** to hook these rwo steps/ACs. For instance, `POST` and `GET` step would look like below(simple and clean).
