@@ -13,16 +13,16 @@
   + [Available Matchers](#TODO)
 
 + Zerocode Tokens
-  + [LOCALDATE_TODAY](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDate-Today)
-  + [LOCALDATETIME_NOW](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDateTime-Now)
-  + [RANDOM_NUMBER](https://github.com/authorjapps/zerocode/wiki/Token:-Random-Number)
-  + [RANDOM_STRING_PREFIX](https://github.com/authorjapps/zerocode/wiki/Token:-Random-String)
-  + [RANDOM_UUID](https://github.com/authorjapps/zerocode/wiki/Token:-Random-UUID)
-  + [RECORD_DUMP](https://github.com/authorjapps/zerocode/wiki/Token:-Record-Dump)
-  + [STATIC_ALPHABET](https://github.com/authorjapps/zerocode/wiki/Token:-Static-Alphabet)
-  + [SYSTEM_ENV](https://github.com/authorjapps/zerocode/wiki/Token:-System-Environment)
-  + [SYSTEM_PROPERTY](https://github.com/authorjapps/zerocode/wiki/Token:-System-Property)
-  + [XML_FILE](https://github.com/authorjapps/zerocode/wiki/Token:-XML-File)
+  + [LOCALDATE.TODAY](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDate-Today)
+  + [LOCALDATETIME.NOW](https://github.com/authorjapps/zerocode/wiki/Token:-LocalDateTime-Now)
+  + [RANDOM.NUMBER](https://github.com/authorjapps/zerocode/wiki/Token:-Random-Number)
+  + [RANDOMSTRING.PREFIX](https://github.com/authorjapps/zerocode/wiki/Token:-Random-String)
+  + [RANDOM.UUID](https://github.com/authorjapps/zerocode/wiki/Token:-Random-UUID)
+  + [RECORD.DUMP](https://github.com/authorjapps/zerocode/wiki/Token:-Record-Dump)
+  + [STATIC.ALPHABET](https://github.com/authorjapps/zerocode/wiki/Token:-Static-Alphabet)
+  + [SYSTEM.ENV](https://github.com/authorjapps/zerocode/wiki/Token:-System-Environment)
+  + [SYSTEM.PROPERTY](https://github.com/authorjapps/zerocode/wiki/Token:-System-Property)
+  + [XML.FILE](https://github.com/authorjapps/zerocode/wiki/Token:-XML-File)
 
 + YAML DSL
   + [YAML Based Test Scenario Automation](https://github.com/authorjapps/zerocode/wiki/YAML-DSL-For-Test-Scenarios)
