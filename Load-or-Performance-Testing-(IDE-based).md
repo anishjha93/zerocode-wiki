@@ -50,11 +50,11 @@ public class LoadTest {
 
 + [And how to achieve/run the above by using our IDE e.g. Eclipse or IntelliJ etc?](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#and-finally-how-do-we-run-the-load-test-using-our-ide-eg-eclipse-or-intellij-etc)
 
-+ [Service virtualization during performance testing](https://github.com/authorjapps/api-mock-maker/blob/master/README.md#api-mock-maker)
-
 + [Download or browse the demo project](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)#download-or-browse-demo-project)
 
-Lets address one by one of the above aspects in details in the following section.
++ [JUnit5 Jupiter automated load generation and testing](https://github.com/authorjapps/zerocode/wiki/JUnit5-Jupiter-Parallel-Load-Extension)
+
+Let's address one by one of the above aspects in detail in the following section.
 
 ### Load vs Stress, Horizontal Load vs Vertical Load
 In a nutshell :
@@ -62,7 +62,6 @@ In a nutshell :
    + Monitor the system behaviour making large number of concurrent users fire the requests.
 + Stress: In a single request, pass a heavy payload 
    + Monitor the system is behaviour with making our payload largest
-
 + Horizontal: Generate more parallel requests on the application server
    + Monitor the system behaviour making large number of concurrent users fire the requests.
 + Vertical: In a single request, pass a heavy payload 
