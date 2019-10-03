@@ -63,6 +63,8 @@ Where, the `hello_world_scenario_happy_path.json` looks like below.
 
 the `github_host.properties` looks as below:
 ```properties
+                       github_host.properties
+                       ----------------------
 web.application.endpoint.host=https://api.github.com
 web.application.endpoint.port=443
 web.application.endpoint.context=
@@ -70,7 +72,7 @@ web.application.endpoint.context=
 
 ***
 
-YAML Test case:
+Or using YAML:
 ```yml
                        hello_world_scenario_happy_path.yaml
                        ------------------------------------
