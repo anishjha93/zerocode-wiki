@@ -317,7 +317,7 @@ See: `org.jsmart.zerocode.httpclient.CorpBankApcheHttpClient#addBasicAuthHeader`
 
 Boundary End Point Mocking
 ===
-Visit HelloWorld example repo and see the following example.
+Visit HelloWorld example repo and see the [following example](https://github.com/authorjapps/zerocode-hello-world/blob/master/src/test/resources/wiremock_tests/mock_via_wiremock_then_test_the_end_point.json).
 
 > src/test/resources/wiremock_tests/mock_via_wiremock_then_test_the_end_point.json
 
