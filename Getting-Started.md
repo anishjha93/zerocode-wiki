@@ -10,10 +10,11 @@ Add this maven dependencies in `test` scope which transitively brings in `JUnit`
 <dependency>
     <groupId>org.jsmart</groupId>
     <artifactId>zerocode-tdd</artifactId>
-    <version>1.3.x</version> 
+    <version>1.3.x</version> <!-- Pick the latest release -->
     <scope>test</scope>
 </dependency>
 ```
+**Latest release: [1.3.x - Click me](https://search.maven.org/search?q=a:zerocode-tdd)** 🏹
 
 Then annotate your `JUnit` test method pointing to the JSON/YAML scenario-file as below via `@Scenario` and `run` as a JUnit test. That's it really!
 
@@ -61,7 +62,7 @@ Where, the `hello_world_scenario_happy_path.json` looks like below.
 ```
 
 the `github_host.properties` looks as below:
-```
+```properties
 web.application.endpoint.host=https://api.github.com
 web.application.endpoint.port=443
 web.application.endpoint.context=
