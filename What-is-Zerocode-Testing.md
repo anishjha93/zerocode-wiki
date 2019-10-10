@@ -76,10 +76,8 @@ In the _Declarative Style_ **we don't need to write** any of the below.
 + Response payload parsing
 + Code for assertions e.g. comparing actual vs expected response
 
-
-
 | Declarative Style                            | Traditional Style                                        |
-| -------------------------------------------- | -------------------------------------------------------- |
+| :-------------------------------------------- | :-------------------------------------------------------- |
 | `"url":"/api/v1/register/persons"`    | Create an _HttpClient_ object. Set the `url` to `"/api/v1/register/persons"` <br/> e.g. `RequestBuilder.setUri(httpUrl);`  |
 | `"method": "POST"`  | Set this `POST` operaton to the _HttpClient_ object <br/> e.g. `RequestBuilder.create(methodName).setUri(httpUrl);`| 
 | `"request": { ... }` | Parse the request payload and set to HttpEntity. <br/> e.g. `HttpEntity httpEntity = EntityBuilder.create().setContentType(APPLICATION_JSON).setText(reqBody).build();` |
