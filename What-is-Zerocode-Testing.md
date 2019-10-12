@@ -197,17 +197,12 @@ Or you can mention the FQDN with http or https with port
     "url": "https://apphost.gov.uk/api/v1/register/persons",
 ```
 
-
-Or you can mention the qualified Java class name,
-
-```
-    "url": "uk.gov.DbSqlExecutor",
-```
+See ahead examples on how you can point to a Kafka topic using this `url` field.
 
 #### METHOD
 
 REST end-point or SOAP end-point
-All Http methods such as: POST, PUT, GET, PATCH, DELETE etc
+All Http methods such as `POST, PUT, GET, PATCH, DELETE` etc
 
 ```
     "method": "POST",
@@ -218,11 +213,15 @@ Or when we need to call a Java function
     "method": "executeSql",
 ```
 
-Or when we need to validate Kafka events
+Or 
+
+when we need to validate Kafka events
 ```
     "operation": "produce",
 or
     "operation": "consume",
+
+Note- `method` and `operation` are identical can be used interchangeably. Preferably `method` is used for `http` calls and `operation` is used for `Kafka` calls.
 
 _(See Kafka DSLs below)_
 ```
