@@ -220,11 +220,12 @@ when we need to validate Kafka events
     "operation": "produce",
 or
     "operation": "consume",
+```
 
-Note- `method` and `operation` are identical can be used interchangeably. Preferably `method` is used for `http` calls and `operation` is used for `Kafka` calls.
+Note- `method` and `operation` are identical and can be used interchangeably. Preferably `method` is used for `http` calls and `operation` is used for `Kafka` calls.
 
 _(See Kafka DSLs below)_
-```
+
 
 #### RETRY
 `Retry` comes handy when the actual response doesn't match the expected values in certain use-cases.
