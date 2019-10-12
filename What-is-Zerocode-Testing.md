@@ -533,7 +533,7 @@ Running the Tests using _JUnit_
 public class JustHelloWorldTest {
 
     @Test
-    @JsonTestCase("helloworld/hello_world_status_ok_assertions.json")
+    @Scenario("helloworld/hello_world_status_ok_assertions.json")
     public void testGet() throws Exception {
 
     }
