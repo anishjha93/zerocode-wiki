@@ -173,9 +173,19 @@ e.g.
     "loop": 3
 ```
 
+#### IGNORESTEPFAILURES
+
+When this DSL flag is set to `true`, the framework will go ahead and execute the subsequent steps in the scenario file.
+
+```java
+    "ignoreStepFailures": true
+```
+
+This is an optional flag and you can skip this or set to false to retain the default behavior.
+
 #### URL
 
-REST end-point or a SOAP end-point or a Kakfa topic or a fully qualified Java class name.
+REST endpoint or a SOAP end-point or a Kafka topic.
 
 ```java
     "url": "/api/v1/register/persons",
