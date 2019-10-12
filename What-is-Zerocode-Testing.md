@@ -256,6 +256,18 @@ Or when we need to call a _Java_ function with a SQL query as method parameter
     "request": "select id, name from customers"
 ```
 
+#### QUERYPARAMS
+
+This DSL field can be used for sending query params to the HTTP endpoints.
+
+```json
+"queryParams":{
+   "param1": "value1",
+   "param2": "value2"
+}
+```
+
+which is equivalent to `?param1=value1&param2=value2`
 
 #### HEADERS
 Request with headers and body payload,
