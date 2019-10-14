@@ -1,6 +1,7 @@
 Table of contents
 ===
    * [Steps](#steps)
+   * [An user-journey test scenario - example](#an-user-journey-test-scenario-example)
    * [Try-at-home examples](#try-at-home-examples)
 
 Steps
@@ -108,6 +109,10 @@ public class JustHelloWorldTest {
     }
 }
 ```
+
+An User-Journey Test Scenario Example
+===
+Visit this [User-Journey CRUD testing automation](https://github.com/authorjapps/zerocode/wiki/User-journey:-Create,-Update-and-GET-Employee-Details)
 
 Try-at-home examples
 ===
