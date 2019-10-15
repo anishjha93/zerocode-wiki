@@ -245,7 +245,8 @@ in combination will decide how long the tests will run. This means- if we set `l
 The test reports are generated under `/target` folder with name `zerocode-junit-granular-report.csv` which attaches a `correlation-id` to each test it runs. If more number of steps are run for each scenario, attaches a `correlation-id` to each step making our life easier to track **which test/step failed** for what reason.
 
 A sample load report looks like this in [CSV format](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/zz_reports/sample-load-junit-granular-report.csv), but when we draw charts/graphs we get a **fancy** looks along with a **throughput** statistics, a sample one looks like [this (download and view in MS Excel)](https://github.com/authorjapps/helpme/blob/master/zerocode-rest-help/src/test/resources/zz_reports/sample-load-junit-granular-report.xlsx)
-![Load throughput report](https://github.com/authorjapps/zerocode/blob/master/img/load/load_sample_throughput.png)
+
+<img width="1159" alt="load_sample_throughput" src="https://user-images.githubusercontent.com/12598420/66826721-065c3980-ef45-11e9-8ce7-33d6dc8eb609.png">
 
 ### How to reuse our existing test to feed it to generate load?
 If we have an existing test case e.g. a `POST` call or a scenario with `POST, PUT then GET`, then we can simply feed this test into the load runner as below-
