@@ -89,7 +89,7 @@ Zerocode enables you to achieve both [Verification and Validation](https://en.wi
 
 Load Testing Made Easy
 ===
-Visit here to learn [JUnit way of load and stress generation](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based))
+Visit here to learn [JUnit way](https://github.com/authorjapps/zerocode/wiki/Load-or-Performance-Testing-(IDE-based)) for load and stress generation
 
 Security Testing Made Easy
 ===
