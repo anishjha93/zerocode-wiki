@@ -479,9 +479,6 @@ Zerocode Tokens
 
 Matchers
 ===
-### Assertion place holders
-Visit the [Wiki](https://github.com/authorjapps/zerocode/wiki) for more details.
-
 | Place Holder  | Output        | More  |
 | ------------- |:-------------| -----|
 | $CONTAINS.STRING:id was cust-001       | Assertion passes if the node response contains string "id was cust-001" | Otherwise fails |
