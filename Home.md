@@ -477,18 +477,26 @@ Zerocode Tokens
 + [SYSTEM.PROPERTY](https://github.com/authorjapps/zerocode/wiki/Token:-System-Property)
 + [XML.FILE](https://github.com/authorjapps/zerocode/wiki/Token:-XML-File)
 
-_Verifications/Matcher Tokens:_
-+ [CONTAINS.STRING]()
-+ [CONTAINS.STRING.IGNORECASE]()
-+ [MATCHES.STRING]()
-+ [IS.ONE.OF]()
-+ [IS.NULL]()
-+ [IS.NOTNULL]()
-+ [GT]()
-+ [LT]()
-+ [SIZE]()
-+ [LOCAL.DATETIME.AFTER]()
-+ [LOCAL.DATETIME.BEFORE]()
+Matchers
+===
+### Assertion place holders
+Visit the [Wiki](https://github.com/authorjapps/zerocode/wiki) for more details.
+
+| Place Holder  | Output        | More  |
+| ------------- |:-------------| -----|
+| $CONTAINS.STRING:id was cust-001       | Assertion passes if the node response contains string "id was cust-001" | Otherwise fails |
+| $CONTAINS.STRING.IGNORECASE:id WaS CuSt-001       | Assertion passes if the response value contains string "id was cust-001" with case insensitive | Otherwise fails |
+| $MATCHES.STRING:`\\d{4}-\\d{2}-\\d{2}`       | Assertion passes if the response value contains e.g. `"1989-07-09"` matching regex `\\d{4}-\\d{2}-\\d{2}` | Otherwise fails |
+| $IS.NOTNULL       | Assertion passes if a not null value was present in the response | Same as $NULL |
+| $IS.NULL      | Assertion passes if a null value was present in the response | Same as $IS.NOTNULL |
+| $[]       | Assertion passes if an empty array was present in the response | Otherwise fails |
+| $EQ.99       | Assertion passes if a numeric value equals to 99 was present in the response | Can be any int, long, float etc |
+| $NOT.EQ.99       | Assertion passes if a numeric value is not equals to 99 was present in the response | Can be any int, long, float etc |
+| $GT.99       | Assertion passes if a value greater than 99 was present in the response | Can be any int, long, float etc |
+| $LT.99       | Assertion passes if a value lesser than 99 was present in the response | Can be any int, long, float etc |
+| $LOCAL.DATETIME.BEFORE:2017-09-14T09:49:34.000Z       | Assertion passes if the actual date is earlier than this date | Otherwise fails |
+| $LOCAL.DATETIME.AFTER:2016-09-14T09:49:34.000Z       | Assertion passes if the actual date is later than this date | Otherwise fails |
+| $ONE.OF:[First Val, Second Val, Nth Val]       | Assertion passes if `currentStatus` actual value is one of the expected values supplied in the `array` | Otherwise fails. E.g. `"currentStatus": "$ONE.OF:[Found, Searching, Not Found]"` |
 
 Verifying HTTP error messages
 ===
