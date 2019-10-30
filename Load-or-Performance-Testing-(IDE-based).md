@@ -1,5 +1,7 @@
-> _For reading this first time it might take around 15 min, afterward it should take 2 to 5mins. 
+> _For reading this first time it might take around 15 min, afterward, it should take 2 to 5mins. 
 But if you are already familiar with the concepts of load/stress generation on the target server, then you can directly jump to the [try-at-home source code section here](#download-or-browse-demo-project)._
+
+> Visit this page for [JUnit5](https://github.com/authorjapps/zerocode/wiki/JUnit5-Jupiter-Parallel-Load-Extension) Jupiter parallel load generation. Super easy! Give it a try!
 
 ## Why using an IDE ?
 Performance testing could be simple, easy and flexible to match our project need if it is based from our IDE!
