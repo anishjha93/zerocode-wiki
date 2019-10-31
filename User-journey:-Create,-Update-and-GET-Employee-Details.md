@@ -196,7 +196,7 @@ web.application.endpoint.context=
 If You Have Time To Read
 ===
 
-_If we have little more time to read below, see what all hassles we escaped and how much time we saved !_
+_If you have little more time to read below, see what all hassles we escaped and how much time we saved !_
 
 + No need to write pojos and builder for the domain objects(e.g. Employee here)
 + No need of any serialization/deserialization
