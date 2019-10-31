@@ -192,8 +192,8 @@ public class ParallelLoadTestSuite {
 ### GitHub Repo - Examples
 + The regular `Junit` tests and the `load` generating tests are [here](https://github.com/authorjapps/performance-tests/tree/master/src/test/java/org/jsmart/zerocode/samplesjunit5)
 + You can clone [this repo](https://github.com/authorjapps/performance-tests) and run from your IDE
-+ Please note- Junit5/Jupiter tests and JUnit4 tests can exist together. 
-  + Which means - Junit4 tests run via the Vintage engine
++ Please note- Junit5/Jupiter tests and JUnit4 tests can co-exist. 
+  + Which means - Junit4 tests run via the Vintage engine, JUnit5 tests run via Jupiter engine
   + That's not really an issue to maintain both tests, as explained here [JUnit5 user-guide](https://junit.org/junit5/docs/current/user-guide/#migrating-from-junit4)
   > Which reads : Since all classes and annotations specific to JUnit Jupiter reside under a new org.junit.jupiter base package, having both JUnit 4 and JUnit Jupiter in the classpath does not lead to any conflicts.
 
