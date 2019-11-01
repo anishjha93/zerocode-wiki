@@ -1,4 +1,4 @@
->                                  Original Author Name: @kristin-smith
+>               Original Author Name: @kristin-smith
 
 Background
 ===
