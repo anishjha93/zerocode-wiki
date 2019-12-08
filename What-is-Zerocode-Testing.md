@@ -12,6 +12,7 @@ Table of Contents
         * [URL](#url)
         * [METHOD](#method)
         * [RETRY](#retry)
+        * [CUSTOMLOG](#customlog)
         * [REQUEST](#request)
         * [QUERYPARAMS](#queryparams)
         * [HEADERS](#headers)
@@ -236,6 +237,12 @@ _(See Kafka DSLs below)_
             },
 ```
 The above settings will retry maximum of `5` times with 2sec delay between teh retries.
+
+#### CUSTOMLOG
+`Custom Log` This is a optional field which can be use when user want custom log for particular step.
+```
+           "customLog": "custom message"
+```
 
 
 #### REQUEST
